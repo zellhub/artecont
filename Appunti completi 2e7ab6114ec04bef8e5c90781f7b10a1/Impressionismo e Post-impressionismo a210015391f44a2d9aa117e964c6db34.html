@@ -1,0 +1,775 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Impressionismo e Post-impressionismo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a2100153-91f4-4a2d-9aa1-17e964c6db34" class="page sans"><header><h1 class="page-title">Impressionismo e Post-impressionismo</h1></header><div class="page-body"><h3 id="064c60fb-7698-43f0-b347-771b9fd01a74" class=""><strong>IMPRESSIONISMO</strong></h3><p id="3692c88f-f929-4935-ab34-364fee7d5b61" class="">
+</p><p id="846aa846-0716-4505-ab24-9ce45a326947" class=""><strong>CONTESTO STORICO, SOCIALE, CULTURALE, ECONOMICO, TECNOLOGICO</strong></p><p id="e26fb4cf-3b11-44dc-8502-708057b572c7" class=""><strong><em>La Belle Epoque </em></strong><em>(fine 800 - inizio 900) IGM circa</em></p><p id="75a02a09-fd72-422f-b159-19b9b7bcd2d6" class="">
+</p><ul id="c34ed1f6-370a-4453-b748-c8fc9049dabb" class="bulleted-list"><li style="list-style-type:disc">Gli intellettuali si ritrovano nei locali di cultura - Boulevard di Parigi, caffè...</li></ul><ul id="bc8a1f04-deb3-4b0c-b708-a55495ea9fc2" class="bulleted-list"><li style="list-style-type:disc">Seconda rivoluzione industriale  - economia e società</li></ul><ul id="cb2d31f8-461d-4989-a969-c414bccc20e6" class="bulleted-list"><li style="list-style-type:disc">Macchina a vapore alimentata a carbone sostituita da motore a scoppio, alimentato a petrolio</li></ul><ul id="63d79756-7676-405d-851f-275f95d574ee" class="bulleted-list"><li style="list-style-type:disc">Prime centrali elettriche e reti di distribuzione della corrente</li></ul><ul id="9424bc9e-6032-4dc7-8403-ab44ccfcbb0d" class="bulleted-list"><li style="list-style-type:disc">1879 Edison brevetta la lampadina, lampioni elettrici sostituiscono quelli a gas</li></ul><ul id="d8997d90-a1b5-4a1e-9d4a-4f58009c5520" class="bulleted-list"><li style="list-style-type:disc">Le nazioni iniziano a competere per la corsa al progresso e all’industrializzazione, confrontrandosi nelle esposizioni universali (mostre evento che riuniscono espositori da tutto il mondo per mostrare meraviglie tecnologiche)</li></ul><ul id="99b2b944-07b0-4590-a493-a12afe3c97ac" class="bulleted-list"><li style="list-style-type:disc">Invenzione del dagherrotipo</li></ul><p id="89853e31-ef5d-49c6-9b89-768ff43b6838" class="">
+</p><p id="96f99159-e50a-4dcf-ad19-7bdb7516395d" class=""><strong>PITTURA</strong></p><p id="b84ea178-2254-45a4-a5ba-c13ff8d1809b" class="">En plein air</p><p id="a91ea4f3-1f23-4125-9b77-7814830089bf" class="">I pittori implementano la fotografia nella pittura (camera ottica): per cogliere dettagli in un secondo momento, bloccare gli attimi</p><p id="26ed2274-dff1-436d-9d48-f61724b74479" class="">Influenza dalle stampe giapponesi che si ricollegano a un’antica tradizione pittorica, sensibilità nella stesura dei colori e dei volumi</p><p id="62648400-9c0e-4524-b492-be60e14e4e1a" class="">Lavoro all’esterno, importanza all’accostamento cromatico, alle ore del giorno e condizioni metereologiche → Movimento proiettato verso la modernità</p><p id="06013475-50cd-497b-be71-a702969fc6e0" class="">
+</p><p id="c891c36d-36f1-4f20-98af-edc383b0a31a" class=""><strong>MONET</strong></p><p id="8b249420-b1ab-4bb6-a792-4d776f7fb03a" class="">Dipinge en plein air, si focalizza sul paesaggio della Senna</p><ul id="558906d8-8810-40cf-91bd-2fd660f76c56" class="toggle"><li><details  =""><summary>Impressione, levar del sole (1872)</summary><p id="db5cc4b9-2fab-4007-a83d-7640dbdd578e" class="">
+</p><figure id="8353cad2-5abf-4594-b01f-8f544415cdbf" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled.png"><img style="width:600px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled.png"/></a></figure><p id="7510e45c-a02c-478a-b538-c28f186b2e9a" class="">
+</p><p id="27813cbc-7bb1-4766-9bd2-97182e3cbdb1" class="">Alba nel porto di Le Havre, momento suggestivo, nebbia leggera</p><p id="a7f769ea-f068-46d3-801a-e8416958f515" class="">La critica disprezza l’opera deridendo i pittori impressionisti, da qui il nome</p><p id="c10cfc62-6915-4d9d-a36a-7f0113cc14c8" class="">Manca rifinitura dei dettagli cara ai pittori ottocenteschi - contorni incerti</p><p id="1f413a45-bce4-4b72-b5cb-8c611f1852ad" class="">Silhouette pescatori</p></details></li></ul><ul id="e6086e81-8965-4193-9079-2f22d8a4dd64" class="toggle"><li><details  =""><summary>Donne in giardino (1867)</summary><figure id="ed16aa86-1175-46fb-9426-96ee1bd3a070" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%201.png"><img style="width:1200px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%201.png"/></a></figure><p id="fb3dc5b0-d5cd-478e-950f-574b6176c3cc" class="">
+</p><p id="3732c3c5-1872-451e-ba04-c18328a5ec93" class="">Studio a livello cromatico della brillantezza dei colori: forte stacco cromatico, in un contesto cupo candore dei vestiti brillanti.</p><p id="373c5d32-6236-4fb5-8074-c8141bb435c5" class="">
+</p></details></li></ul><ul id="db054f9f-612a-4746-ac03-3d3fe3e31935" class="toggle"><li><details  =""><summary>La grenouillère (1869)</summary><p id="d8daf9e8-fbed-4a7f-8de1-3fee5d51c6cb" class="">
+</p><figure id="cfb5c259-004f-4dfa-aaf6-cbcd73fc8399" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%202.png"><img style="width:3234px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%202.png"/></a></figure><p id="c42f486b-9400-4b87-8f57-db4f5bce0690" class="">
+</p><p id="caeb3789-07f1-4137-8c9d-7004b1237f30" class="">Luogo di pettegolezzi molto rappresentato dagli artisti, chiamato anche “stagno delle rane” per via dei chiacchiericci che si andavano a creare</p><p id="f9f5132b-7acb-4ace-8d28-bf1d043a097b" class="">La prospettiva si centra sull’isolotto, ma le figure non sono ben definite da essere distinguibili</p><p id="12c64767-7d89-4d15-b2e6-b13787c4117f" class="">
+</p></details></li></ul><ul id="622c4b11-4972-4fa5-b53b-b38f2a92705a" class="toggle"><li><details  =""><summary>Ninfee (1899)</summary><p id="db40d4f0-6f35-4017-b38c-5ab6b5ae058b" class="">
+</p><figure id="a1bd18cb-3d50-437f-90cf-4135ceb79205" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%203.png"><img style="width:818px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%203.png"/></a></figure><p id="b5f0c3d5-b38c-477f-a6e5-d3f561e220e3" class="">
+</p><figure id="2f088ea4-2302-463b-90ad-b0f8e3983e16" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%204.png"><img style="width:650px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%204.png"/></a></figure><p id="b8917d61-6def-4074-bc1c-2edec448c27a" class="">
+</p></details></li></ul><ul id="b7b8b835-ddc7-4837-8949-7b0c6e31d33e" class="toggle"><li><details  =""><summary>Cattedrale di Rouen (1894)</summary><p id="be6696d1-ab11-4c7b-a7ba-4587aba50dad" class="">
+</p><figure id="331cc0d3-168a-45f2-ab8a-93694eb1711c" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%205.png"><img style="width:753px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%205.png"/></a></figure><p id="7c4ebc39-7a1a-45a5-b129-78ca6d30b3fe" class="">
+</p><p id="6fa0d707-d9c4-44be-9971-c3bf42db8e37" class="">Massimo studio nei cambi cromatici delle condizioni metereologiche,  incidenza del sole, temperatura, armonie tonali, ore del giorno.</p><p id="806b32ae-9713-406d-846d-16f404fd65b6" class="">
+</p><p id="d6c4d0de-1f98-4db0-9846-6fa2b2513175" class="">
+</p></details></li></ul><p id="ae5a1962-37f3-42f8-8fd1-4ac1dd10c839" class="">
+</p><p id="0f3c17e7-fe27-4f88-abe5-29149bac4ec2" class=""><strong>MANET</strong></p><p id="f5e742a6-6858-4839-9423-0b2a0ca120dd" class="">Non si sente mai del tutto impressionista, ha elementi in comune ma si distanzia.</p><p id="3613584a-888b-4547-a7ea-9183c15dfe01" class="">Dipinge en plein air ma vuole giungere al rinnovamento della pittura operando all&#x27;interno delle istituzioni accademiche. 
+Lo consideriamo precursore dell’impressionismo.</p><ul id="b57da325-907b-4792-9b7f-b5f28b195e81" class="toggle"><li><details  =""><summary>Colazione sull’erba (1863)</summary><p id="8c9df4e3-1d64-4b56-bcd1-d5bb83baf988" class="">
+</p><figure id="96f81079-0dd5-4254-9eae-327505ce80b0" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%206.png"><img style="width:648px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%206.png"/></a></figure><p id="0107b3d2-617c-4d48-8ea5-8403ae65a077" class="">
+</p><p id="4d5d8141-3dfd-4617-ae8f-27deda558afc" class="">Scandalo scaturito dal nudo sfacciato non attinente a storie mitologiche o religiose. Volgare, rozza, scandalosa.</p><p id="c66cbb3a-d000-4a29-9737-57b95d49530b" class="">E dalla tecnica pittorica perchè non rispetta le tecniche accademiche di chiaroscuro, proporzioni, prospettiva ecc.. </p></details></li></ul><ul id="a02e6ba4-c87c-4923-b524-49f6acc5a9b7" class="toggle"><li><details  =""><summary>Olympia (1863)</summary><p id="ffb6b09c-e572-45b4-95cb-af598340b1a9" class="">
+</p><figure id="34c92a45-3448-43ea-af48-3172b38e7874" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%207.png"><img style="width:650px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%207.png"/></a></figure><p id="3b05966b-7db7-4301-8751-01eaeb797dc0" class="">
+</p><p id="cf768dec-dd8f-460c-b699-ecb3bdb8f2e8" class="">Altro quadro scandaloso per la rappresentazione priva di proporzioni accademiche di una prostituta che guarda verso il fruitore dopo probaiblmente aver visto un cliente.</p></details></li></ul><ul id="9fe8685b-d99d-4b00-bb4b-cdd3a0651ab8" class="toggle"><li><details  =""><summary>Il bar delle Folies-Bergère (1881-82)</summary><p id="95c46bf1-4054-499f-a1a0-2eb93d709e19" class="">
+</p><figure id="7a87ec80-7463-4a81-bad0-9e6f7c1d0b71" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%208.png"><img style="width:656px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%208.png"/></a></figure><p id="b79a808c-4220-4c49-8f1b-6ae1d9ce40b0" class="">
+</p><p id="e7597666-8dfb-44b4-9aab-46818a12896f" class="">Predispone uno specchio alle spalle della barista che dà modo di vedere in controcampo la scena del bar. </p><p id="ebfb6470-6ad0-4f76-9e35-32b351a6ef62" class="">Rifinitura del primo piano (piano marmoreo, bottiglie, frutta)</p><p id="311936a8-23fd-4060-853e-bc849fbbb2ef" class="">Si nota in alto una trapezista.</p></details></li></ul><p id="47887686-9ee2-4416-803b-bf0daefe8b9c" class="">
+</p><p id="c3eda0b7-4ad8-4087-ae82-4105c6c9ec55" class=""><strong>DEGAS</strong></p><p id="390bf3f4-5b35-4c05-a968-e27180bee8d9" class="">Non si etichetta come impressionista ma segue una propria scia autonoma, indipendente: a differenza dei suoi colleghi intenti a rappresentare la luce e l&#x27;atmosfera, vuole immortalare la vitalità dei corpi in movimento</p><p id="d1af9f36-fc68-48f4-a6d1-ad42bb8596cc" class="">Predilige soggetti come ballerine trattati con una certa contemporaneità</p><p id="fe4949c0-e017-4a8b-aba1-1207b6cd9756" class="">Adotta la fotografia per sperimentare all’interno delle proprie composizioni pittoriche nuovi tagli: netti, marcati. </p><p id="f1645c42-de55-40ab-99a3-0a94e2ea8879" class="">Lo studio va oltre la rappresentazione pittorica.</p><ul id="18a229a9-ca90-4623-9d2a-dcae9a598787" class="toggle"><li><details  =""><summary>Classe di danza (1873-75)</summary><p id="ad791a62-412d-48c8-877c-042f2127695c" class="">
+</p><figure id="f04e0c4f-b327-4eac-aa4f-ebe0195ace35" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%209.png"><img style="width:426px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%209.png"/></a></figure><p id="2555ed71-e7e1-4b28-baf0-13c0a4636397" class="">
+</p><p id="7a824213-bac3-48b3-9feb-947b7b460219" class="">Coglie dettagli della realtà particolari nelle pose e abiti.</p><p id="fa9c7ef3-c2ce-4579-9c46-39956f9dc35d" class="">Lo sguardo del fruitore va oltre il quadro grazie allo studio della prospettiva.</p><p id="65696041-94cc-40d0-b3cb-499472d2e5a2" class="">Seppure l’ambiente sia chiuso ci riporta l’esterno con una finestra. Coincidono quindi due aspetti principali, l’interno e lo scorcio esterno.</p><p id="73aaf1e3-5279-46c7-87f2-7b6a98b27500" class="">
+</p></details></li></ul><ul id="993f6049-84d8-4340-b995-ed8367a115ab" class="toggle"><li><details  =""><summary>L’assenzio (1875)</summary><p id="47ffee14-6d78-4a47-ae17-cae2a6b7fd0b" class="">
+</p><figure id="6babe616-70d2-48ea-860c-2e7998381f46" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2010.png"><img style="width:365px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2010.png"/></a></figure><p id="848f17d0-ad27-456d-bc7d-15bacf2a1087" class="">
+</p><p id="b4f61e9d-23c1-4a18-b1fe-7e7270c6d9e4" class="">I tavoli inducono lo spettatore a guardare oltre la tela, fuoriescono dal perimetro dell’opera.</p><p id="179df3d1-0a32-4007-91d4-8c28daa213b1" class="">Pone in risalto i luoghi più amati del tempo, i caffè parigini.</p><p id="150abb3d-ffa8-4040-b299-9a255cd05e9d" class="">L’asenzio è un distillato con alta gradazione alcolica, proibito all’epoca perchè può dare effetti stupefacenti, Degas vuole rappresentarne gli effetti.</p><p id="b3428273-9c1c-4118-8692-3526e49f5cf2" class="">Amici e attori interpretano i personaggi.</p></details></li></ul><ul id="84f71657-3dab-4e6d-beac-d840f8cbcdf8" class="toggle"><li><details  =""><summary>La tinozza (1886)</summary><p id="18c2796d-979f-4364-8443-d237d444f7d4" class="">
+</p><figure id="72364122-fc21-4354-b186-3edb1ac7a696" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2011.png"><img style="width:623px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2011.png"/></a></figure><p id="31e285d1-cb9d-4b03-b345-e35a68d7872e" class="">
+</p><p id="908898a0-5f1e-481d-98e5-2b2192bffa8a" class="">Ritualità della donna nel proprio bagno.</p><p id="b66c7739-9e4b-4d9c-af0a-a71f0f32c4e8" class="">Raffigura con occhio meticoloso i passaggi della toilette di una donna che si lava con una spuga dietro la nuca, anticipa il pettinarsi e l’asciugarsi con spazzola e asciugamano.</p><p id="14cba2fc-33d6-4df3-950c-44e6cda12d52" class="">Tagli particolari identificano le sue opere, oggetti non rappresentati nella loro totalità.</p></details></li></ul><p id="cc431a01-e2ab-488f-8335-0c6c745e567e" class="">
+</p><p id="b9f1ab4c-9343-417a-ba71-282afca5fb80" class=""><strong>RENOIR</strong></p><p id="18339879-6d7a-46d0-950e-b503f7d36382" class="">Si dedica allo studio degli effetti di luce, e predilige la figura umana e il divertimento in determinati contesti di gruppo, compagnia, colta nei momenti di svago: Il pittore della joie de vivre.</p><ul id="4e0f04fb-ea7d-436d-ac10-3870b9796fa4" class="toggle"><li><details  =""><summary>La Grenouillère (1869)</summary><p id="ede6d0ee-58b4-454b-adbf-281f7bdb31a9" class="">
+</p><figure id="400dee82-6d5d-451a-961e-ac120b7bc05b" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2012.png"><img style="width:648px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2012.png"/></a></figure><p id="703094a6-f289-4f0a-af47-1c57746774bb" class="">
+</p><p id="8c76b065-69b0-4b90-bb0d-ba8562dd30fe" class="">Più luminosa della grenouillère cupa di Monet.</p><p id="bb01fc9b-555c-40de-aedb-dcceac6a7f21" class="">Maggior ricchezza nei dettagli della vegetazione, delle figure umane e degli abiti. </p></details></li></ul><ul id="d76bfe84-3504-43d0-bc81-b23028a0bb9b" class="toggle"><li><details  =""><summary>Moulin de la Galette (1876)</summary><p id="54e1245d-a427-4f9b-914f-c0f9c9ff3cb1" class="">
+</p><figure id="d1b17c86-d5b1-4ecf-ab42-8d01738cd4c5" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2013.png"><img style="width:652px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2013.png"/></a></figure><p id="db4069a0-5984-4c08-972f-268fc867e8de" class="">
+</p><p id="d105e175-22b3-477b-b349-cc3a465693ed" class="">Trasmette allegria, spensieratezza, atmosfera leggera di un momento conviviale.</p><p id="dc583114-e801-47f4-b9c8-b19bc24a8c63" class="">Ricercatezza per quanto concerne la luce, la percepiamo filtrata attraverso gli alberi.</p></details></li></ul><ul id="ec8762a1-de87-44c0-b5f1-d1a611313f41" class="toggle"><li><details  =""><summary>Colazione dei canottieri (1881)</summary><p id="20042245-3fbf-417e-af4b-ef25757b6a1a" class="">
+</p><figure id="b568473e-368a-4cf7-a826-a3b502897ed4" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2014.png"><img style="width:646px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2014.png"/></a></figure><p id="8304c86f-1278-4fe4-8d3b-cdd8b72b1f4e" class="">
+</p><p id="ee48dc19-f1b3-4e2c-9b45-9037ad6aaab7" class="">In un villaggio sulla Senna i frequentatori (sportivi di canoa) godono meritato riposo con amici e fanciulle. Condividono un momento di tranquillità di dialogo rappresentato en plein air. </p><p id="6a5b0738-3ef2-4096-8a4b-f96692d9ae18" class="">Ci troviamo in un primo pomeriggio estivo, lo percepiamo dalla luce.</p><p id="8f55354a-5a9c-4f2a-b41d-849df45db933" class="">
+</p></details></li></ul><p id="352c9897-3304-4ef6-a87e-3d3afd2bda3b" class="">
+</p><p id="bb4402a8-5cbd-4ac7-98af-41da2c8181f4" class="">Brevissima citazione su alcuni artisti <span style="border-bottom:0.05em solid">italiani</span> del periodo impressionista 
+(Federico Zandomeneghi, Giovanni Boldini, Giuseppe De Nittis e Medardo Rosso)</p><p id="90be941b-8275-4109-b529-3699a5d2d37b" class="">
+</p><h3 id="73ed60c2-5368-4be3-bbd2-b8a21d627f56" class=""><strong>POST-IMPRESSIONISMO </strong></h3><p id="e34fe067-2e9d-4b2b-b1cd-08af456557a4" class="">Non ha regole, non è un movimento organizzato con punti di connessione tra gli artisti, si riferisce agli artisti successivi agli impressionisti fino le avanguardie.</p><p id="dabf89b2-daae-4680-9f44-635cdc6cc32f" class="">Studi analitici più scientifici della prima impressione.</p><p id="45cadede-dca4-4218-86c1-fe091b014153" class="">Ci avviciniamo alla teoria del colore, il cerchio cromatico di Chevreul è diviso in 72 parti. Vengono definiti i colori primari e secondari, e i colori complementari.</p><p id="e2ca7ea3-2c36-46e6-9cda-8b36f629bae2" class="">L’accostamento di due colori complementari esalta la luminosità dei colori e crea nella retina un terzo colore.</p><ul id="db5012b9-d9ad-45fc-b23e-edd4dec0a5b5" class="toggle"><li><details  =""><summary>Circle Chromatique</summary><figure id="c19c5211-2dc4-48b1-980b-fc6b2710da67" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2015.png"><img style="width:490px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2015.png"/></a></figure></details></li></ul><p id="011035ca-a30b-47e6-9d58-8f3fb2871239" class="">
+</p><p id="7b846a2e-d9b3-4649-947a-27e0e3082d07" class="">1886 a Parigi segna la fine dell’impressionismo - ultima mostra di corrente impressionista a Parigi - viene pubblicato il manifesto del simbolismo</p><p id="ff7e0bc3-1dbb-4678-9b77-46e82b26468a" class="">Rifiuto della sola impressione visiva, immagini meno istantanee</p><p id="5df49bf3-2ebc-45dc-8349-cd8095d21b6b" class="">Tendeza a cercare solidità dell’immagine, sicurezza del contorno e libertà del colore.</p><p id="5ca4f68d-530f-4105-a252-a77fb8f50431" class="">Superamento dell’impressionismo si muove su due direzioni principali:
+1 - visione razionale, strutturata dell’arte (Cézanne, Seurat)</p><p id="da8a08c4-47f1-426c-adeb-2d72fac33b32" class="">2 - visione emozionale (Gauguin, Van Gogh)</p><p id="ecba64c7-17a1-46c4-aeb4-b991b84ccf16" class="">
+</p><p id="d2ebe495-2207-4bae-ab91-392d9912bf1e" class=""><strong>SEURAT</strong></p><p id="303851ae-6892-4613-902a-17eaf158ba36" class="">Puntini, trattini portano a una ricomposizione totale visiva all’interno della retina della scena. Tecnica inventata da Seurat.</p><ul id="d6f8890d-c506-46b7-927c-39a38655d1fe" class="toggle"><li><details  =""><summary>Una domenica pomeriggio all’isola della Grande Jatte (1884-86)</summary><p id="c442192e-ee58-43ad-aadd-41f9c00b1f22" class="">
+</p><figure id="90a93381-3682-4d66-9fbd-96f4fd60d51b" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2016.png"><img style="width:647px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2016.png"/></a></figure><p id="2fa46331-2579-464d-8795-98fa4a26b247" class="">
+</p><p id="239c01eb-2a6a-4bb7-93b6-66bffbc929b1" class="">Ebbe successo perchè esposta durante l’ultima esposizione impressionista.</p><p id="478b7581-6645-42db-9776-8431befbb5e2" class="">Tela di grandi dimensioni, cromie totalmente differenti, all’avvicinarsi si perde la distinzione delle forme.</p><p id="ee5cf576-6d73-428d-9521-0cbcc76a6911" class="">Pomeriggio alla riva della Senna, denota lo studio affrontato sulla base dell’ora del giorno</p></details></li></ul><ul id="4092a564-0bb2-4ee2-a45f-8cfdc5f8eba5" class="toggle"><li><details  =""><summary>Bagno ad Asnières (1833-4)</summary><p id="e41690fe-9dd6-4a56-a5b3-8a0a36a52f3d" class="">
+</p><figure id="d681dc6c-3243-4135-bf7e-bf1bfd9517f0" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2017.png"><img style="width:622px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2017.png"/></a></figure><p id="0b149bba-358b-4493-9f0e-2262374ef42d" class="">
+</p><p id="18a2e352-5779-4bbb-b897-a564ca47174f" class="">Forme semplici, essenziale. Uso del colore: bianco sporco esalta i corpi pallidi.</p><p id="e93750b2-9dea-472e-bbc1-8fd7c8b4735d" class="">Precisa geometria compositiva. </p><p id="80f9a539-15f8-44ad-94ec-b518372989d7" class="">Rigidità delle figure nella composizione nelle forme del corpo.</p></details></li></ul><p id="d4598d65-78cc-431e-80e7-a3684d30cadc" class="">
+</p><p id="c7e0725c-5b9a-46cf-9cad-a54d2106a3ae" class=""><strong>SIGNAC</strong></p><p id="b681693b-b7d4-40fc-b02a-673dd169b392" class="">Usa la tecnica del puntinismo con pennellate più grosse</p><ul id="d9c1c1dd-239b-4630-ab42-29d1ee6503cf" class="toggle"><li><details  =""><summary>Red Buoy, Saint Tropez (1895)</summary><p id="7a836023-9153-415f-acad-b64b1b8f1404" class="">
+</p><figure id="5324acdb-5d3a-4fab-b209-888703a1ddd1" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2018.png"><img style="width:388px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2018.png"/></a></figure><p id="55ee8bd4-9e9d-41e9-84f9-5cd6c17e4a0f" class="">
+</p></details></li></ul><p id="a5439abe-65a3-41e7-b538-cc45d19879c7" class="">
+</p><p id="7b992781-a529-4d21-bd86-d4e903885c2d" class=""><strong>CEZANNE</strong></p><p id="1a30e17c-568e-4b16-8d87-2c4107a59290" class="">Da una prima fase impressionista si dedica a paesaggi caratterizzati da colori cupi, forme vigorose, impasti densi, mancanza di profondità spaziale, respinge la prospettiva perchè è un artificio, a lui interessa la verità strutturale delle cose, la loro essenza geometrica.</p><p id="ce234e9f-10a5-4f7a-b5fb-b4e9edc696d1" class="">Ricerca strutturale e compositiva basata su forme semplificate geometricamente.</p><p id="5132eba5-eb3f-4b85-ac4a-ac01bf61c68f" class="">Soggetti prediletti sono paesaggi e natura morta.</p><ul id="15a0590b-7669-4137-836c-ef81997fab04" class="toggle"><li><details  =""><summary>La casa dell’impiccato (1873)</summary><p id="cb6591f6-bc0a-407b-8359-09586dfd03ed" class="">
+</p><figure id="845d184c-d166-43b8-af4b-8e4adde1afd7" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2019.png"><img style="width:577px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2019.png"/></a></figure><p id="ff724b7d-dc8c-4861-aafe-75de53eaafca" class="">
+</p><p id="6f153f20-7644-47a1-99e0-1d283cc222f6" class="">
+</p></details></li></ul><ul id="f92b826e-2439-4fba-b0c6-c9d2a94449ce" class="toggle"><li><details  =""><summary>Le grandi bagnanti (1899-1906)</summary><p id="2253fea5-09e2-4cf9-a2d5-5ea503af2496" class="">
+</p><figure id="c4abe5d5-0107-4e94-b572-ad1000025d29" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2020.png"><img style="width:594px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2020.png"/></a></figure><p id="87acab5d-8829-4d99-a438-42e688f13c7c" class="">
+</p><p id="ab2729a4-46c0-435a-bf3a-bfa4c8209710" class="">Il disegno è parte determinante delle sue opere.</p><p id="5cb0a95a-e067-4b3f-841b-72428865d692" class="">Le forme devono seguire la natura stessa delle forme, inserite all’interno di sfera, cilindro, cono, il tutto messo in prospettiva.</p><p id="938019aa-8968-42d2-8043-7be8cbf26f5c" class="">Struttura architettonica equilibrata sia cromaticamente sia nel rapporto tra elementi orizzontali e diagonali. I tronchi convergenti sottolineano e incorniciano le figure. </p><p id="6eddf06d-de19-4d5c-b1ac-3831b79f3ae5" class="">Racchiude la struttura plastica della composizione all’interno di un solido, il cono</p><figure id="f9996e13-3efe-4f8e-8d9b-a4337058f610" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2021.png"><img style="width:591px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2021.png"/></a></figure></details></li></ul><ul id="e176a80d-d898-49a7-866a-7511fefdeba8" class="toggle"><li><details  =""><summary>Natura morta (1890)</summary><p id="d89e4336-3caf-40cc-ba11-0c465d1e5012" class="">
+</p><figure id="61713452-ed09-4af3-8acb-cd083f248e99" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2022.png"><img style="width:567px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2022.png"/></a></figure><p id="6afdabb0-3a77-451b-a41c-88ab33c6c63b" class="">
+</p><p id="76f96b2a-39a1-400f-826b-c8d3eda02165" class="">Analisi meticolosa dei volumi e della prospettiva.</p><p id="48a7ce40-fa07-4486-940d-bd24a9abeaf4" class="">Tagli importanti.</p><p id="25c16c20-e5b1-4115-bac3-c8603b05666a" class="">Il soggetto permette id disporre elementi a proprio arbitrio potendo studiare infinite armonie compositive.</p><p id="58891b90-d131-4e3a-8705-3aaedb04ec72" class="">
+</p><p id="3888b44b-4272-4866-8240-f2c205ba0795" class="">
+</p></details></li></ul><ul id="6905f53d-3477-4778-921a-21ef2b8ceb73" class="toggle"><li><details  =""><summary>I giocatori di carte (1892-95)</summary><p id="05232326-cb07-4f2b-9219-7c2ba7d3a2d1" class="">
+</p><figure id="b2db7a21-d64c-42a3-a88c-b73630d2b723" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2023.png"><img style="width:645px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2023.png"/></a></figure><p id="477804a9-5b2f-4970-8e67-79f4fac770c1" class="">
+</p><p id="b14ff788-3eae-43f6-b3d9-995360ff95a1" class="">Due uomini in un’osteria giocano a carte davanti uno specchio.</p><p id="b68f73b0-7889-420e-9843-4509b05945a3" class="">Rappresenta la scena secondo i parametri di forme solide.</p><p id="233540fc-4c50-4d00-813f-e25c5de1517d" class="">I personaggi sono inermi, statici, emergono volumi come calotta sferica e cilindrica dei cappelli, le maniche hanno forma cilindrica, i parallelepipedi del tavolo. </p><p id="7fa0ff0d-d532-4957-96c9-37061ae2a50a" class="">La scelta si ritrova anche nella certa rigidità della tovaglia.</p><p id="927dedfc-526e-492f-8fd8-a6f4ba068c4b" class="">Ripresi elementi cromaticamente: elementi bianchi - colletto, sigaretta, riflesso bottiglia che taglia a metà, in modo squilibrato, la tela.</p><p id="1a1cd844-6202-4086-945f-ad068ed98e7a" class="">
+</p><p id="47edefac-b9fa-4ef8-b2ce-30e09d3c58c7" class="">
+</p></details></li></ul><ul id="289c6aea-f6a3-4d2e-94eb-d6a9fe85ce20" class="toggle"><li><details  =""><summary>La montagna Sainte-Victoire (1902-04)</summary><p id="756278d3-9e70-40e3-8841-b0de898c29dd" class="">
+</p><figure id="3ff87bd9-0f67-4da6-a71a-55dab2f40d6a" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2024.png"><img style="width:612px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2024.png"/></a></figure><p id="a4e0ed00-62ec-411f-ba8e-c922ff946bba" class="">
+</p><p id="c63c5296-d153-4356-a205-321c8d52ebb8" class="">Dipinge un’infinità di volte, scomponendola con strutture e cromaticità diverse, pennellate particolari, questo scorcio a cui è caro perchè osserva fin da bambino.</p><p id="d36a1d09-d16f-425f-9089-0347d3f8055a" class="">I volumi si sommano a una ricerca basata sulla profondità senza una prospettiva geometrica ma un’idea che ci restituisce attraverso l’uso dei colori e delle pennellate, che comunicano volumetria, plasticità, solidità.</p><p id="d4582d3f-dc19-49ff-9ec3-5c60c99b8eef" class="">
+</p><p id="d59d1795-cf24-4266-a6e0-491769ae18b3" class="">
+</p><p id="8d85a1e3-5397-4436-a986-dd763fd420a9" class="">
+</p><p id="7f9b3159-3991-4990-aead-a18aa178dad5" class="">
+</p></details></li></ul><p id="b1910821-4f68-4b22-92ea-31edda7402f1" class="">
+</p><p id="1322c53d-399b-467b-a930-e87869e9636e" class=""><strong>VAN GOGH</strong></p><p id="95d3a8ca-b222-499f-8483-b7fb1caf7c68" class="">Aspetto emotivo, sentimentale, sensibile.</p><p id="504ce6f5-efff-459c-9c37-f769785c6204" class="">Fa riferimento alla propria vita e al proprio passato.</p><p id="ebe32e4f-e5a6-4b20-ae9d-6f84c8b7fa3e" class="">Da colori cupi e scenari usuali (villaggi, contadini) → Conosce colori brillanti dei protagonisti dell’impressionismo.</p><p id="6e9f2954-2d24-4ce1-ade7-e899ba6a698b" class="">Problemi psichici: crisi nervose - interiorità traspare nelle rappresentazioni.</p><p id="5908a598-4ed0-451a-83eb-4abcfdd23f91" class="">Rapporto importante con Gauguin.</p><ul id="03d7d233-f121-4cf0-a1eb-82f95fdb3dee" class="toggle"><li><details  =""><summary>La camera da letto (1888)</summary><p id="39fdaff0-6e4d-413d-b164-b3e8a2bae82d" class="">
+</p><figure id="10d35ce0-789d-4083-b963-ee022e6ebdb6" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2025.png"><img style="width:644px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2025.png"/></a></figure><p id="b69d5b13-a146-4858-aa56-b3b4313dfac2" class="">
+</p><p id="d8469c6a-38a8-4e4e-88ef-55e8dba1b850" class="">Una delle fasi più felici della sua vita.</p><p id="7aea2f64-9687-4c99-8769-a750eedf2ab1" class="">Lunghe pennellate</p><p id="e5bb9a20-e5f4-42d6-af32-7c6793ddfc86" class="">Caratteristiche cromatiche molto forti, colori saturati, accentuati.</p><p id="43704329-2e88-496c-81b8-37e14fb8317f" class="">Prende ispirazione da stampe giapponesi: assenza di ombre, la luce schiaccia gli elementi rappresentati. </p><p id="81d3401c-e01d-4eea-9ab4-1e67c5f1d2f1" class="">Uso personale della prospettiva. Non rispecchia le regole della rappresentazione prospettica e proporzionalità, vi sono dimensioni varie. L’osservatore entra all’interno del suo mondo, un luogo interiore che mette inquietitudine, rispecchia la visione tormentata.</p></details></li></ul><ul id="f8a715da-376e-4338-a10f-5890ed8ac41c" class="toggle"><li><details  =""><summary>Notte stellata (1889)</summary><p id="565a2dad-c6b0-41fe-b822-c43e5051ddea" class="">
+</p><figure id="d85edfa7-920b-4e89-a531-f97aa1ea77e3" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2026.png"><img style="width:653px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2026.png"/></a></figure><p id="fe191ada-2354-4549-b131-3e67f974f436" class="">
+</p><p id="4f397df8-be33-432d-82e3-3782cc22946b" class="">Realizzata dopo una crisi nervosa.</p><p id="c181a7e0-2129-4dd8-8423-9cc65ea526ed" class="">Linee tormentate, contorte, vibrano nel cielo.</p><p id="093af88e-0002-4d38-8142-4403368955d0" class="">Colori che si mischiano tra loro in un ritmo incessante, sia nel cielo che nel cipresso.</p><p id="1f48b874-6746-4234-9502-d81b71aeb204" class="">Riflessione di un animo combattuto, tormentato, inquietante.</p><p id="56a48f70-70b9-464c-92eb-674d56ae4636" class="">Collina taglia in maniera obliqua la tela occupata dal cielo. 
+Il soggetto principale è il cielo, le stelle.</p><p id="a7292feb-2641-423b-8834-94062cd54e78" class="">Sorgente luminosa è la luna aranciata che illumina il cielo stellato, sottotono speranzoso.</p></details></li></ul><ul id="95cf7267-d497-4f7a-94d6-9c1082f74d72" class="toggle"><li><details  =""><summary>Girasoli (1888)</summary><p id="a5dc7481-e1bd-4358-b846-bd8793d33a5c" class="">
+</p><figure id="ea9d129a-070a-49d1-acc2-4f8318669ee8" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2027.png"><img style="width:375px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2027.png"/></a></figure><p id="f5a58cd7-6f01-4f23-a63e-598c08396327" class="">
+</p><p id="3011813a-88d5-4a6e-a864-4d2185154c40" class="">Li rappresenta sia in fiore che in un bocciolo appassito, varie fasi della vita. Attaccamento cicli di vita e morte.</p><p id="c4ed9696-03f4-4ccc-8f61-54eb0d348826" class="">Il girasole ruota verso il sole - dedizione alla luce alla vitalità </p></details></li></ul><p id="309f2ddc-a54b-46d2-ae6c-cfcb1a8f5ff5" class="">
+</p><p id="b9da7d19-a729-4f5a-a23b-b9e244e6d026" class="">
+</p><p id="eaa48849-f415-4f2f-9323-474fe1f58a8a" class=""><strong>GAUGUIN</strong></p><p id="d776ec04-6599-4f08-9a21-f7429610f899" class="">Desiderio di libertà, evasione, verso una vita più semplice, ad uno stato più “primitivo” . Ricerca di paesaggi idilliaci, suggestivi, tropicali.</p><ul id="cd98d7e0-2fd1-4ce9-9f11-c08f7a5aaf29" class="toggle"><li><details  =""><summary>Fase polinesiana (1891-2)</summary><p id="ce1429d9-2cb4-4b03-9a49-5964aad2528c" class="">
+</p><figure id="7ac37d8f-f37d-4690-a87c-5363644b65d6" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2028.png"><img style="width:677px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2028.png"/></a></figure><p id="f74efbef-1d4d-4127-bbd5-f2d4b2654ebb" class="">
+</p><p id="02eaee28-d030-405c-92e5-d7eb7be65432" class="">Interessato alla trasposizione dei colori, libertà di rappresentazione del colore. Il colore non è legato all’oggetto. </p><p id="160f909d-b729-42d0-9fa2-d1d19966a06c" class="">Trasferisce lo stato emotivo elevato nella ricerca di un paradiso terrestre, l’essenza pura, primitiva, territorio non contaminato. </p></details></li></ul><ul id="76720afb-4b21-4aec-bb8f-cda844bc63b2" class="toggle"><li><details  =""><summary>Da dove veniamo? Chi siamo? Dove andiamo? (1897-8)</summary><p id="cb74b5e8-65e1-4140-b127-3d4157dce753" class="">
+</p><figure id="b5596280-90ef-441f-9090-36331fb5fd07" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2029.png"><img style="width:858px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2029.png"/></a></figure><p id="2aab33a6-3849-45f3-948f-110b1b4d6de3" class="">
+</p><p id="316bda59-5bb7-45aa-9a8b-decab83f3438" class="">Sviluppo orizzontale da destra a sinistra che rappresenta le fasi della vita: Nascita, Eva che coglie un frutto nel paesaggio suggestivo, Morte.</p></details></li></ul><p id="bde6d881-f4b5-4a93-b8f6-01130ac9ce45" class="">
+</p><p id="7cbd1dde-a858-4da1-aee8-592ae5d5daff" class=""><strong>TOULOUSE-LAUTREC</strong></p><p id="e5fbb277-7d87-4507-9745-b21a65c1a5a6" class="">Dipinge la Belle Epoque</p><p id="5a3f272b-29d0-4ada-943c-825b96cd3a09" class="">Illustra diversi manifesti.</p><p id="e9bb2950-601f-4451-be53-d97580111f05" class="">Nasce con grave malformazione ossea.</p><p id="7371025e-5762-4356-bb21-77f0a7e59809" class="">Dipinge l’allegria dei quartieri parigini, scene tipiche di luoghi tipici del periodo.</p><ul id="7ef1baf1-e32f-4751-85ee-137e72b1b5ca" class="toggle"><li><details  =""><summary>Au Moulin Rouge (1892-93)</summary><p id="f6a56fce-7a29-4730-a42a-0d6f2669db95" class="">
+</p><figure id="a830fc33-8394-48f3-8995-be7478428919" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2030.png"><img style="width:557px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2030.png"/></a></figure><p id="160f5d4d-fb69-413b-a1a2-77e7287524e8" class="">
+</p><p id="342b71fc-3a88-421b-b2cf-6c8ebf0541d3" class="">Tagli drastici della scena.</p><p id="5760401b-85ad-41cf-8d1b-76876a13e13d" class="">Uso del colore enfatizzato.</p><p id="907102e2-3898-476b-8932-1c89801a3894" class="">Inserisce un proprio autoritratto all’interno del quadro.</p></details></li></ul><ul id="a2311882-fd46-4921-b1f0-1cb52720aa18" class="toggle"><li><details  =""><summary>Au Salon de la rue des Moulins (1894)</summary><p id="c467c6f1-cf6d-472d-bc37-52c30863b06f" class="">
+</p><figure id="b1346fbf-6fb6-4eff-8e6f-0283885d6449" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2031.png"><img style="width:485px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2031.png"/></a></figure><p id="ba9c672d-308b-4155-9000-46698724a40f" class="">
+</p><p id="d69af763-4a9a-4cb3-b03c-89fa43fd8ba7" class="">Rappresenta un bordello: ambiente provocatorio, malizioso, ma le donne sono vestite e non mostrano alcun tipo di seduzione</p></details></li></ul><p id="dd2dbc13-dc5b-4c52-9905-e30e34877bd3" class="">
+</p><p id="c5a0c2dd-52a5-44bd-bc39-8c5dd6f9bec8" class="">
+</p><p id="b44c05bd-9e08-4cb8-8445-2f4272651135" class=""><strong>ROUSSEAU</strong></p><p id="7633b5f8-85dd-4191-aed9-cc251dc83141" class="">Si rifà a una pittura spontanea, ingenua. Non si lascia influenzare dai dibattici culturali ed estetici del periodo.</p><ul id="d287f9ea-81ae-4b8a-a925-aa27ec125135" class="toggle"><li><details  =""><summary>Il sogno (1910) / La Guerra (1894)</summary><p id="13a619a1-a08e-4636-98db-255c247530c8" class="">
+</p><figure id="fe4fb852-cb43-4a9f-983e-ba472b262057" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2032.png"><img style="width:875px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2032.png"/></a></figure><p id="7d4d7b77-5d5e-4981-8a31-b13501a04d91" class="">
+</p><p id="3cf24691-a013-4656-80a3-5c78fe8957ba" class="">Si focalizza sulla vegetazione, riempie quasi totalmente la superficie togliendo spazio al cielo.</p><p id="31712f80-7652-4cc7-90dd-a5ebb8d103cf" class="">Si mimetizzano degli animali. </p><p id="a34dad4f-40ed-4b8d-8936-b4b88a482992" class="">Mette a frutto una ricerca che rivediamo nella pittura metafisica.</p><p id="d67b8035-148e-47fd-985e-7a4b9fe737c2" class="">Visione allucinata, trasferisce visioni spiazzanti, magiche sulla tela.</p></details></li></ul><p id="b859a62c-6e05-44b8-9c2c-ff62c0d2eec5" class="">
+</p><p id="fa4a3723-71ca-4429-8067-803f280cdab9" class="">Il manifesto del simbolismo definisce le poetiche del movimento. Nasce come movimento prettamente letterario e artistico e rifiuta con decisione l’impressionismo, la nitidezza accademica.</p><p id="2d088e56-1d72-4687-8f4a-ff6de660b396" class="">Si affaccia verso una ricerca di un modo di approcciarsi fantastico, idilliaco, spiriturale, mistico...</p><p id="fa968d5c-6da5-4dbb-ba2f-029b09a9930e" class="">Prende più ispirazione dal romanticismo. (Fussli, Blake)</p><p id="c77ba343-8806-4718-ad25-8f1958bd7a4d" class="">Ci si concentra su sogni, immagini bibliche, letterarie, miti, personaggi del medioevo, è un palese richiamo del passato.</p><p id="897dcbd8-3570-472a-9a1f-560925ac0846" class="">
+</p><ul id="405edd26-8365-4fe4-809f-91b6e16766b4" class="toggle"><li><details  =""><summary>Preraffelliti - metà 800 in Gran Bretagna</summary><p id="8c21f41d-fe83-40e6-a312-272e06fba672" class="">
+</p><figure id="c501d0d7-dad0-4470-b3e3-13b8ced82b58" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2033.png"><img style="width:767px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2033.png"/></a></figure><p id="d137b0ec-7e5f-49d0-9f86-3121d9b09c4f" class="">Rappresentazioni della donna dipresi dal dolce stil novo, classicheggianti, prerinascimentali, purezza, eleganza.</p><p id="38b837cf-fe91-494a-9152-79aac0e4bfdd" class="">Ofelia che si lascia annegare nel fiume.</p></details></li></ul><ul id="87483661-213a-43d5-9377-ef280e4a5099" class="toggle"><li><details  =""><summary>Pellizza da Volpedo</summary><p id="714d03cb-2ddc-44f1-a75d-00f2ab65cbce" class="">
+</p><figure id="b537b73d-e106-4b24-8551-fb381caa65b2" class="image"><a href="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2034.png"><img style="width:874px" src="Impressionismo%20e%20Post-impressionismo%20a210015391f44a2d9aa117e964c6db34/Untitled%2034.png"/></a></figure><p id="543c7105-82f8-45c5-8d95-f305be403d2f" class="">
+</p><p id="1ad874da-d39e-49f3-a388-76c0fce8ee1a" class="">Vicino a temi sociali.</p><p id="4cdedc02-69a9-40d6-9f8f-272196678be4" class="">Classe sociale (lavoratori) che marcia in modo solidale verso lo spettatore. </p><p id="6587d0b7-0f85-4902-b59c-6e48f7edf65d" class="">Tra le due rappresentazioni notiamo divergenze stilistiche:
+- In Fiumana non distinguiamo i personaggi sullo sfondo rispetto alle tre sagome principali.
+- La luce illumina maggiormente i dettagli, più rifiniti rispetto la prima stesura.</p></details></li></ul><p id="d3840adb-e3d9-4027-9f1d-8e3fd3fdcd09" class="">
+</p></div></article></body></html>

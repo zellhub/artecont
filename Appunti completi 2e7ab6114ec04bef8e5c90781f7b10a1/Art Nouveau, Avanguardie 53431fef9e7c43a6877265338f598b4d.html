@@ -1,0 +1,875 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Art Nouveau, Avanguardie</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="53431fef-9e7c-43a6-8772-65338f598b4d" class="page sans"><header><h1 class="page-title">Art Nouveau, Avanguardie</h1></header><div class="page-body"><h3 id="bbddeb6c-86e5-4d85-b5e2-d131b9d570c9" class=""><strong>Belle Epoque (seconda metà del’800)</strong></h3><ul id="c831d7ce-5bc6-4258-a46c-0f07c3272e7f" class="bulleted-list"><li style="list-style-type:disc">Espansione capitalista che interessa piccola e media borghesia</li></ul><ul id="dd26be82-78a3-4bfa-ad7b-98b500d68f02" class="bulleted-list"><li style="list-style-type:disc">Capitali europee brillano metaforicamente e letteralmente (elettricità)</li></ul><ul id="76121966-4234-418b-8cf4-6f0100277cec" class="bulleted-list"><li style="list-style-type:disc">Industrializzazione porta le campagne a spopolarsi e nell’artigianato a essere sostituita la manodopera con le macchine → Contadini costretti ad abbandonare i propri territori e le proprie identità</li></ul><ul id="e4d2fa74-e665-4911-9d7b-2b03ef016123" class="bulleted-list"><li style="list-style-type:disc">I prodotti perdono di originalità/unicità che solo l’artigiano poteva dare</li></ul><ul id="2b583241-abaa-484d-a3bb-d48966d174a2" class="bulleted-list"><li style="list-style-type:disc">William Morris per primo si occupa delle arti decorative: produce tappezzeria, ricami, carta da parati, decorazioni per l’interno ecc..<ul id="837c4d34-229e-47c9-b6a8-eea185fb74d1" class="bulleted-list"><li style="list-style-type:circle">La fantasia è un chiaro rimano all’oriente, il pattern è floreale, quasi arabesco</li></ul><p id="70700928-64dc-42ba-aa46-2dbc01c8d58e" class="">
+</p></li></ul><p id="cfe12771-9d1a-4bb7-aea6-ed64b326263b" class="">
+</p><div id="e7302905-4c50-4e85-96cc-538465d5045e" class="column-list"><div id="1e8c6394-f1eb-46cd-9087-a74e58a64e16" style="width:50%" class="column"><figure id="e36c814b-26e6-476c-a139-7cba55974131" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled.png"><img style="width:528px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled.png"/></a></figure></div><div id="abdae8c1-1841-427d-8081-8a98f54024b4" style="width:50%" class="column"><figure id="f31a7659-8909-4052-bde0-9935b3eeff5d" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%201.png"><img style="width:432px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%201.png"/></a></figure><p id="6e51b802-025b-4ab7-b66b-b16cd2b2287e" class="">aspetti principali del movimento</p><p id="eb02df8b-c032-4f26-84db-70dbe644144f" class="">
+</p></div></div><div id="27ac54ce-1c0b-409d-bc96-6879d9e0af5f" class="column-list"><div id="2f3421ac-d587-4663-a818-43c9bcec2b1b" style="width:50%" class="column"><figure id="76c9a1dc-043e-4bfb-857e-3566fcd96bba" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%202.png"><img style="width:624px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%202.png"/></a></figure><p id="2c5d77c7-3538-4b12-8afe-34bcf35509e8" class="">esempi di stoffe, gioielli e arredamento</p></div><div id="86e6745f-3912-4e1d-aee5-cd4f9642fb55" style="width:50%" class="column"><figure id="e95118ec-e692-4602-8c22-231dcd5e931a" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%203.png"><img style="width:620px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%203.png"/></a></figure><p id="ade1374a-1df7-40e0-bd4a-84c9990178bb" class="">esempi nell’illustrazione e architettura</p><p id="3f52e4c1-b93d-489a-a4c9-ff5f2e623025" class="">
+</p></div></div><p id="78325218-3627-44fb-abe5-051984dceeb7" class="">
+</p><h3 id="ffaae726-8fdc-4e5e-9c53-650d35b616ec" class=""><strong>La Secessione Viennese</strong></h3><p id="3fee8b67-a8ef-4fba-ada3-c781a50c833f" class="">Rivista <span style="border-bottom:0.05em solid">Versacrum</span> - rivista ufficiale della secessione viennese</p><p id="2f0dae72-448c-4164-abc9-f655f36ffe90" class="">Ampio sviluppo dell’editoria e della cartellonistica pubblicitaria;</p><p id="83b7d631-1a17-4bdc-a93c-983057f9625b" class="">Nel primo  numero viene pubblicato  parte del programma ufficiale del gruppo di studenti, una sorta di dichiarazione di intenti</p><p id="c8f0790d-63e1-41da-a509-8c28b2ba52e7" class="">
+</p><p id="dd8ff55b-cf14-425d-8bd0-b5ab24e55bdd" class=""><strong>KLIMT</strong></p><p id="24ce86c8-2352-4692-a667-3d76833bb604" class="">visione idilliaca, simbolica della realtà</p><p id="a6682d5e-32c6-442b-9ad8-806618028e0d" class="">linea elegante, sinuosa, bidimensionalità delle forme</p><p id="78921f3c-3a68-4838-84b0-120194c54535" class="">cromatismo ricco e prezioso (uso dell’oro) chiaro riferimento a influenze bizantine</p><p id="a02e99da-9d25-412f-8636-43e3ff473459" class="">soggetto della donna: si lega alla sinuosità e all’eleganza, bellezza.</p><p id="e648e24d-5523-465a-8466-4c4c582c13c8" class="">Sviluppa pian piano una maggior cura e dettaglio delle forme e degli abiti
+(Il costume è lo specchio della società)</p><p id="f9b20a41-078d-4655-8441-fb19271b43fc" class="">
+</p><ul id="401f72ee-2400-43bb-bbb2-96f46952ee69" class="toggle"><li><details =""><summary>Giuditta, Giuditta II (1901 / 1909)</summary><p id="6fd54d98-8f2b-41c1-9258-7bae04e368bf" class="">
+</p><figure id="0d0d297f-8528-4c9f-a58b-5db6b03151f9" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%204.png"><img style="width:175px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%204.png"/></a></figure><p id="ca058c65-573b-4835-8a75-24da1939379a" class="">
+</p><p id="2dda6e5a-d39b-4a95-ae72-8ee1d184f68b" class="">Nudità non palesata in maniera volgare o pornografica</p><p id="7304ead1-99b5-4b95-b6f6-1f98cbf2091d" class="">Corpo morbido, forme non accentuate in maniera netta</p><p id="1791f519-b748-4e8f-ac32-7d3cc462bb50" class="">Un seno è intravisto attraverso la trasparenza dell’abito</p><p id="a23b23c2-6c1d-4f8a-a171-3011010bc7c1" class="">Eroina ritratta vittoriosa con sguardo fiero mentre tiene la testa di Oloferne</p></details></li></ul><ul id="adf5b2c7-9217-43e8-b680-5b908069f75e" class="toggle"><li><details =""><summary>Il Bacio (1907)</summary><p id="bb605cce-df1a-454f-ac8f-ec70a7d64f3e" class="">
+</p><figure id="fd991a00-fdce-4b9d-8809-7ac313f55f88" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%205.png"><img style="width:340px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%205.png"/></a></figure><p id="b4342eb6-7f6c-4c09-9562-e34e6ad8d7d6" class="">
+</p><p id="ce65534c-8b1c-49e7-b724-63a56d9585dd" class="">Uso della pigmentazione dorata, tela sovraccaricata di tinte dorate</p><p id="c567eeea-fb15-4e2e-8921-0b2a8deca589" class="">Bacio non sdolcinato, quasi irriconoscibile</p><p id="89de601b-533e-4ff4-9d84-7fb9b6c29dd8" class="">Lei inginocchiata su prato riccamente fiorito mentre lui si china per baciarla sulla guancia</p><p id="cbfcdd4e-cd64-41d6-910e-beac38b0291d" class="">Attenzione agli abiti</p></details></li></ul><p id="756dff39-ab92-4055-88fe-cb09a4c05099" class="">
+</p><h3 id="0c3dc9db-ec76-4655-9646-e661e6b38870" class=""><strong>Avanguardie storiche</strong></h3><p id="ec45d81d-7d79-4a75-a8b4-f91e6566b9b5" class="">La prima parte del 900 è contraddistinta da grandi cambiamenti storici e culturali: gli eventi bellici portano al crollo di ogni certezza ed ideologia</p><p id="65425a89-fe9e-4a09-9286-94f52cadd65a" class="">Nel primo ventennio del 900 emergono le avanguardie storiche: comune intento, abbandonare la tradizione del passato per cercare qualcosa di nuovo, andare oltre, confrontarsi con il presente attuale</p><p id="cc449e6d-28b6-41d0-b28c-6b756983671d" class="">Gli artisti cercano maggiore libertà di espressione, creativa e di linguaggio visivo</p><hr id="d5f6d9d0-c901-4e18-9d61-d15ade71f5fe"/><p id="b09dd005-5eeb-4574-9239-9e5fac86a7e8" class="">Le avanguardie sono espressioni per indicare tutti i movimenti sorti nel primo Novecento caratterizzati dal desiderio di modernità e superamento della tradizione</p><p id="ff322ab9-b1ed-4a3b-96af-569b0b7f8986" class="">Il nome deriva dal gergo militare: Avant-garde, reparto dell’esercito che precede le truppe per aprire loro un varco</p><p id="17a2cad0-6134-4ae4-9132-a2fa53f1b939" class="">Le avanguardie storiche si pongono in avanti rispetto al panorama artistico, alla ricerca di una nuova concezione dell’arte</p><p id="026e434e-6ba3-4fb0-bbc2-ea6308ff6380" class="">Vengono definite avanguardie storiche solo i movimenti nati nei primi <strong>trent’anni </strong>del Novecento</p><p id="e64c4ea5-8ccd-40d6-9800-1dfa4482743c" class="">
+</p><p id="facf7bd7-8640-46a6-aab4-3037a151a49b" class="">
+</p><h3 id="eca2d58c-66e8-4d3b-a07e-e3b018788739" class=""><strong>Espressionismo (1905-1925)</strong></h3><p id="8c614f14-62da-4c53-9386-8fbfdcdd13a5" class="">L’artista proietta sulla tela il suo sentire interiore, esternare, dall’interno all’esterno.</p><p id="290144bb-0a86-4e16-a20b-b470f5feb001" class="">Esprime il sentimento individuale dell’artista. L’artista, i suoi stati d’animo, e il suo vissuto sono il focus. </p><p id="f5bd99e4-029a-4361-b9e1-a49f1bbbd267" class="">Viene messa in discussione la rappresentazione oggettiva della realtà </p><p id="01fc9db3-2f82-4edd-a9d9-ba79f2b994b0" class=""><span style="border-bottom:0.05em solid">Punti fondamentali:</span></p><ul id="91c59498-ed0b-4825-ba97-509dec164488" class="bulleted-list"><li style="list-style-type:disc">Ritorno ai primitivi</li></ul><ul id="2df561d8-cbdc-4a1e-a707-fcce613d5ba0" class="bulleted-list"><li style="list-style-type:disc">Valorizzazione dell’arte popolare folkloristica</li></ul><ul id="132ed88f-4486-4337-b4c6-7ca3e60d54f5" class="bulleted-list"><li style="list-style-type:disc">Liberazione della forza del colore</li></ul><ul id="4ecbc9ca-84dd-42ff-a308-f4ee37d17353" class="bulleted-list"><li style="list-style-type:disc">Distorsione ed esagerazione dei tratti figurativi</li></ul><ul id="191614ca-f4c0-4787-ba3f-e431d13c2bd1" class="bulleted-list"><li style="list-style-type:disc">Eliminazione del’illuminismo prospettico</li></ul><p id="930ab242-8717-4572-b512-c4b612e35a74" class="">
+</p><p id="14f438c8-524e-402b-902c-413830e88492" class=""><strong>MUNCH</strong></p><p id="d1602c5a-22b9-4599-919e-ad2b908d1a5a" class="">Conflitto interno molto presente, i conflitti psicologici vissuti fin dall’infanzia li rivive nelle sue opere</p><p id="155983a7-50f2-4ea3-99b2-7fd179d28f29" class="">Fin dall’infanzia è a contatto ocn malattia, morte, dolore</p><p id="12b13a4f-d269-4b7f-b446-9971f5dc9da8" class="">(Perde la madre e la sorella a causa di malattie)</p><p id="93c00d31-eef7-43ce-a09b-706853c8457d" class="">I lutti, i drammi e i dolore si ripresentano attraverso lo stile.</p><p id="d240915c-defa-4764-b45c-3cd255f7f05c" class="">Il dramma dell’esistenza dell’uomo è il focus della sua arte.</p><p id="b8b1c073-be99-4b16-b8b6-dd69073db7bb" class="">Si focalizza sugli aspetti dolorosi della vita, tutto ciò che di negativo circonda l’uomo: paure, ossessioni, dolori.</p><p id="5b11f7c0-dc96-4623-83fe-971b2f8391dc" class="">
+</p><ul id="bfb72fb3-4811-4156-931d-3276226c107d" class="toggle"><li><details =""><summary>L’urlo (1893)</summary><p id="c78cfd9f-f8b0-4cb5-9f90-53ad80b2b7cf" class="">
+</p><figure id="78f0decf-f8db-4172-8415-3eb2cb106747" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%206.png"><img style="width:277px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%206.png"/></a></figure><p id="86b4140a-7d4b-4d37-bda7-6afa3e44ec84" class="">
+</p><p id="f0fc7707-2f1e-42f1-bcb6-2ab768e1d825" class="">Urlo di disperazione primordiale, angosciante, uomo d’innanzi a un complesso angoscioso a cui far fronte.</p><p id="c9182077-0202-493b-a9af-7526486c840d" class="">La voce incessante parte dall’interno dell’artista emerge attraverso un urlo simbolico, richiama il contesto interiore che sfocia nel raffigurato.</p><p id="a871e855-077c-4663-9cca-f4a9d1fb1166" class="">Il vissuto interno si manifesta venendo espresso sulla tela.</p><p id="70c760b0-a730-461a-bb59-196a5000d168" class="">La prospettiva del ponte taglia in maniera netta in obliquo la tela. </p><p id="1704ea60-3707-4a5a-8888-3c02597616b6" class="">Passeggiando sul ponte assieme a degli amici vive questa sensazione, una sorta di allucinazione.</p><p id="b6f733c8-6b43-437e-b463-bde7d11f7f2a" class="">Cieli rosso-sangue, linee curvilinee violente che manifestano lo stato d’animo dell’artista. Il tratto è fermo e deciso, austero, il colore è violento.</p><p id="241ad783-f142-434a-bc28-22f497b99527" class="">Chiara associazione di colori compelmentari. Accostamento di colori caldi e freddi.</p><p id="d0c7d6ba-a369-45fe-942a-d266db082aa8" class=""><em>“Camminavo lungo una strada con due amici. Il sole tramontava, il cielo si è improvvisamente mutato in sangue e io ho sentit la natura lanciare un grido immenso” - </em>riferimento riportato da Munch nelle proprie annotazioni.</p></details></li></ul><ul id="8b70a4ce-7a1e-4c94-88ec-756f44939652" class="toggle"><li><details =""><summary>Pubertà (1894)</summary><p id="1809a736-dddc-4334-80e7-18dbefaf0874" class="">
+</p><figure id="dbc8059c-e006-4257-88fb-37009d949097" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%207.png"><img style="width:252px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%207.png"/></a></figure><p id="c75840c7-b476-48c6-871b-b34420c85ed8" class="">
+</p><p id="819babf4-17bf-4b9d-86c1-5d550ba9736a" class="">Cambiamento del proprio corpo, intimità, consapevolezza.</p><p id="4ac25df1-e193-403b-a550-a8a983947bfd" class="">Si entra nella prospettiva di età adulta, lo sguardo è proiettato alla morte.</p><p id="c72389a8-3bcb-4bfb-a9bd-07d36c14ffe4" class="">Lo sguardo è assorto, manca di espressività. </p><p id="7b319a39-bcca-4de2-b4d1-6a68a6bacc57" class="">Messaggio di paura, inquietudine. </p><p id="a00f9640-86d7-428c-a6c3-3f17f61dd592" class="">La composizione è semplice, l’ambiente è arido, spoglio, squallido. </p><p id="bf9605bf-5036-4c76-975f-4a08221688c3" class="">A trasmettere il senso di inquietudine è l’alone/ombra alle sue spalle, una sorta di presagio. </p></details></li></ul><ul id="2751df65-2b55-46f3-96c7-70de6428b230" class="toggle"><li><details =""><summary>I drammi esistenziali fanno da sfondo in tutte le opere di Munch</summary><figure id="f176d8f9-6883-4d69-a925-f9eace6751ab" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%208.png"><img style="width:365px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%208.png"/></a></figure><p id="957a381c-d720-4f3c-881e-14751d0f1bf4" class="">
+</p></details></li></ul><p id="b5470f03-5eab-4eda-b5be-b395b7666927" class="">
+</p><h3 id="b5e737d4-894e-4c06-b6e2-5aac9f1f7a3e" class=""><strong>I Fauves</strong></h3><p id="0d1e2d8e-e7e6-4326-baf7-955c3430af8f" class="">Nel 1905 a Parigi si tiene il Salon d’Autumne che raccoglie opere di vari artisti.</p><p id="e5a38ad4-21b4-4834-9be7-dae3efbb354a" class="">Nelle opere si contraddistingue l’uso del colore gioioso, vivace, sgargiante, provocatorio, contrasti violenti. L’impatto visivo viene accostato al lanciare un barattolo di vernice in faccia al pubblico.</p><p id="ebd6b81f-31f2-452b-9992-f09f208dc7f3" class="">I soggetti sono interni, scorci di paesaggi, ritratti, figure umane, vedute di città e marine...</p><p id="5f7b278a-cc5a-4ec2-9512-f591cde0758b" class="">Desiderio di esprimere sulal tela le emozioni usando la forza visiva del colore.</p><p id="1a47567b-39ce-4efa-9db3-eba2eae94faa" class="">“<em>Donatello chez les fauves” (Donatello tra le belve)</em>
+In questa lapidaria affermazione, nel 1905 il famoso critico d’arte Louis Vauxcelles condensava tutto il suo sgomento e il suo disprezzo per quella corrente espressionista, che proprio grazie a lui passerà alla storia proprio con il nome di “Fauvismo”.</p><p id="e3c1bd65-26e5-4246-b89c-aa0580fa09c4" class="">
+</p><p id="9350115a-6257-4449-8ec2-69c674c55886" class=""><strong>MATISSE</strong></p><p id="a13b5d1f-2c3c-4342-9a76-6edb711b6c3b" class="">Sintesi della forma, attenzione alla composizione.</p><p id="71bf4c86-fd93-459d-8bca-555f4032a727" class="">Stesura del colore si rifà al puntinismo (tecnica visionistica di Signac)</p><p id="7ae6f005-8d11-4ff1-8723-0ba1d39d62a9" class="">Si avvicina a tematiche già viste: le bagnanti, ritratti...</p><p id="8766ec49-4701-476a-841e-d62c1641b7eb" class="">Con alcuni viaggi che fece in Africa si avvicina all’arte primitiva.</p><p id="19b61e44-5800-49da-a5d0-f97f5348eefc" class="">Stilizzazione compositiva, semplificazione formale, sintesi visiva.</p><ul id="0b09072f-b58c-4b0f-8483-785d37d108a9" class="toggle"><li><details =""><summary>Ritratto con la riga verde, Donna col cappello (1905)</summary><p id="c0936ba8-5030-4fd9-a34d-d258eed5c1f9" class="">
+</p><figure id="869c1d8f-7f62-43a4-bec1-311433dbe0e0" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%209.png"><img style="width:471px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%209.png"/></a></figure><p id="d9508c66-4317-425c-9eed-9e9a2879b4e4" class="">
+</p></details></li></ul><ul id="b9c0d673-d765-4174-9637-5cbb6cf28b44" class="toggle"><li><details =""><summary>La Danza (1909-10)</summary><p id="8e16162d-4dc7-48e3-9977-80866654c926" class="">
+</p><figure id="47e20a03-0666-4d04-b1bd-b85cc7b509cb" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2010.png"><img style="width:474px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2010.png"/></a></figure><p id="20f94dc2-725f-437b-8dc8-b41378c0c799" class="">
+</p><p id="897627e4-c37e-4fb6-aec2-0790f702180b" class="">Girotondo di figure nude che danzano.</p><p id="9ec914ad-52a1-4a41-824b-96bb152e28d3" class="">Si evince una composizione circolare costretta a rientrare nei bordi della tela.</p><p id="f05ca1d9-d11f-40b3-8708-d044a6907b94" class="">Colori predominanti: rosso, verde, blu - caratterizzano le parti principali: figure umane, superficie, sfondo</p><p id="8c178913-2440-4ee3-bea4-e15149491606" class="">
+</p></details></li></ul><ul id="4d63fdc0-f001-4ded-816c-9d3c4ce94ada" class="toggle"><li><details =""><summary>Nudo Rosa (1935)</summary><p id="89a67034-4566-4761-9342-9c6e520ed381" class="">
+</p><figure id="25dbe208-7fd5-4fcf-bd28-f28425b95a61" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2011.png"><img style="width:624px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2011.png"/></a></figure></details></li></ul><p id="dc3e3f5d-dd95-4766-9fb6-bc835f94b593" class="">
+</p><h3 id="2daf41ad-54d0-4c7e-b439-e5f5835542f3" class=""><strong>École de Paris </strong></h3><p id="dfacb077-f55b-4d27-8693-71af2c798254" class="">Seguono un proprio filone, un proprio modo di rapportarsi con la pittura e la realtà. Rientrano in questa classificazione Modigliani e Chagall.</p><p id="dab1d47e-8b23-4b91-8cf0-8af38d7fb782" class="">
+</p><p id="de6338aa-39ce-4b14-abe3-b9a851152c5c" class=""><strong>MODIGLIANI</strong></p><p id="88209fc8-104d-4fc7-b863-d97b7fdbe841" class="">Si evince una sintesi delle forme e ri-identifica il suo stile, i volti e i colli lunghi si rifanno all’arte primitiva. </p><ul id="78daebc9-63fe-40a4-97d4-250664f3a100" class="toggle"><li><details =""><summary>Ritratti (1917-8)</summary><p id="3bcd6a11-9017-4194-9b55-122df36872f3" class="">
+</p><figure id="f1693436-9134-42fc-a796-7f397169287f" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2012.png"><img style="width:497px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2012.png"/></a></figure><p id="09a6aeae-4a9b-40aa-a45d-525de8977dba" class="">
+</p><p id="161258c5-2fb7-4a5b-926b-8dea12b63e44" class="">Peculiarità delle sue opere sono gli occhi vuoti, come quelli delle statue.</p><p id="f107fbd1-94d8-4848-acd1-5177b1b345a3" class="">Esasperazione degli aspetti geometrici, deformazione.</p></details></li></ul><p id="6f109aa2-c52a-496d-bd6c-4b4a4702f7e7" class="">
+</p><p id="626554af-28fe-45b3-80da-63844d79928f" class=""><strong>CHAGALL</strong></p><p id="1888a80d-63ee-4f70-a802-aad8869adf09" class="">Adotta linguaggio colorato e fiabesco.</p><p id="b91efd38-5d70-46da-b7ea-4afb97d969b1" class="">Rivive la serenità dell’infanzia che ha vissuto.</p><p id="18daf2a7-c333-4590-94fe-33f346b54023" class="">Illustra spesso la sua vita sentimentale </p><ul id="612760c9-c82f-4a67-b2c8-5a8b6848937e" class="toggle"><li><details =""><summary>La passeggiata (1917-18)</summary><p id="371a909a-412b-44c9-8b00-508d6db54616" class="">
+</p><figure id="9b02b932-b953-4d6a-82cb-c91e0472fd75" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2013.png"><img style="width:346px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2013.png"/></a></figure><p id="255f63a0-1275-4fc6-9f83-e4ab83dc7653" class="">
+</p><p id="90598a7d-fdbb-47c0-bcf2-841daefeb2e6" class="">Ritrae sè stesso che tiene per mano l’adorata moglie Bella Rosenfeld dopo il rientro in Bielorussia, dopo il matrmonio, mentre lei si libera in aria, leggera come il loro amore. </p><p id="df4867e3-52cd-49c6-ac30-b2218c0e52d5" class="">Sullo sfondo si vede Vitebsk, il paese natale dell’artista, colorato di rosa come la veste di Bella e di verde come l’erba dei campi.</p><p id="b5af7201-c119-4ae3-a86e-af6a0d865ae4" class="">Anche Chagall si sospende leggermente da terra.</p><p id="216af564-8711-421f-a3d2-7145a8d00aa8" class="">L’uccello che tiene in mano simboleggia l’amore che hanno per la natura.</p><p id="3e1929d0-5d97-4ac6-ab28-97620d468f04" class="">Trascorrono un momento di tranquillità su un prato, probabilmente si sta svolgendo un picnic. (Tovaglia fiorata con bevande e cibo sulla sinistra)</p><p id="64007238-f6db-42c8-94ee-3c460875f720" class="">Con la sinagoga richiama l’aspetto religioso.</p><p id="184ca011-9783-459f-93f3-e5b8ba5967d2" class="">Ci sono chiari riferimenti al cubismo.</p><p id="42c0f00a-b16a-4113-8ad6-c4d8bd857a79" class="">L’atmosfera è fiabesca, di magia. </p></details></li></ul><p id="21ee1f92-6791-4434-92e2-ddebbbd6f0b7" class="">
+</p><h3 id="c4bf4b87-89e7-47be-831f-0d975a0bdc0f" class=""><strong>DIE BRÜCKE </strong></h3><p id="e213bba2-2c86-44a8-8335-31a064a99635" class="">Die Brücke (Il ponte) collegamento tra esteriorità e interiorità</p><p id="dee3e4f2-671c-4a3f-9d60-ea13bf5fbbc7" class="">Altro movimento espressionista, centro propulsore a Dresda.</p><p id="72e70d80-e087-4f97-bf52-4569f77d279a" class="">Cercano nuove esperienze della realtà e sentimentalità.</p><p id="52f819dc-b56b-47e6-8a7f-6e66856421e2" class="">Si sciolgono all’affiacciarsi della IGM per divergenze artistiche ecc..</p><p id="778606b8-c35e-4a16-b0bf-c654978518fe" class="">Spirito primitivo, segni marcati. Ritorno alla pittura tedesca del 500.</p><ul id="f04ec5e6-f769-4060-a3ce-4d16a653e282" class="toggle"><li><details =""><summary>Kirchner, Schmidt, Pechstein, Heckel</summary><p id="86bf83cb-acd3-4422-8ea8-c71d6673444e" class="">
+</p><figure id="25862daf-9288-4d13-abd7-d5558aa5de35" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2014.png"><img style="width:381px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2014.png"/></a></figure><p id="fb175723-3023-4d31-a5b5-747cdc995145" class="">
+</p></details></li></ul><p id="6a248e8d-73bb-4ca4-ae45-939f3995dbfe" class="">
+</p><p id="0566ec5c-e1d0-4d54-a889-caf2d2ceb7ca" class=""><strong>KIRCHNER</strong></p><p id="7f5e60b4-f9ad-417b-a3ee-2b87ab6058c3" class="">Artista inquieto, complesso.</p><p id="963e548d-70de-4bf5-baca-78b9281f641e" class="">Colori squillanti, semplifica le forme in maniera netta, linee espressive che trasmettono forza.</p><ul id="b5304013-4d9f-4718-9606-060e36a0609b" class="toggle"><li><details =""><summary>Marcella (1910) 
+Busto di donna nuda con cappello (1911) 
+Donna nuda allo specchio (1912)</summary><p id="b9689270-0bf0-4ef0-af93-e4df494c3445" class="">
+</p><figure id="1a39547c-dcb1-4299-ad67-b732a0f0ff68" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2015.png"><img style="width:274px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2015.png"/></a></figure><p id="b2676625-046f-4e61-ad77-e850bcdaaa2a" class="">
+</p><figure id="e8a0fd02-d7e4-44da-8538-792dee741900" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2016.png"><img style="width:474px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2016.png"/></a></figure><p id="a7482481-1d70-40b4-a5f3-ec835e424b7f" class="">
+</p><p id="f21d03a0-a0c7-48da-95db-e61ac1a353e2" class="">Emergono colori vibranti, nelle donne il blu.</p><p id="bed7d9a0-a2a0-4d49-aedc-2f7926d9e66e" class="">In Marcella non si esaltano le forme rispetto che nel busto di donna.</p><p id="32184727-56fb-49b9-875c-c5db42292622" class="">Gestualità, rappresentazione della donna mostrano linee decise, spigolose.</p><p id="e7478cfd-716c-453d-b13e-51b56eafd9ed" class="">Aspetto cubista è rilevante.</p></details></li></ul><p id="3e8ae8dc-da45-48ae-8530-7ffd018455f7" class="">
+</p><hr id="80893cc4-e26d-4b64-a75c-6cd517f3cf88"/><p id="eb6fb50c-0eab-40ae-8547-3abce1e97a2d" class="">
+</p><p id="86e41b37-a858-4225-bd80-0adae96ed483" class="">
+</p><p id="c25825d2-5481-4496-8799-894e3e049ab3" class=""><strong>KOKOSCHKA</strong></p><p id="e36e8a6f-b043-4e48-b906-9d9186629beb" class="">Espressionismo tedesco, al di fuori degli altri gruppi.</p><p id="f304b511-c9af-452c-a7cb-d287cd8cce6c" class="">Stile molto personale, il segno è forte, deformante.</p><ul id="930e6a50-958f-4e94-8e5f-4702f5f41c41" class="toggle"><li><details =""><summary>La sposa del vento [Tempesta] (1914)</summary><p id="ee276bed-2731-4d3f-9dc0-23d54d13904b" class="">
+</p><figure id="6fba19eb-9133-48d7-b2b8-bcd4a0f6312e" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2017.png"><img style="width:412px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2017.png"/></a></figure><p id="e9998c88-1f94-4f50-a51d-f112f46f9b6b" class="">
+</p><p id="15351620-1cf8-4433-bcd2-765b8d3d876a" class="">Rappresentazione di amore travolgente, impetuosa.</p><p id="6d03151b-d16f-4e2c-909d-1543f3910472" class="">Rappresenta sè stesso e l’amante.</p></details></li></ul><p id="a8f84e18-4efe-4148-9ba1-5438e48f85a5" class="">
+</p><p id="fe7c050b-a10b-4ec7-b05d-3e611106b76f" class=""><strong>SCHIELE</strong></p><p id="878db697-5eb9-4a91-a286-4e988bcec33c" class="">Austriaco, tra espressionisti europei più conosciuti.</p><p id="c7eec990-1b2b-4bf2-93d8-72d3b49fda3d" class="">Caratteristica è la precocità. Inizia a dipingere giovanissimo, sui 20 anni.</p><p id="b4acb394-6f02-4c2c-af07-5335d8c5c1b2" class="">Tasforma la sua ricerca iniziando dal decorativismo, avvicinandosi alla secessione viennese, marca maggiormente il suo segno creando un tratto distintivo.</p><p id="47fdfbe6-d555-46a8-b37c-ee56afc44a42" class="">La linea denota una certa instabilità e ricercatezza.</p><p id="5f06aaac-28e1-451a-b3fe-ee883682fc87" class="">I corpi contorti irrequieti, i movimenti dei corpi evidenti nelle sue opere denotano uno stato interiore non tranquillo.</p><p id="ab581604-7de8-4b95-a7f9-d508fc695197" class="">
+</p><ul id="bc5abb28-fef8-47cd-afa9-1e0572853d45" class="toggle"><li><details =""><summary>Auroritratto con dita allargate (1913)
+L’abbraccio (1917)</summary><p id="5b2c3dfb-1d65-4d9d-a418-45e6e557c833" class="">
+</p><figure id="bb182ee7-dcaf-4880-a8d0-5cb196491c89" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2018.png"><img style="width:428px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2018.png"/></a></figure><p id="19d620db-cddf-46cd-8ce1-445d1f8b1d27" class="">
+</p><figure id="f77ddcf7-da37-4395-91b4-e7dbeb620462" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2019.png"><img style="width:472px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2019.png"/></a></figure><p id="cc3794eb-20ca-47b7-9061-28eabdd31c12" class="">
+</p><p id="fead6363-bb33-4343-8d01-450a970fa0ce" class="">Due amanti si stringono in un abbraccio di disperazione.</p><p id="0395fa9f-5d80-43fe-822a-93dbd3bc602b" class="">Stretta dolorosa anticipa un addio straziante.</p><p id="18978b5a-49f1-4b60-ae25-c74704755293" class="">Studio di anatomia, tensione della muscolatura accentuati.</p><p id="27c79443-3ffc-4746-8c17-18a582571c7e" class="">Pittura nervosa evidente anche dal lenzuolo stropicciato. </p><p id="a493d513-4611-4710-8b35-e2e9a365f2ba" class="">
+</p></details></li></ul><p id="0de4109a-6fb6-433f-98fa-6999513f935f" class="">
+</p><p id="46c4fe16-3dca-4bc9-9003-6fbc191eadd7" class="">
+</p><hr id="0b3cae4a-8352-4124-abba-d65373110b7c"/><p id="f4929b6a-ca3f-450a-a9d7-d90f26d09c62" class="">
+</p><h3 id="d1ec571a-495f-4dda-b126-314f33c304f8" class="">Primo novecento </h3><p id="40b1168e-f627-4894-a10b-4b8a8cbc13bd" class="">
+</p><p id="413a0943-53a1-4821-8265-952cd5276be8" class=""><strong>I Guerra Mondiale: </strong>Primo evento bellico su scala mondiale</p><p id="a1a75823-b1cb-4622-8d96-db35cb9aa30b" class="">Freud compie studi sulla psicoanalisi - presenta il concetto di subconscio che si manifesta attraverso i sogni</p><p id="bfc6dea2-0b15-4601-b23a-51e097146a90" class="">Ricerca scientifica: Einstein nel 1905 propone la teoria della relatività dimostrando che spazio e tempo non sono entità assolute, tra loro distinte e indipendenti </p><p id="64ed4992-257f-4020-a68d-32ec43fd67c5" class="">→ subisce forti cambiamenti il concetto di tempo, si introduce una quarta dimensione: possibilità di ritratte il movimento attraverso un’immagine ferma e di emttere in evidenza, sovrapponendoli nell’immagine, i molti punti di vista da cui un oggetto o una persona possono essere ivsti, da posizioni diverse dell’osservatore, quindi in momenti successivi del tempo.</p><p id="e69c6ad5-c29c-4755-a267-596e77643263" class="">
+</p><h3 id="4ef302ae-a4b2-4b84-8f8e-00c94d9e67f3" class=""><strong>CUBISMO</strong></h3><p id="5381d992-2018-4c2d-9d89-72bfdb558c42" class="">Movimento rivoluzionario, per la prima volta si rappresentano oggetti nella loro totalità.</p><p id="5758af1b-7ec2-4c46-9723-61501adf5a85" class="">1- Il punto di partenza era ancora quello di opporsi alla meccanica riproduzione del reale e alla presunta superficialità di osservazione dell’impressionismo, per rendere invecef il proprio modo di interpretare il mondo esterno.</p><p id="27b17853-366d-475b-aa3e-c0e253592d7a" class="">2- I cubisti partono dallo studio della realtà per scomporla e ricomporla in un nuovo ordine che cancella la distinzione tra gli ogggetti e lo spazio che li circonda. Un medesimo soggetto viene colto da diverse angolazioni che vengono poi sovcrapposte nella rappresentazione.</p><p id="83c2f772-fe9b-41f6-b3e2-4aacb673187e" class="">3- Le vedute successive di uno stesso oggetto e dello spazio circostante sono fuse insieme, con l’intento di comunicare la totalità delle percezioni in maniera simultanea, come se l’osservatore potesse girare intorno al soggetto rappresentato, osservando da tutti i punti di vista.</p><p id="a1bb3019-5151-46fc-affc-0377e70361e5" class="">
+</p><ul id="36c009a6-2fb7-4829-96ff-8d215806a45e" class="toggle"><li><details =""><summary>Maggiori rappresentanti: Picasso, Braque - fondano la corrente cubista</summary><p id="c11c2426-c59c-4cfd-a0d5-33ed2ca2d7fd" class="">
+</p><figure id="b1956c9c-626b-4973-9c14-da34d58c2954" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2020.png"><img style="width:625px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2020.png"/></a></figure><p id="110ce75e-4788-42f5-8786-73945c9ea9c3" class="">
+</p><p id="1e3aaa7c-f48d-4180-9c5f-b9e924c53da4" class="">
+</p></details></li></ul><ul id="159d6ab4-6785-4015-929b-e6eceaf59010" class="toggle"><li><details =""><summary>Gris, Léger</summary><p id="a7fce1b2-619b-4162-9c5c-e276688b54f1" class="">Gris: dal cilindro alla bottiglia, non al contrario. Cerca prima il soggetto geometrico per poi riadattarlo a una forma</p><p id="accf5acc-7c69-45b9-9ac5-bb9e6e727077" class="">Léger: tratti meccanici, strumenti meccanici, non c’è più un riferimento alla natura, maggiore priorità alla civiltà della macchina, al progredire, all’aspetto tecnologico. Le macchine fanno parte del suo modo di concepire la pittura.</p></details></li></ul><p id="154ca77c-1fa4-4999-b323-5d2bf52a0b1a" class="">
+</p><p id="cc171616-5ba3-4a6e-99e6-96812c113787" class="">L’esigenza era di mostrare la realtà non come appare ma nel modo in uci la mente umana ne percepisce l’apparenza: alla realtà-vista si sostituiscono la realtà pensata e la realtà creata.</p><p id="3032fcfd-03a0-45a1-a1f3-0cb43b196443" class="">Il cubismo nasce e si sviluppa a partire dal 1908 fino alla IGM. </p><p id="16c69eda-ca9f-45fd-9dfb-7eace381cf08" class="">Si distinguono due fasi:</p><ol type="1" id="8a0a7d18-ad2d-4ec0-a496-0109661572d2" class="numbered-list" start="1"><li><strong>Cubismo Analitico:</strong>
+(1908-1912) caratterizzato da accentuata frammentazione delle forme e dall’uso di colori spenti, spesso solo un tono cromatico, monocromo</li></ol><ol type="1" id="e11553b7-4499-43bb-96bf-24bf18dd5ee7" class="numbered-list" start="2"><li><strong>Cubismo Sintetico:</strong>
+(1912-1914) attua un parziale recupero del colore e delle forme. In questa seconda fase inizia l’uso di incollare sulla tela parti ritagliate da giornali, libri, spartiti e altri tipi di materiale</li></ol><p id="9eef1a56-85e5-4779-912a-5c349f2823b0" class="">
+</p><p id="e3b81496-cdde-4df0-ba0a-76cce2ecc365" class="">
+</p><p id="d498e7e3-e980-4349-b03e-fefc79e077ea" class=""><strong>PICASSO</strong></p><p id="3716f7f4-c429-4df3-8c23-fcf6f885a34b" class="">Stampa, pittura, scenografia, artista che sperimenta in diversi campi.</p><ul id="3f661eef-445a-4341-a7e3-626d04745844" class="toggle"><li><details =""><summary>Prima comunione (1895); Ragazza a piedi nudi (1896) - periodo classico </summary><p id="1333b89a-7401-44ea-b697-03f05911f4f6" class="">
+</p><figure id="41ab7fcc-d222-49f6-b13c-3ee353b40c77" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2021.png"><img style="width:472px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2021.png"/></a></figure><p id="1a8c28b0-5aa1-42a5-9efc-e7134923e3b0" class="">
+</p><p id="46f7b090-4722-47e5-9c30-4f08d368cce0" class="">Stile realistico, tradizionale</p></details></li></ul><ul id="5763e88f-f820-450e-a8b7-c3c17a7191ba" class="toggle"><li><details =""><summary>Fase sperimentale - periodo blu e periodo rosa </summary><p id="5c6b51c3-48f2-4a83-b0b4-ab73415c23bd" class="">
+</p><figure id="1ce8c64e-6cf0-4808-8dfb-6c576377bb75" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2022.png"><img style="width:473px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2022.png"/></a></figure><p id="56c34e55-9b9f-4f4f-b038-618a57f84aad" class="">
+</p><p id="2456af26-8821-4937-bd03-05fd581485a1" class="">Periodo blu: produzione stilisticamente omogenea dominata dalla monocromia del blu, appunto. Notturno, severo. Scelto non solo per la sua potenzialità espressiva ma anche per il suo impatto psicologico che gli permette di superare il naturalismo descrittivo. I suoi soggetti sono gli emarginati, i poveri, i girovaghi, le mezzane.</p><p id="60e2d482-f1e6-4b12-9430-ffc9b4360d0b" class="">Periodo rosa: tematiche incentrate su elementi magici, ambiente circense, ballerine, arlecchini, acrobati. </p><p id="90a779b2-1dbd-4e0d-9c69-058376e60c09" class="">E’ un complemento classico: il rosa, il terracotta, la terra di Siena naturale, ricordano i colori caldi delle decorazioni murali romane e l’ atmosfera della cultura mediterranea antica. Il pittore stava cercando uno stile più oggettivo, meno sentimentale.</p><p id="e6a42a51-1bd3-41fb-90b7-b460cc646747" class="">
+</p><p id="f0063910-25e5-45d4-bac5-07ea93487284" class="">
+</p><p id="c7c63f72-824b-4f69-9485-49659566a69f" class="">
+</p></details></li></ul><ul id="1a4f8172-9be6-4fb2-8b4f-180f2e45cd29" class="toggle"><li><details =""><summary>Les Demoiselles d’Avignon (1906-7)</summary><p id="7c52fe8c-aec3-42be-bb60-1287834344d9" class="">
+</p><figure id="ebde5154-6b8a-41de-8611-8e1202cbf162" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2023.png"><img style="width:307px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2023.png"/></a></figure><p id="34143512-d4e3-42e1-934d-8ab971cd71d1" class="">
+</p><p id="d0aaa350-4098-4491-892b-8197b0529782" class="">Lineamenti asimmetrici, marcati, taglienti - riferimenti arte primitiva
+Soggetto sono 5 prostitute di un bordello di Barcellona</p><p id="6ab304c8-a34d-4b7a-84f8-c207f9eed6cc" class="">Modelli iconografici classici, (Venere di Nilo o Schiavo morente di Michelangelo) Cezanne, Ingres </p><p id="1736436b-32f4-4411-a617-76067ad0edc0" class="">Elementi tipici dello <span style="border-bottom:0.05em solid">stile</span> sono:
+- rappresentazione delle cose come sono e non come le si vedono (concettualità)
+- fusione di più vedute simultanee, diversi punti di vista (dipensione tempo)
+- disintegrazione della distinzione tra figura e sfondo e annullamento della profondità prospettica
+- geometrizzazione delle figure
+- influenza dell’arte africana e primitiva
+- influenza dello stile di Cézanne</p><p id="8da112db-b9f4-4aa3-8106-e362441ee303" class="">
+</p></details></li></ul><ul id="d8210989-f8a2-4f33-a551-c64c8a668544" class="toggle"><li><details =""><summary>Natura morta con sedia impagliata (1912)</summary><p id="c2127396-3119-4224-92dd-f3066435bce3" class="">
+</p><figure id="3bc6f356-61be-4c67-8d7f-88b4ac1e4605" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2024.png"><img style="width:387px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2024.png"/></a></figure><p id="70ec7eb1-4aa9-4370-bb10-0827471493d7" class="">
+</p><p id="89d55c61-9ffb-4658-a447-d43dccfa918d" class="">Segna una svolta all’interno della ricerca cubista
+Il formato ovale segna radicale rottura con il passato e segna passaggio tra cubismo analitico e sintetico</p><p id="ad4db072-3fd2-475e-9db7-7ef42bf32792" class="">Ci sono vari elementi, cucchiaino, fetta di limone, lettere JOU (journale)</p><p id="f9adfb4a-2fbb-448c-9c78-042985c70696" class="">Il tessuto riproduce la sedia senza rappresentarla figurativamente - Micheal Thonet sedia viennese, uno degli oggetti di design più gettonati dell’Art Nouveau</p><p id="4ec376bc-98a7-4b15-bd95-41d66d9811b5" class="">Rappresentato come tavolino trasparente visto dall’alto, collage</p><p id="e97f0f20-19b3-4ea9-a2b6-79c7223cc848" class="">
+</p><p id="7bc1f9c7-ba64-4c83-86b9-7e801831bd15" class="">
+</p></details></li></ul><ul id="c34a70d3-df02-413c-95e7-63903658b287" class="toggle"><li><details =""><summary>Guernica (1937)</summary><p id="ccdcb797-a9e9-4fe8-8e4b-411f6728d50a" class="">
+</p><figure id="ce7b9b2f-382f-4a6b-b8cc-8f5eacbf7531" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2025.png"><img style="width:625px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2025.png"/></a></figure><p id="11758702-089e-4e7d-accc-5d1d625480a6" class="">
+</p><p id="e4961b6d-4f7d-4545-a355-136e73125492" class="">Testimonianza della sofferenza causata dai bombardamenti di Guernica nel contesto di guerra civile spagnola</p><p id="31d0ef69-d177-4583-aacc-2dd0b8113dee" class="">Luce artificiale piramidale che illumina la tragedia centrale, tumulto di eventi, aggrovigliarsi di soggetti</p><p id="075d32ff-7832-4120-aa8f-85f9bba0400a" class="">Ai lati personaggi che chiedono aiuto, disperazione totale.</p><p id="0a38107f-1cc0-4f5a-83ab-f5d102813687" class="">Fiore identificato come simbolo di speranza. Da questo territorio che subisce l’ira dell’uomo nasce comunque un fiore, simbolo di vita.</p><p id="de350349-3d33-44f3-97e0-063b517a8186" class="">Bianchi gessosi, nero catrame, grigi - ispirazione da fotografia in bianco e nero.</p><p id="ec7c97a7-2298-4192-bf8b-f3326210cecc" class="">La scena è contemporaneamente interna ed esterna, si svolge al buio ed è circondata da edifici in fiamme - decostruzione della realtà.</p><p id="2968e9dd-e520-46ed-b081-0d6846d2fd20" class="">
+</p></details></li></ul><p id="fa38e2c8-4fa7-45b1-baaf-8c3f09be4a19" class="">
+</p><h3 id="597001da-b297-4d1b-99ab-4c177fad9c4e" class="">FUTURISMO</h3><p id="70cfe9bb-f7ba-4067-8543-d00e2dd20fe7" class="">Si presenta con il manifesto futurista pubblicato a Parigi nel 1909 in Le Figaro. Fondatore è Marinetti, elabora il manifesto: si esalta progresso, velocità, macchina in corsa, tecnologia, avanzamento, meccanica.</p><p id="cc48d06c-4b66-462c-a61a-d57aacf28413" class="">Glorificazione della guerra. Volontà di distruggere musei, arte, biblioteche.</p><p id="f1fbec0f-a462-4967-ae46-840b7d2abab6" class="">
+</p><p id="d335beff-a311-4d2f-af4a-ead241410477" class=""><strong>BOCCIONI</strong></p><ul id="3a05e4d8-6a29-43fb-b0dc-b69bc0df89db" class="toggle"><li><details =""><summary>La città che sale (1910-1)
+Stati d’animo (1911)</summary><p id="823365d9-212c-4c0d-8990-0ffadc8a52fb" class="">
+</p><figure id="17b52756-5d4d-41d9-b99a-3d8ff0bce0d2" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2026.png"><img style="width:468px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2026.png"/></a></figure><p id="e48ade26-3e5b-4b2a-9055-a9c4b46195f3" class="">Cavalli simbolo di violenza, ondata di energia travolgente.</p><p id="5c267441-7ec3-4550-b958-81591434e7a5" class="">Pennellata da tratti che formano immagine nella loro totalità.</p><p id="0efa514e-93eb-4d44-97f8-93c52aad802d" class="">
+</p><figure id="136787aa-b216-47f6-b42d-92c6e541c36a" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2027.png"><img style="width:477px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2027.png"/></a></figure><p id="60fc2f2c-f839-4aa7-a81a-97c7540b35a8" class="">Elementi cubisti, influenze del periodo. Visione caotica.
+Locomotiva che sbuffa, codice locomotiva, rumore voci, confusione, movimento - caratteristiche del movimento futurista. </p></details></li></ul><ul id="01df4906-ad3b-4a9c-8211-15d39fe85c29" class="toggle"><li><details =""><summary>Forme uniche della continuità nello spazio (1913)</summary><p id="f0fc5ae8-5887-408b-82b4-02011eb2d673" class="">
+</p><figure id="35cf0e2b-425b-406f-b968-c581cfd4a122" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2028.png"><img style="width:272px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2028.png"/></a></figure><p id="8368c34b-a116-4c96-9778-b2f4a41d286c" class="">
+</p><p id="0d866766-0b28-4df0-a4e8-46105fa5df27" class="">Continuità, spinta, movimento.</p><p id="25603be5-4023-47b7-8195-540454414fae" class="">Immortalata nell’attimo di moviemnto in cui si spinge verso qualcosa.</p><p id="d3da9acb-4715-47a1-b50b-19bc46ae1d23" class="">Modellata dal vento.</p><p id="1db6a5c8-d901-42e8-a40e-3c6f9648eee4" class="">Riferimento alla Nike di Samotracia.</p></details></li></ul><p id="3a2c7f90-2ddf-47d0-b85d-c79a717912cd" class="">
+</p><p id="a60c942a-20d4-465c-897e-f61bda49adc8" class=""><strong>BALLA</strong></p><ul id="9979819d-a179-417b-a7e1-75c9d6c5d34b" class="toggle"><li><details =""><summary>Dinamismo di un cane al guinzaglio (1912)</summary><p id="f42d0f97-d99b-4675-894e-f9dc7c2a5fa7" class="">
+</p><figure id="94b89260-e83f-4d0d-be26-2ad686a8a2bb" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2029.png"><img style="width:469px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2029.png"/></a></figure><p id="3be4e1df-b3aa-45ff-8bdb-d3d3c55b12fd" class="">
+</p><p id="cb7a6b1a-57b5-4331-8447-786f2381eb8c" class="">Moltiplicate azioni della figura umana e del cane, disposte su un unico piano.</p></details></li></ul><ul id="64e75e3c-bc7f-4fde-8951-93270ecc0b99" class="toggle"><li><details =""><summary>Mani del violinista (1912)</summary><p id="551326a4-0785-494a-af7a-3dc6bcf9dea4" class="">
+</p><figure id="19739537-38f6-4d49-b984-2dae656b378b" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2030.png"><img style="width:625px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2030.png"/></a></figure><p id="22abf540-9eb1-406f-8488-2ce726f2e3c8" class="">
+</p><p id="1221896d-f35a-43bd-a12a-25c4b2f31890" class="">Molitplicazione dell’azione in un’unica immagine.</p><p id="15787382-f439-43be-81d2-d967b1201a68" class="">
+</p></details></li></ul><p id="3ca9787d-cd1f-4da2-87e7-d024189f8fe6" class="">
+</p><h3 id="e2a180ed-bd58-454e-8282-5e3c48ea4e3a" class=""><strong>ASTRATTISMO</strong></h3><p id="e1d1cac9-ec5e-480d-bcf1-5e820b8d2f06" class="">Capovolge costruzione classica dell’arte.</p><p id="3ecc3cee-5559-46bc-acd8-6dd486e2d56f" class="">Con l’astrattismo si supera il legale con la rappresentazione ottenuta con riferimenti al mondo reale. Ora i sentimenti vengono visualizzati solo attraverso forme, linee e colori.</p><p id="571febb0-9e80-41c5-aa30-1c9704e951d3" class="">L’astrattismo ha forti analogie con la musica, capace di comunicare sensazioni nell’ascoltatore senza fare ricorso a limitazioni naturalistiche. La parentela tra musica e arte è così forte che i termini specifici delle due forme espressive si sono scambiati. Si parla di suoni chiari o scuri, colori squillanti ecc..</p><p id="24c3e670-174d-4f9a-a033-f739164f4a1c" class="">Principali esponenti del movimento sono Klee e Kandinskij, entrambi musicisti.</p><p id="2813ba5a-cc1e-454a-9c56-a06d2119282a" class="">
+</p><p id="58f302bc-110d-42d2-b7a6-d5f70d330569" class=""><strong>KANDINSKIJ</strong></p><p id="0f80a583-12d5-4aa0-9124-7cd8e79885e8" class="">Fonda con Franz Marc il cavaliere azzurro, gruppo che simboleggia la libertà, anticipa l’astrattismo. </p><ul id="6af3dd97-38d0-4337-819d-b315c094af78" class="toggle"><li><details =""><summary>Sintesi della teoria pittorica</summary><figure id="45a11dc6-faa5-418b-bc64-63a8da3d4f80" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2031.png"><img style="width:549px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2031.png"/></a></figure></details></li></ul><ul id="1f1e37f3-0958-40cd-ac93-1c5fbce78501" class="toggle"><li><details =""><summary>Senza titolo (1910)</summary><p id="9c580f97-3f9f-4ec2-9fc6-58baa2b03532" class="">
+</p><figure id="819727dd-c050-40bc-bc76-568ed99f1cf5" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2032.png"><img style="width:458px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2032.png"/></a></figure><p id="c7c9410d-7f0d-4947-b941-de7884afdba6" class="">
+</p><p id="7ed8a2d4-fb84-4a30-92bf-7d7ff1c60513" class="">Opera che segna l’inizio ufficiale dell’astrattismo.</p><p id="ffa05350-411b-40e0-bf74-0fd7d9ca62c8" class="">Mancanza di titolo - mancanza di riferimento al reale.</p><p id="8ec6a42f-d7cd-4106-b847-607fab314659" class="">Retrodatato per avere paternità ufficiale dell’astrattismo, è in realtà del 1913.</p><p id="d41fa6c5-dc92-4e0f-ab08-5affe9e09d57" class="">
+</p><p id="ebe6cc6f-3dbe-4c87-b589-897cfc96c93c" class="">
+</p></details></li></ul><ul id="6cb00d1f-d7ea-4182-abc1-e701b538bf01" class="toggle"><li><details =""><summary>Paesaggio bavarese con chiesa / La vita variopinta (1908)
+La mucca (1910)</summary><p id="012cbabd-55cc-42c0-afd7-1e9de83ade61" class="">
+</p><figure id="2b28ee58-028c-4a87-845c-4f3db8bb839c" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2033.png"><img style="width:631px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2033.png"/></a></figure><p id="6f7a3a75-6300-488e-a2eb-c7e1e48b435f" class="">
+</p><p id="401b85b2-2e67-40b3-86be-4cbd549b5eb7" class="">
+</p></details></li></ul><ul id="0850438b-e811-4c5e-b120-cf82c028e9cf" class="toggle"><li><details =""><summary>Composizione 8 (1923)</summary><p id="5fc01c58-87e3-4303-a036-6d981d2d128c" class="">
+</p><figure id="1dbea9f5-5fe0-4d5e-a660-b41c9ff7adf3" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2034.png"><img style="width:466px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2034.png"/></a></figure><p id="e5968be7-2f0c-4c9b-8a39-8d99f252c7f2" class="">
+</p><p id="25d3f10c-174a-4703-89ad-15b9e9581f5a" class="">La musica entra nella sua ricerca artistica.</p><p id="bfb403a3-ec61-4773-b9a2-d74cc3fa97cc" class="">Astrattismo lirico → Astrattismo geometrico</p><p id="8a88b4f5-f481-4c5d-b96d-26b31f90570d" class="">Tensioni di linee e colori - potere evocativo</p><p id="535e78d6-9ca4-40d7-b170-aae177042a91" class="">Perso ogni senso ambientale o riferimento alla prospettiva o realtà.</p></details></li></ul><ul id="5f6474c2-a828-4a7f-9a05-004b9a3b307e" class="toggle"><li><details =""><summary>Alcuni cerchi (1926)
+Punte nell’arco (1927)</summary><p id="4c1e2dfd-99e1-4c01-a896-0e972a152288" class="">
+</p><figure id="aa7da6f9-4043-4959-b6a1-9ebfeeee6809" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2035.png"><img style="width:513px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2035.png"/></a></figure><p id="76969fc0-e2b7-405a-a4a0-031298a50b9a" class="">
+</p><p id="5f0c364b-5b14-4e74-993c-0c0c3729008d" class="">
+</p></details></li></ul><p id="a121d991-a788-45c0-b47f-cb0903be7cd1" class="">
+</p><p id="e93f9d2d-2d29-4c9e-89fb-21662b22f8ea" class=""><strong>KLEE</strong></p><p id="f5afcf3c-9fe3-4a61-869e-d4280e2c4794" class="">Si focalizza su libertà di espressione creativa, si separa dalla realtà ma riporta similitudini con il reale. Presenti spunti esterni riconoscibili.</p><p id="942480f6-a753-4a0a-9ff5-088fc4514eb3" class="">Affrontò vari viaggi da cui si fece condizionare per luce e colori.
+Paesaggio urbano è il soggetto in cui più si identificano le influenze dei viaggi.</p><p id="759b64f2-9709-40cb-8482-2843358ea322" class="">L’arte doveva avvicinarsi alla natura senza imitarla, ma con creatività.</p><p id="f48c1513-a576-4e3c-b33b-d5b95eb35254" class="">
+</p><ul id="1cace5dd-1603-4e11-859f-c2e34f506acd" class="toggle"><li><details =""><summary>Giardino di Tunisi (1919)
+Strada principale e strade secondarie (1929)</summary><p id="4b95c25b-c121-44c9-9c86-f9e9ded773c7" class="">
+</p><figure id="dec06216-c581-4812-90e4-b02d552686f8" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2036.png"><img style="width:625px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2036.png"/></a></figure><p id="45810f64-a43f-4d92-b520-e405963552c4" class="">
+</p><p id="d17cc5cc-ee27-44fa-9524-2ae98cbfa20e" class="">Paesaggio fluviale, convergenza prospettica delle linee che tagliano perpendicolarmente la struttura.</p><p id="3882eab1-1a3f-4de9-aa71-7c2f45a06b05" class="">
+</p></details></li></ul><ul id="115ec5cc-3a81-49a7-82dc-643009dbe895" class="toggle"><li><details =""><summary>Si avvicina al mondo figurativo dell’infanzia.</summary><p id="f08639c6-e76a-4525-86af-cb9bb02bd530" class="">
+</p><figure id="46714fdc-3df4-4582-bad9-1e735dc0ed39" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2037.png"><img style="width:479px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2037.png"/></a></figure><p id="961751c9-4efa-4ef6-bc5c-c07f9eb4a112" class="">
+</p><p id="08cb7850-a874-48cb-9bb0-b76f74629186" class="">
+</p></details></li></ul><p id="275eba96-b8e2-42a2-91b2-f615ca8c3772" class="">
+</p><h3 id="b55aa41f-6a6d-4ef9-8e5b-823cab4caea6" class=""><strong>SUPREMATISMO</strong></h3><p id="2c3f69af-4552-4c3a-a022-2319b08aa307" class="">Indica la supremazia della pura sensibiltà nell’arte, della pura visione, l’espressione del sentimento più intimo non inquinato da alcun riferimento all’oggetto esterno o da scopi politici, sociali o religiosi.</p><p id="2541f8f6-959a-4591-8ba0-97c01cb3b613" class="">Maggior esponente è Malevic.</p><ul id="0e48a01c-157e-4539-a964-8e94aec91bf6" class="toggle"><li><details =""><summary>Quadrato nero su fondo bianco (1915)
+Quadro bianco su sfondo bianco (1918)
+</summary><figure id="947c0290-310a-42e9-b5ec-9dfdf591316c" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2038.png"><img style="width:627px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2038.png"/></a></figure><p id="e79c874f-5fb5-4688-a2d0-a9f43a45d5ec" class="">
+</p><p id="9fd857e7-ad3a-4c72-a805-b4c497180a00" class="">Forma geometrica pura, perfetta, si imprime su identità non figurativa.</p><p id="544a34ed-5bcc-4581-9566-2a6727483877" class="">Si spinge oltre le possibilità figurative dell’artista.</p><p id="d26b5492-275e-45df-829c-9651ec55ff98" class="">Va oltre le linee guida della pittura stessa, oltre le forme essenziali pittoriche.</p><p id="fabef9c0-85ab-4170-9af6-29fb5d96b1e1" class="">
+</p><h3 id="95275c22-1e20-4e31-8ea5-8e8c251fbef8" class="">COSTRUTTIVISMO</h3><p id="c3534c90-f9e6-4c7e-a6dc-25b668f1d016" class="">Movimento artistico nato nel 1912 sotto l’influenza del futurismo e del cubismo. Esponente principale Vladimir Tatlin. </p><p id="643edf85-6b8f-4f78-b404-5388995a4ef9" class="">Tatlin ritiene che l’arte abbia una funzione sociale e che per questo, più che alla rappresentazione, debba tendere alla costruzione della società e della vita contemporanea.</p><ul id="5646ac8f-3d6b-4e0c-86a9-9d5489cf4fe1" class="toggle"><li><details =""><summary>Monumento della III internazionale (1919-20) - riproduzione</summary><p id="e136adc0-7c2f-4d36-b0b0-9755d848acc8" class="">
+</p><figure id="cc113c91-f4ce-4b8f-b0b5-577e6d29ab10" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2039.png"><img style="width:548px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2039.png"/></a></figure><p id="3ea63c77-1b99-4666-b36e-6ec4adfb00c7" class="">
+</p><p id="a26316bf-0e0d-428a-8955-c180a122c756" class="">L’opera originale non è mai stata creata.</p><p id="a7e65f54-05b8-48fe-8910-552c0960e4f0" class="">
+</p><figure id="80bdcd61-7aeb-453e-b368-a50b48536563" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2040.png"><img style="width:530px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2040.png"/></a></figure><p id="9cf9974b-0f9f-4b08-af8f-431e5d49e718" class="">
+</p></details></li></ul><p id="07f6e335-35e4-4c4f-923d-2155dc531e14" class="">
+</p><h3 id="092e6792-0ac7-466b-afd2-2685a4785e04" class="">NEOPLASTICISMO (De Stijl)</h3><p id="575391b0-964c-4cda-86fa-5dac380cd19a" class="">Fondato nel 1917 prese il nome della rivista fondata da Theo van Doesburg, che rappresentava l’organo di diffusione dei principi teorici e delle realizzazioni pratiche del movimento stesso. Sorse in Olanda (paese culturalmente avanzato)</p><p id="a0347803-d4b0-4ea1-a5c1-5c1ced1c3d64" class="">Maggior epsonente è Mondrian.</p><p id="ca41204a-dd6f-4e68-ba4c-a4b51ae1ad49" class="">Le loro teorie sono simili a quelle del Suprematismo: il superamento della rappresentazione dell’oggetto preesistente e la creazione di forme pure, bidimensionali, geometriche.</p><p id="11c60a73-85ee-47a1-9541-1bf327d4ed6e" class="">Ciò che si vuole raggiungere è l’ordine, la chiarezza, l’equilibrio.</p><p id="e7ca743f-41db-40fc-9c6d-08c5166ef269" class="">
+</p><p id="deb16f47-9508-4ad5-850c-5e22b8761745" class=""><strong>MONDRIAN</strong></p><p id="0e0281ba-5d6b-4288-807e-c6afebc77078" class="">
+</p><ul id="79b2a430-3287-40b2-b858-7d884f7fd677" class="toggle"><li><details =""><summary>Studio sull’albero (1910)</summary><p id="7826a1c1-dc29-4f57-9274-92c7b3342be9" class="">
+</p><figure id="a2a64f30-054f-4e44-a22f-a1c1f2ef6453" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2041.png"><img style="width:476px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2041.png"/></a></figure><p id="a8601f8c-4f02-43e9-9611-bd92bbef4280" class="">
+</p><p id="d7b02583-fdc1-40c9-a403-db653c657ce3" class="">
+</p></details></li></ul><ul id="4c9f7c4d-a11b-4abf-91c6-181d6d2bb2b2" class="toggle"><li><details =""><summary>Composizione in rosso, blu e giallo (1930)</summary><p id="46b2fafd-8e92-445c-acee-1b1a21e6b8d1" class="">
+</p><figure id="642ee9a1-6a66-42a2-b1fa-222d511f4ffd" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2042.png"><img style="width:306px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2042.png"/></a></figure><p id="e64d560c-00cc-4038-a382-6c9e357421e2" class="">
+</p><p id="8cbd6070-2453-4120-a4d0-02a021b804fe" class="">Neoplasticismo bidimensionale, colori primari</p><p id="8e04c3cd-cb12-441a-8400-2634258d076c" class="">Linea nera separa colori in modo che non possano influenzarsi a vicenda.</p></details></li></ul><ul id="443f222e-e590-4b73-bb8c-d6e7b3dbf8a5" class="toggle"><li><details =""><summary>Victory Boogie Woogie (1942-44)</summary><p id="d55a0e0d-a987-4fc8-9ca6-b76b79002314" class="">
+</p><figure id="da6ff9f4-620e-47d9-b2a8-5bf20cfbf229" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2043.png"><img style="width:627px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2043.png"/></a></figure><p id="17f338bc-7e60-45df-b5c5-f0e638608937" class="">
+</p><p id="1980646e-9b80-4e93-b6fc-4616d54e6b33" class="">
+</p><p id="515d3767-7f66-45bc-9573-75321024d9f5" class="">
+</p></details></li></ul><p id="9f7d0374-48ba-4ff9-aab6-a34d6a3def22" class="">
+</p><p id="cc37c0fa-37bf-453b-a679-d14f81f3f0d9" class="">
+</p><h3 id="fd228e75-3c0f-4dcd-9251-813a2e76a36b" class=""><strong>DADAISMO</strong></h3><p id="0f15929e-3881-4e22-ace7-43934240018a" class="">Movimento artistico che nasce in Svizzera nel 1916 nel giorno in cui fu inaugurato il Cabaret Voltaire.</p><p id="f6405606-9d3f-465c-9c3d-b2c43c92b8e1" class="">Si diffonde anche in Germania, a Parigi e negli USA.</p><p id="e548b0e2-212b-4196-93a0-9cc2ab6138a7" class="">Esponenti Duchamp e Man Ray.</p><p id="8dfa710c-73ec-45a1-a76b-661a274659ad" class="">Dadaisti si schierano contro la guerra. </p><p id="6a11265c-c06a-4298-8f34-5c0b88d4ad26" class="">Se il futurismo tende alla destra politica, i dadaisti tendono alla sinistra.</p><p id="67923333-804f-40fd-9188-8f769811201d" class="">DADA: Tristan Tzara fondatore del gruppo narra di aver trovato la paura a caso in un vocabolario francese. In russo significa due volte sì, in tedesco due volte qui, in taliano e francese costituisce una delle prime parole che i bambini pronunciano, e con la quale indicano tutto. Significano tutto ma non significa nulla.</p><p id="df5c2603-5780-4027-b54f-b4c6ee05500f" class="">
+</p><p id="efaf7596-6f70-4dfe-be0b-a23579db6a7f" class=""><strong>DUCHAMP</strong></p><p id="49222cb3-5312-4482-a828-c1889119529c" class="">Si trasferisce a New York e ha modo di interagire con diversi artisti.</p><p id="253f1325-1522-41f5-bf99-4761606687f4" class="">Periodo ricco dal punto di vista creativo, ideologico, rivoluzionario.</p><p id="e32c065c-a5c7-411d-9e4a-34b353031287" class="">Si propongono idee nuove, avanzate.</p><ul id="721b5f23-2382-41fb-b0ea-3a1839bd2fe3" class="toggle"><li><details =""><summary>Ruota di bicicletta (1913)</summary><p id="6716df88-be2a-470d-8a08-7c8702dca18a" class="">
+</p><figure id="5f0ab85a-90c7-47ac-a086-266949055752" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2044.png"><img style="width:197px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2044.png"/></a></figure><p id="c4b9a542-e975-4631-ac15-ecdae2ee0add" class="">
+</p><p id="889a8123-2bf7-4f01-a0f3-e4682576329f" class="">Ready-made in legno e metallo. Mette in discussione tutta la storia dell’arte. Oggetti perdono la loro funzione originale.</p></details></li></ul><ul id="b5ff2980-993b-459a-9b8b-d7955a2c504a" class="toggle"><li><details =""><summary>R.Mutt - Fontana (1916)</summary><p id="0f04d4da-ea20-4a0e-bdb2-19ddd54e7a49" class="">
+</p><figure id="f8f2cab9-a28b-46b5-ae2c-53e5c7942bb0" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2045.png"><img style="width:755px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2045.png"/></a></figure><p id="718f324b-a953-4626-ac86-589c536f9588" class="">
+</p><p id="89b8aaba-982a-40d6-914f-b9bfbb228f06" class="">Decontestualizzazione</p><p id="71e34aa4-cfc5-4bb5-99be-ca7441f7991b" class="">
+</p></details></li></ul><ul id="7fd1968c-efd5-4520-abb3-62f5fc3ab3d2" class="toggle"><li><details =""><summary>L. H. O. O. Q. (1919)</summary><p id="d2ba5f63-641f-486f-b6c7-dbf04fe56fe8" class="">
+</p><figure id="06ac6d20-e9ba-4358-8e83-b4e69486ee94" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2046.png"><img style="width:220px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2046.png"/></a></figure><p id="18a485df-f175-42c4-bc29-32b6c3245b38" class="">
+</p><p id="e067822b-d8df-45aa-bd7c-8d40641c78a9" class="">Provocazione alla quiete pubblica. Doppia dissacrazione sia tramite baffi sia il titolo. </p></details></li></ul><p id="1151ca81-70af-4392-9d6c-1223ee756eca" class="">
+</p><p id="02caa6ac-ac70-4b02-8f7b-c0af479fac7a" class=""><strong>MAN RAY</strong></p><p id="7ca578d7-3608-48ba-92b6-58137b71649b" class="">
+</p><ul id="fdb50176-192f-4d04-953d-a91c87447d62" class="toggle"><li><details =""><summary>Oggetto da distruggere (1923)
+Cadeau (1921)</summary><p id="ae31ef66-ab6c-47c2-a3f3-344530dad92d" class="">
+</p><figure id="ca9af218-eef4-4c4d-b3e1-91e2a10033b1" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2047.png"><img style="width:625px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2047.png"/></a></figure><p id="ee3a0500-eb77-440b-8d9f-c08ac366afc2" class="">
+</p><p id="375f330f-acb4-4d0b-9a06-59b3aa6405f4" class="">14 chiodi rendono inservibile l’oggetto.
+Cambia il titolo in “Oggetto indistruttibile” perchè il pubblico prende alla lettera il titolo. </p><p id="4561ba25-9a15-469b-83ef-625c43838006" class="">Controllo ossessivo rispetto a chi osserva (riferito alla tempistica della vita, parametri ritmici della nostra esistenza) / occhio divino che ci osserva</p></details></li></ul></details></li></ul><h3 id="2d92eac7-429a-47e4-b979-a546e12f314a" class="">COSTRUTTIVISMO</h3><p id="c246f5a9-101f-4ad9-9b7f-3a42a6a8d908" class="">Movimento artistico nato nel 1913 sotto l’influenza del Futurismo e del Cubismo</p><p id="2df88e59-040e-46f1-99f7-f021ada5ad1b" class="">Maggior eponente è Vladimir Tatlin, costruttivista russo spinto dall’ideologia della Rivoluzione d’Ottobre.</p><p id="24e3dd19-3152-42d6-bf83-28fa9e9f1170" class="">
+</p><p id="836586d7-c8d8-470f-965b-dc3c35a695e5" class=""><strong>VLADIMIR TATLIN</strong></p><p id="d652ac3b-19bf-4d96-8c99-e4ea57a101e7" class="">Tatlin ritiene che l’arte abbia una funzione sociale e che debba quindi tendere alla costruzione della società e della vita contemporanea.</p><ul id="78bf16a2-e7c0-4eac-8000-c3d77396ef29" class="toggle"><li><details =""><summary>Monumento alla III Internazionale (1919-20)</summary><p id="3892cbcb-b65c-4806-849f-bd4deffb6c26" class="">
+</p><figure id="7d8dd891-a662-408e-86be-17e2029a86b3" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2048.png"><img style="width:288px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2048.png"/></a></figure><p id="b106d6cc-953d-49d9-b965-c4dc3567abcc" class="">
+</p><p id="00bf9d60-41d9-43b7-a46d-b18c11fc3218" class="">Torre proletaria come luogo di riunione per scambi di informazioni e decisioni politiche, per celebrare le glorie del regime comunista in occasione del congresso della Terza Internazionale</p><p id="60cac521-756c-435c-8a75-9af2f110aa27" class="">Il progetto definitivo prevedeva che dovesse essere più alto addirittura della Tour Eiffel, con uno sviluppo di circa 400m</p><p id="f5b62719-f87c-41c8-be46-6730a62f29e3" class="">La forma prevedeva due spirali con sviluppo reciproco in senso contrario, costruito intorno a volume conico con inclinazione rispetto al terreno, dale da dare impressione di cedimento nelal struttura</p><p id="7da1e30e-d7de-4971-ae70-2ba13f0e7744" class="">All’interno, caratterizzato da una rete di cavi e sostegni d’acciaio, c’era posto per tre edifici di cristallo sovrapposti capaci di ruotare sul proprio asse a divevrse velocità.</p><p id="cbf29073-532d-455e-a95a-4caec7871e81" class="">Metafora di dinamismo.</p></details></li></ul><p id="af70642a-b096-4a22-8718-c985bb987491" class="">
+</p><h3 id="d475fcdb-ee00-4541-8b78-5ddb515d1684" class="">NEOPLASTICISMO (DE STIJL)</h3><p id="1dbb6dfb-b459-4450-b385-b04d0a1a3a56" class="">Il De Stijl, o Neoplasticisimo, in olandese lo stile, fondato nel 1917 in Olanda, prende nome dalla rivista fondata da Theo van Doesburg che rappresentava l’organo di diffusione dei principi teorici e delle realizzazioni pratiche del movimento stesso.</p><p id="5f73bd00-b475-487a-a091-aef7e712c819" class="">Le loro teorie sono simili a quelle del Suprematismo: superamento della rappresentazione del’oggetto preesistente e della creazione di forme pure, bidimensionali, geometriche.</p><p id="84f99644-1c6f-4584-a2a4-6de2e35b7f6f" class="">Si vuole raggiungere ordine, chiarezza, equilibrio.</p><p id="4fe59f82-8040-47b1-9ae6-87583516193a" class="">Maggior esponente è Piet Mondrian.</p><p id="2b453cb6-df29-4575-9000-1fd4dd19c483" class="">
+</p><p id="eb7f85c9-cebe-4093-b393-7d4d84abffa2" class=""><strong>PIET MONDRIAN</strong></p><ul id="b831c81c-a184-447e-9bf6-13958be7ad47" class="toggle"><li><details =""><summary>Studio sull’albero (1910)</summary><p id="e92233d5-8039-42da-8316-5ac2a4f5d7cb" class="">
+</p><figure id="a8845d22-5e41-4d7c-9c3a-fa6263017d0b" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2049.png"><img style="width:416px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2049.png"/></a></figure><p id="54fa07cd-96bf-4337-9f49-a68a047af322" class="">
+</p><p id="3ed663a3-b619-4809-a790-7ca361f9e983" class="">Nel primo decennio del Novecento raggiungere gradualmente la semplificazione vera e strutturale, base chiara e armonica delle linee guida dello schema compositivo.</p><p id="12fa9f5f-0c0d-4121-9034-d57f8d818874" class="">
+</p></details></li></ul><ul id="0e055ab4-698d-42f2-a5f8-3fd86a8dba1b" class="toggle"><li><details =""><summary>Composizione in rosso, blu e giallo (1930)</summary><p id="8abe9e74-4c59-455f-95e9-639f2e7185cf" class="">
+</p><figure id="2257ab2f-56c9-40a2-854c-1a65297d79b9" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2050.png"><img style="width:278px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2050.png"/></a></figure><p id="3c73dafa-4023-4203-84d7-83609820c495" class="">
+</p><p id="3f42c546-ba34-42fd-980f-ef97fc1b9a56" class="">Pittura ortogonale, connubio correlato fra forme pure e colori primari. </p><p id="823148dd-87db-491c-a8e5-c38e5a612548" class="">Si evince razionalità. Struttura elementare, cartesiana. Rapporto neutro, armonico che rispecchia le linee essenziali del Neoplasticismo bidimensionale. Le linee nere spesse separano i colori in modo che non possano interagire influenzandosi a vicenda. </p><p id="d657ab19-e9a6-4cd1-b696-f71605e71fac" class="">Rigidità schematica, geometrizzazione estrema. Calcoli, concretezza.</p></details></li></ul><ul id="58601f9b-71d4-44ad-8656-e34b55c9ae9b" class="toggle"><li><details =""><summary>Victory Boogie Woogie (1942-44)</summary><p id="4d6c875d-ab17-4939-a45a-673c280676cb" class="">
+</p><figure id="f72e3717-07ff-41ac-b8cb-ec7050231e00" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2051.png"><img style="width:395px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2051.png"/></a></figure><p id="3a357afc-2372-424a-8d86-a88900b8e793" class="">
+</p><p id="af3f1b0d-85f8-4ef5-a455-b786cbb5efb7" class="">A seguito degli avvenimenti bellici, ritornando in America scopre una nuova società, più dinamica e intraprendente. </p><p id="f72b0187-2dc6-4096-a6e7-5aeddd6a339b" class="">La nuova atmosfera energica contribuisce nel suo lavoro, cambia il formato che diventa romboidale. Le opere trasmettono dinamismo sottolineato anche dai titoli stessi. </p></details></li></ul><p id="b3da3aa8-3a7f-4b3b-ab0a-31ae766f5a41" class="">
+</p><h3 id="b4c9883b-4144-4157-a84e-c87391a59ee7" class="">DADAISMO</h3><p id="1fdde0c7-4e32-4264-9f88-b174933da7ce" class="">Movimento artistico che nasce in Svizzera nel 1916. Stravolge la sfera concettuale. Si diffonderà anche in Germania, a Parigi e negli USA. Perde valenza nei primi anni ‘20 quando subentra il surrealismo. </p><p id="31aac61f-b3eb-41ad-85bf-bf550f212996" class="">Se il futurismo è un movimento che tende verso la politica della destra, al contrario il dadaismo è un movimento di sinistra. Rifiuta la guerra.</p><p id="ec57414f-f3a1-4b00-985e-db972969f069" class="">É un luogo importante per il movimento dadaista il Cabaret Voltaire.</p><p id="44f8a0cc-44e6-4603-b0d4-ec10f402cf0d" class="">Maggiori esponenti sono Duchamp e Man Ray.</p><p id="37bc3fb1-c06f-4b6c-aa92-ecdf42bff35a" class="">Tristan Tzara, poeta fondatore del gruppo, narra di aver trovato la parola a caso in un vocavolario francese, in russo significa due volte sì, in tedesco due volte qui, e in francese è una delle prime parole che i bambini pronunciano e con cui indivano tutto.</p><p id="0d2b7dbc-c6fb-44f8-a89d-50b98934f771" class="">Il dadaismo è frutto della creatività umana che inizia ad emergere.</p><p id="a5df376c-b818-416f-afd0-abd8328538d7" class="">
+</p><p id="e8d22abf-d204-44be-aecc-c6f3370a8a0e" class=""><strong>MARCEL DUCHAMP</strong></p><p id="98d3da7c-3821-4f1f-9dac-edd1da854b9b" class="">Si trasferisce a New York dove ha possibilità di interagire con moltissimi artisti</p><ul id="390016d0-44c2-42d1-beed-fe8cecff75f7" class="toggle"><li><details =""><summary>Ruota di bicicletta (1913)</summary><p id="ab3c6abc-2470-4cf2-848c-0b49b9979a8e" class="">
+</p><figure id="c0332719-81f8-40f6-910c-97aa73fe8507" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2052.png"><img style="width:162px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2052.png"/></a></figure><p id="7d5dff77-90cb-4b3f-9c4a-053d50c48a65" class="">
+</p><p id="406aad78-0310-4285-86e1-332bbab5c48c" class="">Ready-made in legno e metallo.</p><p id="9044d6b9-668f-45f0-9c79-04c4122f05b2" class="">Estraniata dal mezzo (bicicletta) la ruota perde la sua funzione. Decontestualizzata. </p><p id="82dfd0ac-a379-4099-946f-9b0a85516e50" class="">Ready-made: decontestualizzazione di oggetti di uso comune dal loro ambiente naturale, isolati dal proprio contesto vengono inseriti in un differente contesto: istituzionael (gallerie, mostre...) </p></details></li></ul><ul id="fdd6928d-8f82-4995-9a8e-6dad8ba1572b" class="toggle"><li><details =""><summary>Fontana (1916)</summary><p id="af4bcdf3-1e67-417e-a37a-9fcc7955343e" class="">
+</p><figure id="61f60fbb-65d4-4d13-a75c-fdd638f3a506" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2053.png"><img style="width:241px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2053.png"/></a></figure><p id="dca47dc8-5922-4073-9022-96a88d652ff7" class="">
+</p><p id="a6d25aa6-b239-4004-b4b3-f31d9dbe6e41" class="">Pseudonimo di Richard Mutt.</p><p id="897d63df-78d4-4ef8-972e-0e4ecac71648" class="">Oltre al gesto scandaloso di esporre un orinatoio capovolto, si firma con uno pseudonimo perchè facente parte della giuria del comitato organizzatore, da cui si dimise quando l’opera viene rifiutata.</p><p id="9098476d-6f42-4c11-8e08-4b8cf0118780" class="">Vuole capire quanto il pubblico e la commissione fossero aperti mentalmente ad accogliere una determinata rivoluzione artistica.</p><p id="a56d92b6-8821-48c7-a66b-1b0abbf2922c" class="">Nella storia dell’arte, da queste due opere si ha un punto di non ritorno, rivoluzione determinante, viene messo in discussione tutta la storia dell’arte fino ad allora.</p><p id="2148ffb6-edc5-42d3-9711-9a5f1104031c" class="">
+</p></details></li></ul><ul id="3495eb4f-51e1-41a8-a931-44078a6ec8c6" class="toggle"><li><details =""><summary>L.H.O.Q. (1919)</summary><p id="aa7e7f42-2b42-4319-be98-afa63623dadb" class="">
+</p><figure id="c8d648c3-3a54-4cde-99be-da83a0f2ca88" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2054.png"><img style="width:139px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2054.png"/></a></figure><p id="3391d60e-3548-423d-930c-b48d9ddce492" class="">
+</p><p id="93ecd49d-0a27-4a94-a77c-994cb9478ddf" class="">Disegna baffi e pizzetto alla Gioconda di Da Vinci.</p><p id="1e6dad16-96d4-48f9-8d65-70a41a0c6b28" class="">“Lei ha caldo il sedere” sigla in francese.</p><p id="a0fcf7b6-db79-4bb3-b9fa-84fc962e7108" class="">Viene riprodotta un’opera iconica che provoca la quiete pubblica con baffi e titolo, dunque una doppia dissacrazione.</p><p id="30788241-3fc0-4869-96bd-0dd3fe980f73" class="">
+</p><p id="2629518a-2a18-4ee5-aaed-e3a7c1a0bd69" class="">
+</p></details></li></ul><p id="772a3433-9ae3-4e2a-b237-dff6f642fa12" class="">
+</p><p id="0671a834-8bac-4ab0-8c20-a1b5c4f6568e" class=""><strong>MAN RAY</strong></p><ul id="ef74f16c-76fe-4cf6-a4c9-72e6a9292c07" class="toggle"><li><details =""><summary>Oggetto da distruggere (1923)</summary><p id="b665a0d6-c24d-4cd8-a5e2-4edd9fecf382" class="">
+</p><figure id="01df9bbf-a7f9-43b1-bbf5-68df52e41ad0" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2055.png"><img style="width:151px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2055.png"/></a></figure><p id="dfab945e-84b3-4a86-a923-74643d03f923" class="">
+</p><p id="769c490c-7cdf-4bce-a3c5-7864ff53ee4b" class="">Posiziona un occhio sull’asta di un metronomo, oscilla ritmicamente. L’allusione è quella di tenere un controllo ossessivo alla tempistica della vita, i parametri ritmici dell’esistenza. </p><p id="fdee6957-b17c-4907-8ba2-7f1e82e525cd" class="">Altra analogia è l’occhio divino che ci osserva.</p><p id="27d5ff5e-16c2-4117-885b-40ab153e5264" class="">Modifica il titolo in oggetto indistruttibile per evitare che il pubblico prendesse alla lettera il titolo.</p><p id="217c87e7-e76f-4c13-a787-a1089b6fba62" class="">
+</p><p id="030ade16-c6f6-419b-9b78-3ca45d2d9a65" class="">
+</p></details></li></ul><ul id="ec8ee701-9af0-42c1-917f-23bf2ffb3422" class="toggle"><li><details =""><summary>Cadeau (1921)</summary><p id="1c0058e3-3c1f-46db-b1d8-b5929fad7466" class="">
+</p><figure id="1e55089c-9305-457d-a06e-b14ac55555a8" class="image"><a href="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2056.png"><img style="width:181px" src="Art%20Nouveau,%20Avanguardie%2053431fef9e7c43a6877265338f598b4d/Untitled%2056.png"/></a></figure><p id="9830f746-9a51-4953-9ddd-ca4174faa56f" class="">
+</p><p id="291f9841-b749-4a70-b82c-da71d52eedc6" class="">Quattordici chiodi in fila rendono inservibile il ferro da stiro. </p><p id="48308a1d-5e3f-4dda-ace5-8762ba6cc776" class="">
+</p></details></li></ul></div></article></body></html>

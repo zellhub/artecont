@@ -1,0 +1,766 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title> New Dada, Nouveau Réalisme, Performance, Pop Art, Iperrealismo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8516e85d-5067-447f-988d-b2f26649eae7" class="page sans"><header><h1 class="page-title"> New Dada, Nouveau Réalisme, Performance, Pop Art, Iperrealismo</h1></header><div class="page-body"><p id="e0d9438b-9472-4680-b6ff-d32a9c03f8c3" class="">
+</p><h3 id="dfa191ec-8c67-4aac-8c62-8015737c2aaf" class="">New Dada</h3><p id="44078014-3523-4cf8-99d3-423e2cec5f5d" class="">Combine painting: scultura e pittura unificate, assemblaggio di oggetti comuni</p><p id="7f0703ea-9f1a-4a64-be0f-4c846fe73825" class="">Oggetto non decontestualizzato, ma viene inglobato all’interno di un’opera in un contesto installativo.</p><p id="4fea2fe7-2102-4c3e-9926-ca84c1ddb89d" class="">
+</p><p id="f8d8608d-0370-40da-956a-fb270b8e0ab5" class=""><strong>RAUSCHENBERG</strong></p><p id="bc6c5a3b-1ee1-4b0b-b496-fc8423a2836e" class="">Promotore del reinserimento di oggetti della quotidianità nella propria opera.</p><p id="cdbf7c28-323e-47ac-a69c-fcdc1be013dc" class="">Stile pittorico vicino all’espressionismo astratto, richiamo all’azione, alla gestualità.</p><p id="480f7124-b022-44b5-baba-1cba73f4461b" class="">Richiamo all’oggetto.</p><ul id="d5813ddf-03d2-490d-aba9-18c027924edb" class="toggle"><li><details  =""><summary>Odalisca (1955-8)</summary><p id="fbdeda25-ac87-43ec-985a-098a1140e1f5" class="">
+</p><figure id="183100cc-307b-48c9-8025-038a3d0b9e8e" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled.png"><img style="width:215px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled.png"/></a></figure><p id="41f71dfd-b41d-4c22-990b-544ee581b9c7" class="">
+</p><p id="c4d87ba2-f6b2-4ba7-a525-84f2e23c18fc" class="">
+</p></details></li></ul><ul id="7eb8a8d8-0c03-4dd3-ab5e-faa748dd286f" class="toggle"><li><details  =""><summary>Bed (1955)</summary><p id="2d8703f1-6242-41a2-83dc-880d7be98d83" class="">
+</p><figure id="77b153e5-0895-4842-9fdc-64520c1258f6" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%201.png"><img style="width:495px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%201.png"/></a></figure><p id="3c33ff79-dc7f-400c-b705-5e3218de92a8" class="">
+</p><p id="d826c10d-e8cf-40c4-8f7e-c5a6480df972" class="">Ready made che riprende il concetto duchampiano.</p><p id="f640e967-7780-44d6-84ae-db3943b7da77" class="">Letto che perde la sua funzione, viene usato come tela. Collocato verticalmente sulla parete.</p><p id="2f51852e-9f64-4093-aba8-e64299b7d532" class="">L’artista dipinge direttamente sull’oggetto.</p></details></li></ul><p id="71fdb59b-980f-4484-9c23-b804cb5d7aea" class="">
+</p><p id="7806131a-c7c4-4054-a42d-d719795e974e" class=""><strong>JASPER JOHNS</strong></p><ul id="cfe6e635-9d1d-41c5-8c8a-b44084e6cbfd" class="toggle"><li><details  =""><summary>Tecnica dell’encausto</summary><p id="b3200e97-5ab3-4e45-96ed-7ac8c9d12478" class="">
+</p><figure id="704ac828-9180-4dbb-b327-6681d9894b84" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%202.png"><img style="width:789px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%202.png"/></a></figure><p id="ce1e0b70-804b-4158-897f-7d41807dd25c" class="">
+</p><p id="a2857f8c-5a5d-4aa0-8674-494242da80ae" class="">Bandiera come simbolo di nuova potenza, il centro propulsore dell’arte che si sposta da Parigi a New York.</p></details></li></ul><p id="352d408d-6235-48f6-8405-db24423de12d" class="">
+</p><h3 id="3eb158e1-0d56-4680-a514-c6b969cfaa78" class="">Il nuovo Realismo Europeo </h3><p id="c980d501-e3e4-486d-994a-d390cd897d0f" class="">1960 - Francia → Il gruppo si scioglie nel 1963.</p><p id="1561eedd-ca01-48b5-bd99-dbad6fec233c" class="">Nonostante le diversità dei vari linguaggi plastici, gli artisti che aderirono al gruppo avevano percepito una base comune del loro lavoro, essendo questo un metodo di appropriazione diretta della realtà, equivalente nei termini usati da Pierre Restamy, a un riciclaggio poetico di realtà pubblicitaria, consideravano la loro opera d’arte come un segno comune del loro tempo da mostrare a. futuro.</p><p id="f4a42c5c-0e2c-436f-b52b-6f18598f400c" class="">Il fulcro è l’oggetto stesso ritrovato che viene catapultato all’interno delle opere.</p><p id="15ee631e-0325-44fd-9655-72982a26cf37" class="">Rivisitano la materia riadattandola alla loro ideologia.</p><p id="073dc2b2-5eff-476d-bc4c-410ff64b3428" class="">Utilizzavano oggetto di uso comune: scarti, rottami, ecc..  qualsiasi oggetto che poteva essere identificato con la società e il consumo.</p><p id="b2ced451-cff4-4987-84af-97babdca2fa0" class="">
+</p><p id="4ae850d5-ca88-4b11-a12f-e0b5b3bc7d9a" class=""><strong>DANIEL SPOERRI</strong></p><ul id="2fb3debb-917c-47a5-89fb-ef1997c5e690" class="toggle"><li><details  =""><summary>Quadri-trappola</summary><p id="f08a8bbb-94f4-4d1f-9565-b5f81db96721" class="">
+</p><figure id="c4eb6824-abad-4f27-b7f9-18f216a72f8c" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%203.png"><img style="width:234px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%203.png"/></a></figure><p id="e065dd16-940a-48de-82dc-01ce30053ccb" class="">
+</p><p id="ff978cbc-a52b-4a75-9857-399a6ad5c3c1" class="">Apre ristorante dove crea appuntamenti dove cucina con altri artisti, quando vengono a cenare lui entrava ed esclamava “Stop!” e i commensali erano obbligati a interrompere l’azione nel momento e lasciare tutto così com’era sul tavolo.</p><p id="26e098ec-8fac-4e8c-a544-d233e9e45f23" class="">L’artista fissa su dei supporti le tavole imbandite intrappolando gli oggetti, da qui il nome “quadro-trappola” </p><p id="ec614bf0-23d5-451b-a865-e3950aab9701" class="">
+</p></details></li></ul><p id="4a0e00e7-992a-497d-82a7-027b43ea538b" class="">
+</p><p id="a6bb8c52-be1c-40d8-ae16-0bcdd7cdc126" class=""><strong>CÈSAR</strong></p><ul id="aea7a317-7c53-420c-b48a-b92d6ff778b6" class="toggle"><li><details  =""><summary>Compressione “Ricard” (1962)</summary><p id="b3e8d0ba-9c89-4aad-8a9d-05e051dd614f" class="">Elementi d’automobile compressi</p><p id="e8ca356b-aa69-495f-b0c0-49a0b7c366cc" class="">
+</p><figure id="71fed319-8ce5-450e-b65e-a9420999d611" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%204.png"><img style="width:181px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%204.png"/></a></figure><p id="5c15d679-576b-4ce6-85e4-3de55b4c016c" class="">
+</p><p id="91a17388-7cf1-49c3-8414-671ea6b2d948" class="">Si appropria di oggetti scartati per renderli opera d’arte. Lavora sulla fusione, sulla sfera industriale, e il ciclo di vita di un oggetto industriale. </p></details></li></ul><p id="5895e165-8086-4a65-9747-3ad6bb050fdb" class="">
+</p><p id="93b9a6de-1b5c-4857-845b-f28a28e491f4" class=""><strong>YVES KLEIN</strong></p><p id="15e50949-e374-474a-87f5-26b781d21021" class="">IKB - International Blue Klein (pigmento che prende il nome dall’autore)</p><p id="6c30dd65-d812-4fae-80d9-317323bb0cae" class="">Questa sorta di blu oltremare molto acceso ricorda i cieli di Giotto e suggerisce una via d’uscita verso la spiritualità.</p><p id="c3d2cbf2-7bfe-47f7-ab8d-948065c6d9b3" class="">Blu oltremale composto di resina sintetica e altre sostanze.</p><p id="e883520c-26d3-4678-bf8a-fa59a1b882d4" class="">L’opera d’arte non è più identificabile con un oggetto. L’opera d’arte è un’operazione estetica che porta a guardare la realtà in modo diverso.</p><p id="1114ed69-7eed-4afa-8ce2-28a68fa3299f" class="">
+</p><ul id="9fe3b15f-2aa1-4f8e-944b-30b36a5ce0d8" class="toggle"><li><details  =""><summary>Performance antropometrica (1960)</summary><p id="d2d13026-7aa3-4383-918c-8f32b3da4f45" class="">
+</p><figure id="7f554dfc-4d2f-4566-85bc-d3164a21fa14" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%205.png"><img style="width:566px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%205.png"/></a></figure><p id="4f21c3fa-a616-4459-b66e-a6da743906d0" class="">
+</p><figure id="b8d139bc-6d29-441f-bd42-98608c867f8f" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%206.png"><img style="width:518px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%206.png"/></a></figure><p id="ff28209d-02a7-498b-ab94-0da48b2a451d" class="">
+</p><p id="eda6efa6-0f3e-4623-826c-c9359bdc8be4" class="">Corpo femminile inteso come pennello, cosparso del blu da lui creato.</p><p id="71d48e2d-02bf-42b1-b5e2-640054d307f7" class="">Da qui nascono le antropometrie.</p><p id="b8f1535f-9bfb-48f6-8e85-b84a7ed1b205" class="">L’arte non è più tecnica ostile ma atto di scelta.</p><p id="4b402841-6b34-4ca8-94bc-4202a4a3fc54" class="">Accompagnati da sinfonia monotona, creata da Klein stesso, composta da una sola nota. Il suono entra sempre di più nel mondo artistico.</p><p id="780cf4ea-3329-4b0b-a214-b18c4453399c" class="">
+</p><p id="3a325478-7d9d-47d3-909b-63c8bcd9a863" class="">
+</p></details></li></ul><p id="08070cf8-10a6-4a38-bb2b-badff2c760f2" class="">
+</p><h3 id="e20db4fe-d6e0-41d0-83f3-6b2d88aeda28" class="">PERFORMANCE</h3><p id="55c1db12-b032-48cc-8214-6f492d2957d9" class="">La performance è una modalità basilare nell’arte della seconda metà del Novecento, costituisce un vero e proprio genere che attraversa una molteplicità di movimenti e tendenze, articolandosi a seconda degli orientamenti dei singoli artisti.</p><p id="c5ee9d67-d089-4edf-b982-a9c0daa11a93" class="">Nel corso delle varie sperimentazioni, la performance con la fotografia e il video cui assegna la funzione di registrare e di cui rispecchia trasformazioni tecnologiche.</p><p id="41dce0d9-3433-4529-a894-6dc7667a92de" class="">La performance segna l’ingresso del corpo dell’artista nell’opera, o in alcuni casi attraverso modelle e modelli.</p><p id="512176e7-f9e3-4aad-98d3-3ae4f661e857" class="">[A differenza dell’Happening il pubblico non è partecipe, e viene a mancare l’aspetto di improvvisazione]</p><p id="b374dd99-3f3c-4459-9f14-687fd6c7d44f" class="">
+</p><ul id="eea1f675-2824-4b23-8040-15cadbc3db0e" class="toggle"><li><details  =""><summary><span style="border-bottom:0.05em solid"><strong>Décollage</strong></span></summary><p id="4d89850f-357f-4502-bd24-e6e464a7933f" class="">
+</p><figure id="8b238bd7-5449-406d-b933-21c58672e7a7" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%207.png"><img style="width:704px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%207.png"/></a></figure><p id="6468a222-e352-4bee-a9f4-59826719d1ad" class="">
+</p><p id="4386d756-3943-41b2-876a-d799bd5b9919" class="">Viene rivelata l’immagine attraverso la lacerazione. Viene modificata l’identità originaria. Si crea una scomposizione dell’immagine.</p><p id="63627ee7-326f-487b-9d0d-bbc13d53a8b8" class="">
+</p></details></li></ul><p id="c38023ed-36b1-4de3-a18c-0d44df5bd457" class="">
+</p><p id="e42c5702-bba2-440a-bfc1-5983da161d9a" class=""><strong>PIERO MANZONI</strong></p><p id="d04830d4-d3ae-4475-b0da-bbc36b98dd28" class="">Si pone domande sul reale valore attribuito dalla società alle cose.</p><p id="b8aa04b2-f593-438f-b33f-d0973403e9f4" class="">Manzoni ha elogiato e deriso allo stesso tempo la figura dell’autore creatore.</p><p id="3f6df42b-e451-402a-aa1b-a62929773f74" class="">Si basa sul concetto della dissacrazione dell’artista geniale. </p><ul id="df141ab4-d75c-499f-8d58-9d625814a170" class="toggle"><li><details  =""><summary>Achrome, Base magica, Corpo d’aria (1958-62)</summary><p id="7c5d32e6-d25a-47aa-bd45-61cc4c30fc9a" class="">
+</p><figure id="8b3de3ae-a75d-419c-9777-a3a2db563f49" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%208.png"><img style="width:785px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%208.png"/></a></figure><p id="861c6dce-887b-429f-b6db-c78fc387de41" class="">
+</p><p id="1432c108-465d-4f32-b1c5-2e01ba373cd2" class="">Achromi: la tela diventa inutilizzabile</p><p id="8904f549-2b74-41e8-b715-a223d492e230" class="">Base magica: lo spettatore diventa opera d’arte</p><p id="ae116732-3ff6-4608-ab30-2b65b8c5c3c7" class="">Corpo d’aria: gonfiato con l’aria di Manzoni, da qui ci si catapulta a Merda d’Artista</p><p id="6ed391bd-b858-4c35-b9d1-59a4bfe298a5" class="">
+</p><p id="ee1fd54d-3120-418c-9853-3c72e81f0a25" class="">
+</p></details></li></ul><ul id="f603741d-fa7f-4e66-b51f-f0302c7bd0e2" class="toggle"><li><details  =""><summary>Merda d’artista (1961)</summary><p id="f2cf42dd-27e7-4095-b47b-9f9f16c5bc8c" class="">
+</p><figure id="b7b40a59-bd14-4caf-8ccb-0742017e4cb9" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%209.png"><img style="width:779px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%209.png"/></a></figure><p id="88694e35-e487-4e7a-b1c1-bb15caf0e112" class="">
+</p><p id="ddf5a8e5-774b-4a2b-9dfb-d0b0f9bfc6c8" class="">Serialità: prodotte 90 scatolette.</p><p id="b079c0b9-7311-43d0-8b4a-7e9d43b0d630" class="">Ridicolizza ciò che succedeva nel mondo dell’arte nel tempo.</p><p id="69f4a2b6-44d5-48c3-a8dd-1c1aebd70758" class="">Manzoni va a scardinare il boom economico del mercato dell’arte.</p><p id="344e82a8-35b1-44f0-9851-9670add3e432" class="">Presenta le proprie feci come opera d’arte, qualcosa di personale, confezionato e autenticato, con l’intento di ridicolizzare, che però acquista valore di altissimi livelli.</p><p id="9df6911b-d9f1-40e7-8fd8-0ccda795cc27" class="">
+</p><p id="33f5c9dc-b592-4b63-b152-71ad8cafea05" class="">
+</p></details></li></ul><ul id="21a734fc-b888-4979-b532-2ba8e25912c7" class="toggle"><li><details  =""><summary>Sculture viventi (1961)</summary><p id="55480ba2-652e-4760-8d01-c64de0ff6289" class="">
+</p><figure id="3530ea97-f286-4020-aa35-9b8d127dd871" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2010.png"><img style="width:561px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2010.png"/></a></figure><p id="0aa65a5f-194b-4362-87d9-a9a7a837a918" class="">
+</p><p id="74a3c9ba-1bf6-4e5e-be10-242685c8958c" class="">Performance in cui firma il corpo delle modelle, applica ironicamente il concetto di autenticità che aumentava il valore dell’opera.</p><p id="36bc07b1-c352-48ed-b3e7-aa2d8a4ef6f3" class="">Corpo come opera d’arte.</p></details></li></ul><ul id="a840d0bc-5750-413d-9ab8-f40a4579b62d" class="toggle"><li><details  =""><summary>Uovo scultura (1960)</summary><p id="6b2a09bb-2d52-49eb-b410-3aa2aee62604" class="">
+</p><figure id="f370d75b-bdec-46ab-ad9a-6fe4bdeb3697" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2011.png"><img style="width:385px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2011.png"/></a></figure><p id="9812334e-3e75-45a9-a942-23869d45e477" class="">
+</p><p id="637fdc50-e540-41fc-b2d5-4053c4dc6743" class="">Uova pulite con solventi, fatte cuocere in forno e poi firmate con l’impronta digitale dell’artista. Il pubblico viene invitato a mangiarle sul posto. </p><p id="aee89165-551a-44da-9a28-17ee46fe07b4" class="">Trasforma l’opera d’arte in prodotto da consumare.</p></details></li></ul><p id="40f26a5f-42c4-4565-9a33-a30ba9d7e565" class="">
+</p><h3 id="4e73d903-641a-4765-bd56-09268d773289" class="">Pop Art</h3><p id="f5fe32e6-779e-4436-987f-7166d618b5e2" class="">Nasce nel 1956 in Inghilterra con la mostra This is tomorrow alla Whitechapel Gallery di Londra.</p><p id="80d92f10-b439-47ac-be70-335b2a5dccaa" class="">Prime manifestazioni di pop art, riflette il consumismo inglese della Londra di quegli anni.</p><p id="35f4221a-a5ac-46e5-a49c-0c560be188d6" class="">La parola Popular cambia significato: Si ispira alla cultura popolare, l’arte di massa, prodotta in serie.</p><p id="8a73e533-1851-4376-9a2a-6545dc8cdffa" class="">La pop art è il primo movimento artistico che tiene in conto della rivoluzione mediatica senza condannarla.</p><p id="44409502-8df7-4f8d-9f4d-2197f9d9c230" class="">Un ritorno al realismo mediato dalla riproduzione tecnica dell’immagine.</p><p id="ee78d3a8-91b8-45ca-8d6c-40dc4b067714" class=""><span style="border-bottom:0.05em solid">Caratteristiche secondo il critico Lawrence Alloway:</span></p><ol type="1" id="3b68c1d2-4a15-475d-b336-1cec95aad93b" class="numbered-list" start="1"><li>Rappresentazione della realtà trasmessa dai mass media (pubblicità, rotocalchi, televisione)</li></ol><ol type="1" id="3b0f79f2-40ea-404b-b5c4-02be36b157b4" class="numbered-list" start="2"><li>Esplorazione del gusto popolare e del kitsch</li></ol><ol type="1" id="7dff705a-cdf9-41d8-a79b-bb17dcd5bd91" class="numbered-list" start="3"><li>Rappresentazione dei personaggi-culto: divi del cinema, cantanti pop, personaggi politici</li></ol><ol type="1" id="dafe9437-a014-4e8f-8bec-42a138924666" class="numbered-list" start="4"><li>Utilizzo delle tecniche di riproduzione meccaniche, come la serigrafia</li></ol><ol type="1" id="ce1d82a3-984e-4a78-83cd-73a60299ced2" class="numbered-list" start="5"><li>Celebrazione dell’oggetto di produzione industriale e di uso comune</li></ol><ol type="1" id="106b0ab7-2ea5-4336-b4eb-b34248e52eec" class="numbered-list" start="6"><li>Rappresentazioni di tipo piatto con colori uniformi e violenti simili a quelli dei cartelloni pubblicitari</li></ol><ol type="1" id="957dd10c-a6a1-4eab-8a98-32f6218abbf7" class="numbered-list" start="7"><li>Abbondante uso della tecnica, di origine dada-surrealista, dell’assemblage.</li></ol><p id="27639b48-103f-45e8-ac2b-9636882ac16c" class="">Personaggio chiave è Andy Warhol</p><p id="42269a32-58e9-4533-b1a8-a03044acedef" class="">
+</p><p id="7c5505ad-e22e-427b-881c-9275bded7083" class=""><strong>RICHARD HAMILTON</strong></p><p id="498885f3-1e49-4302-a928-3079a2990d7a" class="">I personaggi esprimono tutto il loro narcisismo e uno stile di vita fondato su suggerimenti massificati attraverso il loro corpo, ma anche attraverso gli oggetti che li attorniano.</p><ul id="ceb53e3a-13dd-4720-8320-8b3790ec26c7" class="toggle"><li><details  =""><summary>Just what is it that makes today’s homes so different, so appealing? (1956)</summary><p id="a686fca9-c5b7-4239-b20d-fd6eb659b402" class="">
+</p><figure id="9aa9168c-6f77-4e94-92a1-c30eddc12c14" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2012.png"><img style="width:308px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2012.png"/></a></figure><p id="e4638733-60db-4b35-bcc2-dffeca517bcb" class="">
+</p><p id="ce968884-e453-4a4c-9209-9ae5a25c9636" class="">Racchiude gli elementi fondamentali della pop art. Prima manifestazione. </p><p id="14d05827-e0d3-4460-b51f-2147c0a6760a" class="">Soggiorno borghese, arredamento moderno e benestante. Si evince la classe sociale dall’oggettistica.</p><p id="d83ae2d5-92af-4cec-9c1e-708635f9b3d3" class="">Elementi caratterizzanti del consumo di massa sono: aspirapolvere, governante, registratore, televisore, marchio Ford.</p><p id="3ac1e0f7-bb36-400b-93f5-0b8b679dc64f" class="">Corpo di donna e uomo quasi nudi, lui è coperto da una sorta di racchetta-dolciume, di lei corpo non materno ma sensuale, seducente.</p><p id="53ed148e-d475-40fb-a307-c9ca448a0fd3" class="">Oggettistica contemporanea.</p><p id="e9947f90-77b6-42ef-8fa9-d2de7deeb498" class="">Presenti ritratto riprende la ritrattistica classica, e stampa di fumetto (importanza dei giornali) </p><p id="f34984e8-3ad5-4d04-b47b-d52304e5f316" class="">America sfavillante del tempo (luci al neon, pubblicità, banner di eventi culturali)</p></details></li></ul><p id="0eda0438-4cbe-481b-a61b-a9d759395a17" class="">
+</p><p id="0a4a0cde-a2ea-496a-9393-f2930fa6f8b7" class="">
+</p><p id="34ba6c21-6919-4546-99e2-a4d7b9155d13" class=""><strong>ANDY WARHOL</strong></p><p id="87f17211-d381-4b86-8df5-71564bc80185" class="">Nasce come grafico pubblicitario, persona abbastanza eclettica. Crea la Factory: macro-ambiente dove si poteva interagire con personaggi con cui si creano collaborazioni (modelle, artisti, musicisti) si crea una rete di comunicazione.</p><p id="eeaa5193-1499-4a38-97a8-470e00b739c5" class="">Serialità</p><ul id="bc7343c9-26e3-40e8-a5ff-c24c32fa850f" class="toggle"><li><details  =""><summary>Andy nella factory</summary><p id="43ccef26-4858-4d38-9a3b-3a90ed4a54d9" class="">
+</p><figure id="f455f24d-c378-421c-ada0-b6bf2f78419b" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2013.png"><img style="width:767px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2013.png"/></a></figure></details></li></ul><ul id="281307fc-7507-4df3-9ce7-14c44ea63a10" class="toggle"><li><details  =""><summary>Minestre in scatola Campbell (1968)
+Green Coca-Cola Bottles (1962)</summary><p id="be5538f8-127c-4d11-8c23-c459d189ec00" class="">
+</p><figure id="abc11eb0-d507-47ff-98b2-e63fd781cb70" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2014.png"><img style="width:783px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2014.png"/></a></figure><p id="2cc46249-4dcc-4dd4-ac49-794733e585f0" class="">
+</p><p id="b2586f29-245c-4d93-bf6a-866c4615746b" class="">Prodotti di consumo riprodotti in serie, in chiave bidimensionale. Non prende l’oggetto fisico in sè ma ne riproduce l’immagine. </p><p id="bb3bcc03-2e93-4251-b6f7-36252bbedb07" class="">
+</p><p id="77573d26-d222-41ef-97f7-8b3eb63e41de" class="">Disegna inoltre la cover dell’ambum di un gruppo, chiave erotica, invita lo spettatore a sbucciare questa banana. (Può essere sbucciata tramite una pellicola, ha sotto un colore rosa) Vuole provocare, stuzzicare il pubblico.</p></details></li></ul><ul id="41bc2317-c33d-4c49-9ab5-78119059b35d" class="toggle"><li><details  =""><summary>Turquoise Marilyn (1962)</summary><p id="bd07fff6-9508-4856-a0f2-6b9729f22b36" class="">
+</p><figure id="1b0f1a54-4bce-453e-a464-6359bdbd28fa" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2015.png"><img style="width:561px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2015.png"/></a></figure><p id="fab907d9-c0ce-41c4-8284-b8ab9c623f71" class="">
+</p><figure id="6b514574-9455-4b79-8fd4-043c08b8d978" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2016.png"><img style="width:758px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2016.png"/></a></figure><p id="fd4fa919-bc2c-44ac-8d18-b510dfb66061" class="">
+</p><p id="c796886f-01ed-427f-9ebc-5fd4ded079a4" class="">Ossessionato dal volto di Marilyn Monroe, prende un rimando a un poster preso su manifesto cinematografico, ne esalta le caratteristiche cromatiche. </p><p id="0876f4fc-6851-4c03-9624-85cd01cda8a5" class="">Pone accento su capelli, ombretto e rossetto, in qualsiasi elaborazione cromatica venga presentato è sempre riconoscibile il volto di Marilyn Monroe. </p><p id="96928ab8-04ad-4f8e-b27f-3d6d069f37de" class="">Restano immortalati i tratti che semplificano l’immagine in icona, riprodotti i caratteri di bellezza.</p></details></li></ul><ul id="1eb13a95-4ebf-4caf-a643-7d864c620a4a" class="toggle"><li><details  =""><summary>Gold Marilyn (1962)</summary><p id="cb31c1a1-ca0f-4e93-9edd-aca0c5d29ef4" class="">
+</p><figure id="3edd8d28-a7a8-4216-b815-edf38519a22a" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2017.png"><img style="width:772px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2017.png"/></a></figure><p id="407008eb-1ccc-474c-a2a3-4cfbde0098c4" class="">
+</p><p id="2d7a9515-15fd-4e5f-a326-a3dd3fd4252b" class="">Fondo oro è peculiarità di Warhol, da sempre affascinato dall’arte bizantina → Enfatizzato l’aspetto “ricco”</p><p id="06b944b4-410d-41a2-b85a-59f5982e05ea" class="">
+</p><p id="7840eae6-8c29-4c5a-852e-f7aadcab804d" class="">
+</p></details></li></ul><p id="e4444e90-714b-4f39-947a-6a07e28fef6e" class="">
+</p><p id="4f3dfe8e-b1fd-4033-98d9-86634c38ba2e" class=""><strong>ROY LICHENSTEIN</strong></p><p id="7ae1c830-ca30-4ad9-8007-dc889cf92345" class="">Riprende un dettaglio del rotocalco (fumetto) e lo analizza con uno stile tutto suo. Prende una vignetta, isola e ingigantisce un dettaglio.</p><ul id="0d37796d-fa0e-449c-a981-95491794f814" class="toggle"><li><details  =""><summary>Hopeless (1963)
+Sweet Dream Boy (1965)
+M-Maybe (1965)</summary><p id="dd168ddd-95bc-4b59-a074-21bf6da8f0ab" class="">
+</p><figure id="d3ba9131-cdce-4596-b4d4-50e1831055c6" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2018.png"><img style="width:769px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2018.png"/></a></figure><p id="fee5385b-aab1-4b62-bf0e-2d7c054a08fb" class="">
+</p><figure id="2b66e5fe-14f2-40eb-a3e3-864847e75ef1" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2019.png"><img style="width:732px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2019.png"/></a></figure><p id="bc991025-0273-42db-9b50-ec1b12a0b453" class="">
+</p><figure id="5fc31239-be32-4dac-aade-982259c8e332" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2020.png"><img style="width:702px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2020.png"/></a></figure></details></li></ul><p id="f87ee139-9971-4adb-8d16-4922cca7551f" class="">
+</p><p id="6b9058d4-b5f9-4379-aec2-47ef72f0534d" class=""><strong>CLEAS OLDENBURG</strong></p><p id="580027ce-e171-445e-ad58-d98b04bb3a9a" class="">Il cibo è per Oldenburg il simbolo della società americana. Presentato come grande pubblicità o in molti tipi diversi disgusta lo spettatore.</p><p id="48a4137a-9d44-4331-9f52-6b92fffac501" class="">Estrapola il cibo e lo ingigantisce a livelli esponenziali.</p><ul id="667925ba-a558-4832-b5e2-53049853d0c2" class="toggle"><li><details  =""><summary>Opere che rimarcano il consumismo del cibo-spazzatura che identifichiamo con la cultura americana</summary><p id="21732726-f52e-49f4-9719-930194d911b0" class="">
+</p><figure id="fbd53eb0-8a96-4d70-9478-a5079a36d95b" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2021.png"><img style="width:421px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2021.png"/></a></figure><p id="8f86da77-64a6-490b-8e6a-9085dcf45a32" class="">
+</p><p id="cfe71d85-bef2-4689-8a58-466c87dfe51c" class="">Installazione site-specific di un’area urbana.</p><p id="72124d78-4556-4717-a4b7-b54fa581cf02" class="">
+</p></details></li></ul><ul id="e45561a8-d49e-44d3-b533-f6cec0253215" class="toggle"><li><details  =""><summary>Ago e filo e nofo (2000)</summary><p id="1ba5b208-09d3-4b01-b008-7175cfc692e3" class="">
+</p><figure id="91fe04f8-f63e-4e20-ac21-92afe3046854" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2022.png"><img style="width:776px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2022.png"/></a></figure><p id="76f07a69-11e4-48ef-97b5-4b781aafaa20" class="">
+</p><p id="c7e26de2-8a25-4267-810c-c01ece843303" class="">Ago che penetra nel tessuto urbano di Milano, città capitale della moda.</p></details></li></ul><p id="c4b75e65-d78c-4e53-83d8-b705efe64a61" class="">
+</p><p id="59bbe965-6399-42cd-9671-09c76dffcb09" class=""><strong>TOM WESSELMAN</strong></p><p id="affae118-126e-462b-a0ae-9176e531e872" class="">Accentua l’erotismo del corpo femminile riducendolo all’essenziale. </p><p id="2b87a410-d074-4bad-a9a1-907aba8281e7" class="">La vecchia America puritana viene sfidata dalla nuova, in cui è facile “comperare il piacere” e in cui ogni sorta di piacere diventa industria.</p><ul id="37dcf7f6-5781-4a1d-a755-e382b6fe263c" class="toggle"><li><details  =""><summary>Great American Nude (1965)</summary><p id="09cac497-cb57-4aad-8581-49b8603e4ef1" class="">
+</p><figure id="132daf15-8709-4c84-95b9-488297721a51" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2023.png"><img style="width:2000px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2023.png"/></a></figure></details></li></ul><p id="9415fdd6-4381-4309-9c48-e910cb42b9fc" class="">
+</p><ul id="1ced0490-45a3-471c-ba69-1eb2ba81bea2" class="toggle"><li><details  =""><summary><span style="border-bottom:0.05em solid">Riassunto caratteristiche pop art</span></summary><p id="496a61d6-2986-4e99-a4ea-7bd4547d1b4b" class="">
+</p><figure id="694ae69d-c287-448b-b929-d6e5b04ff345" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2024.png"><img style="width:686px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2024.png"/></a></figure><p id="994d81ba-66c6-4b17-ad89-fa48a3cbb5cf" class="">
+</p><p id="2bd7aefa-6e21-4526-a1ee-21c3c99ba19d" class="">
+</p></details></li></ul><p id="a11f2f94-7768-477b-b713-967935ffe09a" class="">
+</p><h3 id="32637053-27e0-4f54-8a10-1c2a5ee19983" class="">Iperrealismo</h3><p id="6d95cc3c-45ff-42d4-8088-2a964ec7ddf7" class="">Sfocia grazie alla pop art: promozione del consumo e realisticità dei consumi e degli oggetti.</p><p id="015bdc0d-61a8-439a-b6f3-2b6202ca6002" class="">Trova una connessione alla pop art con l’oggetto stesso: renderlo il più veritiero possibile. La tecnica diventa ossessiva, maniacale. Gli artisti celebrano modalità di dipingere compulsiva, vogliono creare il più verosimilmente possibile la realtà.</p><p id="2d3df649-8de4-4281-b4f4-d71483fa8aa5" class="">
+</p><p id="f2484a39-ae50-400b-8925-041b7305651b" class=""><strong>CHUCK CLOSE</strong></p><p id="bcaefb2d-86a3-4db0-ac03-51719d9e381d" class="">Lavora su ingrandimenti pittorici, lavora sulla veridicità dell’immagine fotografica.</p><p id="959d36a1-8efa-422c-adb1-bee57eca40dd" class="">Lavora da un punto di vista pittorico.</p><ul id="0b630c2b-4201-4f38-9423-dd571656d4d3" class="toggle"><li><details  =""><summary>Robert (1973-74)</summary><p id="e9fdec2e-7200-47b8-9ce4-3fcf12f7e062" class="">
+</p><figure id="61fa7716-e9f6-4686-b0ad-3a3478c45053" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2025.png"><img style="width:699px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2025.png"/></a></figure></details></li></ul><p id="a8cad1e3-1ab9-41f2-8950-47fcfe00fcb8" class="">
+</p><p id="7f2556b2-cf2a-4ccd-a09a-c5b0cb771eb8" class=""><strong>DUANE HANSON</strong></p><ul id="ab082597-5f53-42de-8828-abe31fb29941" class="toggle"><li><details  =""><summary>Signora al supermercato (1969)
+Turisti (1988)</summary><p id="32048c81-c657-49f2-bc72-c68bccd03269" class="">
+</p><figure id="06a5948c-d3ec-47e5-9fb0-f4666435e5d2" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2026.png"><img style="width:369px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2026.png"/></a></figure><figure id="be83e0d0-62aa-488a-85f4-ec3a841108dc" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2027.png"><img style="width:360px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2027.png"/></a></figure><p id="f683e996-9029-4877-88b8-ffabc56c583e" class="">
+</p><p id="d4377f79-18d6-499e-98d8-4a6efc110256" class="">Iperrealismo fotografico, estremizzazione del consumismo.</p><p id="92fc283c-ea8f-4cc8-8625-b90f4632fa74" class="">Borghesia americana rappresentata in maniera molto cruda.</p><p id="c0c648b5-5965-4c8b-b6d5-84f555d5ac99" class="">Sculture molto realistiche che propongono personaggi persone con abiti e oggettistica reali, non è modo di ridicolizzare ma sottolineare l’aspetto stereotipato della casalinga americana (carrello pieno di cibi ipercalorici) e dei turisti.</p><p id="161d2b8e-99ee-46a3-94c0-358a2e9b5e7d" class="">Materiali: resina, poliestere, dibra di vetro, vestiti e oggetti naturali, sculture a grandezza naturale</p><p id="3d6cee74-bfd2-4bbd-9f0b-382dff8908f6" class="">
+</p><p id="7b6934c6-5bb5-46c8-a7d9-b6e874deb0ed" class="">
+</p></details></li></ul><p id="d277a3e7-7e00-4456-b9a0-e7a9265c539b" class="">
+</p><p id="66a8c489-d4a7-414b-ab7b-3d9c0e5b3022" class=""><strong>JOHN DE ANDREA</strong></p><ul id="768a609c-c6a2-4b97-88f9-5898c6be6bc5" class="toggle"><li><details  =""><summary>Diane (1986)</summary><p id="272701f6-4ecb-4d69-bb95-e2313fd4115a" class="">
+</p><figure id="df93cdc3-383e-4441-aec0-28726074f8f1" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2028.png"><img style="width:652px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2028.png"/></a></figure><p id="730d9437-af80-4854-a4a0-7abc9c78f844" class="">
+</p><p id="a2bbc81e-c17f-411d-8cc2-cd812c613d8e" class="">Ricrea artificialmente materiale della pelle.</p><p id="bf1e75e8-2f1b-4bc6-b3fb-25efa5725980" class="">Nudo femminile rannicchiato che si identifica con un nudo femminile reale.</p><p id="6af6f636-01f8-4807-9d7e-22e51a368aa4" class="">Scultura a grandezza reale</p></details></li></ul><p id="17bb0079-f13e-48a5-9eba-dbad58904b9a" class="">
+</p><p id="eb4a0132-7733-4e5f-9cde-f8b145588036" class=""><strong>RON MUECK</strong></p><p id="55aee589-75b7-44f1-967b-dac1069d2e71" class="">Mueck rielabora i personaggi in maniera accentuata, le dimensioni sono molto più grandi del reale. Non trovava interessante la grandezza reale, vediamo tutti i giorni persone a grandezza reale.</p><ul id="c42ee854-e0e2-45a4-8487-df05689572ff" class="toggle"><li><details  =""><summary>Mask II </summary><p id="96008fe1-388e-42cc-8424-350e151df0de" class="">
+</p><figure id="172e9ed8-2415-40b1-ac24-0e68cf9a6476" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2029.png"><img style="width:877px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2029.png"/></a></figure><p id="73581174-b4f9-4aa6-9a7b-13f434615e47" class="">
+</p><p id="12eda0d2-d75d-45d5-842c-5f9e43105f9f" class="">Dettagli e meticolosità nella ricreazione dell’aspetto anteriore di un volto.</p><p id="72772974-64cb-47c7-872c-a94a013ed474" class="">Altamente dettagliato, estrema perfezione realistica ha riscontro positivo nella critica. </p></details></li></ul><ul id="887d2f86-bed8-435f-92b7-8db6279ee4da" class="toggle"><li><details  =""><summary>Boy</summary><p id="b5b5bdb7-1278-4b23-821e-825c41319c05" class="">
+</p><figure id="41c0892c-9705-4182-9579-7f58aada06dd" class="image"><a href="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2030.png"><img style="width:871px" src="New%20Dada,%20Nouveau%20Re%CC%81alisme,%20Performance,%20Pop%20Art,%208516e85d5067447f988db2f26649eae7/Untitled%2030.png"/></a></figure><p id="a3f70220-1f70-4fab-9c82-5d1a152faa7d" class="">
+</p><p id="a5e9bba4-948c-44d2-b4d1-507916160c8f" class="">Altera la scala di grandezza, facendo notare dettagli che altrimenti sarebbero andati persi (rughe d’espressione, l’aspetto concavo intotrno all’occhio, dettagli dei capelli ecc..)</p><p id="43d0d870-3148-4f57-85af-b91b42b5cda9" class="">Bambino rannicchiato semi nascosto da un braccio</p></details></li></ul><p id="90a98d63-7684-4382-b5fa-663a65fcc004" class="">
+</p><ul id="24982a35-4195-4873-ad06-9132f4073aef" class="toggle"><li><details  =""><summary><strong>Esempi in Italia </strong></summary><p id="8329a146-0ad4-4634-9859-c0de2a7d899d" class="">Mario Schifano, Tano Festa, Pino Pascali</p></details></li></ul></div></article></body></html>

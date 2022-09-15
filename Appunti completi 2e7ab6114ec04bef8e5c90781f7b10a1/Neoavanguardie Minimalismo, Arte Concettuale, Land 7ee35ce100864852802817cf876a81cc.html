@@ -1,0 +1,783 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Neoavanguardie: Minimalismo, Arte Concettuale, Land Art, Arte Povera</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7ee35ce1-0086-4852-8028-17cf876a81cc" class="page sans"><header><h1 class="page-title">Neoavanguardie: Minimalismo, Arte Concettuale, Land Art, Arte Povera</h1></header><div class="page-body"><h1 id="a7738893-eb92-48a9-83d2-2d332153e7ae" class="">Le Neoavanguardie degli anni ‘60 e ‘70</h1><p id="42b16e9b-4bec-443d-a095-ac75bad8bff0" class="">Avanguardia storica - è un “porsi in avanti” rispetto alla tradizione, contrapponendo un linguaggio rivoluzionario a quello sociale, estetico e morale del secolo precedente</p><hr id="f45c30d0-3738-4117-b16b-989639187bb4"/><p id="a4176e54-0bbe-4746-a286-0e9746dd6e6b" class="">Si possono individuare alcuni tratti comuni nei differenti movimenti:</p><p id="005078e1-bf40-4ec6-b55b-230ada480811" class="">L’attenzione si rivolge non solo e non tanto verso l’opera come risultato infinito, ma soprattutto verso l’analisi del metodo, dell’idea, dell’atteggiamento mentale e fisico, del processo, insomma delle condizioni preliminari che la determinano</p><p id="6f8ec280-4299-455a-b1e4-06cd43c422b8" class="">Il dissenso ideologico si trasformò in una aperta protesta contro il sistema commerciale e si spinse contro la trasformazione delle opere in merce</p><p id="8ff860f1-76ba-427c-8d4a-ecbf1ea09497" class="">Questa protesta assunse spesso la veste di una voluta fuga dei luoghi tipici dell’arte (musei e gallerie) dei metodi tradizionali di allestimento e dei materiali tradizionali delle opere</p><p id="4931e0f5-8e0f-41e4-9ea7-3fa9224edcd6" class="">L’allargamento delle tecniche portò a contaminazioni con altri ambiti creativi</p><p id="7bf06e0e-05d7-4573-a967-046f8e9b4e8d" class="">Spesso la manifattura dell’opera viene affidata ad altri</p><p id="c03e9468-51b5-4779-9d85-47f6c6b98812" class="">La creatività non è più riconosciuta in quanto legata alla manualità, ma l’inventiva e al senso interno delle opere</p><p id="44ec5904-4b18-4e0e-ae18-625e4712d890" class="">
+</p><h3 id="74df0c82-66e2-469a-a182-395a96cc56ac" class="">Minimalismo</h3><p id="9b75e5a2-06b9-46ef-a961-5f8d6683dade" class="">Reazione all’esuberanza dell’iperrealismo del consumismo</p><p id="3fd12a1b-a8c4-4a14-a404-89bffea84e82" class="">Si schiera contro tutto ciò che sta accadendo in America, movimento americano a cui partecipano numerosi artisti come Frank Stella, Carl Andre, Dan Flavin, Donald Judd, Sol LeWitt e Robert Morris</p><p id="d04d73d8-f850-4b5e-9b7e-cb36e8a223b5" class="">Il termine nacque a metà degli anni ‘60, quando il filosofo ?? teorizza la minimalità estrema che si può raggiungere. Non c’è pathos, relazione con l’osservatore.</p><p id="1ec01667-7d5d-4f63-b61c-8ff496f19f85" class="">Fondata sull’utilizzo di forme primarie, elementari e semplificate, spesso attinte dal mondo della produzione industriale e sviluppate in sequenze ripetitive animate da piccole variazioni sul tema.</p><p id="ec893fe7-c921-49ef-aaca-9e3f8d4b0762" class="">Tende a rappresentare le linee guida della purezza, essenzialità, geometria estrema, cercando di mantenersi su contenuti freddi, rigidi, anonimi, non simbolici o allusivi.</p><p id="e64c6753-7f33-4cb2-821b-c95a2f8818d8" class="">Radici: costruttivismo russo, De Stijl, Brancusi e altri astrattisti geometrici.</p><p id="f84242a4-0cd9-43cd-9a3b-d8b90f08852d" class="">Ripetitività e serialità di elementi geometrici molto elementari, semplificati.</p><p id="97c8e5ed-526c-4e86-a92e-01dbd7edd32f" class="">La maggior parte delle opere sono solidi geometrici, dall’aspetto unitario, spesso modulare e dalle superfici monocrome, utilizzo di materiali freddi.</p><p id="94a1bbc9-1eea-4c07-8e8b-758f025eaf79" class="">Si distacca dalla Pop-art e fa leva sulla pittura informale, espressionismo astratto americano, action painting è l’opposto del minimalismo (ribellione, irruenza, rabbia, gesto, azione / pacato, ragionato, razionale, distaccato, freddo)</p><p id="eb765516-dce9-4239-ad92-e203716df35b" class="">Anti compositive, azzerano ogni valenza espressiva, non rimandano ad altro se non al loro aspetto concreto. É tutto concretizzato sull’opera stessa. </p><p id="96e9f8df-6005-49a4-b7e9-ecfd30a9f7e8" class="">Importante l’incidenza della luce sulle strutture, relazione con materiali freddi e luce.</p><p id="00f04c16-b172-43c9-b2d3-92e1f83d4ff5" class="">
+</p><p id="d9610de7-bdbe-4773-8695-10765ddc7d03" class=""><strong>FRANK STELLA</strong></p><p id="826a520c-cd8b-43bf-91d3-5802a00bbb11" class="">Padre del minimalismo. Ricerca geometrica, tinte scure.</p><ul id="ea193900-de85-4c9b-8871-950de3e7a339" class="toggle"><li><details  =""><summary>Serie nera II (1967)</summary><p id="390b4508-4040-4a37-9dfb-f91f681f4289" class="">
+</p><figure id="5bfe002b-31f0-43a8-b569-28fae5db6a06" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled.png"><img style="width:1536px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled.png"/></a></figure><p id="64f99509-552b-47da-820c-7fed738acdfd" class="">
+</p><p id="7e491ece-9c54-404a-b939-d88070c16763" class="">Dipinge opere con strisce nere separate da piccoli intervalli bianchi, coincide con lo spessore del telatio. La struttura in superficie riproduce la croce dei montanti sul telaio.</p><p id="e8886cfc-37f8-4b02-bd86-747112760099" class="">
+</p><p id="802bcb10-1a19-43d9-95a6-75998b257163" class="">Il dipinto è l’opposto dell’espressionismo astratto, le strisce dipinte a smalto, usate per la pittura murale, per la loro regolarità delle strisce e per l’eliminazione del colore escludevano ogni coinvolgimento emotivo.</p><p id="1749696b-651e-4c67-92a4-31e7cec0a784" class="">
+</p><p id="bcf259c7-3aca-49a7-860e-6a88e13d805d" class="">Semplificazione visiva ridotta all’essenzialità, al minimalismo estetico estremo.</p></details></li></ul><ul id="caf1f10f-1426-4c13-80c4-af3dc11d4d2a" class="toggle"><li><details  =""><summary>Gran Cairo (1962)
+Imperatrice d’India (1965)</summary><p id="cd5b5a61-f0e3-4725-9d08-36498a02e24e" class="">
+</p><figure id="ff5a7028-125b-40ff-8116-9856658fd085" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%201.png"><img style="width:875px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%201.png"/></a></figure><p id="ee00c237-2fc3-4727-a8cc-fbd25a14f299" class="">
+</p><p id="e582b6fb-f3d8-4c46-9988-1f26536042b4" class="">Inizia a lavorare con la cromia dove mantiene forme geometriche ma vi aggiunge l’aspetto cromatico che va a inserire una ritmicità differente.</p><p id="b14187ed-8846-484e-97f1-cf6a729e521e" class="">Si tratta di una shape canvas (tela in forma): la sagoma della tela rende l’opera d’arte pittorica un’opera che ha anche la valenza plastica di una scultura.</p></details></li></ul><p id="24200758-cb75-4efd-b69f-c6d8b39abc80" class="">
+</p><p id="14c15e53-f4f4-4bc5-b48e-ffd580cafe71" class=""><strong>CARL ANDRE</strong></p><p id="95ee1658-0e81-4136-ba31-f6a8adb85935" class="">Strutture che possono essere smontate e ricomposte, cambia il modo in cui l’artista può rapportarsi con l’opera. </p><ul id="f365b31d-0ffe-4b27-abde-bbe2009f484d" class="toggle"><li><details  =""><summary>Lastre di zinco e ottone (1969)</summary><p id="c8e13d54-c692-4003-8431-789cf8b0cb75" class="">
+</p><figure id="a7b86504-7406-4fcc-a33d-d76d917ee223" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%202.png"><img style="width:875px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%202.png"/></a></figure><p id="f692b09e-5d1c-42be-a98b-d0ca9efc30e6" class="">
+</p><p id="36da19c4-210c-42a9-99ac-0ba42e1716ad" class="">Due chiavi di lettura differenti: struttura verticale che si erge verso l’alto, struttura che si sviluppa orizzontalmente sul pavimento per essere calpestata dallo spettatore.</p></details></li></ul><p id="4e470727-1922-4843-870b-47350f42595e" class="">
+</p><p id="ebe4bbf3-35da-4493-9a8b-d992a3bfc677" class=""><strong>DONALD JUDD</strong></p><ul id="8c163fe4-e7fe-4708-a452-c9c978863c19" class="toggle"><li><details  =""><summary>Senza titolo (1970)</summary><p id="8668faa2-c243-4629-a386-bfa165c70a84" class="">
+</p><figure id="b07ec8c7-0b17-49f4-b9ad-f318b69d159d" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%203.png"><img style="width:656px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%203.png"/></a></figure><p id="07512b39-69c0-489f-bfaf-2d8799c9dc00" class="">
+</p><p id="f3291637-d248-4fa1-925c-b217bd6486fd" class="">Opere unitarie che funzionano in relazione ad altri elementi.</p><p id="81e2b062-7a73-47bc-99dc-f4aeae988daa" class="">Sequenza, serialità, non c’è variazione ritmica -  le mensole sono della stessa misura, colore e distanziamento. Ritmicità regolare.</p><p id="7e896745-5c8d-42b8-a978-eb65094ab792" class="">La luce è un elemento determinante: l’incidenza del’illuminazione gioca determinati ruoli cromatici. </p><p id="ae4d2989-a777-4d52-aaab-d3dcf541f721" class="">
+</p><p id="13b6584b-07d5-4bf8-b39e-cf7d59acb72c" class="">
+</p></details></li></ul><p id="687fbcb5-c238-4313-a533-6ce1aa284186" class="">
+</p><p id="a73a8359-5527-4872-9e77-249a1f98bfe0" class=""><strong>DAN FLAVIN</strong></p><p id="4f479b50-eff6-4246-af51-25e07c91d10e" class="">Lavoro su luce artificiale. Artista che per eccellenza all’interno del minimalismo lavora con le qualità primarie della luce artificiale.</p><p id="90b9035f-bffc-4c9a-8262-bb608afe692d" class="">Le sue opere nascono da semplici e seriali combinazioni di tubi al neon che, assemblati in quadratia, rettangoli o griglie, creano installazioni di luce all’interno dello spazio prefissato.</p><ul id="9f661b87-3da3-4407-b873-1925a8a7d897" class="toggle"><li><details  =""><summary>The diagonal of May 25, 1963 (1963)</summary><p id="a7532dad-40bd-4873-bbb7-37a8de218d44" class="">
+</p><figure id="1e59f83f-4d7e-4c4b-8adf-b6f8374fd2c3" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%204.png"><img style="width:360px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%204.png"/></a></figure><p id="794fcf9a-4907-49a7-b61a-1a48ae6cc815" class="">
+</p><p id="03d8acc8-6402-4ffb-a6bb-9a2405f55aad" class="">Omaggia la scultura di Brancusi, tende a sottolineare nelle sue opere un omaggio a diversi artisti. Lo fa anche con Tatlin</p><p id="e7f1952b-83ba-4811-a2e2-0bbffa08020f" class="">
+</p><p id="93ce94e1-f863-4f64-97d9-78aa4f9fd569" class="">
+</p></details></li></ul><ul id="12092859-b508-4658-81c9-6d3a33e02511" class="toggle"><li><details  =""><summary>Altri esempi con tubi al neon</summary><p id="c4c280e9-913e-47f8-ac5d-7629079795b5" class="">
+</p><figure id="7e3bc77a-ed47-480b-919a-666f2d9cbb18" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%205.png"><img style="width:240px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%205.png"/></a></figure><p id="26cd8256-1079-41fb-92d7-c365f13b3dd5" class="">
+</p><figure id="7cc824f0-6638-4298-b04d-8b694db3493a" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%206.png"><img style="width:240px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%206.png"/></a></figure><p id="fb16476c-8dee-481c-940c-6c88db79a1a3" class="">
+</p><p id="4a550822-539d-4dea-8378-e8718aad6c60" class="">
+</p><figure id="e92395bb-a2f3-4b11-84f0-10963fa9eea2" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%207.png"><img style="width:814px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%207.png"/></a></figure><p id="0e5ea653-0b58-4f4c-aedc-851e7e785f0a" class="">
+</p><p id="bdad55b9-763c-4782-b372-930dac7305d9" class="">Sensazione di stanza in bilico</p></details></li></ul><ul id="d5d86fa8-c087-4b64-9de1-961cbbb4ef91" class="toggle"><li><details  =""><summary>Santa Maria in Chiesa Rossa (1996)</summary><p id="96e17bb8-4edf-4020-ba19-b29c3ac7ac52" class="">
+</p><figure id="f403003d-92d4-4f40-9b66-97cbfee13754" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%208.png"><img style="width:646px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%208.png"/></a></figure><p id="8e055303-bea4-4c04-a7bb-3c191716714d" class="">
+</p><p id="10568ddd-3891-4141-a854-bdc8a335aa38" class="">Opera site-specific. Usa la luce come un colore, in questo senso ha spesso “dipinto” Interi ambienti.</p><p id="ab117e30-6c38-4134-bf84-02e213a73eae" class="">I colori rimandano a diversi elementi della cristianità: azzurro del soffitto - paradiso, oro - riprende il luogo di apparizione, la gloria divina, rosso - pigmentazione rosata che va a ricordare la passione di Cristo.</p></details></li></ul><p id="26eb76ff-c14d-47fe-8910-a2f7138d3081" class="">
+</p><p id="4a9a1d24-5c0a-4080-8bb6-72c97bc7c34e" class=""><strong>SOL LEWITT</strong></p><p id="e4eb21aa-4732-446d-ae1e-5f5a3e2c54ab" class="">Ossessionato dalla sfera geometrica, dalla complessità che si può riformulare sulla base di forme geometriche.</p><ul id="d36d2c77-d916-4ca6-bf5f-8ab2eef16bd8" class="toggle"><li><details  =""><summary>Cubo modulare (1968)</summary><p id="197234d9-dafe-42a6-bb72-c90033b5f040" class="">
+</p><figure id="f81226cc-90cd-42c0-88fc-d6cd3af14409" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%209.png"><img style="width:872px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%209.png"/></a></figure><p id="efc1f95c-b87f-47eb-b364-4ab58fefd6a3" class="">
+</p></details></li></ul><p id="f6966877-2173-4e5f-81c9-0e871c8d6b6c" class="">
+</p><p id="84960ba7-52eb-4b54-a82d-f131eb514d16" class=""><strong>ROBERT MORRIS</strong></p><ul id="12340efb-30d1-4f3a-860e-100a8b816806" class="toggle"><li><details  =""><summary>House of Vetti (1983)</summary><p id="bcedd54d-75a0-4c78-b2b9-e4f20fb715b4" class="">
+</p><figure id="d7b92917-c594-4413-9894-a6f33255c6a4" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2010.png"><img style="width:871px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2010.png"/></a></figure><p id="35134e0e-cc38-4060-badc-b0e1144e5cbe" class="">
+</p><p id="6ec75c2f-9a04-4f7e-9615-4dcf926c7bc3" class="">
+</p></details></li></ul><p id="4498fa22-bb09-467a-b31b-138057385382" class="">
+</p><p id="abf1880e-5cb5-4ec5-8a8e-3348a86ed461" class=""><strong>RICHARD SERRA</strong></p><ul id="2cce6f4e-3a5e-46db-8af7-526abb501cc6" class="toggle"><li><details  =""><summary>Green point (1983)</summary><p id="f6e313b6-e95c-4b20-a75f-3fcb486237e3" class="">
+</p><figure id="0731c30a-d866-48d6-aaa7-b2f29acc4e7c" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2011.png"><img style="width:653px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2011.png"/></a></figure><p id="f11650ab-bcee-4452-b24a-61ec71f64be3" class="">
+</p><p id="0cb1cb79-6c4e-4d6e-93e3-662c951c2ba2" class="">Lastre di ferro che refistrano gli agenti atmosferici, si creano strati di ruggine. Si creano linearità particolari. L’essere umano è insignificante d’innanzi alla potenza della natura. </p><p id="050f6b24-e70f-48b7-8655-34705d9797f6" class="">Si crea relazione con luoghi specifici, contesto urbano. </p></details></li></ul><p id="e0ea2c1e-465e-42ce-b65c-3ed5d284dc86" class="">
+</p><h3 id="41acc0af-3178-4260-b08f-ae2fbeb04e73" class="">Arte Concettuale</h3><p id="c0c54951-3e05-4ec6-a055-233d4ce5cb42" class="">Viene valorizzata l’idea alla base, la manodopera viene affidata agli artigiani.</p><p id="f4325cd1-a354-4743-9aeb-64020df8b777" class="">Auspira nell’artista un distacco assoluto dell’emotività “dalle componenti fisiche, visive dell’arte”. L’artista tenderà ad evidenziare i processi mentali che stanno a monte della formazione dell’opera d’arte.</p><p id="6b363f3b-fa5a-45e1-b671-938fdfb8c494" class="">Nel 1969 Lawrence Weiner propose una sintesi brillante della distanza dalla manualità e della rilevanza invece dell’aspetto mentale:</p><p id="3a7937c3-db8a-4d20-9e4c-d34a3dc1efff" class="">1 l’artista può costruire l’opera</p><p id="ecb146e9-2c86-4fbf-8c95-8f4014137835" class="">2 l’opera può essere fabbricata</p><p id="da2aadd8-89fa-4e1b-9bba-00330fd8842c" class="">3 non è necessario che l’opera venga realizzata</p><p id="1b4e65b7-f2c8-44d5-b38f-99fa3e0643b0" class="">Ciò che conta non è l’oggetto, ma il concetto.</p><p id="fd52036c-5203-4c8a-8b4d-04f33d27e663" class="">
+</p><p id="9c7bfbdf-1528-4b24-a367-73a06335d4ee" class=""><strong>JOSEPH KOSUTH</strong></p><p id="22366050-85ea-4379-93d5-4c0ef79109ac" class="">Il punto centrale del suo lavoro è mettere in evidenza le relazioni che intervengono nel pensiero quando si cerca di formulare un concetto.</p><ul id="112c7467-7630-4322-9eb2-28666512625a" class="toggle"><li><details  =""><summary>One and Three Chairs (1965)</summary><p id="00cb4b18-e48f-4896-a49d-322ced6f954c" class="">
+</p><figure id="b0ec8d9b-86eb-4180-888d-5ff6df3d848f" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2012.png"><img style="width:627px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2012.png"/></a></figure><p id="90c29728-3278-4aef-800e-561110af7869" class="">
+</p><p id="564007a0-b3dc-4809-ae7d-e2ab91c3cfb1" class="">Opera più emblematica e importante di Kosuth.</p><p id="9a60c1cd-0deb-4a4b-bd85-2ed38d58a494" class="">Processo di smaterializzazione dell’oggetto stesso, la ripropone in tre aspetti divergenti: l’oggetto stesso, l’immagine e la rappresentazione verbale.</p><p id="d9f434cf-550e-4eec-899e-cff73902235f" class="">
+</p></details></li></ul><ul id="d43a335f-c846-43f3-bc07-884b408252d3" class="toggle"><li><details  =""><summary>Altri esempi:</summary><p id="97f119b2-05f2-4063-8518-06b9b06252c8" class="">
+</p><figure id="b9ab13af-ef28-4972-af53-bb9c6894ffa9" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2013.png"><img style="width:872px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2013.png"/></a></figure><p id="1d4c2eff-a409-4f01-b0aa-eb4279d6c8e2" class="">
+</p></details></li></ul><ul id="70ea36d9-c931-425f-a0f1-35dd06d177d9" class="toggle"><li><details  =""><summary>Neon (1965)</summary><p id="b90764ee-0acf-4e27-bc72-b66c39762ad6" class="">
+</p><figure id="c15c84d9-2a0b-4524-bff3-dba07f8ef7e1" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2014.png"><img style="width:360px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2014.png"/></a></figure><p id="78e457a1-8e15-4884-92dc-c8df88af28b8" class="">
+</p><p id="185d187e-e680-4ef0-b2e7-827148b07e05" class="">Installazione che riproduce la parola stessa, neon, realizzata con lo stesso materiale. Anzichè una scomposizione in tre, si ha una relazione tra oggetto, materiale e significato.</p><p id="571468a8-261f-4377-9c07-1650145dff89" class="">
+</p><p id="6801a101-5ced-43cd-b00e-24dfd263063f" class="">
+</p></details></li></ul><p id="60455331-ef04-451e-b1d2-a08085d604cb" class="">
+</p><p id="561a8ab3-61d3-4af3-ae31-b63079db32ce" class=""><strong>BRUCE NEUMAN</strong></p><ul id="e5fa66a2-8005-450f-b246-78537d856eaf" class="toggle"><li><details  =""><summary>One hundred Live an Die (1984)</summary><p id="f0609b31-f8e3-44be-9804-50dbbde87acd" class="">
+</p><figure id="5ae2e2db-e37a-4805-8e0d-5d6aaf4982e7" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2015.png"><img style="width:566px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2015.png"/></a></figure><p id="f6701282-9a32-4da4-ae43-d309c1da6ab3" class="">
+</p><p id="c9e216b7-39fd-4011-aceb-635ad8fd8c3b" class="">Installazione al buio, che fa emergere le cromie al neon.</p><p id="e0d6063d-89fa-4c30-b392-96a8db91e1fb" class="">Scritte a intermittenza, le parole si accendono e spengono ritmicamente. </p><p id="2651b9ad-a88f-4576-b235-46af35590924" class="">I suoi lavori si basano sull’uso del linguaggio e della comunicazione.</p><p id="061181ae-443c-497b-972f-1346f0f21c13" class="">
+</p></details></li></ul><p id="5323267d-b978-4c29-bba5-ae32745b630b" class="">
+</p><p id="86bda864-b14d-4c2c-87fa-54ba6ffbf165" class=""><strong>ON KAWARA</strong></p><ul id="49a2e659-40bc-48a5-b70a-4903b69a9230" class="toggle"><li><details  =""><summary>Passaggio del tempo, Storie personali, Evento importante</summary><p id="28e01d38-6334-421a-a009-f324ab79eb0c" class="">
+</p><figure id="1cdd99c8-530f-4ce4-8bf3-575fa02932d6" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2016.png"><img style="width:864px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2016.png"/></a></figure><p id="c946fa12-28ef-4aec-8aee-7766d4cef3e0" class="">
+</p><p id="9ec75e3f-b0eb-4be3-a6b9-584e8178e385" class="">Date collegate a sue vicissitudini particolari. </p><p id="2e7db45d-5cba-4015-ac50-4459b5a32406" class="">Riconduce l’artista stesso a pensare un determinato evento, fa riflettere l’osservatore sul dove si trovasse in quella determinata data.</p><p id="b3e3f031-d517-457e-9218-308e8f448f9c" class="">I passaggi (passaggio, storie, evento) hanno luogo solo nella mente dello spettatore.</p></details></li></ul><p id="92253abb-dd64-4808-a98a-d703ff38129f" class="">
+</p><p id="212db2a5-70f8-4926-9387-76f3c5ed176b" class=""><strong>JOSEPH BEUYS</strong></p><p id="8bccf000-dcd3-4c4f-acaa-23786f7d5b8b" class=""><em>“Non c’è differenza tra vita e arte, l’artista è uno sciamano ed esegue rituali per riportare l’umanità a un’antica spiritualità”</em></p><p id="98f99f60-4935-4bdb-b72c-40440a984f66" class="">Destinato a carriera da medico, si trova in un aereo che precipita in Crimea e viene soccorso da tribù di nomadi, viene ricoperto da grasso e feltro. Il feltro ha un ruolo determinante, ha proprietà isolanti, lo tiene in vita e ha legato l’artista alla natura e all’anima dell’uomo. </p><p id="8275a7bb-ef28-4f1b-8078-caaab94e6e7f" class="">Ripercorre una strada che porta a una salvezza personale e collettiva, vuole trasformare gli aspetti della sua vita vissuta in chiave collettiva, contribuendo a una salvezza generale.</p><ul id="6aca9f51-49ea-4707-862f-2d9b04442ea4" class="toggle"><li><details  =""><summary>Vestito di feltro (1970)
+Infiltrazione omogenea per pianoforte a coda (1968)</summary><p id="5fe5257f-48f8-423f-a11b-74ba4e90e2ba" class="">
+</p><figure id="5599ff63-d22f-46da-824c-6e470ab4395d" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2017.png"><img style="width:240px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2017.png"/></a></figure><p id="10487d35-bb07-410d-a21c-d0eff74d5ede" class="">
+</p><p id="8e0a497d-3757-472d-9012-e35a183fade8" class="">Abito appeso come se fosse un quadro, abito vuoto ricorda il rapporto tra vita e morte. Feltro come materia salvifica. Mancanza di figura all’interno dell’abito si riconduce alla morte nei campi di concentramento.</p><p id="7ccb6b80-bf94-48f4-bf45-b900dd38c6be" class="">
+</p><figure id="a63fb0fa-20b1-4a62-ae66-cae7776f2caf" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2018.png"><img style="width:336px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2018.png"/></a></figure><p id="6f353a37-b9b2-4c86-8bbc-1da249e23709" class="">
+</p><p id="0a06f355-f79d-47db-bce1-17cfc974f5e4" class="">Pianoforte ricoperto di feltro e segnato da una croce rossa.</p><p id="c699bd6a-d354-4c2f-a299-b176e722eb58" class="">Pianoforte è simbolo di cultura dell’Europa dell’800.</p><p id="91734e83-a9d6-4e58-b4cd-8d6a97678cda" class="">Ammutolisce la musica, lo strumento non può essere suonato, viene soffocata la bellezza avvenuta nella storia.</p><p id="2ec0a987-049a-4b73-bb68-950a77a5c5b3" class="">Buys intendeva che questo concetto di calore si estendesse oltre il materiale per comprendere ciò che ha descritto come calore spirituale o l’inizio di un’evoluzione</p></details></li></ul><ul id="fab78164-857a-417c-9757-4af13a232cb1" class="toggle"><li><details  =""><summary>I like America and America likes me (1974)</summary><p id="f99a0114-d3a7-418f-bc23-8e837152eb66" class="">
+</p><figure id="748162eb-1855-4e4a-80af-d04dadf0769a" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2019.png"><img style="width:872px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2019.png"/></a></figure><p id="a9486bf5-bb8a-4584-973d-53ab0fdb5584" class="">
+</p><p id="0bc58c39-7651-4c2b-afe3-2fb989a04abc" class="">L’artista è in contrasto con il territorio Americano per la guerra in Vietnam, e altro. Non vuole dunque metterci piede. Ma decide di raggiungere comunque la galleria di New York senza entrare a contatto con il territorio. </p><p id="0c1c2434-a0d1-4f49-b99a-4e555103fac4" class="">
+</p><p id="21a3d447-c5b3-4e87-85ba-90daaa19a966" class="">
+</p></details></li></ul><ul id="2cacc230-18b2-4213-8e81-4db45beaeb80" class="toggle"><li><details  =""><summary>Documenta 7 (1982)</summary><p id="8b272383-d02f-48bb-b6fc-2d30a85ebaf4" class="">
+</p><figure id="98135fdf-9a65-40f4-88bd-92cf8c1ef55c" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2020.png"><img style="width:868px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2020.png"/></a></figure><p id="81652a52-232f-420d-89ae-dd6a2b00453b" class="">
+</p><p id="d2e6c7d4-78c8-4ef0-b1ea-5166c43a8ead" class="">Performance avvenuta durante Documenta 7. </p><p id="d0a0b16c-2f14-4d9c-8f89-70b6ae6dd98e" class="">Fece accumulare pietre davanti al museo dove era in corso la Documenta.</p><p id="e5aff4cc-f540-4eed-852d-f70f2b14fc02" class="">
+</p></details></li></ul><p id="b924e85a-d26b-4fe7-b516-4e6ef66e4758" class="">
+</p><p id="eb6e5a54-3502-4879-bbfe-8ab600275e57" class="">
+</p><h3 id="0922d569-17ee-42c2-ad3b-0d7503ebb219" class="">Land Art</h3><p id="2ed053e3-d147-44a8-83d5-a4f7ffa15406" class="">Si scappa dai musei, si cercano luoghi che non hanno nulla a che fare con istituzioni, si entra in stretto contatto con l’ambiente.</p><p id="173dbe2f-0855-4026-bfd8-69da44a761ac" class="">Crea immagini artistiche utilizzando terra, rocce,s uolo e altri materiali naturali, al fine di aumentare la sensibilità verso l’ambiente.</p><p id="c259d20b-1c33-400d-a48d-6227ec6e9e6b" class="">Questi (spesso massicci) interventi o opere d’arte terrestri hanno assunto una varietà di forme, da opere d’arte terrestri su larga scala come tende artificiali che si estendono attraverso vaste distese di paesaggio, l’accerchiamento di intere isole in tessuti colorati e corsi d’acqua e vulcani rimodellati, a semplici linee di imponte nella terra.</p><p id="a9d1cf3e-d1d8-47ea-97d5-355e9a0de1e1" class="">L’osservatore deve muoversi per ammirare l’opera.</p><p id="8d60b1e5-28de-44af-9e01-9ff060cfa5e1" class="">
+</p><p id="7c6e3239-f3b1-4c94-bd00-94df813a61d4" class=""><strong>ROBERT SMITHSON</strong></p><ul id="4391e771-a97c-499f-8d9e-53b7bc53dd40" class="toggle"><li><details  =""><summary>Spiral Jetty (1970)</summary><p id="9029c4e4-ff06-4e36-b022-a8474131aef7" class="">
+</p><figure id="60e38a07-a57c-432d-80db-af9589364a5d" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2021.png"><img style="width:657px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2021.png"/></a></figure><p id="9bb5e49d-7e52-476e-93ce-89893bd512be" class="">
+</p><p id="1f6e1642-f2dd-4a7c-8b01-af478801fb97" class="">Il moto del mare crea paesaggi marittimi costantemente modellati a livello cromatico e materico. </p><p id="0c9a3347-ffe0-48c8-99b0-6c9686d92fcd" class="">Forma che in natura ricorda determinati elementi, vortici d’aria, forma chiocciole, spirale è un elemento che si ripresenta spesso in natura.</p><p id="9fc22c23-1c81-4c00-9dba-dfdb73847dfc" class="">L’opera muta in base agli agenti atmosferici. </p></details></li></ul><p id="76169522-8d9f-4fd7-8ffd-667c894b3ed0" class="">
+</p><p id="fa7a9135-dbc8-45c8-8bf6-acaf26967e87" class=""><strong>VALTER DE MARIA</strong></p><ul id="1cd278e5-279d-4116-8ac5-463b150bb83c" class="toggle"><li><details  =""><summary>Lighgning Field (1977)</summary><p id="b7abc361-31a8-4348-a1ae-d6ff357d4426" class="">
+</p><figure id="f14c7198-7fbd-43b5-ba26-ba77b301eeba" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2022.png"><img style="width:693px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2022.png"/></a></figure><p id="a410c8d8-24d3-4d92-b66f-193c25d9fe5a" class="">
+</p><p id="fcb0033c-20e3-4b95-8048-394c227c2e35" class="">
+</p><p id="7be92039-d49c-438e-91b6-75ea7534e36c" class="">
+</p></details></li></ul><p id="47ef17df-353a-41aa-9754-844bb06f0964" class="">
+</p><p id="eed97cc2-d41a-49a9-83b5-5a1987b37c28" class=""><strong>MICHEAL HEIZER</strong></p><ul id="291334e0-19e1-4c8c-be3a-443e6a716df7" class="toggle"><li><details  =""><summary>Double Negative (1969-70)</summary><p id="ba45bf60-9643-4d6b-86b1-e7dd03499ecc" class="">
+</p><figure id="09970e3b-0cc8-42bb-8a2e-d6f6afc294d6" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2023.png"><img style="width:874px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2023.png"/></a></figure><p id="15cea93e-4084-4d33-b733-eefafece23e6" class="">
+</p><p id="6a2fac4c-0e81-48ae-b20e-bb671cb71610" class="">Appare come un gigantesco segno geometrico, uno scavo archeologico.</p><p id="7c2b20d1-395b-4f55-99fb-628bfeb89afc" class="">
+</p></details></li></ul><p id="8762f3ba-7468-4519-89a9-9628262127b3" class="">
+</p><p id="b345a403-6176-4f0b-9354-63c2d1ef0d8f" class=""><strong>RICHARD LONG</strong></p><ul id="aff33fef-5338-4247-a5c0-5da48868a841" class="toggle"><li><details  =""><summary>Esempio opere</summary><p id="efaf1a26-fcde-4e42-8622-6b75a104b9e4" class="">
+</p><figure id="3e829696-5194-4e14-b861-68b9d7a70650" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2024.png"><img style="width:645px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2024.png"/></a></figure></details></li></ul><p id="46637a87-a1a7-444c-862e-e54dfe1b09c7" class="">
+</p><p id="735cade8-738e-4535-99a6-1b495b94ebc3" class=""><strong>CHRISTO E JEANNE-CLAUDE</strong></p><p id="17921e0a-c834-4307-b758-3f4096f4a83d" class="">Le grandi conquiste ambientali di Christo e Jeanne-Claude nascono per alterare temporeneamente e non definitivamente il territorio in cui intervenire.</p><p id="6bade388-bf5f-4043-a4b9-b013ff197055" class="">Imballano oggetti, monumenti pubblici e paesaggi &gt; rendono il contenuto allo stesso tempo misterioso e valorizzato.</p><p id="73bdccb6-7b95-446c-b034-d73bacbb1067" class="">Non coprono per negare la storia ma per valorizzarla, vogliono dare importanza al luogo, capire cosa vi ci celasse dietro, e comprendere la storia in relazione a un determinato edificio. Sono operazioni site-specific.</p><p id="452f9670-d69f-4ed9-bc94-5d9b32330218" class="">I coniugi devono decidere quale monumento andrà portato alla visione del pubblico.</p><ul id="1a47c6c1-4ec5-41c8-a9f2-03ed792ea191" class="toggle"><li><details  =""><summary>Palazzo del Parlamento di Berlino (1995)
+Impacchettano il monumento equestre di Vittorio Emanuele II (1970)</summary><p id="fbd31472-f8d2-4e9a-8123-92f5fe9b79b3" class="">
+</p><figure id="c2bd11bc-1ea8-4610-8109-2d326785d834" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2025.png"><img style="width:867px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2025.png"/></a></figure><p id="0c9c97bd-cae6-45ea-8f54-0c8daca6288a" class="">
+</p></details></li></ul><ul id="23718d81-fdcc-4857-8930-c4b29bc787f6" class="toggle"><li><details  =""><summary>Floating Piers (2016)</summary><p id="3adecb6d-f379-4456-89b0-2a7a89821141" class="">
+</p><figure id="f6d23fbd-50c0-4cee-8cff-5963e81d4941" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2026.png"><img style="width:868px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2026.png"/></a></figure><p id="5bd2dc4c-4444-4066-9b67-9cbfe246b352" class="">
+</p><p id="0e8909fe-89fd-432a-a217-46245d96f6ae" class="">Per due settimane un milione e mezzo di persone hanno camminato su questa passerella, il pontile era ricoperto di tessuto particolare che potesse accogliere un numero grande di persone. Lunghezza totale di 3km circa.</p><p id="7c55c982-2dc3-4c56-9fbe-7bb0541152df" class="">
+</p></details></li></ul><ul id="fc234eed-9cd8-4883-a85e-29157d618d92" class="toggle"><li><details  =""><summary>Punti salienti della loro arte</summary><figure id="2eebbd87-1bbc-4ac3-bb3c-c768473a62eb" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2027.png"><img style="width:480px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2027.png"/></a></figure></details></li></ul><p id="2f39ea70-ef6e-4c78-8d86-77f3729ef6ee" class="">
+</p><h3 id="bf4235df-43d2-4a6a-8bbf-162f489c6106" class="">Arte Povera</h3><p id="62c9880e-8c47-4919-bb85-f188f3b14715" class="">Si sviluppa nella fine anni ‘60. Con questa definizione di fa riferimento a un gruppo di artisti per lp più torinesi che tendono a identificare l’arte con un’esperienza radicata nella vita.</p><p id="dbe3afab-c19d-4dd3-a906-0e9fc069f749" class="">L’arte povera torna a rivalutare gli oggetti. </p><p id="931b7487-b97f-459b-9812-3b2f5036db2c" class="">Arte libera da rigidità, schemi, programmazione, predisposta a rinascere da cose molto semplici ed elementari.</p><p id="299a5192-9036-4911-a803-41c6b9ce52ca" class="">L’arte povera si contrappone all’arte ricca, quella legata ai consumi.</p><p id="bdb18603-9973-46ab-929f-50d4879a8bcc" class="">L’arte povera si esprime attraverso materiali volutamente esclusi dai processi produttivi di tipo industriale, rivendicando la manualità delle lavorazioni e a volte, anche la rozzezza e l’imprecisione.</p><p id="37de05a5-1d8c-49b1-b872-07456b25175f" class="">Materiali poveri, di recupero, elementi che sottolineano ciò che si manifesta a fine anni ‘60 in Italia.</p><p id="88e02849-85bb-44ae-a7ed-92a6a8e743d6" class="">
+</p><p id="694e35c8-9c52-47e9-91f2-f39471a1ca85" class=""><strong>MARIO MERZ</strong></p><p id="296776a1-ed79-46a1-b872-2fc90db18e15" class="">Adotta tra i soggetti più famosi l’idea dell’igloo.</p><ul id="73c1f380-ddd3-4efe-b1d1-c90539fa7476" class="toggle"><li><details  =""><summary>Igloos</summary><p id="e6963425-6bdc-4abe-ae4f-493b7e6c1221" class="">
+</p><figure id="214a3a60-6b6a-4102-9412-50c1bccfb5f7" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2028.png"><img style="width:750px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2028.png"/></a></figure><p id="29a36698-64dd-4c00-aad0-4dbaba29a794" class="">
+</p><p id="65f7a6d5-37bf-4bb4-a17b-7b8ddaec973f" class="">Base: scheletro di ferro o altro materiale resistente, ricoperto di vari materiali di varia natura: rami secchi, lastre di pietra, nylon, ecc..</p><p id="b58eb60d-ce4a-40d3-840b-b97d59dd2d4f" class="">L’igloo è il luogo primordiale, protetto.</p></details></li></ul><ul id="0dec47f6-b475-447c-971f-68c177ec5ff6" class="toggle"><li><details  =""><summary>Luoghi senza strada (1987)</summary><p id="225fb380-30fd-49ee-821a-88ad61a409c1" class="">
+</p><figure id="f0debfbd-bbab-4634-907e-d3f2d4d21565" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2029.png"><img style="width:651px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2029.png"/></a></figure><p id="5166612f-8b6e-4fbd-84be-1770a0194a9e" class="">
+</p><p id="4731005a-0082-435e-8112-aedac5be45eb" class="">Serie di numeri realizzati con il neon, sequenza di Fibonacci. (ogni numero è la somma dei due precedenti) - riferimento a crescita, sviluppo, scambio di energie.</p></details></li></ul><p id="35109bbe-a68f-49e7-8d4b-95997d35ba51" class="">
+</p><p id="44480cf7-9ce6-45aa-89cd-8ad86b4cdae0" class=""><strong>PISTOLETTO</strong></p><ul id="0bf10c4c-29a5-4188-80d5-b6772e644e7b" class="toggle"><li><details  =""><summary>Quadri specchianti (dal 1962)</summary><p id="0143ffd7-95ef-47be-bfcc-4d3a293b37f0" class="">
+</p><figure id="c44c3c09-788e-40e1-9b1c-b14e009f1356" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2030.png"><img style="width:866px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2030.png"/></a></figure><p id="1492ae03-17d0-4a2d-9463-ef30f2343281" class="">
+</p><p id="a8aeb755-3fbf-4501-8d42-8f666d6324b1" class="">Opera estremamente concettuale, esiste nel momento in cui la si osserva.</p></details></li></ul><ul id="6897cd91-9e49-4d87-a628-40e5ec26ec74" class="toggle"><li><details  =""><summary>La venere degli stracci (1967)</summary><p id="220c126e-94b1-4b3d-88c9-3fc2d1ce0cd1" class="">
+</p><figure id="b3b0b168-1261-49ac-9236-ef7124c8db8e" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2031.png"><img style="width:617px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2031.png"/></a></figure><p id="46fa88c7-fb14-41ed-863a-5500b0d0c00f" class="">
+</p><p id="54954aa5-f632-4cc3-baaf-acfc2147b6e8" class="">Riprendono l’idea di igloo di Merz.</p><p id="df51eb9b-1365-4d52-9ffa-310b6af15b16" class="">
+</p><figure id="fc6e5b97-980e-4582-a014-fb353f98fb72" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2032.png"><img style="width:850px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2032.png"/></a></figure><p id="e6968142-0f01-4942-97b0-1cdf37d733d3" class="">
+</p></details></li></ul><p id="a49f8b11-5b74-462d-bf18-1d5459c5bb45" class="">
+</p><p id="4b901281-50a7-447e-a8ea-c72770e708d6" class=""><strong>KOUNNELLIS</strong></p><ul id="56849022-fb39-4c10-9550-60196794a43b" class="toggle"><li><details  =""><summary>Cavalli (1969)</summary><p id="c7310f54-b3b0-411c-bd89-24f319441921" class="">
+</p><figure id="56b3d0c8-9645-4c51-b552-78821f032c4f" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2033.png"><img style="width:611px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2033.png"/></a></figure><p id="0ffd64e5-54cf-4eb9-9d2a-524508eff09e" class="">
+</p><p id="f5dc0c3a-bf4c-4fea-a828-905ae7eb17f5" class="">Odore, calore, energia del pubblico che partecipa all’evento, coinvolti da reazione emotiva e sensoriale, nel condividere spazio della galleria con animali.</p><p id="5aeb1de8-92b4-47c4-9d29-f43ab4448502" class="">Lo spettatore non si sente limitato a mantenere distanza, è una sorta di performance. </p></details></li></ul><p id="cd3312c1-1784-468f-9dfc-e42de75f3078" class="">
+</p><p id="1cd1e742-2d9b-4d92-b8ac-725c1e31e136" class=""><strong>ANSELMO</strong></p><ul id="fd16e5d7-d8d2-4d8e-a9d6-e3ab2f938a4f" class="toggle"><li><details  =""><summary>Struttura che mangia l’insalata (1968)</summary><p id="c8eb90a0-8494-4d51-a7f4-8fe0192b783e" class="">
+</p><figure id="ea26b441-6f17-4662-94f5-54a6073d8b63" class="image"><a href="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2034.png"><img style="width:261px" src="Neoavanguardie%20Minimalismo,%20Arte%20Concettuale,%20Land%207ee35ce100864852802817cf876a81cc/Untitled%2034.png"/></a></figure><p id="7395ecc4-ccd8-4dbc-baaf-468754dbaab8" class="">
+</p><p id="3d602bac-d768-4964-8bbc-c1d8b184bceb" class="">Due blocchi di granito, lattuga, blocco minore che ferma la lattuga, filo di rame, segatura. Opera monumentale, solidità. </p><p id="f4262b67-37b9-4049-b575-e742041fc421" class="">Lattuga è materiale organico facilmente reperibile, con bisogno di rinnovamento costante. Granito invece è un materiale duraturo.</p><p id="d99e6713-59ee-4a3c-bc28-823b30c13e1a" class="">Rapporto tra effimero e duraturo.</p><p id="2025d7b7-3911-48e0-aaf2-c6ec7c9b82b8" class="">
+</p></details></li></ul><p id="61044191-2ff5-4273-86ed-4b74579f3da5" class="">
+</p></div></article></body></html>

@@ -1,0 +1,776 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Neoclassicismo, Romanticismo, Realismo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2fe278c4-e697-4ea0-a70a-9e7dc781dec7" class="page sans"><header><h1 class="page-title">Neoclassicismo, Romanticismo, Realismo</h1></header><div class="page-body"><h3 id="2ba61989-539b-4b99-a2ab-80d28c586026" class="">Tra Neoclassicismo e Romanticismo
+Dalla ragione al sentimento - tra 700 e 800</h3><p id="df3c45f7-4dc8-44be-87c3-6961f9cd9318" class="">
+</p><h3 id="04b391f6-2891-49b4-80f3-290559f3b75f" class=""><mark class="highlight-gray_background"><strong>Neoclassicismo</strong></mark></h3><p id="1013272f-8609-48d7-9b02-32e76ea8506b" class="">Nascita strettamente collegata alla diffusione dell’illuminismo.
+Nasce in Europa nella seconda metà del XVIII secolo come reazione contro esuberanza del Barocco e Roccocò.
+Una nuova generazione di artisti sceglie il rigore e la chiarezza, e seguono un ideale di bellezza ispirato ai modelli dell’antichità.</p><p id="6376f5c9-5ec5-436b-97e3-3324a4d58794" class="">
+</p><p id="95b4e7a9-521c-4963-9293-ab5c72863d36" class=""><span style="border-bottom:0.05em solid">Avventimenti storici:</span></p><p id="4d7a2f58-67c2-42ab-89af-d3b43eea5b89" class="">Rivoluzione industriale (Inghilterra 1760)</p><p id="fde332e6-d1b3-46f6-9ed6-add7b6b07598" class="">Rivoluzione francese 1789-1799</p><p id="39666423-7a46-4886-a32e-fb789465953e" class="">Fondamentali scoperte archeologiche effettuate a partire dal 1738 in Italia 
+(1738: scavi a Ercolano, 1748 a Pompei, 1760 templi greci di Paestum e della Sicilia)</p><p id="ac3f350e-48dc-48f5-ad84-d6a292d30387" class="">
+</p><p id="9eba5608-730f-46bc-9488-de9c42a0e712" class=""><span style="border-bottom:0.05em solid">Punti fondamentali che determinano la formazione e diffusione dell’arte Neoclassica:</span></p><ul id="32158d92-3a86-4a18-90fa-f59f7a2278ff" class="bulleted-list"><li style="list-style-type:disc">Si manifesta soprattutto nelle <em>arti figurative </em>ma si influeza anche architettura, letteratura e teatro.</li></ul><ul id="d37a8256-f589-4a43-a5b1-a44936d84454" class="bulleted-list"><li style="list-style-type:disc">Promuove il ritrno all’arte classica, greca e romana sia nei soggetti che nello stile - c’è un rinnovo dei canoni estetici: armonia, equilibrio, proporzione si affermano in reazione agli eccessi dello stile ridondante e iperbolico del Barocco è Roccocò.</li></ul><ul id="628365d0-34cc-4d2f-afd8-55d736d6988f" class="bulleted-list"><li style="list-style-type:disc">Nel libro Storia dell’arte dell’antichità del 1764 lo storico Johann Joachim Winckelmann foruma il principio fondante dell’estetica neoclassica: l’arte non deve esprimere le passioni, ma la bellezza ideale e assoluta.</li></ul><ul id="ed6d4af9-3db3-44a7-baa8-1aee8a67e56e" class="bulleted-list"><li style="list-style-type:disc">L’italia diventa tappa fondamentale per l’educazione estetica degli intellettuali europei benestanti: è tra le tappe principali del <em>Grand Tour </em>- viaggio di approfondimento culturale, tappa educativa fondamentale, se lo permettevano intellettuali benestanti (da Sud a Nord)</li></ul><ul id="2e409c31-1213-4753-b04a-2cd8be5cd2fd" class="bulleted-list"><li style="list-style-type:disc">1793 sorge il Louvre, luogo pubblico dove ammirare i capolavori.</li></ul><ul id="cf312188-eaec-46ba-a660-82190f1db6d2" class="bulleted-list"><li style="list-style-type:disc">Di questo periodo è l’<em>Enciclopedia ragionata delle scienze</em>, delle arti e dei mestieri (del filosofo Diderot e del matematico D’Alambert)</li></ul><ul id="7fc26f7d-4c98-4198-897c-05981b2430e6" class="bulleted-list"><li style="list-style-type:disc">Gli illuministi si battono per una società più giusta, l’aspirazione è che possano tutti partecipare alla vita politica - Libertè Egalitè, Fraternitè</li></ul><ul id="14c1e4fb-a92b-4cef-8ade-ac282a0e8d51" class="bulleted-list"><li style="list-style-type:disc">Fiducia nella scienza</li></ul><ul id="f3eca44e-1997-4a1e-907c-d125b7392072" class="bulleted-list"><li style="list-style-type:disc">Immanuel Kant è filosofo principale dell’illuminismo.</li></ul><p id="b38f82a6-e7b1-4858-a888-8280f57334c1" class="">
+</p><h3 id="ad7272f6-55f4-4616-b205-4abb9fc84087" class=""><span style="border-bottom:0.05em solid">Pittura</span></h3><p id="af73faaf-2113-43ba-8f30-907964800ed8" class="">Recupero del mondo antico nei soggetti e nel linguaggio classico: personaggi storici e mitologici, si tralasciano soggetti sacri.</p><p id="079466e7-f36b-41bf-b7d7-1295e0934ea7" class="">Linguaggio classico - Rappresentazione corpo grazie a studi anatomici: Corpo, Nudo, Muscolatura, Abbigliamento e ambientazioni.</p><p id="772b318a-b6fc-4a83-a45e-9e5a78557324" class="">Soggetti: Eroismo (Jacques-Louis David), Perfezione formale (Jean-Auguste-Dominique Ingres) </p><p id="887b6f07-301f-49a4-9387-bd73f849683e" class="">Eccezione per Goya, Füssli, Blake - non classificabili, non si inseriscono in maniera determinante nè nel neoclassicismo nè nel romanticismo, hanno aspetti di entrambe le correnti ma sono in una fase intermedia.</p><p id="d7eeafa5-00a3-4d52-aeb0-0a04a62bc432" class="">
+</p><p id="45b88c67-fa86-4ec9-929b-0ada49fb0b75" class=""><strong>DAVID</strong></p><p id="d5499c4b-d4f6-4d5b-9166-a8900b0e2d2e" class="">Neoclassico a tutti gli effetti, lavora per Napoleone, sviluppa uno stile che richiama l’antichità romana e greca</p><p id="9e6b622c-974b-4d5a-9f06-6e6a382c2a67" class="">Modelli: Eroismo, Virtù, Impegno sociale</p><ul id="142810d9-bd98-41da-8bee-ff4ac34d07e0" class="toggle"><li><details  =""><summary><strong>Il giuramento degli Orazi (1784)</strong> </summary><p id="e2f661d5-809a-497d-934e-387814c2c621" class="">
+</p><figure id="eee729ea-ae1c-40cc-b6b8-06d84e13b8e3" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled.png"><img style="width:761px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled.png"/></a></figure><p id="e427011d-c62f-4b5f-91f4-3f99f61acaae" class="">
+</p><p id="bb269253-52a6-42f4-854a-b881e6795984" class="">Rappresenta il momento antecedente il combattimento tra due città: il giuramento.</p><p id="f20eeb96-4c16-48a4-9eee-c0e10c6e97b1" class="">Impegno civile e patriottico</p><p id="0cc3a027-4bf9-48d1-9047-c6a1fa4ecc61" class="">Fratelli romani Orazi incontrano il padre che consegna loro tre spade, il padre guarda il cielo come in preghiera per i figli. A destra donne addolorate (mogli e sorelle) prese dallo sconforto perchè perderanno una persona a loro cara. </p><p id="fdc7f209-2987-4bbf-a635-c99d63856202" class="">Entrambi gli schieramenti non cennano ad indietreggiare, le donne con nessun gesto cercano di fermare il massaro.</p><p id="3ec7303a-de44-4357-9b6b-76cc55daeccd" class="">La luce arriva da sinistra, mette in risalto la muscolatura e le pieghe delle vesti. </p><p id="5f72ae1e-d749-48c4-849d-d0fdd9f9656f" class="">Rappresentata inoltre architettura elementare e semplice, scenografia semplice e lineare.</p><p id="5ab82b87-c21f-498a-8702-addb2d64059f" class="">La composizione è essenziale, le figura sono disposte secondo una tripartizione formata dal portico a colonne dipinto sul fondo.</p><p id="2acfae3f-2dd2-4786-9f41-e2f8ad547d60" class="">Il punto di fuga della prospettiva cecntrale si colloca nell’incontro tra le mani che sottolinea solennità della consegna delle spade.</p><p id="943890b3-5307-4368-aaf0-174ad2817f86" class="">Le linee del pavimento contribuiscono a rafforzare la prospettiva.</p><p id="fd57d078-81c6-45c9-8a64-976ed9439844" class="">
+</p><figure id="e3a53bf9-0851-45c7-a005-4f4ab5e206b6" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%201.png"><img style="width:336px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%201.png"/></a></figure></details></li></ul><ul id="a516175b-fcb8-48ac-b5c0-44a1b7b82c03" class="toggle"><li><details  =""><summary><strong>La morte di Marat (1793)</strong></summary><p id="fd8cccb1-0025-4d4c-b0d5-66add986e4d1" class="">
+</p><figure id="449621c7-14bc-4584-8d1f-96dce4be10e8" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/img-morte-di-marat-jacques-louis-david.jpg"><img style="width:336px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/img-morte-di-marat-jacques-louis-david.jpg"/></a></figure><p id="ab7caa47-92f8-4ea2-a4ec-4cbf2586b504" class="">
+</p><p id="255c5cf8-5cce-4418-9bff-521689bc9cff" class="">Marat, amico di David, giacobino rivoluzionario ucciso a tradimento per mano di Charlotte Corday giovane donna girondina seguace della parte politica avversa.</p><p id="f7430055-3dc4-4a74-b0ca-924c7380567d" class="">Stringe in mano la lettera di supplica con la quale Marie Anne Charlotte Corday gli chiede udienza. Di Charlotte Corday rimane solo il coltello sporco di sangue, viene cancellata in maniera simbolica, è condannata all&#x27;oblio.</p><p id="fdddf869-dfec-4183-9db0-75b2744e9f29" class="">Marat è immerso in vasca da bagno per una malattia alla pelle, la donna lo uccide nascondendo un coltello tra il seno e lo butta per terra.</p><p id="0be3a991-6063-480c-b8a9-5fbb6b7a242d" class="">David viene chiamato per immortalare un momento, e raffigura la parte finale, Marat come un santo martire della Rivoluzione.</p><p id="43950c4e-2c66-40af-9bbd-df55353c4850" class="">La posizione del corpo rimanda chiaramente alla Pietà o Deposizione di Cristo. 
+(Testa riversa, braccio abbandonato, lenzuolo macchiato)</p><p id="1206d200-9866-4eb6-82fe-f074b8805601" class="">Sul tavolo è incisa la dedica di David a Marat.</p></details></li></ul><ul id="db9a54a3-60b4-46c2-a281-f2b5465433b8" class="toggle"><li><details  =""><summary><strong>Napoleone che valica le Alpi (1801)</strong></summary><p id="ae537b55-9317-45a4-bfbf-a467409790d5" class="">
+</p><figure id="630f0bf0-87a9-4c81-829a-52c8e6c0cd1c" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%202.png"><img style="width:432px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%202.png"/></a></figure><p id="14d33b1f-e553-4462-9161-1e28b7f80d38" class="">
+</p><p id="32152930-3f17-415c-ba65-4ea18d1e4147" class="">Rappresentato in maniera trionfante, esuberante, in sella a cavallo rampante che indica la via da seguire.</p><p id="c00eeaec-71f2-4082-b421-281d9bdbf016" class="">Mantello rosso è segno di potere, così come le scritte incise sulle rocce che riportano i nomi di Napoleone, Annibale e Carlo Magno.</p><p id="1073ad4c-40d1-4117-ab9e-537a12eb9256" class="">Non è una rappresentazione reale. Le sembianze fisiche non sono reali, Napoleone non valicò mai le Alpi a cavallo ma con altri mezzi. </p><p id="76bc5849-50ef-4061-8de7-8fd7e133bf6d" class="">Risalto al potere imperiale.</p><p id="ddcb93d7-8577-4434-a842-b960d9418924" class="">Esistono 5 versioni in cui cambia il colore del mantello e del cavallo. </p><p id="6a92f95e-c559-46f9-9cc1-bb6de24d5b83" class="">
+</p><figure id="6c6e7c2a-6645-4787-9a5d-40944f09214f" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%203.png"><img style="width:1046px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%203.png"/></a></figure><p id="4622fac1-6690-4cd2-b7d1-3e204a685848" class="">
+</p><p id="c48ac646-a5c6-48a9-9f41-bb9e6ec48cc6" class="">Viene riproposta da Bansky nel 2018, palese riferimento all’opera di David, il mantello che copre il viso si riferisce cecità dei francesi di fronte ai mirganti bloccati da mesi.</p><p id="d2ab6dfc-82f5-41eb-884b-f9bac1ce2376" class="">
+</p><figure id="1d1d077a-7606-49f5-afdc-f5fbf21be134" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%204.png"><img style="width:317px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%204.png"/></a></figure><p id="529b1cc6-735a-41a4-9736-8aec5edb95c0" class="">
+</p></details></li></ul><p id="27ffdeec-a6f0-4390-abc9-d93d9a3dc224" class="">
+</p><p id="55bd44d5-ca11-4e93-a4fb-490aabe6d81d" class=""><strong>INGRES</strong></p><p id="c079eaab-cb31-4a5a-8003-c32bcf2e5280" class="">Richiama più le forme classifiche soffermandosi sulle forme classiche più che sulle virtù.</p><p id="4a9c5f5b-c970-4e5e-9c27-c531303e75cd" class="">Si rrifà molto a Raffaello per il tratto morbido e lineare e la perfezione dei tratti del corpo femminili (segno puro, rigoroso, colori chiari e luminosi) e Velàsquez.</p><ul id="a3f6032a-c364-4283-ab96-a48d8ad9a1db" class="toggle"><li><details  =""><summary><strong>La grande odalisca (1814)</strong> richiama il tema esotico.</summary><p id="5eb8c5a1-154e-405b-9627-e85ad1416e72" class="">
+</p><figure id="c496b6cd-4e5c-45a1-b19c-0f615bf91110" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Ingres_la_grande_odalisca-2000x1114.jpg"><img style="width:528px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Ingres_la_grande_odalisca-2000x1114.jpg"/></a></figure><p id="c56c099d-233f-494c-96eb-d60828be3ad8" class="">
+</p></details></li></ul><ul id="6a236d2b-e84a-4085-9500-68785cc9415e" class="toggle"><li><details  =""><summary><strong>La bagnante di Valpinçon (1808)</strong> - bellezza ideale senza tempo</summary><p id="c7c3352b-37c4-40bc-a5c2-b17b93ee86d6" class="">
+</p><figure id="a7e37e84-e8fa-4f2b-9bbe-066f47c3a334" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%205.png"><img style="width:336px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%205.png"/></a></figure></details></li></ul><ul id="4fb52669-ae56-4f3e-9b4e-e51bbaa192b9" class="toggle"><li><details  =""><summary><strong>Bagno turco (1862) </strong>- profondità spaziale, svariata rappresentazione delle donne, luminosità, componente voyeuristica.</summary><p id="9d367ee1-a093-4a35-9d42-ad06a87b52b2" class="">
+</p><figure id="e315243b-b178-442c-b580-1cd789a8ea91" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%206.png"><img style="width:432px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%206.png"/></a></figure><p id="87b810ff-7661-4fb8-a633-b43c25325eac" class="">
+</p></details></li></ul><p id="116c93ad-d0dd-44aa-aaa4-b8d775b5a4ad" class="">
+</p><h3 id="3e68ad1c-f39b-47d6-b1bd-47f328c4f99c" class=""><span style="border-bottom:0.05em solid">Scultura</span></h3><p id="bfe0d1d9-1fac-4447-8120-719ed337d5a2" class="">La bellezza rientra nelle linee guida accademiche.</p><p id="7b5f2c9f-fb61-4529-8a74-1c61c8ddf23f" class="">Arte greca: calcoli matematici, proporzioni</p><p id="962a0436-1169-4e39-9d4c-1e3f58b225b3" class="">Eleganti proporzioni, equilibrio compositivo, anatomia, mitologia</p><p id="a70aec9a-b73c-4e6b-8b81-5e1b9f2c2a04" class="">Personaggio chiave della scultura è Antonio Canova.</p><p id="ba3149e9-6f7f-455d-96bf-f76db7957d61" class="">
+</p><p id="9bdbca3b-ef60-4547-b164-546e74bd6898" class=""><strong>CANOVA</strong></p><p id="d6906ef3-a6d1-4199-8296-6fa129130f3a" class="">Recupera modello di bellezza ideale de mondo antico riproponendelo nelle proprie sculture, raffinate, eleganti, armoniche. Le forme della donna sono idealizzate. </p><ul id="5f0ada27-e002-4015-b6e8-6a11b44f50bd" class="toggle"><li><details  =""><summary><strong>Paolina Borghese (1805)</strong></summary><p id="c01d0667-e618-4d67-b652-3074c2601d17" class="">
+</p><figure id="f8da1da7-f626-4800-bcfa-2d96543a2590" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Paolina-1-scaled.jpg"><img style="width:528px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Paolina-1-scaled.jpg"/></a></figure><p id="0f3277e2-1b35-460e-aaba-f03c10f41666" class="">
+</p><p id="df4ffa31-9d04-45b2-8658-aff1fa3cc683" class="">(sorella di Napoleone)</p><p id="51cacf5c-bf6e-48b4-8f20-ba6e5bc5b9f3" class="">Celebra uno dei personaggi del mito greco in cui Paride è chiamato a scegliere la dea più bella donandole una mela d’oro → Paolina ha in mano una mela che richiama il mito greco.</p><p id="72e5ddc6-f637-4953-a8c9-9319ae90c737" class="">Disposta su un divano con spalliera e un solo bracciolo. Canova immortalare Paolina seminuda con un panno che ricopre la parte inferiore de corpo.</p></details></li></ul><ul id="8970e86d-6a92-47ad-a38e-69805df4805f" class="toggle"><li><details  =""><summary><strong>Amore e Psiche (1788)</strong></summary><p id="f4c8428a-5f1e-4e3c-bf87-22b78282e07f" class="">
+</p><figure id="4d93cf4a-e86f-4f1e-9be6-b2ed177bd277" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/wp-image-1509830179.jpg"><img style="width:336px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/wp-image-1509830179.jpg"/></a></figure><p id="592b5f78-32d0-4c49-94d2-70a5022ccb28" class="">
+</p><p id="2f21ed8b-9fc6-4f7a-b5e8-05c471d139eb" class="">Amore / Eros / Cupido risveglia Psiche, che era caduta in un sonno dopo aver aperto un vaso che doveva essere consegnato a Venere. La risveglia con un bacio, o meglio il momento antecedente al bacio.</p><p id="6de50589-e73d-4a4c-93e3-32b9ff53cc01" class="">Le braccia incorniciano i volti. Il punto focale è la quasi unione delle labbra.</p></details></li></ul><ul id="3869c7d4-cdfe-4a66-adf4-25745fb4aeee" class="toggle"><li><details  =""><summary><strong>Le tre grazie (1812-16)</strong></summary><p id="4b7a417a-787a-4b91-a56e-be70d210e697" class="">
+</p><figure id="06add55b-1b67-42bd-8421-5a0403bdee11" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%207.png"><img style="width:192px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%207.png"/></a></figure><p id="624164a5-d6f4-4592-9f06-3ba585b88db7" class="">
+</p><p id="42c683a5-6598-4891-bfae-0203703da602" class="">Figlie di Zeus, simboleggia castità, bellezza e amore, sono le protettrici degli artisti.</p><p id="2bab3932-e65a-4a51-8a4c-dccbda736da0" class="">Sono tutte visibili, i dettagli sono a 360 gradi. </p><p id="9182ad4d-4878-43aa-8456-9276272c5e5a" class="">Le tre figure sono unite da un abbraccio, un girotondo giocoso, unite da un drappo che nasconde la nudità.</p></details></li></ul><p id="057d239d-133d-484d-b6fd-af4a911c4f65" class="">
+</p><hr id="c25cff31-3eb1-4913-836c-3cbfd1454f27"/><p id="de8b2891-6132-4607-abca-df8ed55d9e0e" class="">
+</p><p id="29a86de3-7285-4bd0-8ce8-2d15f0b9c05c" class="">
+</p><h3 id="313e463e-0a89-42da-a61b-bc5611af5ac4" class=""><mark class="highlight-gray_background"><strong>Preromanticismo
+</strong></mark></h3><blockquote id="65e1a08f-357a-4dac-87ce-b679168cb741" class=""><strong>Il passaggio dalla ragione al sentimento
+
+</strong>Neoclassicismo si fa promotore del ritorno all’ordine,  cerca stile più razionale ispirandosi ai modelli classici, regolarità e disciplina.
+Romanticismo esalta fantasia, sensibilità personale, malinconia, esaspera il sentimento e rifiuta il razionalismo illuminista che del neoclasicismo aveva costituito la base teorica.</blockquote><p id="82385f07-8004-4669-95a0-e8309702a06a" class="">
+</p><p id="282af3a5-4e77-487b-b0d0-3ce56321a79a" class="">
+</p><p id="5f253012-bd80-488c-83e8-dff14da3e181" class=""><strong>FRANCISCO GOYA</strong></p><p id="013493e0-6e75-40c1-bfcc-b53a917feb63" class="">Arte riflette le contraddizioni della Spagna nell’epoca, rivediamo virtù ed eroismo di David. </p><ul id="1ebd8a92-f9ec-45b8-b275-18d21f8d0982" class="toggle"><li><details  =""><summary><strong>Fucilazione / 3 maggio 1808 (1814)</strong></summary><p id="1389c3a7-d08e-4622-bc5a-3ba6d989df0c" class="">
+</p><figure id="e85faa34-505c-4f1a-9658-b07eb1cc74f5" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Goya_El_Tres_de_Mayo.jpg"><img style="width:1280px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Goya_El_Tres_de_Mayo.jpg"/></a></figure><p id="8967e0fd-2792-4b73-90b6-01848b731c78" class="">
+</p><p id="bedbbe41-8076-480d-acce-7fc0c70c82c9" class="">Un centinaio di patrioti di spalle, soldati di Napoleone attaccano civili disarmati.</p><p id="951b1409-9196-46c0-a0fe-c7ac1c76bc3c" class="">Scena irruenta, disarmante, di ingiustizia.</p><p id="e32dd2a1-8dad-40a0-b202-3f2c942982a5" class="">Il punto focale è il personaggio che chiede pietà di interrompere lo sterminio, abbigliamento illuminato da lanterna, si stacca dagli altri personaggi. </p><p id="c12f987b-283c-4dc7-97da-63aa12e351c5" class="">Personaggi si coprono gli occhi, a terra inerme morto, immerso nel sangue, cadavere di un altro corpo.</p></details></li></ul><ul id="53aa4441-243d-47d7-a283-c63689c3a98b" class="toggle"><li><details  =""><summary><strong>Maja desnuda / Maja vestida</strong></summary><p id="7ca51790-1071-4e43-8364-e80f2216a5c9" class="">
+</p><figure id="13d806dd-dc3d-4e44-8730-cc0fac524764" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%208.png"><img style="width:423px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%208.png"/></a></figure><figure id="0842436e-92d8-4589-921e-695d8bbb52b4" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%209.png"><img style="width:414px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%209.png"/></a></figure><p id="3fb5303c-3619-4257-a250-22d0f6c18460" class="">
+</p><p id="514023bd-879d-4e71-ad78-a688602c03a9" class="">Esegue opera commissionata da un ministro potente, per sopperire alla censura rappresenta lo stesso soggetto con stessa posizione e ambientazione, ma con vestiti.</p><p id="185f6de8-d921-467e-9d23-3349b2e888b2" class="">[Non era possibile raffigurare nudo femminile se non riguardante soggetti chiaramente classici]</p><p id="f2937cb1-97af-4627-9e1f-c30b66a7dfbb" class="">La posizione è aperta, lo sguardo malizioso.</p><p id="044a164b-afba-4a6e-b5d3-ce8743b60097" class="">I pizzi e i colori chiari richiamano la purezza.</p></details></li></ul><p id="488f1c2d-aece-427e-a49d-ba3cae020f0f" class="">
+</p><p id="c8845304-b520-4b33-8bce-96a5bce30396" class=""><strong>FÜSSLI</strong></p><p id="2aa1c333-5b28-4e69-bef1-f417895ddada" class="">Richiami romantici, struggenti, shakespeariani, danteschi, medievali.</p><ul id="34bae070-0d54-4c09-97ff-2fee624b7959" class="toggle"><li><details  =""><summary><strong>Incubo notturno (1783)</strong></summary><p id="8052e828-87e6-4183-a5f4-a2fddbbc7007" class="">
+</p><figure id="3611dbb5-4a89-4f28-adf5-c53f4c555909" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2010.png"><img style="width:384px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2010.png"/></a></figure><p id="67987bc0-2eda-4769-979f-312fb058c5d0" class="">
+</p><p id="6bacd291-b219-42f4-9e74-099c9b9f7dcf" class="">Inconscio che prende sopravvento sulla ragione durante il sogno.</p><p id="1823c9e6-dcdd-455c-91ae-1c114a93f626" class="">Liberazione del segno visionario.</p></details></li></ul><p id="0a7f2eb1-e5c4-46a9-9935-11ccf2f48a19" class="">
+</p><p id="effd8a53-e35d-4837-bfb2-466872b6a511" class=""><strong>BLAKE</strong></p><p id="94ad9fc1-bc67-4f56-bf69-d891e960a9da" class="">Poeta e pittore visionario dallo stile libero, sognante, aspetto intimo.</p><ul id="1432fa73-ab8a-473c-b012-c99093b8cea1" class="toggle"><li><details  =""><summary><strong>Il vortice degli amanti, Paolo e Francesca (1824)</strong></summary><figure id="3652d55c-f1a7-482e-97e5-1484555138aa" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2011.png"><img style="width:533px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2011.png"/></a></figure><p id="d797e471-f6ac-4ad9-8418-152ff1cc24af" class="">
+</p><p id="845c7969-a6c2-4db8-9e7a-63979ee72fd0" class="">Nel dipinto Blake interpreta fedelmente i versi in cui Dante<strong> </strong>descrive con una metafora la condizione di coloro che in vita non riuscirono a mantenere le proprie passioni entro i limiti della ragione.  </p><p id="f6477a57-4c81-4c5a-b90d-c0cfa6f05610" class="">Ha infuso alla scena un vorticoso dinamismo: i corpi dei dannati, travolti dall’incessante bufera infernale, sono disegnati con grande immediatezza, ma senza precisione nei dettagli anatomici, come si nota nell’ardita contorsione del corpo di Paolo in alto, che tende le mani a Francesca. La figura stessa a terra sotto di loro è Dante, svenuto per la commozione suscitata dalla visione, l’uomo in piedi accanto a lui è Virgilio.</p><p id="41f0b5dd-106b-4bbc-bf05-1f3e8a944da0" class="">Evidenzia la linea che si fa più sinuosa ed avvolgente.
+Costruzioni plastiche si diluiscono, sciolgono.</p></details></li></ul><p id="814e972d-bbe0-4ef4-ab5f-aae44fa7a8c6" class="">
+</p><hr id="890dac77-885c-4f4e-94fb-f11749090e92"/><p id="f292dc9f-aa89-42f0-80a9-ef4d678dd6e5" class="">
+</p><h3 id="f9ea6694-e3d6-4cfd-8d56-02b662008c7f" class=""><mark class="highlight-gray_background"><strong>Romanticismo</strong></mark></h3><p id="4d16bb68-c5ac-4941-84d7-11a0096c6ef0" class="">Il romanticismo è movimento filosofico, letterario e artistico che ha origine in Germania a fine ‘700 e si sviluppa in Europa durante la prima metà dell’800, privilegia l’espressione del sentimento che vince sulla ragione.</p><p id="5792db5f-2520-4560-962f-0d4ef2e4b7c6" class="">Si sviluppa in concomitanza con il Neoclassicismo, finchè non ha la meglio sulla scena artistica, letteraria e filosofica.</p><p id="dbd32313-85d5-45eb-b34c-7498a26259f8" class=""><em>Sturm und Drang</em> (tempesta e impeto) - movimento letterario sviluppato nella seconda metà del ‘700 che anticipa le caratteristiche principali del Romanticismo.</p><p id="b565aba7-085a-4910-9a83-71e38d0493fa" class="">Goethe pubblica i dolori del giovane Werther che incarna l’emozione che irrompe nell’anima dell’artista. Romanzo incentrato sulla passione tormentata di un amore non corrisposto.</p><p id="7dc1aeab-84b3-4755-9dab-a41ae3a1d628" class="">Emergono grandi musicisti: Beethoven, Wagner, Schuman</p><p id="df9908b4-1e9e-42b4-a1c7-2f57ec593958" class="">Parole chiave del romanticismo sono: irrazionalità e <em>pathos</em>: sofferenza, emozione, esperienza.</p><p id="8c6a0b9e-3e88-4f4e-8e3d-805f375e1221" class="">Attenzione si sposta dalla figura umana al paesaggio ↓</p><p id="3481b2ba-a587-425b-a846-0e522bc4356b" class=""><em>Sublime e Pittoresco:</em>
+Sublime (violenza, impeto, la natura è un ambiente duro e ostile, che sviluppa nella persona il senso della propria individualità, della propria solitudine, della fondamentale tragicità dell&#x27;esistere)
+Pittoresco (semplice, impeti e passione dell’artista, immagini più idilliache, natura come ambiente accogliente e propizio, che sviluppa nell&#x27;individuo i sentimenti sociali)</p><p id="f9238b56-728d-4731-83cc-3cf2173c0c32" class="">
+</p><p id="753200cd-0e80-492b-9d9b-4845efe20417" class="">
+</p><p id="8675dc40-ad8f-46d5-b232-1ddfb6800d33" class=""><span style="border-bottom:0.05em solid">Avvenimenti storici:</span></p><ul id="044e2283-d1bc-4d64-85c3-555c3ed90686" class="bulleted-list"><li style="list-style-type:disc">Rivoluzione Borghese (Rivoluzione di Luglio anche detta Rivoluzione del 1830, Seconda rivoluzione francese)</li></ul><ul id="fc8d845e-cb5f-4aa6-89e7-e52e5204a59c" class="bulleted-list"><li style="list-style-type:disc">Rivoluzione francese del 1848 o terza rivoluzione francese è la seconda rivoluzione avvenuta in Francia dopo quella di Luglio 1830.</li></ul><ul id="6bcc8292-0013-4b78-9552-124fedc8c530" class="bulleted-list"><li style="list-style-type:disc">Sviluppo urbanistico, migrazione dei contadini che lasciano la terra per vivere in parti più industrializzate.</li></ul><ul id="2ba87241-2f7d-4582-8164-0dccc577cdc0" class="bulleted-list"><li style="list-style-type:disc">Tessuto economico e sociale perde valenza.</li></ul><ul id="0d509f53-ccba-4f0b-a7d5-cb775d57b828" class="bulleted-list"><li style="list-style-type:disc">Crisi dell’artigianato al posto di tecniche industriali.</li></ul><ul id="2258bc89-e138-451b-9188-cbed6e1494e1" class="bulleted-list"><li style="list-style-type:disc">Operai e contadini si riuniscono per moti e rivolte, scioperi, reclami contro condizioni di lavoro non dignitosi.</li></ul><ul id="21d97d84-7a59-4aca-bb81-80ea9c585de0" class="bulleted-list"><li style="list-style-type:disc">Contesto più ribelle e dettato dalla giustizia.</li></ul><ul id="099090fe-85dc-49b7-a8c3-d5c30ef33721" class="bulleted-list"><li style="list-style-type:disc">Manifesto del partito comunista di Marx ed Engels</li></ul><ul id="5396ad3a-6c79-447c-9743-a310c01f8ad2" class="bulleted-list"><li style="list-style-type:disc">Guerre di indipendenza americane</li></ul><ul id="e23dc96b-7e3f-4f5e-84ac-ebbf32f9823d" class="bulleted-list"><li style="list-style-type:disc">Cavour e Garibaldi - Unità d’Italia</li></ul><p id="dd51bd3f-a6d4-4d38-a946-65c1ad9d3c06" class="">
+</p><p id="dc915c5f-59e3-4ee3-a0c9-b125248d8166" class=""><span style="border-bottom:0.05em solid">Punti fondamentali che determinano la formazione e diffusione dell’arte Romantica:</span></p><ul id="56502583-39f2-4142-b68f-3f64018bb6fe" class="bulleted-list"><li style="list-style-type:disc">Recupero dei valori individuali.</li></ul><ul id="042979f7-2761-44ca-aeb5-9ea91fe6046a" class="bulleted-list"><li style="list-style-type:disc">Mito dell’artista genio in contrasto con la società che lo circonda.</li></ul><ul id="223db7a5-445d-49da-87af-67c8f4486d2f" class="bulleted-list"><li style="list-style-type:disc">Partecipazione degli artisti alla lotta per la libertà.</li></ul><p id="cc45d72d-858c-424d-8899-d610b47143e8" class="">
+</p><p id="8670c357-2fe6-4694-8e84-439dabb28920" class="">
+</p><p id="42f14825-8eb4-4e3a-9081-543dbd0591a0" class=""><strong>CONSTABLE</strong></p><p id="b815b2d6-f21b-404d-ad90-3e4e3df2583a" class="">Maestro della pittura inglese, incentrato sul paesaggio ottocentesco.</p><p id="031ba9f2-e271-40f2-960a-cafafd55ecd6" class="">Trascorre infanzia felice in campagna, sviluppa amore per il paesaggismo prettamente tradizionale. Pittura dal vivo, all’aria aperta.</p><p id="6852e5c9-adfc-41b9-b2fe-0e2c82a5bdb0" class="">Studi, schizzi e annotazioni en plein air (dettagli caratteristici di orario, condizioni climatiche)</p><ul id="a04f7a71-f244-439e-9a3a-463d6c8efb95" class="toggle"><li><details  =""><summary><strong>Il carro da fieno (1821)</strong></summary><p id="a929de3e-dfe0-432a-a671-15d3e682f008" class="">
+</p><figure id="e4fdabe9-c9b2-4190-9ee0-3c38b2f9c74c" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2012.png"><img style="width:499px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2012.png"/></a></figure><p id="bdd65919-4383-46eb-93fd-077892788422" class="">
+</p><p id="98f6ea22-55c3-4933-8c66-4d7fd89c301b" class="">Predilige semplicità, osservazione, aspetti caratteristici della natura. </p><p id="6323a0c8-a5ef-4434-9c12-0dec4d3f6fbe" class="">Cielo caratterizzato da studi su nuvole. </p><p id="904a14be-7604-4f63-953e-9dfb960e4f47" class="">La priorità era catturare l’anima della natura, vitalità che rieccheggia nel paesaggio.</p><p id="940215de-5e57-49d7-990b-faf666b14160" class="">Stile: attenzione a colore, composizione, tocco non rifinito, pennellata filamentosa. </p><p id="22d25b17-a406-46da-bb17-fb8a5553143d" class="">Le immagini rimandano all’osservatore una luce autonoma che vige nel dipinto, forme nette e distinte.</p><p id="4486e951-5076-4381-bf4e-1d35fdcc596c" class="">La pennellata sarà punto di riferimento per gli impressionisti.</p><p id="ab9c0f65-1f09-4b35-9808-cf3d185a52f9" class="">Rappresentazione più pacata e realistica.</p></details></li></ul><p id="0039bdb4-c55a-4b98-b386-d8e8d184d5fd" class="">
+</p><p id="38370149-9620-4c91-b8b7-cb767a386188" class=""><strong>TURNER</strong></p><p id="25c3251e-ac3e-4356-ba50-5500b82bebf4" class="">Turner ha un’inclinazione verso incendi, naufragi, catastrofi naturali.
+Catturano la sua attenzione pioggia, nebbia, violenza del mare in tempesta.</p><ul id="5b999c92-b3d1-4635-b492-b86945bb845f" class="toggle"><li><details  =""><summary><strong>Vapore durante una tempesta di mare (1840)</strong></summary><p id="062c2f16-d6ad-4616-89b7-ae71645dc51b" class="">
+</p><figure id="30f52421-eadd-4f90-98e8-c56519715fe4" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2013.png"><img style="width:521px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2013.png"/></a></figure><p id="c5821722-32b6-46f4-b4d2-84d5a995ed89" class="">
+</p><p id="5729f78e-6d9b-4478-b662-d89cc45aaf0a" class="">L’uomo soccombe alla potenza e vastosità della natura.</p><p id="b567dbc6-82f9-4c3e-bc41-3b1d4161fc3c" class="">Carico di vortici, luce che annullano la rappresentazione naturale per l’impeto. </p><p id="ed60f716-9ea5-46fa-83a1-2ea03771eecb" class="">É difficile distinguere le forme.</p><p id="6aa7d199-ab7b-466f-879f-04a62b5854fe" class="">Si fa legare all’albero maestro della nave per vivere sulla propria pelle sensazioni forti di un’esperienza drammatica.</p></details></li></ul><p id="dc655385-ab51-46d6-a66a-22031da994d2" class="">
+</p><p id="73dc15f9-d283-4553-a397-112679978a85" class=""><strong>FRIEDRICH</strong></p><p id="b3ed8d35-df43-4177-a62a-cc1412481a60" class="">Affascinato da rovine solitarie e atmosfere cupe, nebbiose, solitarie.</p><ul id="c941dddb-9c22-4e62-9f3f-66f0d0790301" class="toggle"><li><details  =""><summary><strong>Viandante sul mare di nebbia (1818)</strong></summary><p id="250ddc17-54ae-4680-871d-a641195e6036" class="">
+</p><figure id="23a9b2f5-e163-4837-8af6-381acfdf50a8" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2014.png"><img style="width:450px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2014.png"/></a></figure><p id="b8bd6d38-2a6e-4d41-adff-b7421b3e6766" class="">
+</p><p id="de1ff1b0-2c51-4727-8a2e-52e50d0c7d74" class="">Piccolezza del’uomo colto dalla grandezza della natura.</p><p id="b52a5fc7-8553-4bba-ab51-77665bd5e61a" class="">La figura è di spalle, l’attenzione è rivolta al paesaggio anzichè alla figura umana.</p></details></li></ul><p id="fe13b14b-f51e-414d-8f0d-ca89b6f96593" class="">
+</p><p id="7a126045-9a55-4116-bbfa-f879d82282a6" class=""><strong>GERICAULT</strong></p><p id="ab001feb-dc76-475a-b8ec-579c43da984a" class="">Tra i primi esponenti della pittura romantica, uno degli artisti focalizzati su fatti storici contemporanei.</p><p id="8da66642-5cc5-4c15-9df8-d433ad6e1759" class="">Evidenzia fatti storici con espressività del sentimento dell’essere umano, sua caratteristica peculiare.</p><ul id="1de23519-3cc1-499a-80a2-a29991d5de12" class="toggle"><li><details  =""><summary><strong>La zattera della medusa (1819)</strong></summary><p id="166523c3-0793-4cc2-a33e-4cc27aab1a87" class="">
+</p><figure id="ceb9c886-0b6a-4cc7-8205-f8ef65469e11" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Particolare-protagonisti-zattera-medusa-Gericault-analisi.jpg"><img style="width:1052px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Particolare-protagonisti-zattera-medusa-Gericault-analisi.jpg"/></a></figure><p id="3454393b-ed39-4db4-9f9f-06c49ac3e868" class="">
+</p><p id="be4b14de-8fd9-46f5-985c-351dcf5df3aa" class="">Raffigura momento della tragedia di un gruppo di naufraghi abbandonati tra le onde costretti a sopravvivere anche attraverso cannibalismo.</p><p id="d858dab3-f131-43d0-aca2-6bd752b395d4" class="">Drammacità e tensione dei corpi. </p><p id="5c509eb8-2236-4e33-8d5e-0b267a66a6dc" class="">Colori cupi e lacerati da luce che vediamo all’orizzonte. </p><p id="981f7c8e-9338-4cb8-8eed-b903017aaed0" class="">Ricrea la luce nella maniera più veritiera possibile.</p><p id="f6a0c4b1-39e2-4985-844b-c5246863e550" class="">Le espressioni sui volti sono rassegnate.</p><p id="1a42c9db-9c1f-46fb-b5b8-0374d78be2f9" class="">Il dipinto segue due strutture compositive ad impianti piramidali.</p><figure id="837b02ca-68c7-46e5-8630-8f7729e01431" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2015.png"><img style="width:762px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2015.png"/></a></figure><figure id="f1a70220-4320-4bf1-8fe5-e3ea7b1acb88" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2016.png"><img style="width:779px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2016.png"/></a></figure></details></li></ul><p id="4c681cc8-9885-4e76-9997-f0714b893be6" class="">
+</p><p id="98626b79-c234-49c1-9dd4-ff51ab8115cd" class=""><strong>DELACROIX</strong></p><ul id="2d81df90-0aaf-49d4-b4ff-159191d4cf8b" class="toggle"><li><details  =""><summary><strong>La Libertà che guida il popolo (1830)</strong></summary><p id="d002274c-42f2-4596-9772-32400b0474ad" class="">
+</p><figure id="2892107d-36be-4028-9f5d-cc06bfbf7b3c" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2017.png"><img style="width:778px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2017.png"/></a></figure><figure id="453cafc3-19b7-4a17-a207-d3c1c0350b20" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2018.png"><img style="width:588px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2018.png"/></a></figure><p id="e58af2a7-570d-43cb-9971-54c477fa2324" class="">
+</p><p id="efb38a21-87ab-49c6-95b1-188676f72d46" class="">Intensità drammatica si sprigiona nel dipinto che personifica la libertà calpesta tutto pur di emergere. Cammina verso lo spettatore per portare avanti le proprie idee e la propria ribellione.</p><p id="4458daf0-5e7b-44e2-bb21-29b261cb6f18" class="">Aspetto macabro - popolo caduto, cadaveri</p><p id="df88b233-eb00-4921-9b0a-37c7aa8daa44" class="">Scena irruenta - circondato da nubi il resto del popolo avanza.</p><p id="f5e4828b-c9bc-48af-8771-d8dca7566982" class="">In lontananza le torri del Notre Dame.</p><p id="a967ef4f-6d13-48bd-bc28-b0cfd4ca55dc" class="">Nobile che impugna un fucile si pensa potrebbe essere lo stesso Delacroix. </p><p id="22b08e79-fa79-4a3f-ad2f-9f7333f478bc" class="">Rappresentazione cruda e violenta di cosa si vive in quel frangente.</p><p id="b3deceed-b5fc-4ddf-812e-e3a655a057da" class="">Il nudo femminile riprende la Venere di Nilo, attinenza stilistica.</p></details></li></ul><p id="0f8bfe76-1395-4bc8-933c-6bc7184c5222" class="">
+</p><p id="4d55bc02-5a47-4b47-b9dd-0a8a979a4158" class=""><strong>HEYEZ</strong></p><p id="e0fa94a4-2bd7-403b-bb7a-29bcd71d1156" class="">Heyez personifica il romanticismo italiano: accademico, calssicheggiante. </p><p id="b31adca1-9ca7-495f-a7da-c19eeea0d128" class="">Temi patriottici.</p><ul id="1ddb3637-4f32-451c-8888-be1440d03143" class="toggle"><li><details  =""><summary><strong>Il bacio (1859)</strong></summary><p id="5a25682d-b3e1-4c79-8804-ccc3b406889c" class="">
+</p><figure id="69799a23-a2ce-443a-aea3-a34c2e26d32f" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2019.png"><img style="width:436px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2019.png"/></a></figure><p id="e43ca02a-41c4-44e3-81ec-9f1fca84c590" class="">
+</p><p id="450ecbbd-e7cc-43c8-867f-0a423eeaba5c" class="">Rivoluzionario saluta in maniera veloce e passionale la sua donna.</p><p id="52de7510-0a7c-409a-a578-26404a07cfd7" class="">Attenzione alle pieghe della stoffa e alla postura.</p><p id="4263ad33-370d-485c-8dd7-6d9eb32197e5" class="">Lei è completamente abbandonata e abbraccia il suo amato.</p><p id="57fce34d-55a2-453e-a8d1-d011e9725e5a" class="">Contrasto cromatico raffinato tra turchese e rosso.</p><p id="b143ed3a-2e74-4039-9992-0ffc2d518035" class="">I riflessi della luce denotano il tessuto luminoso in seta, in contrasto con il mantello opaco del ragazzo.</p></details></li></ul><p id="dce09624-4efd-434c-8f3c-555e3dfe2824" class="">
+</p><hr id="1815fb0d-b9ca-4e8e-8b9e-c9fdc730b208"/><p id="248874cb-be1d-42b0-b60d-9178a7eb1ce8" class="">
+</p><h3 id="2398834d-6b66-4939-a3f4-34eaca268c26" class=""><mark class="highlight-gray_background"><strong>Realismo</strong></mark></h3><p id="e31b72a1-ed30-4ce9-b358-176a5f5d710d" class="">La rivoluzione industriale provoca forti cambiamenti all’assetto sociale, da punto di vita economico e urbanistico. Si alimenta un clima di malcontento.</p><p id="384656d6-3479-47db-910c-7a00dad38acc" class="">A partire dal 1848 nascono tumulti reazionari di protesta per far fronte alle ingiustizie.</p><p id="3e9933e4-3504-4a67-bb3a-1443b3e5a7fd" class="">I movimenti realisti nascono pertanto proprio per rispondere in modo artistico a questa prepotente richiesta di vero e di quotidiano.</p><p id="f352de81-9b94-4ca8-94f2-525b469601e5" class="">In Francia il Realismo si sviluppa come metodo scientifico per indagare la realtà spiegando le contraddizioni e le miserie senza esserne però coinvolti emotivamente, astenendo qualsiasi giudizio soggettivo. </p><p id="e0faf986-7d83-4f48-a50c-778053831f7f" class="">Nasce la fotografia per immortalare la realtà, per raccontare ciò che sta accadendo politicamente e socialmente in quel momento. </p><p id="37e2fb6c-abfb-463d-afe0-2b7066254efe" class="">Ha l’obiettivo di rappresentare e raccontare in maniera fredda e cruda ciò che sta accadendo. </p><p id="811c220b-4221-4756-818c-552830a67de3" class="">Immortala quotidianeità mettendo in risalto aspetti di umiltà e povertà.</p><p id="b8ce2bab-2bc8-4edb-9d96-5e4265963093" class="">La pittura realista rifiuta il sentimento e la tradizione accademica. Ci si allontana dai canoni di bellezza e proporzione, l’attenzione è rivolta alla vita, all’essere umano, alle classi umili, alla povertà e alla miseria che si viveva nel momento. </p><p id="6059b56f-a432-4f86-ad3c-a38e121a36e2" class="">Lo scontro è tra borghesia conservatrice e artisti dediti alla rappresentazione realistica e veritiera.</p><p id="1d6db3cd-03ba-4d0e-aae6-d67f30baf238" class="">
+</p><p id="81981ebd-1805-44ff-a81a-aa24c0d431fb" class=""><strong>COURBET</strong></p><p id="68030e53-6ec0-4761-9447-ee0716406f0d" class="">Rappresenta la realtà nuda e cruda, oggettiva, per questo era un personaggio scomodo e le sue opere vengono rifiutate.</p><p id="af27c878-1cd4-49dd-9ff3-59b714928013" class="">“troppo volgare, brutale” risponde organizzando il Padiglione del ralismo, capannone in cui espone diversi suoi dipinti, atto di ribellione. </p><ul id="18260f21-bf26-4e77-aff6-70e24550c53c" class="toggle"><li><details  =""><summary><strong>Lo spaccapietre (1849)</strong></summary><p id="a32ebdfc-052b-491c-a303-f59167bfd76d" class="">
+</p><figure id="b9a67fa4-343f-40fc-9927-025d62fd291d" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2020.png"><img style="width:677px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2020.png"/></a></figure><p id="35d65c3b-7623-4697-ac25-0b1602f75d64" class="">
+</p><p id="769b199c-7f50-48b8-850c-d187c6fb3a55" class="">Nascita ufficiale del realismo, far valere la propria arte e il proprio modo di raccontare la verità. </p><p id="a9053695-d2a8-4118-a911-3d9e66ca50bb" class="">Il dipinto rappresenta un uomo intento a svolgere un lavoro manuale, cibo scarso a lato.</p><p id="12170219-eaa9-475b-806f-e6ce26398335" class="">Pone l’attenzione sui dettagli (toppe, vestiti stracciati)</p><p id="2c6dbdb2-a345-4ab4-88f6-393f90161ff2" class="">Viene esaltata la miseria.</p></details></li></ul><ul id="e2a559ce-1956-4889-bf24-cf3ac8e4deb2" class="toggle"><li><details  =""><summary><strong>Funerale a Ornans (1849)</strong></summary><p id="51653a72-1444-4385-8e73-edf422d9b6c4" class="">
+</p><figure id="5f6a49bd-a25c-4bfb-ba1c-8d6ab9b384a0" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2021.png"><img style="width:1041px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2021.png"/></a></figure><figure id="16d1de17-7a57-456c-b74d-3c5d63c2b58f" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2022.png"><img style="width:956px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2022.png"/></a></figure><p id="aeedbbde-e405-4cbf-9ae4-b6093aa0c98e" class="">
+</p><p id="5a1e4e91-ce35-47e1-84e7-3062f2baac18" class="">Scena tipica che espone al Padiglione del Realismo.</p><p id="a41d83a5-e634-4574-90fc-52f9808b7053" class="">Vengono ritratti personaggi reali con abbigliamento tipico del villaggio, ci sono funzionari religiosi, notaio, contadini, giudice, sindaco... i personaggi partecipano a una cerimonia funebre di un compaesano.</p><p id="8feb8f98-0435-4077-8a2c-a029bf36c942" class="">Il dipinto colpisce per la scelta del soggetto e il modo in cui viene ritratto. Personaggi del popolo non sono idealizzati ma raffigurati con realtà. La realtà è fermata in una rappresentazione pittorica.</p></details></li></ul><ul id="add02dd1-feb3-47f2-98d0-9cb59af5d099" class="toggle"><li><details  =""><summary><strong>Le signorine sulla riva della Senna (1857)</strong></summary><p id="464021e5-ca8c-4e35-8d3e-f5e9119e2d32" class="">
+</p><figure id="804a6f39-ee76-4432-a267-965111d53739" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2023.png"><img style="width:581px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2023.png"/></a></figure><p id="5d2cb902-419c-4f32-9ada-68379963e97a" class="">
+</p><p id="2d81b6fb-b26e-4572-b52a-77157b00e3d1" class="">Incontra critiche perchè non sono dipinte secondo postura elegante e raffinata che due fanciulle benestanti dovrebbero assumere</p></details></li></ul><p id="c7790341-63ca-42c3-a9a2-46d842642a87" class="">
+</p><p id="83a03ad0-f0e4-473f-811c-b0e412221d72" class=""><strong>DAUMIER</strong></p><ul id="d417aa8d-ac92-4a3a-aa8e-fa9e448a803a" class="toggle"><li><details  =""><summary><strong>Il vagone di terza classe (1863-65)</strong></summary><p id="44bc2596-4c94-4ce7-97cc-286af3407471" class="">
+</p><figure id="f0591181-ebe0-408d-82db-8239c33cd2dc" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2024.png"><img style="width:503px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2024.png"/></a></figure></details></li></ul><p id="3875fc27-d56e-499f-9e9e-10bb2df2b32b" class="">
+</p><p id="9315dea1-a45f-464c-a4df-041a21d8f173" class="">
+</p><p id="bc012506-cf6d-4843-b20c-31224825745e" class=""><strong>MILLET</strong></p><p id="3914e8f0-7a77-4d5f-bb72-f076c0ea1277" class="">Rappresenta vita nei campi, trasmette la sensibilità con dolcezza e tenerezza. 
+Cresce in un contesto agricolo.</p><ul id="073bdf95-7b65-4629-b942-83fa55b969eb" class="toggle"><li><details  =""><summary><strong>L’angelus (1858)</strong></summary><p id="27f65e5d-69d1-49c1-b654-00f842c9e0e7" class="">
+</p><figure id="ceb0068d-67d2-4b7d-848b-4d45f0c971b7" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2025.png"><img style="width:521px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2025.png"/></a></figure></details></li></ul><ul id="7bcac279-cf56-4228-a617-e76ea8a70c70" class="toggle"><li><details  =""><summary><strong>Le spigolatrici (1857)</strong></summary><p id="bca6dbed-020f-4097-9e47-af1a6474736e" class="">
+</p><figure id="5836fb83-f2c8-4459-80b7-f121c8ac3bb0" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2026.png"><img style="width:469px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2026.png"/></a></figure></details></li></ul><p id="dea236b3-18a3-41f4-841e-c53a610a6c50" class="">
+</p><p id="6919f83b-d095-406f-af4a-ad71c86d50e8" class="">
+</p><p id="cf715d91-f18a-453e-aa6f-664f4a5e2d8d" class=""><strong>I MACCHIAIOLI (FATTORI, SIGNORINI, LEGA)</strong></p><p id="e5b36bd2-7b42-4f7d-bfea-6f68bbf1e132" class="">Gruppo di pittori che si riunisce al caffè Michelangelo a Firenze, luogo di ritrovo culturale in voga nel periodo dagli intellettuali dell’epoca.</p><p id="a24f3529-fed6-4920-b262-70cf376c11e5" class="">Accademismo, voglia di ripresentare il senso del vero.</p><p id="99ace867-3fc6-4f44-a18e-4203ef68ae76" class="">Componente nazionalista del risorgimento.</p><p id="3a98c1ce-2d2c-4ffc-ae3c-95949e44af74" class="">
+</p><ul id="3f02c21d-2bf2-492d-9fff-7559f975ceb0" class="toggle"><li><details  =""><summary><strong>La rotonda di Palmieri (1866) - Fattori</strong></summary><p id="fd0f9aaf-b24e-472d-9982-c3a1334f2503" class="">
+</p><figure id="2f5949b8-ef0b-49f9-a8e8-958709fdfbba" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2027.png"><img style="width:1033px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2027.png"/></a></figure><p id="21a75fe8-7348-4e3d-ab3b-07b4aea8c916" class="">
+</p><p id="711c7f98-e8db-4b0d-a490-0154bbecaba3" class="">Stabilimento balneare tra i più rinomati di Livorno, la struttura molto stretta della tavola esalta l’inquadratura e rende l’importanza delle donne e dell’orizzonte. </p><p id="e6bba554-16f5-4117-86a3-9704b66373ab" class="">Donne vestite con colori cupi si contrappongono allo sfondo chiaro.</p></details></li></ul><ul id="1056ed0e-e03b-46d4-8b70-84e6e5bee12e" class="toggle"><li><details  =""><summary><strong>Il pergolato / Un dopopranzo (1866) - Silvestro Lega</strong></summary><p id="c7d54cf1-3fdf-4110-be4d-94aa660e8e7d" class="">
+</p><figure id="d154962c-be7f-4efb-a15a-dba06528088d" class="image"><a href="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2028.png"><img style="width:744px" src="Neoclassicismo,%20Romanticismo,%20Realismo%202fe278c4e6974ea0a70a9e7dc781dec7/Untitled%2028.png"/></a></figure><p id="b0b502b5-91b1-4861-9ed4-446293b700f9" class="">
+</p><p id="f3d3d283-8995-4ba7-b4e2-f3af3a43731d" class="">Immagine più intima e rifinita. </p><p id="c1d103dd-20cf-4e05-9e72-a6df3e1b9f88" class="">Scena d’esterno in cui le donne aspettano il caffè nel momento subito seguente al pranzo, sotto un pergolato. </p><p id="5d3a1494-3dc0-4aac-a7d1-bb89558d2db8" class="">La luminosità traspare e filtra attraverso la vegetazione e si prioetta sul pavimento creando ombre.</p></details></li></ul><p id="f1c41bfc-7fb6-46af-a23c-2b903195e3ac" class="">
+</p><p id="807ec62b-8896-4086-8ec8-1990a4b4ca1e" class="">
+</p><p id="fd2a8d66-b9da-42bf-a9b0-d2a979288d43" class="">
+</p></div></article></body></html>

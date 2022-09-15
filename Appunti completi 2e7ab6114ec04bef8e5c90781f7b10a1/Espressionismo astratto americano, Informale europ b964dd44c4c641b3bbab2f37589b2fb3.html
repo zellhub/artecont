@@ -1,0 +1,802 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Espressionismo astratto americano, Informale europeo ed italiano, Happening,  Fluxus</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b964dd44-c4c6-41b3-bbab-2f37589b2fb3" class="page sans"><header><h1 class="page-title">Espressionismo astratto americano, Informale europeo ed italiano, Happening,  Fluxus</h1></header><div class="page-body"><p id="3033abab-b629-464b-a113-4a45a9a1c8db" class=""><strong>Introduzione</strong></p><p id="5044e61e-757b-43eb-b5b3-faa47f143a20" class="">Voglia emergere, non farsi fermare dai condizionamenti sociali e politici.</p><p id="0544e571-d10b-4c9d-bc20-022437460324" class="">L’artista ha necessità di liberarsi attraverso gestualità, concetto, nuovi linguaggi artistici. </p><p id="60e45b01-fefb-4eb2-9c9e-b5a7bb76eee3" class="">Gli aspetti che connotarono l’arte americana degli anni ‘40 furono definiti dal critico Greenberg:</p><ul id="3546837b-602c-456b-9f2c-476544c0776b" class="bulleted-list"><li style="list-style-type:disc">la grande dimensione delle opere, consentita dai vasti spazi americani</li></ul><ul id="0b91e177-0ad6-44e2-8fde-002140c82afe" class="bulleted-list"><li style="list-style-type:disc">la piattezza della superficie, intesa sia senza prospettiva e ogni illusione di profondità, sia priva di rilievi</li></ul><ul id="07116398-b589-4293-884b-c0a7c20fc1ab" class="bulleted-list"><li style="list-style-type:disc">importanza del gesto di dipingere come espressione diretta dell’esperienza dell’artista (arte gestuale)</li></ul><p id="f65abaff-6530-4c7b-b38b-2ada4296cc65" class="">
+</p><p id="38b26e5d-f47a-43f3-95e9-fac6c1227988" class="">Si divide in due macro-aree: </p><p id="3993d541-4cba-41ff-8951-03d9173634c8" class=""><strong>Action painting</strong> - Pollock / <strong>Color Field</strong> - Rothko</p><h3 id="731cae26-e455-4853-bad0-e71d7f2ce208" class=""><span style="border-bottom:0.05em solid">L’action painting:</span> </h3><p id="1e1a6c61-5c89-46b1-9f0b-449ce6590c2b" class="">il segno lasciato dal gesto, pittura d’azione.</p><p id="630739a8-56e6-47ab-8447-1f7f594f221e" class="">Si allontana dai canoni classici.</p><p id="2fbfb906-4681-4894-b883-5db0fa54714c" class="">Si differenzia dall’astrattismo perchè si rompono schemi, legami con matematica ed equilibrio, vi è ricerca filosofica di forme e colori creata di getto senza razionalizzare. </p><p id="70c0cca9-615a-415e-9f3d-c234ba7c23b1" class="">
+</p><p id="ff17ec61-8457-4946-8754-f2c8fb33f4aa" class=""><strong>POLLOCK</strong></p><p id="66ebf3d3-bc9a-4215-9647-04acdd38d353" class="">Rivoluziona il concetto della tela, che non è più appesa ma distesa sul pavimento, c’è completa libertà dell’artista di esprimersi rompendo gli schemi classici, viene colmato di colore e segno su ogni spazio della tela, è impresso il proprio gesto e personalità sulla tela, è importante il movimento del corpo.</p><p id="47c1ca69-1daa-4559-a60d-d3bce6933881" class="">L’artista gira intorno alla tela ed esegue dei passi tribali. Instaura con la tela un rapporto fisico corpo a corpo. [tecnica: all over]</p><p id="5b453ffb-979c-4b58-b19d-11414821a9e7" class="">Dipendenza dall’alcool lo porta a morire in un incidente stradale.</p><p id="11a7b08e-69e8-4d81-99d4-de3ec05683d3" class="">Prova a curarlo con la psicanalisi.</p><p id="6130a137-194e-40c2-8787-32afc1d76818" class="">Apprezza grandi tele e opere che parlano al popolo, utilizza colori vivaci. </p><ul id="e6c4171b-3eb8-423c-8c9d-cc7b614b097e" class="toggle"><li><details  =""><summary>Foresta incantata (1947)</summary><p id="aeddbd8f-49d3-47ac-b21a-f5f6941630df" class="">
+</p><figure id="acb8e1d5-21e0-4607-b5a1-2e9c94464830" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled.png"><img style="width:308px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled.png"/></a></figure><p id="c2e0f828-8665-4efc-8663-bf8ba62b1aa0" class="">
+</p><p id="dedff6d0-b325-4e27-aff5-37ae6ba450d8" class="">Le stesure di pennellate, gocce, le sovrapposizioni creano grovigli filamentosi che possono essere monocromatici o comprendere varie gamme di colore.</p><p id="ff36ea31-37b7-4571-af31-0b02a71c39b3" class="">Spesso contengono polvere e mozziconi di sigaretta.</p></details></li></ul><ul id="b9142e35-59c6-4dec-9f19-24e7b3b8373d" class="toggle"><li><details  =""><summary>Pali blu (1953)</summary><p id="90ecc616-8a91-4c7d-b32d-39f587f2144a" class="">
+</p><figure id="736be01c-0c16-4155-9cba-cfa4cb7a38e0" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%201.png"><img style="width:1000px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%201.png"/></a></figure><p id="2333e0a1-bf7b-4952-8fff-9296e7ab82f0" class="">
+</p><p id="592013ba-e4f8-406e-bb41-fa2454a0f1f4" class="">Nonostante la pittura a tutto campo in cui non ci sono zone dimenticate, dallo sfondo astratto riscontriamo delle forme vertiali, otto “pali”</p><p id="3a6d20d0-1f39-4363-b03e-c68c6f3e0c9b" class="">Rimanda alle melodie jazz del tempo.</p><p id="15e16acb-294b-4890-beca-f18bf5be22a2" class="">
+</p><p id="20cbd114-71f6-4ad2-81c8-1842434935ad" class="">
+</p></details></li></ul><p id="c1fb8b03-5649-4906-a007-76c1bf6caf77" class="">
+</p><p id="7d401716-6591-45b7-9f85-6de20eac5d3d" class=""><strong>DE KOONING</strong></p><p id="418dd398-af3a-4701-ba90-097962c4fc45" class="">Gestualità ossessiva, violenta, a differenza di Pollock è un’arte più figurativa </p><ul id="8298d696-dd14-4489-9b82-4821ba5a8176" class="toggle"><li><details  =""><summary>Woman 1</summary><p id="949fffc7-afe3-4c2d-84d7-817fb0b695d7" class="">
+</p><figure id="145277e7-a942-4dfd-985e-26b5dcad0314" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%202.png"><img style="width:182px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%202.png"/></a></figure><p id="e58c13be-f123-444c-8978-7bc50b08bd8d" class="">
+</p><p id="1236fb15-6129-4860-b35a-a7f12c57bc23" class="">Artista compulsivo, la pennellata rispecchia la gestualità.</p><p id="df37eedf-2866-4830-ae12-55bec75f456e" class="">Si ossessiona dal non terminare mai un quadro, non vede mai la conclusione di un’opera finita, lo ritocca e trasforma in continuazione. Così facendo si sovrappongono diverse aree cromatiche.</p><p id="70d7a913-b698-4d8f-b2ae-839f91610f99" class="">Pennellata violenta, ossessiva, impetuosa.</p><p id="5f0818d9-51dc-4945-844e-5a1bc9281f98" class="">Il seno ha una forma esasperata, non è un seno materno. Lo sguardo è arcigno e aggressivo. </p><p id="c55de098-4416-4729-95d3-7584c36c0957" class="">Interesse per arte primitiva </p><p id="c2a52a04-2d70-4d23-9a20-d2913e7e0845" class="">
+</p><p id="be84c3eb-5875-457b-91a5-270dcf31b389" class="">
+</p></details></li></ul><p id="1189143e-392a-4a8c-8cd7-22df6692e270" class="">
+</p><h3 id="54c08824-9c76-49d3-bc7f-8d332491e1f7" class=""><span style="border-bottom:0.05em solid">Color Field:</span> </h3><p id="fa44c3bf-2e5e-4d0b-9182-f1647f0a3401" class="">Natura gestuale e meditata, riflessione, più dedita all’emotività</p><p id="4476b356-ff64-4cf3-94f3-c14e613bf43a" class="">
+</p><p id="fb4060c0-f946-4120-b5c5-9ee83c13c3c7" class=""><strong>ROTHKO</strong></p><p id="18353069-b4ee-4df1-bdac-b2efd65cdd77" class="">Di origine russe, giunge a New York.</p><p id="4cb3bd1b-89a3-43dd-850f-46bb85199fe2" class="">Stesture e campiture di colori piatti. Ha avuto varie fasi di studio e ricerca, parte da una ricerca digurativa per poi dilatare le forme, arrivando a vere e proprie macchie. Si suicida l’anno prima dell’inaugurazione della cappella.</p><ul id="4d92b292-ebda-4cb7-aac6-57431741f32d" class="toggle"><li><details  =""><summary>Multiforme (1948)</summary><p id="e20bd9dc-8704-4248-8dbe-f71f37e18e2c" class="">
+</p><figure id="071ae125-aab1-4c37-8eb0-03524307cc48" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%203.png"><img style="width:460px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%203.png"/></a></figure><p id="2122025c-499a-474e-b95c-05bcc4c4f540" class="">
+</p><p id="18b25d29-743b-44ef-9f30-4c1973d98b6f" class="">Macchie di colore, creano sbavature e sovrapposizioni di colori.</p><p id="bf06ceb2-430f-4246-9c30-dbda3504bb93" class="">Si crea un ambiente meditativo dedito alla riflessione.</p><p id="dac705b4-7f33-4995-9696-2096655a33e4" class="">Il colore è vibrante, lascia trasparire la tela.</p></details></li></ul><ul id="31ec4c86-ce97-447b-81ee-31bb09afee13" class="toggle"><li><details  =""><summary>Arancione rosso giallo (1961)</summary><p id="85708749-d98e-474f-a525-ee047f0d488e" class="">
+</p><figure id="ebbe4da6-9520-4cbf-8ec7-82053b606001" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%204.png"><img style="width:450px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%204.png"/></a></figure></details></li></ul><ul id="6bd328b0-4f3d-49ba-ac0b-3244e0ca7be1" class="toggle"><li><details  =""><summary>Cappella Rothko (1964) - Houston (Stati Uniti)</summary><p id="fdb4485a-13ca-4a8e-b89a-6b98ea3896cf" class="">
+</p><figure id="411972b4-4763-46da-80bd-deb7783294bf" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%205.png"><img style="width:357px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%205.png"/></a></figure><p id="6d908c60-3e0f-4397-884a-252c7d7d7963" class="">
+</p><p id="05038917-e2e9-4b3c-9c9d-b730d986d4ab" class="">Cappella che non è ocllegata a nessuna religione, punto di ritrovo per meditare. </p><p id="2f8f97a3-cd73-44ab-90ef-551f826df968" class="">Il colore dicelle grandi tele viene messo in discussione grazie alla luce, che con grande attenzione fa emergere gli strati di colore, diventa uno stato contemplativo. </p><p id="92b332c5-6c49-4260-9697-694f9338f8c8" class="">Il colore ha consistenza limpida, materica, si scioglie nella composizione.</p><p id="cb41c620-4141-420e-8f55-bdf6dd40d3c1" class="">La luce restituisce l’effetto di trasparenza del colore, gioca un ruolo determinante per leggere il pigmento, la vibrazione, cambia la sua incidenza sul colore. Ha un ruolo primario la luce attraverso il lucernario perchè restituisce una certa misticità al luogo. Lo spettatore viene immerso nella meditazione.</p></details></li></ul><p id="4632b9d4-b923-4230-aaa1-db365e03d30c" class="">
+</p><p id="4930f088-381a-444b-ba64-3f642f1d98cd" class=""><strong>NEWMAN</strong></p><p id="6e2e1c27-b9fa-4e99-8693-5fbcf292fa6d" class="">Ispirazione spirituale, meditativa, teologica. L’aspetto è più religioso rispetto Rothko. Ci sono rimandi biblici palesi, come nei nomi delle opere.</p><p id="57749faf-f806-47f5-9e54-518f4eedbc00" class="">Grandi quadri monumentali.</p><p id="788bc8f7-e0e1-4ed8-b096-123158556244" class="">Lavora su come il pubblico reagisce con le sue opere. </p><p id="5f618df1-c64f-42da-b229-dc9b65681121" class="">Vuole partire da zero per dipingere una nuova pittura, come se tutto ciò accaduto prima non fosse mai esistito.</p><ul id="46714bd6-3c01-4632-a9e6-173fbed24bd6" class="toggle"><li><details  =""><summary>Vir Heroicus sublimis (1950-1)</summary><p id="cd68f8fd-a9f7-4add-9a67-cf96033888ee" class="">
+</p><figure id="953491dd-5be7-4ebe-9593-6b379bae6423" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%206.png"><img style="width:2000px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%206.png"/></a></figure><p id="cf9212f8-3619-4a85-9bde-6441fdc3dfa1" class="">
+</p><p id="5e232495-a8e3-4516-b7e6-9b58390779ed" class="">Il monocromo conquista l’intero supporto, a intervallare la distea regolare vi sono fenditure verticali sottilissime che lui definisce “zip” come fossero delle cerniere che collegano la parte inferiore con la parte superiore della supericifie. Come se collegasse la terra al cielo.</p><p id="a4f99152-ee59-4814-b5f7-9a9bcce7a0fa" class="">
+</p></details></li></ul><p id="e9112110-bb66-4832-a292-3404eb39e90c" class="">
+</p><h3 id="961c4f40-ffe5-4b19-9f19-1b3a02bff87c" class="">Pittura monocromatica</h3><p id="80a6471d-19a5-477f-b48a-4f6e55bb0c49" class="">Anni ‘60 del Novecento.</p><p id="31a93499-d74b-42f9-bff5-2967a4e5ad0f" class="">Colore che conquista la superficie, che gioca con la luce.</p><p id="ed7ebf13-2d5f-43a9-8a43-576578e07d0f" class="">
+</p><p id="e83e9ead-fd87-4dec-ae02-147d59e1e0da" class=""><strong>SPALLETTI</strong></p><p id="c7f873b8-273f-4454-91d7-7651a6f6983e" class="">Legame tra opera-spettatore.</p><p id="e855c320-11f8-42c2-b72c-3a2b8a9ef249" class="">I colori sono tenui, effetto pastello, ottenuti con lavorazioni particolari. Rosa, bianco e celeste sono i colori più utilizzati.</p><p id="55c0b24a-c475-4a0c-b6ef-1c7b66dd23ee" class="">Rosa: colore della pelle - Azzurro: arte che respiriamo - Grigio: percezione dei colori nella totalità - Bianco: purezza, base primaria su cui inizia l’opera</p><p id="4d5cc878-3521-4668-b014-062ce4eed562" class="">
+</p><p id="3426396a-8021-407b-8d40-556f5cbb6d4f" class=""><strong>AD REINHARDT</strong></p><p id="3bf52848-c83e-4183-9d80-b63769529341" class="">Colori cupi, viola, rossi, marroni, grigi scuri.
+Emotività sprigionata dal colore.</p><ul id="6af050a2-3846-4890-9254-fab97d2d0f9b" class="toggle"><li><details  =""><summary>Abastract painting (1955)
+Red painting (1952)</summary><p id="6974710f-3d9e-4976-bcf4-4ad6eb996e8b" class="">
+</p><figure id="6e07878f-23e0-4e56-9371-38d0cb47bbfa" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%207.png"><img style="width:288px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%207.png"/></a></figure><p id="88605094-135b-4c3e-964f-d22d3413e058" class="">
+</p><p id="254bfe6c-7f0d-4c57-84de-2c57bea8db27" class="">Quadro monocromatico nero, c’è una sovrapposizione quasi impercettibile di una croce distinta da un colore leggermente diverso.</p><p id="1de2f2aa-88f4-4d1d-8fb8-3d683f806c7b" class="">Si nota meglio con il rosso.</p><p id="c8513bf9-6818-47ba-b61e-d7cf4c05f5fa" class="">
+</p><figure id="903c8bf5-5c5f-4eb4-afe6-680ee19d4a87" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%208.png"><img style="width:336px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%208.png"/></a></figure><p id="e2be5d2e-b016-448a-b141-eedbde052bd5" class="">
+</p></details></li></ul><p id="7fc5c2c1-218c-468b-b76f-3114673be9cc" class="">
+</p><p id="ee580ff4-74d6-459f-8699-02a3d8bf9feb" class=""><strong>JIRO YOSHIHARA</strong></p><ul id="eccbde5b-19ed-4bec-9273-57aeb3160527" class="toggle"><li><details  =""><summary>Giapponese, ad Osaka fonda un gruppo di artisti: <strong>GUTAI</strong></summary><figure id="ce8f94a5-5aa2-4e9d-9b18-b1226889fe2e" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%209.png"><img style="width:395px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%209.png"/></a></figure></details></li></ul><p id="6d21b353-adb7-4516-b1e2-be49745ef8fc" class="">“Volontà di concretizzare la spiritualità della materia”</p><p id="c9531d95-a6dd-49f4-b71c-620243313849" class="">Spalmavano i colori con i piedi e le mani, su una tela orizzontale.</p><p id="e6ea21d9-c588-4c1e-8e5c-24e30b0357c6" class="">Si scioglie nei primi anni ‘70 con la morte del fondatore.</p><p id="e7e9debd-ee06-45cb-99d2-c8ddb66c7f03" class="">
+</p><h3 id="fdf58a73-583c-4828-bb0f-ca8f071e4f96" class="">Informale europeo</h3><p id="cb50c27b-52bd-4d8e-9a6b-fd83770425b8" class="">I risvolti stilistici e formativi accaduti in America vengono proiettati anche sul territorio europeo. C’è una ribellione alla forma dopo gli avvenimenti bellici.</p><p id="bbee0c70-a318-4d3a-ad06-7064e288232f" class="">Si sviluppa nel decennio tra di anni ‘50 e ‘60, l’informale si forma in forte polemica con tutto ciò che può esere riconducibile ad una forma, sia essa figurativa o puramente astratta.</p><p id="99637f9a-6102-4eab-b310-1f4270c882e3" class="">Nonostante le similitudini con l’espressionismo astratto americano, il corrispettivo europeo se ne differenziò per vari aspetti tra cui la guerra che conferì alle opere un’impronta maggiormente drammatica, gli artisti eruopei prestarono più attenzione a materia e a un uso rinnovato degli oggetti comuni.</p><p id="d1ad51c5-f48a-46c1-8de9-88f3096096e0" class="">La guerra e il regime dittatoriale accomuna la ricerca di tutti gli artisti europei, che sentono sulla propria pelle molto più gli effetti rispetto gli artisti americani.</p><p id="4ddcc6ef-557d-40ae-9651-9b51c3270830" class="">L’informale si sviluppa seguendo due traiettorie:</p><ul id="afc57169-ba7c-4115-aab4-9ef8ac5dba61" class="bulleted-list"><li style="list-style-type:disc">Una valorizzava del segno-gesto ed è quella che pià si avvicina all’action painting americana</li></ul><ul id="bc8458d7-26e8-4b9a-bcca-b3a8cc23f526" class="bulleted-list"><li style="list-style-type:disc">L’altra era materica e volta a valorizzare i rifiuti, gli scarti, ma anche il colore a olio usato come pasta densa</li></ul><p id="b7bcd609-2216-4b59-ae82-711963c9ba03" class="">
+</p><p id="cd73b08b-cb3e-4afd-9cb1-ba215946f0d7" class=""><strong>FAUTRIER</strong></p><p id="e6913490-bd08-41d8-abdd-168249449eb1" class="">Viene catturato dai nazisti quando la Francia viene bombardata, ha la possibilità di salvarsi passando il periodo in un ospedale psichiatrico. Esterna le tragedie che testimonia attraverso diverse opere.</p><ul id="adc8c539-220f-4285-b92b-ffeefe85a26e" class="toggle"><li><details  =""><summary>Testa d’ostaggio (1943)
+Spoglia (1946)</summary><p id="24b47427-111e-47c5-8496-368956264fe0" class="">
+</p><figure id="16214578-82d3-40eb-aa35-14b8b0927d93" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2010.png"><img style="width:240px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2010.png"/></a></figure><p id="f35b3071-6478-42f1-acbf-8f2feddb15b8" class="">
+</p><p id="38d63d0b-8505-48de-ab66-310a21d32574" class="">Il colore smette di essere il focus dell’opera, diventa invece la densità materica. Il corpo massacrato è al centro dell’attenzione. Vuole rappresentare un volto martoriato.</p><p id="f4c85104-9389-45b9-912e-37c1c587d6ba" class="">
+</p><figure id="e4559199-2235-4f99-b37c-4f954f0e8c59" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2011.png"><img style="width:240px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2011.png"/></a></figure><p id="60653d48-e114-4b9c-b8b7-13df4136be55" class="">
+</p></details></li></ul><p id="00f70b96-7a6e-4676-8115-25684f53daf0" class="">
+</p><p id="2e96985c-aa81-4099-a55c-804c8830fa60" class=""><strong>DUBUFFET</strong></p><p id="1cfcdb40-9dae-4ba0-90de-0a4637e6ae78" class="">Ricerca materica, spontanea, figurativa, linearità con utilizzo materico. Composizione di colore, colla sabbia, per creare densa consistenza del colore.</p><p id="e266d441-ce7c-4b9e-ab3e-263cc8b6de0e" class="">Si allinea verso libertà di espressioni senza vincoli, parametri, schema predefinito.</p><p id="22921c54-efc5-4e2e-a563-2826031e412e" class="">Arte non filtrata dalla razionalità come quella dei bambini.</p><ul id="472cc6a0-8187-4421-8318-e3435a9d4e04" class="toggle"><li><details  =""><summary>Dea madre (1945)</summary><p id="3ab2c163-5cde-471a-b5b6-6132b3f1dab2" class="">
+</p><figure id="ad909db5-a722-4909-a8fe-c659655beed4" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2012.png"><img style="width:202px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2012.png"/></a></figure><p id="b7b21bfe-89fc-48ee-96f2-7b027cdd8bca" class="">
+</p><p id="3b4ebdea-04ac-4d0a-897c-1879c63ac15a" class="">Dea madre, tema rappresentato anche dai seni.</p><p id="da2c15a3-2831-429e-936e-3e877bd2f2f5" class="">Tratti casuali, arte grafica, stilistica.</p></details></li></ul><h3 id="dd4b7b10-2680-46d7-aefb-f9fb7944cf2b" class=""><strong>Informale in Italia</strong></h3><p id="2cb305da-37f7-475d-8d85-7644cd8a753d" class="">
+</p><p id="82290f8b-e298-4310-9eaa-4a91d982a854" class=""><strong>BURRI</strong></p><p id="0881bdf1-cd18-4079-8aa7-c4769e1ca23d" class="">Personaggio nato per caso, laureato in medicina fu chiamato dal battaglione di Mussolini e fatto poi prigioniero in Tunisia. Nel periodi di prigionia nei campi di concentramento ideò un modo per sperimentare la realtà che stava vivendo.</p><p id="bee66c4f-0c00-42a8-a3d2-cbd1dd45af9b" class="">‘50: sacchi - ‘60: combustione - ‘70: cretti</p><p id="5deadb2c-9d8d-4da2-99f1-30dd6271e7f7" class="">Come supporto utilizza i sacchi di Juta, per rappresentare drammi che l’uomo ha conosciuto e che l’artista ha sperimentato. Matericità priva di colore.</p><ul id="acab6e4c-e0bc-4491-b8d4-1d311807384b" class="toggle"><li><details  =""><summary>Sacco rosso (1954)</summary><p id="aac33768-a24d-4822-85dd-fef13bae84e7" class="">
+</p><figure id="5652228b-355c-458b-98e9-d082f89c269a" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2013.png"><img style="width:1389px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2013.png"/></a></figure><p id="5294c4ee-dc35-4422-aa0e-0ca3aab39744" class="">
+</p><p id="df8e9ecc-dd93-4b14-8fdc-50f4f3780cad" class="">Utilizza sacchi di colori come il rosso, colori che hanno quindi una valenza bellica. Vuole conservare una traccia della vita e delle ferite che sta subendo la società. Introspazione del personaggio spesso.</p><p id="e6c83d2c-0485-4ee6-95bc-3202d43975bd" class="">
+</p><p id="669a1a7e-747b-432f-a469-2253ac762447" class="">
+</p><p id="db777ab7-a12a-46f0-8cc7-4f5e3c4d7faa" class="">
+</p></details></li></ul><ul id="f49225a9-c5fc-4be5-8bfd-210431ca4a13" class="toggle"><li><details  =""><summary>Grande rosso (1964)</summary><p id="1eae3a81-42b2-4404-84b9-38d19740a516" class="">
+</p><figure id="4f8c45cd-4d80-4359-92b1-e2b32db1749a" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2014.png"><img style="width:249px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2014.png"/></a></figure><p id="e2691225-a2e1-46e1-a786-3f80f74712db" class="">
+</p><p id="5a878dc8-bf3d-41bb-aba5-3d82b411676a" class="">Sperimentazioni con la combustione negli anni ‘60.</p><p id="c77c0306-495e-43aa-84e7-910fef0c5fda" class="">Avvicina fiamma a superfici di plastica e interrompe il processo prima che le superfici vengano disintegrate.</p><p id="a3c78fbb-e99d-4c15-9453-0ff516e9367c" class="">Trasformazione della materia come il corpo che subisce modifiche con l’avanzare degli anni, chiave di lettura metaforica.</p><p id="905bb639-7d63-43bd-86a9-e85964980457" class="">
+</p><p id="216b6379-4431-46a2-bb41-475c8999823b" class="">
+</p></details></li></ul><ul id="136d069d-187b-4ad8-9509-70d95d663584" class="toggle"><li><details  =""><summary>Cretto G-1 (1971)</summary><p id="bdf86900-b68a-41d1-b1db-5f3b7d4bed15" class="">
+</p><figure id="9e407f64-060d-4c59-ac78-0f5bd4298e75" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2015.png"><img style="width:402px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2015.png"/></a></figure><p id="5a1ca1fd-cdcb-484e-aaad-0ff8ffb0508d" class="">
+</p><p id="9fc474c4-36d3-4403-988c-0f0bf1faef66" class="">Tecnica cromatica che rende l’effetto di terra inaridita. Sperimentata dall’artista stesso con vari impasti e diversi processi di cottura. Si ottengono forme diversificate.</p><p id="90d9f440-b288-43d6-8d20-c389657f7076" class="">
+</p><p id="70823546-fa54-4135-aec8-40ad35c1aa91" class="">
+</p></details></li></ul><ul id="dcd398bd-28cc-4088-b80e-de9bea5cce1e" class="toggle"><li><details  =""><summary>Grande Cretto (1984-2015)</summary><p id="af35fc09-ed76-4739-90e5-2e372813f4b5" class="">
+</p><figure id="f0f587ca-a3a4-4045-a124-d1c652c4ad10" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2016.png"><img style="width:437px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2016.png"/></a></figure><p id="15116b22-566b-4da6-9a46-dc5260ac4099" class="">
+</p><p id="367b7c51-9d79-485f-a49d-fd6ac87b012c" class="">Enorme distesa in Sicilia sopra la cittadina distrutta dal terremoto. Creato in cemento bianco e macerie.</p><p id="0b94ede2-a73b-448c-a635-d4ff97d359d3" class="">La conquista dell’opera sul territorio: opera ambientale - Land Art.</p><p id="aa10a957-6cc5-47b9-bc35-b4f0431e0660" class="">Ricorda allo spettatore cos’è accaduto, parte di storia umanizzata. Stesura di 300 metri per lato che abbraccia il territorio. </p><p id="c4cd1c1c-3b2b-42de-8114-9c8e7024e6a9" class="">
+</p></details></li></ul><ul id="449f88e7-cc61-4ae7-9c99-92d139d2d0c4" class="toggle"><li><details  =""><summary>Grande Cretto Nero (1976)</summary><p id="a855283c-589a-4202-848f-34eeacc3334d" class="">
+</p><figure id="3a3c8177-bf27-42c7-a870-f25a1ed9a543" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2017.png"><img style="width:399px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2017.png"/></a></figure><p id="3ac5d1c5-5e3b-44f8-b915-ade4eb4e2111" class="">
+</p><p id="6a2eb2c3-cfb7-435c-9554-5e81125f139c" class="">Nero translucido in maiolica e smalto, trasmette sofferenza del vivere, il nero si sposa con la sfera concettuale.</p></details></li></ul><p id="b30ffa12-e294-4c5e-a945-2f87210b62d6" class="">
+</p><p id="97341e99-2101-41a3-8dff-9bda2391a713" class="">
+</p><p id="aa91ac6e-f651-4e77-95bf-bdd8ee00cd9e" class=""><strong>FONTANA</strong></p><p id="c7fef57e-e594-4e6f-9d85-a57c4f3a1a27" class="">Artista rivoluzionario controverso del secondo dopoguerra, artista argentino dai genitori italiani.</p><p id="c20ef6c0-4820-450d-acf0-249aad836faa" class="">Artista poliedrico, a tutto tondo, sperimenta con diverse tecniche e materiali.</p><p id="604896af-3d1e-45d7-a335-9979c5fbe320" class="">A metà degli anni ‘40 pubblica il manifesto bianco. Esprime la disapprovazione verso l’arte tradizionale. Non condivide il rinchiudere l’arte in spazio, tempo colore e gesto. Tutti gli aspetti devono formare una sintesi nel processo creativo. </p><p id="13b76b6d-f547-49d8-b4d2-7009a1b920e0" class="">Si avvicina al futurismo e va oltre. Smaterialismo dell’arte, comprende spazio, suono.</p><p id="44c2fe3a-73ab-428a-bc6b-db203973ce11" class="">Dal manifesto dello spazialismo presenta le opere intitolate concetto spaziale.</p><p id="a8a60e1b-3339-4799-8002-d320bd17bc7d" class="">Vuole “andare oltre” i canoni estetici, figurativi, vuole andare al di là del’arte, della tela. La gestualità va oltre il colore, esterna il gesto senza alcun supporto.</p><p id="2661ce36-6a07-46f8-9a52-08173d8d80f8" class="">Vengono rotte le superfici con tagli e graffi.</p><p id="69b487e2-f021-4e8a-b0e2-053139d10c7f" class="">Il gesto è una ferita che va a tagliare il cordone ombelicale del passato per predisporci a vedere oltre la visuale classica a cui siamo abituati.</p><ul id="1f7bccb3-dcfe-42a4-8429-d9af601b77b6" class="toggle"><li><details  =""><summary>Attese (1960)</summary><p id="b1c116af-aa99-454d-b857-f295d2f5bf56" class="">
+</p><figure id="f5c9fd27-f564-4f49-85f0-c56cfa625cf3" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2018.png"><img style="width:640px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2018.png"/></a></figure><p id="e7992587-b5bc-48e9-97ba-65d1a2906ba8" class="">
+</p><p id="a801e487-5906-4d72-961f-f4ef44467c53" class="">Multipli tagli verticali e obliqui su superfici di cromie differenti.</p><p id="e9793cfb-25b8-4e0c-a07b-d5ff1de7c120" class="">Gesto rapido e preciso che annulla la dimensionalità. </p></details></li></ul><p id="c9e20156-7f4e-42a5-8233-8e3511c93f39" class="">
+</p><ul id="e823dabf-0fdb-4ec1-9605-8a86c8be6324" class="toggle"><li><details  =""><summary>Altri artisti rilevanti:</summary><p id="61676549-ab67-4875-985c-20136b120352" class="">
+</p><figure id="2e3dc062-b0f5-40ec-a793-3ea9b7d2b036" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2019.png"><img style="width:517px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2019.png"/></a></figure><p id="3270b3ac-be84-45ab-8054-08cdd692944b" class="">
+</p><p id="0f6ba68b-1cd1-4669-a8c1-c2f127b67abb" class="">Vedova, Basaidella, Capogrossi</p><p id="ac8fb9cc-d5e4-4086-aa43-b6ad5b749c44" class="">
+</p></details></li></ul><p id="af372986-4882-459e-bd1a-0ff304dab9f5" class="">
+</p><p id="49d76a8e-5202-43a1-b868-bf75ea707754" class=""><strong>FRANCIS BACON</strong></p><p id="26f0cfbd-6264-45ba-a4b2-00069597cc0f" class="">Non aderisce a un particolare movimento, non segue doppio filone nè materico nè gestuale, è un personaggio che vive la situazione del periodo esternandola con una declinazione formale e stilistica molto personale. </p><p id="c27fcce0-7553-4226-bec2-388247683288" class="">Molto incline all’espressionismo di Munch, sono presenti forme mostruose, lacerazioni. </p><p id="d321143a-0769-4e2a-a11f-0401db35cfb0" class="">L’idea dell’uomo e del suo dramma rimane al centro della sua ricerca</p><ul id="8ab73764-1023-497f-b823-29a43006203f" class="toggle"><li><details  =""><summary>Studio su tre figure ai piedi della croce (1944)</summary><p id="e94a65ad-8c47-412f-af1d-35a0e4852b6c" class="">Studio dal ritratto di Papa Innocenzo X di Velasquez (1953)</p><p id="5cac4d02-ea23-48a8-b226-9c834cbc2036" class="">
+</p><figure id="1df35387-fc11-4969-8579-9733a5ba9dcb" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2020.png"><img style="width:342px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2020.png"/></a></figure><p id="dc0d3f8a-5971-474a-a9c3-5554588ad693" class="">
+</p><p id="19fc7b2b-caaf-4b57-a724-75b4eefa3d07" class="">Figure antropomorfe mostruose che ricordano le figure del surrealismo</p><p id="9f6448f1-9f35-4890-818d-1980c39505f1" class="">
+</p><figure id="641ecc52-ac97-4a33-ac19-5cb9dd072ff5" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2021.png"><img style="width:336px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2021.png"/></a></figure><p id="3ed178e3-b246-48c8-b8a5-de61bf7c7c19" class="">
+</p><p id="08f996f4-6d6a-413f-a94c-06e5ade0a4cf" class="">Rivista un’opera di Velasquez esternando il disagio profondo che ha per la società a lui contemporanea l’artista.</p><p id="da37789b-8b31-4b26-95e9-c8ab2ff24287" class="">
+</p></details></li></ul><p id="59752533-0df0-43c4-bcfd-0ea5fe7a0e48" class="">
+</p><p id="06b11768-ae0a-47ce-bbe9-7626d5fd2993" class="">
+</p><h3 id="30829f23-b399-4df3-825e-0e61a0ab2b32" class="">Optical art - Arte cinetica</h3><p id="34efa42d-46d3-4ae4-b601-98733cd97982" class="">L’optical art è: Arte che sfrutta l’illusione o gli effetti ottici de processi percettivi. L’artista introduce un illusionismo ottico basato su pattern grafici che danno effetto di movimento virtuale.</p><p id="d2ae6b59-225c-4b06-86e1-d936e209a1e2" class="">Fine anni ‘50 prime reazioni all’informale</p><p id="27cd7070-231d-4d72-b524-587e7aa66cd4" class="">Filone d’arte che va alla ricerca dell’astrazione</p><p id="01e8d096-24f8-404e-8c34-e12b5e6e1732" class="">Il ruolo dello spettatore cambia </p><p id="13071319-5a69-4c3d-a535-dfedb1d30fca" class="">Nuovi fenomeno dal punto di vista strumentale e dell’opera stessa in relazione con il fruitore, e ciò che percepisce nell’osservazione dell’opera.</p><p id="1cc2c678-ac95-43b1-8f02-d0a8751d2748" class="">L’artista non è più il fulcro, il focus si pone sull’osservatore, come reagisce d’innanzi all’opera. </p><p id="9dbeb2db-587d-4362-a782-1b5115714429" class="">Forme fredde, astratte, prevalentemente geometriche, non ci sono collegamenti con valori simbolici o connessione che faccia emergere particolari significati. Vige una ricerca prevalentemente ottico-cinetica dove fa leva stimolare la percezione e attenzione dlel’osservatore, rispetto a meccanismi studiati dall’artista.</p><p id="e91388ee-ece6-4012-ae3c-b8cb7129b9b1" class="">Nascita di nuovi gruppi, i tre principali:
+GRAV - Parigi
+Gruppo T - Milano
+Gruppo Enne - Padova</p><p id="e471226a-ce81-48d9-a6a1-b1ca1e39e53e" class="">Si basa sulla creazione di figure geometriche che vogliono ingannare, illudere la percezione dell’osservatore.</p><p id="f3897b81-5dfb-4702-a09a-e1b5194749b0" class="">Artista Principale è Victor Vaserely</p><p id="0732eafc-df80-4428-8a29-25520358170e" class="">
+</p><p id="7de099ff-b37d-4148-bb6f-b57aa3cc0bda" class=""><strong>VASERELY</strong></p><p id="6d69048a-3d91-4fb5-9bf1-6b14f0dbdcdb" class="">Vaserely è considerato il fondatore dell’optical art, intorno al 1947 abbandona ogni figurazione e si dedica alla considerazione delle reazioni percettive descritte in forme geometriche dai colori piatti e brillanti.</p><p id="aed7af2d-cd01-4add-ada9-e1face2b62e8" class="">Pittura che tende a far lavorare otticamente l’osservatore d’innanzi l’ottica: illusioni ottiche</p><p id="2c583bff-8fa8-4db5-b9ac-bf61fe956d72" class="">Crea inganni illusionistici, inganni visivi che vanno a relazionarsi con il fruitore.</p><p id="dd6cac77-64d2-4b08-ade2-da183029e5c5" class="">Si tratta sempre di figure quadrate che inserite in determinati contesti vanno a modulare il pattern iniziale, schemi abbastanza semplice e ritmico. </p><p id="f255d6e3-61c0-4efd-86e9-b2d5678cb889" class="">Viene scomposto il pattern originale scomponendo l’inclinazione del quadrato stesso, assumendo forse diverse. Giocano alternanze all’interno dello schfema prestabilito. </p><p id="99963534-03d5-4767-93a2-d9a62207fb1b" class="">Vaserely usa la somiglianza e il contratto per ingannare gli occhi dell’osservatore.</p><p id="7e397ee6-2b2f-4a00-adc0-44445eee52e7" class="">Induce l’osservatore a giocare con l’osservazione.</p><p id="0474013e-ffda-43e8-9bf7-b6af92eccd59" class="">Le cromie giocano sui modulati del pattern stesso, viene creata deformazione all’interno del reticolo stesso che può essere a base quadrata o circolare.</p><p id="d7b530ae-7718-4f36-afad-ca0e96802c7d" class="">Il tutto è dipinto in olio su tela. </p><p id="40690d2b-30b8-4521-87f4-f8e45ec23969" class="">
+</p><ul id="d1aa78d7-0054-4a65-b223-ce4477d73733" class="toggle"><li><details  =""><summary>Esempio opere</summary><p id="6909e71d-c908-4608-bbd8-7c694bcf89d9" class="">
+</p><figure id="253991a3-49e9-46f7-8570-6bcf71ab1d4e" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2022.png"><img style="width:3566px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2022.png"/></a></figure></details></li></ul><p id="60f960f3-7180-49f7-ae79-b4910ab697b5" class="">
+</p><p id="22478ed6-2c3a-4e44-bd58-a61a04d9a00f" class=""><strong>CASTELLANI</strong></p><p id="5b49dc43-a257-40de-b63e-7b340687a3da" class="">Nel 1959 l’artista mette a punto il sistema modulare che caratterizza i suoi monocromi, principalmente bianchi o neri. </p><p id="13912df0-37fe-4548-8864-05ac1e75aa3d" class="">Adotta caratteristica per ottenere quel vibrato, non dato dal colore o dalla struttura modulistica, ma abbiamo una vera e propria movimentazione della tela trasformando la superficie bidimensionale in un rilievo tridimensionale, con l’aiuto di chiodi.</p><p id="7eb343e1-bb54-4beb-9504-e1c2bcbf3be7" class="">Restituiscono nella parte frontale una modulazione che va a creare delle sporgenze, parti concave e convesse. </p><p id="843e50ff-ddd3-47b8-8d9d-4f37e99b21f9" class="">La luce gioca un ruolo fondamentale. Si tratta di luce naturale o artificiale che va a colpire la tema monocroma, gioca in relazione con il ruolo che l’artista vuole dare all’opera stessa, facendo risaltare i pieni e i vuoti creando la modulazione della superficie della tela, mossa dalla trama sottostante di chiodi infissi a distanza regolare su un particolare telaio. Ne risulta una texture tridimensionale contraddistinta da introflessioni ed estroflessioni. </p><ul id="f0398d1b-b484-45ca-913d-8e9e85830edb" class="toggle"><li><details  =""><summary>Spazio ambiente (1970) </summary><p id="a0d39b65-4a9e-4260-bbdb-b2da4b0fe830" class="">
+</p><figure id="f15dac7e-edba-4813-a3f2-c6f36741b92f" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2023.png"><img style="width:455px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2023.png"/></a></figure><p id="aa248b18-0077-4ac6-b559-ca76f4f31e91" class="">
+</p><p id="0d4e0c3e-c864-49fc-b47b-bad540b3ccc1" class="">Il fruitore entra un ambiente attraverso ricerche dettate su aspetti di pieni e vuoti.</p></details></li></ul><p id="b55aaf63-c7fb-4b02-810f-cb3d3e8cb7bb" class="">
+</p><p id="7fa0a7df-06ae-4d3f-be79-7c5aa6793bc4" class=""><strong>BRUNO MUNARI</strong></p><p id="05f03a06-0803-47b9-b43f-0cb42606d689" class="">Lavora sempre con un rimando al gioco, al divertimento, realizza il tutto in maniera semplice e ludica, fluida. </p><ul id="e731ba54-fa7a-4b21-827b-e13cd170c218" class="toggle"><li><details  =""><summary>Macchine inutili (1933)</summary><p id="39325abb-e9ba-4bd2-a01d-988e81a456e2" class="">
+</p><figure id="7ceda213-9783-432c-a609-378b6007e5f3" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2024.png"><img style="width:399px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2024.png"/></a></figure><p id="b74469d9-cf3a-439f-9c77-17b59f315217" class="">
+</p><p id="eb3314b7-84bc-4333-98ac-7cdd8a766a97" class="">Una prima indagine di Munari la abbiamo perchè affascinato dall’avanguardia futurista dall’aspetto progressista, poi se ne distacca.</p><p id="1c94590b-1097-4f21-b228-121b2df1f460" class="">Predecessore dell’arte cinetica, identifica le “macchine inutili” ovvero sculture leggere, sospese nell’aria realizzate con fili e contrappesi, elementi geometrici che vanno a modulare la dimensione e lo spazio, si muovono con le correnti d’aria.</p><p id="c5f16b0a-0c14-48bb-9424-b2cb70a00566" class="">I cavi in acciaio danno la possibilità di modellare gli elementi creati in vetro soffiato, legno leggero o cartone. Seguono facilmente quindi i flussi d’aria.</p><p id="d100137f-edda-4ea8-976d-9bd30579dff0" class="">Munari si avvicina da un punto di vista al progresso e al progresso che si dava alla macchina in chiave futurista ma va oltre tutto ciò che è la poetica futurista. </p><p id="f9e4e561-ec92-4adc-805f-647d76e45b15" class="">Cerca di cogliere (lavorando sull’aspetto ludico e sul gioco) sul catturare l’attenzione dello spettatore.</p><p id="1611e9a1-8c58-420d-a483-2da3be0aa917" class="">Cerca di raggiungere la “meraviglia infantile” in un pubblico adulto. Cerca di suscitare stupore.</p><p id="18e4a3ee-b38b-4fc6-acc4-2aff967a5f01" class="">Forme leggere, filiforme, eleganti.</p><p id="77d25821-a076-4f39-a864-7f2c657e9d9e" class="">
+</p></details></li></ul><p id="ef7e86f3-9281-4c25-897f-87c3dbd3e343" class="">
+</p><p id="10b03473-23d3-4ef1-8b31-7a48fd3534f8" class=""><strong>CALDER</strong></p><p id="94c9563c-4afb-4dff-a1fc-3dd71a725d44" class="">Si cimenta con l’arte cinetica, si concentra sul movimento.</p><ul id="f92a2306-dc36-4617-bb5b-8e24b8001454" class="toggle"><li><details  =""><summary>Mobiles</summary><p id="5685436c-9622-4ede-a340-9707a46b57f2" class="">
+</p><figure id="5708ff50-7ccb-4ac6-85ff-c952c95da055" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2025.png"><img style="width:400px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2025.png"/></a></figure><p id="37187ba5-9605-40d0-a051-233264ec972f" class="">
+</p><p id="adbfd5d4-38cc-4471-89d5-12e00023ad05" class="">Strutture ramificate, non hanno base o piedistallo, sono sostenute al soffitto tramite ferri sottili, colorati. Si sviluppano ramificati attraverso strutture che possono avere vari fermati filiformi. </p><p id="b3ac7482-7235-4edd-9bee-35204bcf463f" class="">Tra un collegamento di rame e un altro ci sono piccoli anelli che hanno la possibilità di snodarsi, meccanismi all’interno di un sistema generale che dà la molteplice possibilità di far muovere le pale, agire con la stessa dinamica ovvero spostamenti e moti d’aria. </p><p id="a0c34ce2-998c-49b6-9f4f-192a71215902" class="">Il fruitore è spinto a relazionarsi con l’ambiente stesso.</p><p id="f4e2a255-a43d-473d-86ae-650a9b3c9747" class="">
+</p></details></li></ul><ul id="58c29c3d-ab2c-4889-b084-0ab2ccc1763d" class="toggle"><li><details  =""><summary> Stabiles</summary><p id="5ba3df76-a3ad-4bdf-94fc-cb2772399f2c" class="">
+</p><figure id="3d1acca9-dfec-448a-ae46-615aa34259c3" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2026.png"><img style="width:259px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2026.png"/></a></figure><p id="7fcfd6de-52d7-45fb-8d85-db9c3589d1a3" class="">
+</p><p id="210f4592-0347-4721-ac4a-745fcb0ccfe1" class="">Enormi sculture su base astratta, composte da alastre molto sottili metalliche, incastrate le une alle altre creando giochi di form e incastri. </p><p id="3ed88bf4-da20-402b-a0dc-bef263760f91" class="">Vanno a ricreare formalmente l’aspetto leggero, esile di queste opere sospese.</p><p id="c3805030-e92a-4f80-b069-75c4429f48e1" class="">
+</p></details></li></ul><p id="3eb3401e-f3b5-477b-8e44-2ea98167636a" class="">
+</p><p id="cdf2fd82-c015-4229-be25-a514da348ceb" class="">
+</p><h3 id="c98a4083-f26d-448c-a215-a5285acd5220" class="">New Dada, Happening, Nouveau Réalisme</h3><p id="683ad1c9-d17d-4c32-a7df-dfc9c5d417c7" class="">L’america diventa sinonimo di libertà.</p><p id="1a2f5ffa-7942-4d02-b752-a57339c94021" class="">La relazione tra l’arte e la società si infittisce, l’arte diventa il suo specchio, cambia il suo ruolo:</p><p id="88e9be01-9f65-438d-8d1f-b19e91163a3a" class="">Non più manifestazione del potere, ma tentativo di far riflettere con critica, scandalo e perchè no con ironia e provocazione.</p><p id="0c8ae517-ee29-4ce3-a5d3-a871c6c1a26e" class="">L’arte è lo specchio della contemporaneità, della società.</p><p id="809a98ac-b473-4b71-b3fa-f335f4108782" class="">L’arte avanza, muta, si evolve al passo con la società, con le evoluzioni tecnologiche. </p><p id="d34958bb-3c87-41a7-ba14-dbd7f676048b" class="">Si ha un flusso più veloce, è la società che lo chiede, o più che altro lo impone l’aspetto economico.</p><hr id="a3bb6f10-08c8-49fc-bdc0-eafac2226d80"/><p id="bb4d825f-53a7-44dc-b053-c475cfb816b0" class="">Dopo il <strong>Boom economico</strong> abbiamo l’introduzione nelle case di nuovi OGGETTI: Il nuovo status symbol.</p><p id="9660f412-5f1f-43c7-9a57-6a20b7868202" class=""><span style="border-bottom:0.05em solid">HAPPENING</span></p><p id="4462e88a-0480-47b4-82f0-b1fde1779d70" class="">Lavatrice, frigoriferi, auto economiche, cibo in scatola, bevande in bottiglia ecc...</p><p id="aa9c0deb-629d-46a5-939a-e9ccdd6c1d71" class="">Periodo della beat generation, movimento giovanile che sfocia da un punto di vista poetico letterario conquistando il campo artistico sviluppandosi nella seconda metà del ‘900 e in particolare negli anni ‘50 e ‘60 negli Stati Uniti.</p><p id="b571f63f-46ca-4582-a7ea-2c42f099b64e" class="">Gli oggetti iniziano ad essere introdotto nelle opere d’arte, la rappresentazione della realtà è diventata dominio dei codici di riproduzione mediatica delle immagini.  →  Nuova forma di realismo.</p><p id="257abe7e-9b3e-49cb-b9cf-36e3da9c3795" class="">Si rifà ad oggetti di vita quotidiana.</p><p id="959cebc3-eb9d-42a6-8dfe-b06b56b25b00" class="">C’è un ampio ritorno grafico e artistico dei fumetti nel panorama della seconda metà del novecento.</p><p id="1df706f7-fc06-4edb-8952-9a8e1d90984e" class="">Niente più rappresentazione, la realtà è scelta, modificata o rappresentata. Da un certo punto di vista manipolata dagli autori che reintroducono nelle loro opere l’oggetto estraniandolo dal proprio contesto per introdurlo nel contesto artistico.</p><p id="d16581e7-9085-4955-9ba3-b90dac11d5be" class="">
+</p><p id="f0f501a0-e158-4d79-83e0-6ce0e735a624" class="">C’è un ritorno al dadaismo con l’apertura all’avanguardia e nuovi materiali. </p><p id="9d576dcb-0f23-4e86-9345-29573e146823" class="">
+</p><p id="e739bfbb-05d5-41e8-a833-8c3ad2d80248" class="">Gli oggetti sono decontestualizzati, ma si va oltre la semplice decontestualizzazione, gli artisti vanno a vedere i maestri del passato aggiungendo la propria analisi. C’è quindi un ulteriore chiave di lettura.</p><p id="e9c4090d-b5b5-4083-831f-6810187e8962" class="">In questo tumulto di eventi, si afferma la volontà degli artisti che si impegnano in ricerche simboliche con un comune intento: liberarsi dai limiti dei confini per trovare un proprio linguaggio fuori dalle righe.</p><p id="ea706dc8-8099-43f0-aeba-838220184b86" class="">Ormai il quadro come opera comporta un limite fisico, è spesso sentito come una costrizione, quindi bisogna uscire da questa barriera, cercare un contatto diretto con lo spettatore. </p><p id="3a756281-dbe4-4d60-b439-dfc96661cdaf" class="">Si vuole usufruire delle sensazioni specifiche del suono, della visione, del movimento per instaurare un contatto con la gente.</p><p id="91af89f5-674c-4d38-af0c-cbb1e3968bd0" class="">
+</p><h3 id="b2394cab-af85-4f96-a8d9-5ec5a0ed74dc" class="">Happening</h3><p id="741af01d-4431-49a4-bda5-749b09a61c1b" class="">Fine degli anni ‘50. Nuovi processi artistici partono dall’idea gestuale, dell’azione per divenire “<strong>accadimento, avvenimento</strong>” → definizione di happening</p><p id="2107ebfb-62a1-410b-b113-f532fbaba0c3" class="">Tutto ciò che accade in un determinato contesto.</p><p id="29d09cbf-b90b-4217-a1de-50d21f37d0b4" class="">Nasce una nuova forma di espressione, porta avanti un nuovo modo di linguaggio, un vero e proprio incrocio tra arte figurativa e arte teatrale.</p><p id="ed50e0e3-dbbf-4aa2-87a3-715aa251962e" class="">A differenza delle performance in cui il pubblico è presente ma non è parte attiva dell’opera, non è incluso.</p><p id="2110c811-f951-4ba2-84f7-c12309b13887" class="">Uno dei maggior rappresentanti è Allan Kaprow.</p><p id="a260fe49-340c-4155-b376-3da82aeaa77e" class="">Primo tentativo di fusione tra diverse forme d’espressione e vari linguaggi che vede un vero e proprio incrocio tra evento teatrale e arte figurativa.</p><p id="dc2e96be-471b-4643-b2dc-39ff92175037" class="">É un evento che combina elementi di pittura, poesia, musica, danza, teatro e li mette in scena come un’azione dal vivo.
+</p><p id="daf50cf6-bb86-4e34-abda-b5410cbb3830" class=""><strong>ALLAN KAPROW</strong></p><p id="5cd3add1-484f-42c2-ae3a-5213b1cb46ef" class="">Parte dalle dinamiche futuriste e dadaiste per realizzare avvenimenti dove molto era lasciato al caso, all’improvvisazione, a ciò che poteva accadere nell’immediato.</p><p id="cf3588f6-e250-4d83-a64b-4e539cca3e72" class="">Il primo happening conosciuto nella storia è nel 1961.</p><ul id="cb2530dd-f006-4d40-9dea-51ed291012ef" class="toggle"><li><details  =""><summary>Yard (1961)</summary><p id="04b58482-ce92-4631-b2df-7c968b817546" class="">
+</p><figure id="229453b1-35cf-4854-aa3e-c96189e299ca" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2027.png"><img style="width:508px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2027.png"/></a></figure><p id="42bd43b4-b15f-40ac-8696-90568292234b" class="">
+</p><p id="c45597bd-9471-4e65-8198-1eec0adb7310" class="">L’happening è un vortice di eventi improbabili, l’oggetto è incorporato nell’arte. É determinante la relazione degli oggetti con il pubblico.</p><p id="9a568fc3-7a50-4ff1-98a5-9f34e5db3aea" class="">
+</p></details></li></ul><ul id="cbe0f9fd-f588-4efe-97c2-92179fd24ac2" class="toggle"><li><details  =""><summary>Fluids (1967)</summary><p id="66dd75cc-4904-42e5-8a07-fd069d2b01dc" class="">
+</p><figure id="fd0374f4-dc2d-48cd-8c66-d4e5cc9c011d" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2028.png"><img style="width:512px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2028.png"/></a></figure><p id="8c56ba65-fbe5-4744-8b0a-6a9a45ab61e5" class="">
+</p><p id="71b623b7-5851-4b70-a6dd-7a2be16015a3" class="">L’artista fa realizzare dei blocchi di ghiaccio dalle persone che passavano.</p><p id="7c0fef74-2a08-4823-ba2e-f5ed27baf9ee" class="">Le persone dovevano per forza interagire tra di loro per la dinamica del lavoro. Influisce l’aspetto ambientale.</p><p id="f5b53c2d-9918-4b42-b084-ee97275201fc" class="">
+</p><figure id="fbca0569-a2aa-42ee-a125-b0114df04512" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2029.png"><img style="width:309px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2029.png"/></a></figure><p id="225ec41e-b370-44d5-886f-245052fd0765" class="">
+</p></details></li></ul><p id="ede9fedb-152a-45b3-a661-02456a6cb47c" class="">
+</p><h3 id="2fd7c3dd-909f-4cc0-bf9d-01634735441f" class="">Fluxus</h3><p id="3ee8a7b3-2005-407e-9c81-edc0b3cfb56e" class="">Movimento internazionale, attivo in Europa e US, fondato da George Maciunas nel 1961-2.</p><p id="2c76dd79-e813-4799-b1cc-6f7ecf0df268" class="">Gli artisti Fluxus mirano a creare un rapporto tra arte e vita senza seguire una logica, raggiungere uno scopo.</p><p id="48481f80-be0d-4d4d-8d66-7f321f29d799" class="">Alcuni artisti importanti: George Maciunas, George Brecht, Allan Kaprow, Ben Vautier, Wolf Vostell, Joseph Beuys, John Cage, Nam June Paik</p><p id="c2970dab-a37c-4dce-9807-98b345d3eb64" class="">Flusso di accadimenti, di come devono andare le cose, di come l’arte deve interagire tra i vari linguaggi.</p><p id="c9107008-57be-4a06-973e-cddfb60e5b2f" class="">Al loro interno si trovano le più diverse tendenze artistiche (musicisti, artisti, attori, scrittori) che si manifestano attraverso performance in continua evoluzione, durante le quali il pubblico è coinvolto, spesso provocato, con l’obiettivo di abbattere lo storico distacco tra artista e spettatore.</p><p id="2a12122f-a45c-4637-8bde-ded09aeb229b" class="">“Tutto è arte” e nel sostenere questo concetto, Fluxus oltrepassa il contenuto artistico giocando con la soggettività.</p><p id="7b7bc3d9-8578-432d-9fe8-32a8435942c1" class="">Non si etichettano come movimento artistico perchè, alla base della loro filosofia, c’è il non avere dei punti fermi:</p><p id="f08bd004-1b64-4608-8663-8ff15fb38ff2" class="">Non avere regole di orgine e di appartenenza.</p><p id="3dbb1bc1-6dab-45aa-b8d1-e69b424894bb" class="">Non considerarsi un gruppo prestabilito.</p><p id="36e07861-ef48-4f27-a8bd-87504eff4a31" class="">Non rispettare la distinzione tra le arti (visive, musica, teatro, letteratura) ma favorire un glusso di persone, fatti, eventi, metodi.</p><p id="d73398a5-334e-4523-accf-5edf59216e32" class="">A differenza degli Happening, basato sull’accumulo quantitativo di gesti e cose, l’evento fluxus si presenta come azione minima, ripetitiva.</p><p id="d76d47db-da7e-4edb-b814-61b36804975b" class="">
+</p><p id="3ca1613f-491d-407e-a155-188681528a06" class=""><strong>NAM JUNE PAIK</strong></p><p id="5b1a401c-ae2b-442d-b4cf-c2d6f7364ca6" class="">Videoarte - Tra la fine degli anni ‘50 e primi anni ‘60 inserisce televisori nei suoi happening e installazioni, che alternano o deformano le normali trasmissioni, inaugurando l’appropriazione interattiva del mezzo.</p><p id="a73f4780-6e16-4ae7-b047-7ca9009f8ffd" class="">Concentra la sua ricerca artistica sull’evoluzione tecnologica. Parte da materiali tecnologici di uso comune.</p><p id="b82b306b-e100-4d75-baf4-a8d75616bec1" class="">Nel 1963 in Germania predispone 13 televisori sintonizzati su programmi nazionali tedeschi, collegati con cavi, che riproducono immagini distorte, modificate. Elementi che alterano vibrazione della luce, dei segnali del suono, ricreano afflusso elettromagnetico all’interno alla disposizione di monitor.</p><p id="659260ce-d649-4c33-b402-fc3a6b4ac72c" class="">
+</p><ul id="12c1e33d-fd1a-4934-8b9a-bbe0479e17b5" class="toggle"><li><details  =""><summary>Opere (Videoarte, Tv Buddha, Tv Rodin)</summary><p id="d256080a-dd7b-4a41-bc46-87cce876b5de" class="">
+</p><figure id="04d895d2-74a9-4737-85e2-a8d5cc38aebf" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2030.png"><img style="width:467px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2030.png"/></a></figure><p id="3d253ef4-981d-495a-86a1-4e7e57199d69" class="">
+</p><figure id="ffe7bed6-dde1-40df-a893-0cd6f10bb0e5" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2031.png"><img style="width:621px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2031.png"/></a></figure><p id="53f4df45-ecd3-4182-b1e5-ef97c6af6e5f" class="">
+</p><p id="d8984bc8-8707-4146-91b1-ef103ab49c3a" class="">Si parla di circuito chiuso. Una telecamera riprende il soggetto e lo trasmette sullo schermo.</p><p id="1c3545d7-1382-4972-a0ad-722ba2646d75" class="">
+</p></details></li></ul><p id="7cecc9da-2e5d-4f5d-a5c5-af61ba685724" class="">
+</p><p id="8e017a22-5fb7-4e51-a99e-ad149881f11c" class="">Il primo a teorizzare un’arte capace di espandersi nello spazio, adottando un nuovo strumento in grado di dare libertà al gesto creatore. </p><p id="06402c28-9c15-4ef6-a22e-c9c2e1d8efa8" class="">
+</p><ul id="67c9c56f-41bf-43d4-a1b3-d068836a6a2e" class="toggle"><li><details  =""><summary><span style="border-bottom:0.05em solid"><strong>Manifesto del movimento spaziale per la televisione</strong></span></summary><p id="99fb5b7e-18d3-48e0-b26c-10ea87890202" class="">
+</p><figure id="0cee7751-63d7-4a07-a73b-d43ed60185a6" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2032.png"><img style="width:615px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2032.png"/></a></figure><p id="2a0f91b5-ca27-4401-ac1b-c5feea24cbb8" class="">
+</p><p id="0b3fb808-d96d-4f2a-8ca3-d6b4a470ec0d" class="">Nuovi strumenti tecnologici entrano nella sfera quotidiana e nel mondo dell’arte (radio, televisione ecc..) </p></details></li></ul><p id="d9b210bc-bc71-4f20-af1f-741de77339c2" class="">
+</p><p id="df73f2ca-e4be-4c56-a5f3-31d2da62dd48" class="">Gli artisti di Fluxus si amalgano con le correnti successive.</p><p id="ee2d893d-67e7-4552-81cf-ec85fdb59fc4" class="">
+</p><p id="668002ba-a143-45c4-a1b1-e808649e2bfa" class=""><strong>JOHN CAGE</strong></p><p id="8f971ffc-8cb1-46b0-ae70-7f0ab9200bde" class="">John Cage è stato tra gli artisti più determinanti della componente del suono nel gruppo Fluxus.</p><p id="69383e90-74ca-47ef-81f9-416fa5a139ae" class="">Basando la sua ricerca sul caso, John Cage compone le sue prime musiche aleatorie, dove per ogni elemento - durata, tempo, tipo di suono, movimento - determina degli schemi casuali tramite il lancio delle monete.</p><p id="33f817b8-7c7c-4e53-ae0a-399029787f55" class="">Uno dei suoi primi esperimenti fu “il piano preparato” che crea effetti straordinari partendo da un’idea insolita. Nel pianoforte vengono inseriti dadi, bulloni, pezzi di gomma, ferro, legno, corde, chiavi inglesi per alterare il suono. Il risultato è una musica che ricorda melodie indonesiane.</p><p id="f9c569f2-9340-483a-8e37-cf7aaaa6efd6" class="">Per Cage era modo di lasciare libertà al suono.</p><p id="b050ddb4-52b1-47a9-8ce6-c6da183b392b" class="">
+</p><ul id="73c2b558-0548-41b2-b33f-0c224d03c5e3" class="toggle"><li><details  =""><summary>4’33’’ di John Cage </summary><p id="618ce092-b760-40c9-83b2-833c629bfcf6" class="">
+</p><figure id="ed44aa58-9567-46f2-a472-9f646eb24734" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2033.png"><img style="width:766px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2033.png"/></a></figure><p id="c953e8cc-d337-4387-b804-a6e05564332e" class="">
+</p><p id="f4c92663-4bc8-49b4-8c51-bdf91b23f808" class="">Opera Fluxus sul silenzio.</p><p id="d7f3b0d1-2477-443c-9bd4-2c4238499028" class="">“Il silenzio non esiste”</p><p id="3a15226a-5e85-460f-9a1a-309c0423801f" class="">
+</p></details></li></ul><p id="8b7773a2-683a-4cf2-8616-e320b10da79f" class="">
+</p><ul id="c003ee35-fbd6-4806-92d3-958e30835fa6" class="toggle"><li><details  =""><summary><strong>Cage, Cunningham, Rauschenberg</strong></summary><p id="13907897-912b-4282-b2c8-df101637bc2d" class="">
+</p><figure id="26c10720-e695-4b3f-b5da-cbf1619f212c" class="image"><a href="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2034.png"><img style="width:786px" src="Espressionismo%20astratto%20americano,%20Informale%20europ%20b964dd44c4c641b3bbab2f37589b2fb3/Untitled%2034.png"/></a></figure><p id="a672ca7d-5eab-4804-9f3f-b3e4a1b83dc8" class="">
+</p><p id="2e98ca30-d11d-4026-b24a-b6c5d9179d9b" class="">Interazione tra diverse discipline: musica, arte e danza </p></details></li></ul><p id="6a54142a-da0a-418e-afd6-1a25e474f19d" class="">
+</p></div></article></body></html>

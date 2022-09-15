@@ -1,0 +1,793 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Surrealismo, Metafisica, Ritorno all’ordine</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="620995e3-c2ec-4963-a8b9-ce6743a54e84" class="page sans"><header><h1 class="page-title">Surrealismo, Metafisica, Ritorno all’ordine</h1></header><div class="page-body"><h3 id="c3a9ea01-9696-4574-bba9-c4af06793c14" class=""><strong>Surrealismo</strong></h3><p id="bcb2e498-cbce-4547-b033-9d8c07ac5de3" class="">Primo manifesto del surrealismo pubblicato nel 1924 da Andrè Breton</p><p id="af6535d6-3ea3-4f5d-8a18-076c60be8cf5" class="">Movimento culturale sorto a Parigi dopo la IGM</p><p id="2fbbf73a-0c93-42cd-9f81-a11d2eecfe0e" class="">Si presenta come un movimento rivoluzionario</p><p id="4e3211ec-af8d-45c1-a8b0-5dc808d17d16" class="">Influenza le varie discipline (letteratura, teatro ecc..)</p><p id="4d9ca69d-0feb-49e2-81ab-e1dc9d5fbbe6" class="">Psicanalisi di Freud con l’indagine dell’inconscio è punto fondamentale, le libere connessioni tra la psiche e ciò che viene manifestato attraverso i sogni, influenza in maniera determinante il percorso di diversi artisti</p><p id="d532bd5b-80c0-41b3-89c2-b77922687b2b" class=""><span style="border-bottom:0.05em solid">Tematiche:
+</span>Sogno, follia e ricerca dei contenuti inconsci come mezzi di fuga dalla razionalità (Per fare questo, è necessario oltrepassare i limiti della ragione e accontonare il buon senso comune, dando libero sfondo all’imaginazione)</p><p id="e53d02ba-f005-437f-a960-3d37ce2fcd1b" class="">Polemica contro la centralità del pensiero logico, si sposta l’attenzione allo scavare nell’inconscio per capire il meccanismo che fa emergere determinati stati d’animo</p><p id="edec11f2-a8f0-4766-9194-eb661a1c323b" class="">Liberazione dell’individuo dalle convenzioni sociali</p><p id="b74eb137-3424-4319-afdf-b15e3be85335" class="">Contesta i valori della società borghese e la cultura che li sostiene </p><p id="72c53e7d-d56b-4cd5-8086-be0e9c35b5da" class="">Mirò, Magritte e Dalì sono gli esponenti principali</p><p id="d566c575-d719-457b-b2d1-64ca7961ac7a" class="">
+</p><p id="46865751-2706-4120-b484-fd614460f81f" class=""><strong>MIRÒ</strong></p><p id="8839b7e5-652c-4267-811c-65f946ecb10d" class="">Sente che la sua strada è dipingere un universo fantastico, inizia a raffigurare mondi onirici e gioiosi popolati da creature fantastiche e forme colorate</p><ul id="e9dbbba9-550c-4998-aa10-add174e57f90" class="toggle"><li><details  =""><summary>Il Carnevale di Arlecchino (1924-5)</summary><p id="84841dd8-6545-4001-9611-82c76c85672d" class="">
+</p><figure id="e5f45872-f0f5-40d6-9abd-282cbb104890" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled.png"><img style="width:716px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled.png"/></a></figure><p id="45b5863b-99a9-44a8-8866-6da6ec7329fe" class="">
+</p><p id="f017e430-5703-4e70-9667-6e03269a46d6" class="">Rappresenta in un’unico quadro diversi elementi fluttuanti metaforici che riempiono completamente lo spazio. Fantastia tipica fanciullesca/infantile.</p><p id="d9aae021-6377-4983-a93e-a382e98b6a55" class="">La scala rappresenta l’andare oltre la tela, la sfera nera sulla scala rappresenta il mondo, metafora dell’attraversare il mondo.</p><p id="7e57aeee-e8f9-43c9-bfdd-be446038f390" class="">La finestra dà spazialità e il triangolo rappresenta la Tour Eiffel.</p><p id="d7cbf023-3faf-4d5b-89c6-6b398e2fd0f6" class="">La sfera verde indica la terra.</p><p id="6e64e16a-8dc0-40f2-b8a7-f7c9135258df" class="">Arlecchino è il personaggio blu e rosso. </p><p id="7e7787f9-8556-4d3a-a93a-fc626717dbf7" class="">
+</p><p id="19f98ed6-62ee-41c2-a716-ba06ee08805b" class="">
+</p></details></li></ul><ul id="c3b60fe9-1c84-42a4-9569-3de8f5122711" class="toggle"><li><details  =""><summary>Blu II (1961)</summary><p id="ba7163fa-ebb2-461d-987b-dbdfa1c87eac" class="">
+</p><figure id="ebdcc480-e50c-4bdc-9930-a83aca686fc6" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%201.png"><img style="width:488px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%201.png"/></a></figure><p id="9773173f-5df6-4ad2-b16f-7953bf669aa3" class="">
+</p><p id="ee14192c-4a71-4d1a-a3cd-0dd9ce7d4d0b" class="">Si annllua l’impianto prospettico, non esistono elementi che possono ricondurci alla realtà. Identifica il blu con il colore dei sogni.</p><p id="07687871-f891-47e9-85ff-6ea1d3543506" class="">Le forme geometriche astratte non rientrano nelle sue caratteristiche pittoriche, sosteneva che il segno fosse sempre forma di qualcosa.</p><p id="22f53692-b7ca-4bba-ae2c-6d649b4b2b49" class="">
+</p></details></li></ul><ul id="2813a067-c881-4512-aaee-e283e0b5034f" class="toggle"><li><details  =""><summary>La nascita del giorno (1968)</summary><p id="a07906c2-b50e-448f-b758-2eec5b016593" class="">
+</p><figure id="79e95de8-8e2f-4250-a6e8-2c9c2cf328f3" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%202.png"><img style="width:309px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%202.png"/></a></figure><p id="808cdb95-7f8d-47f6-b449-ed02b8c16189" class="">
+</p><p id="25d83c88-d916-42f0-a5b4-8b5dbeea502c" class="">Colori primari delimitati da linea spessa nera che chiude le forme chiamate “Miroglifici” da uno scrittore</p></details></li></ul><p id="b5ac98f2-201f-4500-bef0-ebdde56126db" class="">
+</p><p id="c2d1e277-fa3f-4610-90a3-fb66edb2193b" class=""><strong>MAGRITTE</strong></p><p id="73fe8f09-1134-4977-a8ab-2d0abc338e59" class="">Artista belga, ha contatti con ambiente parigino.</p><p id="8fc56f56-a731-4df6-a36c-4b32055bd0ab" class="">Si avvicina alla metafisica.</p><ul id="684c109f-dcb6-4a10-a2cc-951258954744" class="toggle"><li><details  =""><summary>Figlio dell’uomo (1964)</summary><p id="338002f6-7789-484d-97b3-ff648d15d320" class="">
+</p><figure id="54750766-2aeb-4f31-beb8-28b35cf9155e" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%203.png"><img style="width:364px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%203.png"/></a></figure><p id="e9f3d6e7-e36b-4f27-8e1a-07ee04be6012" class="">
+</p><p id="108259fa-23de-44dc-9d37-7e1d541e81e5" class="">Identifica la classe borghese nella maggior parte dei suoi quadri.</p><p id="1373f0ec-d226-49c5-9bed-0768b2f7fea3" class="">Abiti tipici borghesi. Reputava la classe borghese meschina ipocrita, corrotta.</p><p id="1ef0818c-4d1f-456c-84c9-12c86d9ed2bc" class="">
+</p></details></li></ul><ul id="7a328a2d-401c-48fa-a7e7-8839728656ed" class="toggle"><li><details  =""><summary>L’uso della parola I (1928-9)</summary><p id="9f76c84e-4388-49b2-a4c6-a585b098c62b" class="">
+</p><figure id="df98df0b-dc62-455b-8469-a73cf6c79355" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%204.png"><img style="width:677px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%204.png"/></a></figure><p id="400922da-d18d-4d18-92a1-c05f72d1bad1" class="">
+</p><p id="ce163027-ee06-4633-9f39-5eb10c9e35d6" class="">È la rappresentazione di una pipa e non la pipa stessa.</p><p id="e69b089c-2a6e-40b9-b240-f2ad096ebbb6" class="">
+</p></details></li></ul><p id="91960890-6c57-40dc-b05c-d5a28c3096c6" class="">
+</p><p id="81e4233c-1123-4ad5-9834-881441907e50" class=""><strong>DALÌ</strong></p><p id="416075e7-7487-4e32-a48a-f9e888e5cb53" class="">Ricerca artistica che rientra a pieno nel surrealismo</p><p id="e42df4ac-042c-4730-af69-1478b9d0f276" class="">Si concentra su inquietudine, sogni, riproduce incubi, tormenti, allucinazioni</p><p id="723f2b03-06a7-4df3-a1e4-1306b2aa1a27" class="">Surrealismo veritiero, si incentra sulla psicanalisi</p><ul id="fd106681-13e4-4522-b28b-33ab04440886" class="toggle"><li><details  =""><summary>La persistenza della memoria (1931)</summary><p id="4f120897-5a2d-492b-b243-eb1831b8cb8a" class="">
+</p><figure id="b7760e58-5514-4070-8f70-e0e73b3f191d" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%205.png"><img style="width:752px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%205.png"/></a></figure><p id="1588b746-b022-4526-bb65-47d40fa70887" class="">
+</p><p id="b5428866-78ff-444b-800d-18de444159a8" class="">Costa catalana, non abbiamo figure umane se non il profilo del’artista stesso come una sorta di creatura</p><p id="8a505684-9368-43c5-950a-b7bd0b4d85db" class="">Orologi molli: legame col tempo, riferimento a Einstein, relatività, quarta dimensione  - Dopo aver cenato con del formaggio si addormenta e sogna queste immagini in cui gli orologi hanno la consistenza del formaggio</p><p id="9a4f640b-3a3a-48cc-95ad-212ca8321a86" class="">Su un contesto marino sono distesi questi orologi sciolti, uno è chiuso e pervaso dalle formiche, sua grande fobia che risale all’infanzia.</p><p id="6664a4ab-9eec-4951-9f99-f84ed419d81f" class="">
+</p></details></li></ul><ul id="89aa0b24-9ade-4cbe-b129-f9a3ce5a38b8" class="toggle"><li><details  =""><summary>Sogno causato dal volo di un’ape (1944)</summary><p id="c8439dcb-71c3-4249-9810-9c17ca6fb335" class="">
+</p><figure id="6f1c50c3-28ad-4487-875c-fd9e27dfb588" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%206.png"><img style="width:408px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%206.png"/></a></figure><p id="d1f03caa-2300-4217-af24-12d2afc2aecc" class="">
+</p><p id="94c037a1-b28b-4dbe-a2dd-5899e0bd4d4c" class="">Situazione nel cui uno stimolo esterno si collega nel sogno (ad esempio rumore ecc..)</p><p id="4ea00605-349e-4018-bcce-95168744d891" class="">Donna distesa quasi fluttuante su una lastra di pietra, è Gala, la compagna dell’artista, ritratta nuda mentre dorme con le braccia dietro la testa.</p><p id="2cd14d79-e67c-45d4-b3ee-144b71e04c6b" class="">A sinistra vi è un’ape che ronza attorno a una melagrana sospesa. </p><p id="b789676c-82b2-4b4e-b575-d1ea6dddde30" class="">Una baionetta punge la parte interna del braccio della donna. </p><p id="8fc5e35f-1463-406d-8bd0-702462b85ef1" class="">Elementi molto enigmatici legati a qualcosa di profondo.</p><p id="14f400fe-8eff-49ba-93c5-0f30b5c1bddc" class="">A sinistra da una melagrana molto più grande fuoriesce un gigantesco pesce rosso da cui escono due tigri aggressive che sembrano avventarsi contro la donna.</p><p id="80bd6776-17c8-42e1-a2a4-10c0859b9604" class="">Sullo sfondo un elefante che cammina sulle acque che porta un obelisco.</p><p id="27c2909e-7971-4c7f-9108-be1f6fdec3bd" class="">Il punto centrale è l’idea del pericolo. Dall’esterno il ronzio di un’ape si manifesta con la punta della baionetta e le tigri che rappresentano un pericolo in atto. </p></details></li></ul><p id="3516db19-037b-40d4-b66d-d78f15e7357d" class="">
+</p><p id="a92b6601-fda0-44e2-b4d6-6654e995185c" class=""><strong>OPPENHEIM</strong></p><p id="55846150-27fe-452e-99b0-24e972b29abc" class="">È un’artista berlinese che si dedica all’arte mentre è modella di Man Ray. </p><p id="fa9e2bc1-f5f8-4a64-92aa-35c32b147690" class="">Gioca molto sull’ironia e sulla provocazione</p><p id="4b2a4136-ee7f-4723-bbf9-b288359ab019" class="">Precede l’arte concettuale</p><ul id="af9567ed-05fc-4032-bc95-e61d2764beba" class="toggle"><li><details  =""><summary>Colazione in pelliccia (1936)</summary><p id="505c6528-994f-4dff-8625-80e6f0c9220c" class="">
+</p><figure id="6fe83b89-0aca-43d7-87b3-23faf465f6a4" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%207.png"><img style="width:354px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%207.png"/></a></figure><p id="e5fcfe1a-21b2-437c-853f-db27a82e36ad" class="">
+</p><p id="f21adaeb-b329-44f6-9cf3-aec9e2be0504" class="">Classico oggetto quotidiano foderato in pelliccia.</p><p id="bf1c3793-6b59-4f64-82a6-b6006e74aba3" class="">L’idea nasce nel bar mentre parla con Picasso, che dice ironicamente che qualsiasi cosa potrebbe essere ricoperta di pelliccia. </p></details></li></ul><ul id="1f282b6c-f084-4604-bbbf-da5dee8ef315" class="toggle"><li><details  =""><summary>La mia governante (1936)</summary><p id="9ba3b3e2-83dd-4c69-adce-bafa49f9e3fc" class="">
+</p><figure id="cb9c6c57-dde3-4c18-88d6-6c94795ddc2f" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%208.png"><img style="width:412px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%208.png"/></a></figure><p id="b55422ef-104c-4c6f-96e8-2244bc7a363b" class="">
+</p><p id="ee1c4cd6-b5f3-4563-a9a0-483eee24d16c" class="">Scarpe col tacco legate come un pollo al forno.</p></details></li></ul><ul id="cabeaaf8-e433-4c84-9119-6b5d2d1a216d" class="toggle"><li><details  =""><summary>Anello con zolletta di zucchero (1936-7)</summary><p id="188595e3-4d3f-4ddf-81ec-1a4f214c9b78" class="">
+</p><figure id="7ec14c3b-9888-4ede-aee9-c965c7af54ef" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%209.png"><img style="width:241px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%209.png"/></a></figure><p id="fc7db4c7-32a5-4f8b-aa86-acac942b8a8b" class="">
+</p><p id="3bc5db8c-b1c4-4469-a1b4-56ed8185c8fc" class="">Unisce materiale prezioso dandogli uso comune</p><p id="e736f2b0-544e-4b8e-8035-055af35e5d68" class="">
+</p><p id="7822ae98-49ad-415a-b260-56d52f94f510" class="">
+</p></details></li></ul><ul id="d0513d90-472d-4303-bae6-d876ee06a1eb" class="toggle"><li><details  =""><summary>Tavolino traccia (1939)</summary><p id="ecab3263-f2a5-4a02-8821-3074b9ff2765" class="">
+</p><figure id="2eb53c31-e5e2-4795-bf49-c41eed31deb3" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2010.png"><img style="width:275px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2010.png"/></a></figure><p id="8551c939-3ac3-4c6c-8aa7-fba90e6ae9ff" class="">
+</p><p id="822d1050-57c6-40ef-86a9-1c41b0e31d80" class="">I piedi del tavolo riprendono quelli di vecchi arredi</p></details></li></ul><p id="3d2130e1-36d3-4295-96bc-676bb19e1409" class="">
+</p><h3 id="85dbe378-0bd7-4f7a-b043-b13d3d474ed4" class="">Metafisica</h3><p id="12094302-2294-4abe-b7af-7ec931e53ea6" class="">Il termine ha allusione a una realtà diversa, che va oltre ciò che vediamo, allorchè gli oggetti usati fuori dal loro contesto solito, sembrano rivelare un nuovo significato che sorprende. I contenuti di un dipinto metafisico vanno al di là di ciò che vediamo, oltre la natura. </p><p id="81e9b0f8-9c6c-4f83-a16f-ffbe923c663a" class="">Forma irrazionale, enigmatica che va oltre al mondo fisico 
+(Meta: in greco spingersi oltre)</p><p id="75b9bc0c-cb9a-403e-8b31-f5f3931756f6" class="">A differenza con il surrealismo, che va a basarsi fondalmentalmente sul sogno e fantasia, la metafisica si riferisce al reale, ma trovandoci dimensioni che non ci appartengono. Ambiente misterioso, enigmatico.</p><p id="80427aa0-5aa3-426f-b8f0-830018e3075f" class=""><span style="border-bottom:0.05em solid">Principi estetici:</span></p><ul id="ea39e45f-0e72-4456-9459-20a5b508e08a" class="bulleted-list"><li style="list-style-type:disc">Descrizione di una realtà che va al di là delle apparenze sensibili</li></ul><ul id="1456e260-d9cb-445a-9462-96518313241e" class="bulleted-list"><li style="list-style-type:disc">Immagini che conferiscono un senso di mistero, di allucinazione o sogno</li></ul><ul id="7972117a-039e-44a0-9ae8-4390e350a86b" class="bulleted-list"><li style="list-style-type:disc">Costruzione prospettica del quadro secondo molteplici punti incongruenti fra loto</li></ul><ul id="940379e5-f2cf-4e36-9b63-c1563c1d7752" class="bulleted-list"><li style="list-style-type:disc">Immagini molto statiche, a indicare arrestarsi del tempo, una csena che si svolge al di fuori del tmepo</li></ul><ul id="e5de3eed-9f60-4ef1-98c1-d151bf037f32" class="bulleted-list"><li style="list-style-type:disc">Assenza della figura umana se non sotto forma di manichini, statue o ombre</li></ul><ul id="ca4fddd4-0d7d-4108-bfbc-624fda9b5094" class="bulleted-list"><li style="list-style-type:disc">Campiture di colore piatti e uniformi</li></ul><ul id="0a4e3fba-3a47-4f89-a410-166ecb2d21ee" class="bulleted-list"><li style="list-style-type:disc">Riferimenti alla mitologia greca antica, alla classicità</li></ul><p id="f04e8a9d-d394-44e3-966b-57fbba5d5a19" class="">
+</p><p id="743c16e6-64dd-4365-9ee5-4079ed2e7206" class=""><strong>DE CHIRICO</strong></p><p id="5e784917-194a-4c23-a704-639d1ab773a7" class="">Vuole rappresentare il mistero, vuole rappresentare la realtà attraverso immagini oniriche, irrealil, ambientazioni che conosciamo decontestualizzate.</p><ul id="99862e0e-045a-401c-846e-37b7621634f3" class="toggle"><li><details  =""><summary>Piazza d’Italia (1913)</summary><p id="6e07b7e2-c616-4c1f-93df-7ff9f7b459f8" class="">
+</p><figure id="6a051f58-a0e1-4b4b-be65-6db30ec31aff" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2011.png"><img style="width:441px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2011.png"/></a></figure><p id="a2d3f933-8de8-4ccd-b5a1-c495dc6d641a" class="">
+</p><p id="6d96aef1-117c-4fd5-ac8c-bb19f57afd38" class="">Si creano nette ombre, contrasti molto forti, irregolarità con strutturata geometria prospettica, caratteristica dei suoi quadri sono cieli irreali</p><p id="d0d7bf88-3ec2-469a-8522-951b37aa2209" class="">
+</p></details></li></ul><ul id="fe1505b1-a5b0-4958-8d76-467ff4794c97" class="toggle"><li><details  =""><summary>Enigma di una giornata (1914)</summary><p id="c0691e16-1a6c-49fe-98ab-eefa8851c7b0" class="">
+</p><figure id="fb1de505-a5a8-4f10-b4c9-aa677d644079" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2012.png"><img style="width:442px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2012.png"/></a></figure><p id="f89f7f83-0660-425a-926d-0ba97be3a9e1" class="">
+</p><p id="690b7721-ffe3-4d15-a0d1-0a946f23d045" class="">
+</p></details></li></ul><ul id="15ba6594-bd1d-46d5-800d-db0c687cf657" class="toggle"><li><details  =""><summary>Canto d’amore (1914)</summary><p id="00c163a4-80a0-44eb-be49-4eb3b6608239" class="">
+</p><figure id="718e134f-b536-474a-a0a6-801f150a5b0c" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2013.png"><img style="width:404px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2013.png"/></a></figure><p id="b7c7c8c7-08bf-4264-ba93-2b9c856be4b8" class="">
+</p><p id="e5c65c17-267b-45b7-9f50-3a38e70912d3" class="">Oggetti collocati in una piazza di Ferrare, impianto prospettico.</p><p id="d45d702e-dd04-4d49-bbee-47a93d911ab3" class="">Si vede sullo sfondo una locomotiva, impianto caro a De Chirico perchè il padre era ingegnere di locomotive, è un elemento che si rincontra spesso nelle sue opere.</p><p id="ac220bb8-c7da-48c5-95ee-c522494e8125" class="">Il volto di Apollo riprende l’Apollo del Belvedere, inserita su un enorme pannello affiancato ad un guanto sproporzionato.</p><p id="ceaede07-48a1-470f-8efa-6b5d929e925a" class="">Sfera verde alla base è simbolo della perfezione, dell’armonia.</p><p id="c410e86e-6fde-450f-b9be-3294b6f08d99" class="">Gli elementi non hanno un legame sensato.</p></details></li></ul><ul id="4580a40d-ece2-4918-b32e-ed0b28132599" class="toggle"><li><details  =""><summary>Le muse inquietanti (1917)</summary><p id="b83b12f2-5dd4-4a71-a6f6-de5a1e6470b2" class="">
+</p><figure id="11922b39-eaae-4d95-8fda-bfb517b46d04" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2014.png"><img style="width:348px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2014.png"/></a></figure><p id="a1d79ea5-8014-475d-bf18-d98c64ab358c" class="">
+</p><p id="b922cdbe-9642-448e-8571-c88c3248eaf4" class="">Piazza di Ferrara, si riconosce il castello estense.</p><p id="407d1fb6-2cce-498c-bd1f-1302e07a2759" class="">Pavimento volutamente realizzato con prospettiva scorretta, le linee sono rialzate più del dovuto, sembra che il pavimento voglia sollevarsi.</p><p id="4759083e-c1e5-4365-9ac0-fc97058bcf50" class="">Manichini con testa che riprende la parte estrema del manichino sartoriale, si deduce dalle cuciture, e testa che riprende un pomello.</p><p id="2e83093a-dbbb-402e-bebd-9160f4555685" class="">Elemento greco classico statuale alla base del manichino a sinistra, riprende anche le vesti greche dell’epoca. </p><p id="d6a699fe-60d5-46ac-8a21-a27561846030" class="">Un’altra statua all’ombra riprende sembianze più statuarie. Dai panneggi e dalla postura emerge una rappresentazione classica.</p><p id="570284e1-7b50-46ce-9474-cf4388c2d049" class="">
+</p></details></li></ul><p id="dc4847e4-9e99-4086-a5b2-b6ffbb2cbe50" class="">
+</p><p id="1556262f-2432-4efe-9236-e19077102458" class=""><strong>MORANDI</strong></p><p id="7f2732df-12fb-4c05-b31a-359873f27a17" class="">Si riconduce a nature morte, composte da piccoli oggetti disposti su un tavolo.</p><ul id="47eb8354-9efa-4fcc-982f-4058192590f7" class="toggle"><li><details  =""><summary>Natura morta metafisica con squadra (1920)</summary><p id="cc471761-f44f-4a42-8092-cc0933677f58" class="">
+</p><figure id="75692ca9-bf05-4847-a890-01a6837ed503" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2015.png"><img style="width:320px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2015.png"/></a></figure><p id="4138da73-2094-4243-a376-b1eb3a4813a4" class="">
+</p><p id="0f7dccb4-86ba-4b07-a9fe-d67733e000d9" class="">Forme concave e convesse di affiancano a cassetta vuota, su cui si poggia cassetta vuota. Viene creata una tridimensione grazie al gioco di ombre.</p></details></li></ul><ul id="b0fa9071-c5ae-4802-96b1-35849ab24034" class="toggle"><li><details  =""><summary>Natura morta (1939)</summary><p id="27487205-e04f-4c4f-89df-1224555d692f" class="">
+</p><figure id="30292b16-b812-4f1d-8ef5-88da6ed5160f" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2016.png"><img style="width:581px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2016.png"/></a></figure><p id="f638ab58-75c9-4e1c-940e-e3528055326d" class="">
+</p><p id="9cf5fafd-cc71-4cc8-98df-213e402527ea" class="">Manca accentuata prospettiva o ombre sul piano.</p><p id="90396d2a-f618-457f-a823-0917a67bd0d2" class="">Solitamente si tiene su colori scuri, sabbiosi, tenui, qui emergono invece aranci caldi e azzurri.</p><p id="92e4e6a7-9f23-48fe-92d0-bf316c1007ac" class="">Visuale frontale.</p><p id="5f3f209c-2163-4187-94c9-be3d11ecf451" class="">
+</p><p id="363d9638-c254-4b94-a7de-8e1382da4c2d" class="">
+</p></details></li></ul><p id="940a6df6-1340-4ba6-908e-5d3cb3bab3ca" class="">
+</p><hr id="e6bcb634-ac91-4f4b-9989-44cbdf58bbf0"/><p id="af45370c-f8ff-49d1-92da-fb19869a3e74" class="">
+</p><h3 id="21a88913-1e5c-42cb-9377-587b6c38a03a" class=""><strong><span style="border-bottom:0.05em solid">Scultura</span></strong></h3><p id="201cc713-a045-4457-9a91-58c0d48d651e" class="">Brancusi, Moore, Arp </p><p id="097d2192-bfe3-4aba-866e-7dbd9b5c9415" class="">
+</p><p id="4757f0c9-60df-4c3b-907f-e622795989a7" class=""><strong>BRANCUSI</strong></p><p id="6cfea91a-27da-4bb7-87dc-1278a14a9f94" class="">Scultore rumeno, si allontana dal cubismo, abbandona la tradizione classica per indirizzarsi verso una stilizzazione della forma reendendola più sintetica possibile. </p><ul id="6d4d6c5b-87d8-4dc5-9758-f6527c952e30" class="toggle"><li><details  =""><summary>Musa dormiente I (1910)</summary><p id="9f2d8cf2-dbae-46f7-a877-fe96fee3b443" class="">
+</p><figure id="446ac50f-6a80-4e21-880e-3eb82be79e78" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2017.png"><img style="width:382px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2017.png"/></a></figure><p id="c5c0cc39-cc0a-4744-b019-8dcf94d0d624" class="">
+</p><p id="3c00d92b-aee9-4031-84b1-94405fcc0bc8" class="">Tratti appena accennati che indicano gli elementi del volto, incisioni molto leggere e irregolari.</p><p id="7fc0c61a-6737-432b-be13-6b2b168443cb" class="">Forma pura, semplice, raggiunge il livello di semplificazione che voleva raggiungere</p><p id="d8e63176-6094-4c9e-a20c-995a8ef9609f" class="">
+</p></details></li></ul><ul id="a739f99c-92a3-4f74-915f-14396e68fd32" class="toggle"><li><details  =""><summary>Uccello nello spazio (1932-49)</summary><p id="846578fb-3ad3-43bb-8e71-508ea04ca3d3" class="">
+</p><figure id="dd17d4fd-674f-4229-8de1-29c42ff8cc90" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2018.png"><img style="width:154px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2018.png"/></a></figure><p id="46acbd4f-e682-48fa-84a8-df008a51b6db" class="">
+</p><p id="788c294a-c3f3-4862-b407-9ac598cd85ec" class="">Raffigura in maniera estremamente concettuale il volo di un uccello</p><p id="b2a9a5f7-04a2-4a3e-aa12-d9c652c8c78b" class="">
+</p></details></li></ul><ul id="85aaa003-90b7-4ddd-b82a-c39c0856ddbc" class="toggle"><li><details  =""><summary>Colonna infinita (1938)</summary><p id="7e503550-8cf9-414d-9a3e-1f084e756193" class="">
+</p><figure id="a75e71a7-3f1f-49bc-a351-ba33dc9c47b4" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2019.png"><img style="width:336px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2019.png"/></a></figure><p id="8ec0fac1-19bf-4cfa-8709-933f96a215d6" class="">
+</p><p id="cac46d29-ec81-4f85-b021-291407bf5696" class="">Modulo infinitamente ripetuto di circa 30m. </p><p id="df76855b-9688-4faf-bcf5-96a9e8e74aac" class="">Tratti sintetici, essenziali della forma</p></details></li></ul><p id="80b69e8e-6c6a-444b-b874-7429af36cb31" class="">
+</p><p id="546e15ca-819f-4e5c-9bf9-95ae3c7ee82c" class=""><strong>MOORE</strong></p><ul id="eef0566a-6e93-497b-ae15-82840a47c388" class="toggle"><li><details  =""><summary>Grande figura sdraiata (1983)</summary><p id="d36d3ad6-04de-492c-9352-d6020d88a544" class="">
+</p><figure id="473d3680-af52-4019-8a74-fa8e440527b0" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2020.png"><img style="width:542px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2020.png"/></a></figure><p id="7fcfd9b1-2dff-4437-aef8-322934317bac" class="">
+</p><p id="316e6d56-bf1e-4eb2-93e0-572adbf51c3f" class="">Rimanda alla figura della donna, madre natura che emerge dalla terra.</p><p id="902ad849-7900-4f09-80ac-43055f7b579c" class="">Evidenzia tratti sintetici, astratti.</p></details></li></ul><p id="f5778663-d7bd-434b-a297-f701d7e72d47" class="">
+</p><p id="4cdabc67-46f3-4923-ac98-efeb1093c0c4" class=""><strong>HANS ARP </strong></p><ul id="5f332fc0-74ae-4cab-93de-428283e60154" class="toggle"><li><details  =""><summary>Corona di germogli I (1936)</summary><p id="7765b7cd-dae6-40d2-8e8c-53f5aa786680" class="">
+</p><figure id="4eedf9c8-15fd-4724-9a81-d65e6d6703e3" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2021.png"><img style="width:353px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2021.png"/></a></figure><p id="814ef635-f427-4096-b9fb-621d311e273e" class="">
+</p><p id="7fc717ae-e71d-450e-bbc7-ada048472255" class="">Forma organica, richiamo al corpo umano.</p><p id="26f28eee-d54f-4691-9fd0-12f86585aa56" class="">Pieni e vuoti si sintetizzano nella forma.</p></details></li></ul><p id="f5dda8d3-fd9b-47c5-b65c-f0ea6fed24bb" class="">
+</p><p id="f3aaae05-d1ef-4180-9b96-9e2199369dd9" class="">
+</p><hr id="5557d4c6-f0ff-445d-a3cd-d9ff4711cbb4"/><p id="83c6396b-ffd7-40ed-965c-70c078c6b5f2" class="">
+</p><h3 id="71c0e002-1f17-4f39-97bf-f0be117553ae" class=""><strong>Ritorno all’ordine</strong></h3><p id="31c04a1d-d697-4b56-b55d-782eadb4e0bb" class="">Periodo a cavallo tra le due guerre.</p><p id="6069661c-0a65-4283-a925-b98f10d571de" class="">Dopo la guerra, periodo delle avanguardie storiche, c’è un ritorno a un’arte più tradizionale, pittura figurativa e classicheggiante.</p><p id="ff1a3078-7042-4858-92e2-c849730eac68" class="">Implica anche il ritorno al mestiere di pittore, in opposizione allo sfrenato sperimentalismo tecnico precedente. </p><p id="593d5417-9b4f-4c8a-8852-fa02b21ee5f5" class="">Termine è utilizzato da Jean Cocteu.</p><p id="c77920f5-fc49-43bc-a205-48396a6f186c" class="">Non è definito come movimento, ma periodo. </p><p id="09b9bdcb-df6a-472a-a93d-f272022d454e" class="">C’è un ritorno al realismo che vuole riprendere la tradizione classica, la pittura italiana di semplificazione, rigore plastico, precisione.</p><p id="73f7a892-8e6b-4aac-be87-923b7ff490af" class=""><strong>GRUPPI:</strong></p><p id="a004cc11-cc8c-487d-9c41-6f4e410da300" class="">Novecento
+Nuova oggettività
+Realismo magico
+Realismo sociale
+Realismo verista
+Neorealismo italiano
+Valori plastici → rivista - fondata a Roma (1918-22) </p><p id="85239f40-f18e-4607-8270-7e4adb68dfab" class="">
+</p><p id="086ab34c-d53e-4b98-ae39-493aac6cabd6" class=""><span style="border-bottom:0.05em solid">Germania</span></p><p id="ff1f47ee-5eed-4f47-a766-d88c9429f38c" class="">Si instituisce la democrazia parlamentare nota come Repubblica di Weimar</p><p id="97e1cc63-fbce-4327-b800-6ff8ab2ec751" class="">La nuova oggettività intende raffigurare in modo spietato i conflitti sociali in corso</p><p id="0ac32a02-f7f0-493a-9d12-bc8abe4b9702" class=""><span style="border-bottom:0.05em solid">Stati Uniti</span></p><p id="d290757f-b110-46cb-b70b-749e6ab4f79a" class="">Grande depressione accade subito dopo la prima guerra mondiale e la crescita economica esponenziale degli anni 20</p><p id="3befb919-f4a6-4cb7-ba99-f24f5714ea12" class="">Con il New Deal viene proposto un programma con Roosvelt per far riemergere la nazione</p><p id="9a923d99-d014-45ca-8ccc-c6eaf8c6de3d" class="">Importante la sfera della pittura realista e fotografia</p><p id="31df0303-6f8c-4cc3-9a39-fac3aad74279" class="">
+</p><hr id="5498c49b-5ef7-44ed-9592-c62f126c9570"/><p id="e019f33e-f64d-4d3f-9ad0-c7a955e2235c" class="">
+</p><h3 id="00d9be83-81b5-4086-8195-bb86077cc483" class="">Realismo magico</h3><p id="951a29c8-4151-49ec-80d8-cead388875a7" class="">Il quotidiano assume aspetti inconsueti, poetici, talvolta inquietanti</p><p id="b6555c79-7f05-4704-b757-e5619c9573ee" class="">In Italia è rappresentante Casorati</p><p id="d9ee7ed0-4a85-413a-ade2-99ac1768c012" class=""><strong>CASORATI</strong></p><ul id="0915692e-c379-4979-a87f-c6169a94a058" class="toggle"><li><details  =""><summary>L’attesa (1921)</summary><p id="f674f13d-269c-4c46-b55a-f3cca3c5f143" class="">
+</p><figure id="fb45a413-c92d-4a37-accc-75a1dcdba7d9" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2022.png"><img style="width:362px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2022.png"/></a></figure><p id="3cf98e0c-12b5-45df-9ea6-4d37cccd52b1" class="">
+</p><p id="5f174511-30fc-4a5c-8a8a-bc5aa31bc4bf" class="">Forme rigorose, semplificate, geometriche</p><p id="f53c0cff-06fd-45ca-a668-a79ffa36827e" class="">Colori spenti, tinte non sono particolarmente vivaci</p><p id="63ffccc0-bf08-439d-ae0a-cb13d7f3882f" class="">La prospettiva è molto accentuata, va oltre l’immagine stessa</p><p id="4d894190-3c15-4c10-8c82-c385eb4d4203" class="">L’impostazione è classicheggiante, vi è una leggera rotazione data dalla posizione del tavolo leggermente obliquo che taglia la tavola</p><p id="12e0f231-b6e3-4d1d-a8b8-3746f82b44af" class="">
+</p></details></li></ul><p id="171b402d-b23b-4ed8-8fd0-b6f916c780e5" class="">
+</p><h3 id="844bb9b0-c345-41ee-83a2-afbc39f23957" class="">Novecento italiano</h3><p id="9cd9033c-c2e9-4625-a272-dbe795575c75" class="">Molti artisti di Novecento italiano erano veterani di guerra e questo aspetto fu motivante per rappresentare l’arte di Stato. Infatti, in un primo tempo, i vertici del partito fascista considerarono Novecento italiano un’opportunità per costituire un’arte di propaganda.</p><p id="be9d3a47-9b76-4cf8-95d2-edbe9159d821" class=""><strong>SIRONI</strong></p><p id="f340058e-50a4-407e-865b-89c88e211b02" class="">Pittura fascista</p><ul id="1467c76e-0b31-46fc-9a0e-196d0d5d4368" class="toggle"><li><details  =""><summary>L’allieva (1924)</summary><p id="da04ca38-d515-417a-9d9a-70403ab9efef" class="">
+</p><figure id="2fabb479-90eb-4ce5-8965-5a039031af0f" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2023.png"><img style="width:339px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2023.png"/></a></figure><p id="d63ed8bd-febd-401b-ad56-c512c7cded54" class="">
+</p><p id="a383bf02-63a4-4e70-8d7e-86af45e79c90" class="">Studentessa di architettura circondata da oggetti illuminati. </p><p id="355a135b-b0b3-437c-bda5-15b09d82379a" class="">Gioco chiaroscurale.</p><p id="a47bdc95-eba7-451b-b023-0c29ec7edcfd" class="">Sullo sfondo una statua dalla massiccia corposità, statica, ma semplificata, riprende le connotazioni rinascimentali.</p><p id="b81946bb-97d2-4dcd-a932-458c4f292927" class="">
+</p></details></li></ul><p id="210237cb-8e00-47b7-a928-21553a8d0b21" class="">
+</p><h3 id="2358af45-9379-4068-867f-422eb1c016dd" class="">Neorealismo italiano</h3><p id="bada5159-83e7-400d-8699-22f879dcbcfd" class=""><strong>GATTUSO</strong></p><p id="33e1014f-ddd6-47f9-b32c-48885fcdc52e" class="">Pittura antifascista, legata al sociale.</p><p id="f8a0a455-0840-4c6c-9cfd-9b88345c0208" class="">Parla in maniera diretta alle masse vita di tutti i giorni</p><ul id="4273b2ce-8090-4d34-abe0-5dcfcda3a06b" class="toggle"><li><details  =""><summary>Vucciria (1924)</summary><p id="20b20f9f-5353-4b74-854e-e680df6a7017" class="">
+</p><figure id="40d979fa-84f8-4e44-9ba7-202369983618" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2024.png"><img style="width:447px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2024.png"/></a></figure><p id="40bf09e6-c7ee-4a9a-b9df-36bd957d380f" class="">
+</p><p id="578867eb-6667-4f23-a971-771015579143" class="">Mercato di Palermo</p><p id="6d47caa2-3f10-4137-b270-dbefe9a8fa6a" class="">Racconta la dignità del popolo</p><p id="1d5683c8-7dd1-4c44-87e1-ff99c5e5da3a" class="">Immagine ricca di elementi, priva di vuoti</p><p id="c9013571-2fce-44b9-a0c8-9ba0c92534d7" class="">Riprende quasi le macellerie del 600</p></details></li></ul><p id="eba273ae-bbca-4b59-9fa7-79c1610e33da" class="">
+</p><p id="b40cfdfc-1b39-45e9-9884-4287fd9e3d31" class="">Scultori del ritorno all’ordine</p><ul id="dac3aac9-ad48-42f8-81d2-ff9e5bd94c4d" class="toggle"><li><details  =""><summary><strong>MARTINI, MARINI, GIACOMETTI, MANZÚ</strong></summary><p id="1c4327d7-c727-4e72-b246-aac8cdad690f" class="">
+</p><figure id="7d475649-bd60-4edb-a6b9-1f93f5ccf208" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2025.png"><img style="width:923px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2025.png"/></a></figure><p id="800a9458-7d40-4e03-8ba8-fa921ee5f5d2" class="">
+</p><p id="0442c2a0-665f-4c2b-930c-83fd025d8223" class="">Forme sintetiche, semplificate, geometriche, essenziali, geometriche</p><p id="21ee623e-c498-4bc2-81c0-224454d826d3" class="">
+</p></details></li></ul><p id="41807c3a-d7e0-4cf4-9740-4630ff593038" class="">
+</p><h3 id="91ff64ff-741c-4a71-8166-3da403674aa1" class="">Nuova oggettività / Realismo espressionista</h3><p id="fd524ab4-8ca8-4b6b-8b18-5548fbd7f10f" class="">Denuncia sociale con linguaggio satirico e grottesco</p><p id="958294b4-61a2-4655-b432-0ecae3aea3a3" class="">Crollo degli ideali di fronte alle atrocità, l’artista polemizza, critica, ironia pungente sulla situazione attuale</p><p id="c1359550-c5aa-44d0-a003-47885f746b0c" class=""><strong>GROSZ</strong></p><p id="c2c2b622-7a48-4fe4-b059-6d13e8b0fc64" class="">Si rifà a uno sguardo soggettivo, circoscritto al dolore individuale.</p><ul id="8b4013ac-6419-4313-8d4e-fb195f3da11d" class="toggle"><li><details  =""><summary>I pilastri della società</summary><p id="5136759b-ee27-4edb-8ab5-a331c5fef59e" class="">
+</p><figure id="a19a3159-7e64-4d58-9d97-9a72707917ea" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2026.png"><img style="width:274px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2026.png"/></a></figure><p id="f03b1b9a-2a79-458d-9873-4335c9efe838" class="">
+</p><p id="5d256ca9-5f88-46ac-ad2b-c47a2afcba91" class="">Rappresenta la corruzione, la crudeltà, si vede sullo sfondo un palazzo in fiamme. In primo piano tre personaggi che raffigurano società corrotta borghese, due politici e un giornalista. Nella parte superiore della testa vengono raffigurati elementi molto pungenti, satirici.</p><p id="aad1930c-0d1d-4843-a58a-2cefc35f8f90" class="">
+</p></details></li></ul><p id="6b99293b-0dd3-4085-aa29-699418fad3ab" class=""><strong>OTTO DIX</strong></p><ul id="3bc30976-08f8-4204-a77b-1a81c3333315" class="toggle"><li><details  =""><summary>Ritratto della giornalista Sylvia von Harden</summary><p id="4afccc76-4991-4619-8d5a-926ddf42feca" class="">
+</p><figure id="aa79dc3e-b9b0-40db-bb80-d0f6e7d8a1c5" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2027.png"><img style="width:302px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2027.png"/></a></figure><p id="c9cc7bb3-c67f-421b-9f7c-63949b5dace3" class="">
+</p><p id="e67a1927-9ac5-4792-9185-4456e5f7a76e" class="">
+In questo ritratto Dix passa dalla critica violenta all’ironia. Tema è la nuova condizione della donna emancipata, maschilizzata, frequentatrice del caffè, sempre entro la mentalità borghese.</p><p id="5b4d1fb0-74df-47c0-b670-0cb22c633552" class="">
+</p><p id="fa5074fe-17d7-429a-8486-f40b6677e2eb" class="">
+</p></details></li></ul><p id="4b4d44ae-df02-4e6a-a188-17456a2377b5" class="">
+</p><h3 id="edf5ae87-1cf2-41c2-9ba6-b48d5e3485bc" class="">Realismo sociale</h3><p id="938f898e-2fbf-4483-85fb-4e2c24884545" class="">Impegno politico e tentativo di comunicare al grande pubblico.</p><p id="8a2d96c6-0277-445c-8093-2d0982126254" class="">Realizzati murales in luoghi pubblici, facilmente accessibile dalla maggior parte delle persone.</p><p id="7e201227-874d-4741-8815-a1f4246ff659" class="">Temi patriottici della storia del Messico.</p><p id="60f27627-5946-4eb6-a412-27da424a9ac3" class="">
+</p><p id="cf588812-ff30-4e49-80d5-ac8df31eb377" class=""><strong>DIEGO RIVERA</strong></p><ul id="31542d23-5017-4b01-be85-84dbc9d15e5a" class="toggle"><li><details  =""><summary>La storia del Messico (1921-1935)</summary><p id="ef375e3c-7628-4f1a-ac64-091102f2679f" class="">
+</p><figure id="680f1b54-0470-4d8c-9f3c-d63bdfbcf3b8" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2028.png"><img style="width:804px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2028.png"/></a></figure><p id="9d6bb2ae-33f9-41e5-a4a0-fa52a3d57361" class="">
+</p><p id="6a7f756c-8311-48a6-9317-bd0dbb3de644" class="">Battaglie del popolo messicano dall’età precolombiana all’epoca contemporanea.</p><p id="3c69a27c-205e-4fe6-a2f3-7a4ae82e1d18" class="">Omaggio al popolo e a ciò che ha vissuto per liberarsi dalla dittatura.</p></details></li></ul><p id="90d27ac3-9c41-4499-9702-d318bae175f3" class="">
+</p><p id="137724c9-1b93-48a4-9639-bf95a7ddb583" class=""><strong>FRIDA KAHLO</strong></p><p id="73fd67b5-9cba-4cb0-bf9c-12e12791a34d" class="">Rappresenta la sua vita intima, di salute (un grave incidente le causa varie problematiche lungo la spina dorsale)</p><p id="459fb232-36f7-4571-a2b6-8ac5b99167eb" class="">Amore travagliato con Diego Rivera.</p><p id="605a0ccc-1918-4f4d-a548-3e8f0c8bf351" class="">Si dedica all’autoritratto non potendosi muovere.</p><ul id="287c03e3-993e-45e8-bfb6-a0da1e52e3ce" class="toggle"><li><details  =""><summary>Autoritratto con collana di spine (1938); La colonna spezzata (1944)</summary><p id="0e086341-0538-4810-96a4-6857fc197818" class="">
+</p><figure id="c9008254-d1a6-4099-815c-f14e46a8e4f5" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2029.png"><img style="width:797px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2029.png"/></a></figure><p id="759b4b7b-170c-4ce4-85ab-1079028d2ee0" class="">
+</p></details></li></ul><p id="1b6ed848-b692-4977-b7f7-3159a9867aba" class="">
+</p><h3 id="910d378a-d3eb-4498-a099-7cf95349e0c5" class="">Realismo Verista</h3><p id="c190ebfb-b5a5-4f66-8f18-457c6d08b827" class="">La pittura cerca di essere specchio obiettivo del reale.</p><p id="741bf879-378a-4489-8381-0040918e8824" class="">Quotidianeità, spazi reali, verismo.</p><p id="762ea07c-9252-4b50-a228-27dbd6ccae44" class=""><strong>HOPPER</strong></p><ul id="22401dc2-bb90-443f-b7dd-c2627e33e9ff" class="toggle"><li><details  =""><summary>Nottambuli (1942)</summary><p id="88695037-89d6-4f73-9e46-1fdf23f969e3" class="">
+</p><figure id="f9eab484-836e-4317-9be0-ebd6956e34f3" class="image"><a href="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2030.png"><img style="width:723px" src="Surrealismo,%20Metafisica,%20Ritorno%20all%E2%80%99ordine%20620995e3c2ec4963a8b9ce6743a54e84/Untitled%2030.png"/></a></figure><p id="1bc40efc-3be7-42b1-99d8-090bd70e7420" class="">
+</p><p id="bc653630-c8b1-4509-a393-e5e9cf2e164e" class="">Mischia all’architettura l’interiorità, il silenzio.</p><p id="43dad565-3575-4bfc-b291-8f242603d253" class="">Senso di solitudine, malinconia, espresso anche attraverso la luce: fuoriesce dal locale e si riflette sull’ambiente adiacente.</p><p id="4c54d81a-6dfb-40a2-b8d3-d9cf681996e2" class="">Si evince lo stato intimista, l’artista racconta spazi immobili, silenziosi.</p></details></li></ul><p id="640f605b-d11b-4593-93ed-852acccbbc5f" class="">
+</p><hr id="02dde9aa-e697-4c25-b312-ecc794882547"/><p id="59162d99-981c-4207-97e8-d94bb119fa29" class="">
+</p><h3 id="0f5d7462-6e37-4946-be45-f1dce8d289b1" class="">L’arte del secondo dopoguerra</h3><p id="8879e2fc-2bed-4fae-b70c-f5ec655ae2af" class="">Arte molto concettuale.</p><p id="e86adc53-737c-46f6-81cc-b2aac4c62ae8" class="">1945 - conclusione della seconda guerra mondiale</p><p id="1d10a98e-159b-4382-bce6-d6018d23b534" class="">GUERRA FREDDA - Stati Uniti e Unione Sovietica [1961 sorge il Muro di Berlino)</p><p id="5ce8b74a-195a-4587-9f4d-bebde4bee699" class="">Contrasti politici ed economici</p><p id="de07a306-892b-46ad-95cd-69c3a50d4ab2" class="">Non ci sono movimenti così importanti da sviluppare tendenze, gli artisti svolgono ricerche artistiche individuali.</p><p id="4fe66dad-4a9a-4e71-9fab-715c57f8d701" class="">Europa → ripresa economica grazie al piano Marshall</p><p id="fb51ba53-da21-4900-9ddc-1294c54ff74d" class="">New Deal → Federal Art Project: è il programma di sviluppo delle attività artistiche messo in atto dal governo americano nella seconda metà degli anni &#x27;30. La sua creazione aveva lo scopo di ridurre l&#x27;impatto della crisi economica e finanziaria del 1929 sugli artisti e sul mondo della cultura americano.</p><p id="624b2691-f4f8-409b-9d40-8089bfb53901" class="">
+</p><p id="eedb7368-e8e9-40fd-995a-3447375f24a1" class="">Gli artisti vogliono rispondere alle atrocità vissute, riscontriamo la velocità, la diffusione dei mezzi di comunicazione.</p><p id="ee62baa5-f712-41a6-bc5c-3a718e628aa7" class="">Life è stata una delle riviste americane più famose di quel periodo, dal 1936 si passa da concetti frivoli e quotidiani, di celebrità e cinema, a una chiave di lettura più profonda: reportage fotografici da tutto il mondo, racconta la povertà degli operai e degli agricoltori. </p><p id="190c555b-1072-48e8-b601-e479eadda481" class="">
+</p><p id="3d20e0c0-ed35-44ea-b45b-65008f75e444" class="">
+</p><p id="bc0bd415-5533-4b1f-8114-0c2ebe5ed213" class="">
+</p></div></article></body></html>

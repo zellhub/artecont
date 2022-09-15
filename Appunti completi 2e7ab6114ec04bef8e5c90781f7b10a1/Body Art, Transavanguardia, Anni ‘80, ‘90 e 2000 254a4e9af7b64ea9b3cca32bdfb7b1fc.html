@@ -1,0 +1,800 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Body Art, Transavanguardia, Anni ‘80, ‘90 e 2000</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="254a4e9a-f7b6-4ea9-b3cc-a32bdfb7b1fc" class="page sans"><header><h1 class="page-title">Body Art, Transavanguardia, Anni ‘80, ‘90 e 2000</h1></header><div class="page-body"><h3 id="03def48f-803e-496e-b3f6-6db35e8bf9a3" class="">Body Art</h3><p id="e75327f9-5474-4740-ad04-80293c13d960" class="">Tra anni ‘60 e ‘70 </p><p id="fb93a027-8081-4b06-8c7c-e3a99775ab44" class="">Nei primi anni ‘70 il corpo inizia ad avere prerogativa accentuata nel percorso della storia dell’arte. C’è una centralità del corpo all’interno delle ricerche artistiche.</p><p id="4f653e6f-f47b-47b6-85a8-92c6d8edc7f1" class="">Entrano in azione nuovi linguaggi artistici (video, fotografia..) che registrano determinati accadimenti.</p><p id="0fb4c081-2127-436b-9652-6690ec8ad37e" class="">Nella seconda metà del ‘900 inizia ad avvenire una sorta di liberazione del corpo. Con l’Art Nouveau cambia l’abbigliamento. Con Cage abbiamo visto l’introduzione della danza, con Pollock del gesto. </p><p id="44eeb45b-d290-43b5-aad1-24dbf96f69ca" class="">Cambia l’espressività del corpo.</p><p id="37a30738-70ea-4b4e-917e-f0c18089c1e1" class="">Arte che usa il corpo come mezzo espressivo: come ogetto su cui compiere operazioni o come entità che agisce in uno spazio e provoca eventi.</p><p id="e9d20f5f-ceff-4483-b26f-9bbe6bf41d39" class="">Dalla fine degli anni ‘70 ci furono le manifestazioni più estreme di questo processo, con artisti che usano il proprio corpo come unico mezzo di espressione.</p><p id="78f998c1-2ea6-4ef4-b249-3bb6aa97a91f" class="">L’srtista eliminando ogni tipo di supporto materiale, si pone al centro della rappresentazione. </p><p id="1ad49fdf-6578-48a5-b0fa-8758f1bb1e3f" class="">
+</p><p id="8789cacf-76bd-41bf-ab56-94fab1acbd34" class=""><strong>ARNULF RAINER</strong></p><ul id="b252a542-c0f7-4b80-9761-ab772705e111" class="toggle"><li><details  =""><summary>Fotografie automatiche (1968-9)
+Paura (1969-73)</summary><p id="d85d988b-180d-4565-85ad-94f6ed75a137" class="">
+</p><figure id="0d717482-d5c1-47bd-9c00-d1051c45207f" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled.png"><img style="width:205px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled.png"/></a></figure><p id="f4dfe2a9-2959-4360-9cf1-72ab4153d1f3" class="">
+</p><figure id="565b5f8a-5a93-4869-9186-089b60b98829" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%201.png"><img style="width:217px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%201.png"/></a></figure><p id="9961d1b1-52f2-4d29-b35b-4e5c2b767e76" class="">
+</p><p id="adffa23f-cfe7-4997-a371-a9b650404a8c" class="">Emerge aspetto giocoso e tragico del proprio volto tramite smorfie.</p><p id="9503c940-d7b1-43ef-a124-f2d41f7fe264" class="">Performance espressa tramite fotografia.</p><p id="bda41e56-691d-410e-ba8d-09eb5288f924" class="">Con atto pittorico aggiunge manualmente colore alla fotografia.</p></details></li></ul><p id="136e22e7-c29a-4163-bb36-5b4fe8227b07" class="">
+</p><p id="b843dd78-f6ac-4a74-a7e2-dd75da9d798b" class=""><strong>BRUCE NAUMAN</strong></p><ul id="1ffa317f-9aec-4fca-b689-d71c1443b28c" class="toggle"><li><details  =""><summary>Studio per ologramma (1970)</summary><p id="6bf3fe9b-0daf-4664-82cc-bfd38d69d302" class="">
+</p><figure id="9869f514-af8e-4823-9c18-843b34443ea1" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%202.png"><img style="width:299px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%202.png"/></a></figure><p id="002ba4c8-c991-461a-809a-48892e8ae9b8" class="">
+</p><p id="352b86a1-6d39-4a54-827e-49865576d911" class="">Serigrafia a colori.</p><p id="2e05ca97-88e2-456c-a222-b4f0f65508ac" class="">Plasma il proprio viso con le mani, modellando come fosse plastilina, trattando se stesso come uno scultore tratta la sua materia</p><p id="cf08ad4d-a4ef-4dc2-ad54-54c5b07bdaac" class="">Plasma il suo volto con le mani come fosse argilla</p></details></li></ul><p id="359cf5d5-c541-44fe-b076-42492a4fa7fe" class="">
+</p><p id="24e51f3d-ed41-42d2-ba70-404ca72d4611" class=""><span style="border-bottom:0.05em solid">Le donne e la body art</span></p><p id="8332842f-8ece-44da-b56b-dfe9e0154c76" class="">Le artiste degli anni ‘70 rompono la questione tradizionalmente maschile della storia dell’arte</p><p id="94807d7e-130d-4a6b-b276-da0f992faab3" class="">Sentimental action è un rituale soggettivo progettato per far emergere i sentimenti profondi legati alle fasi della vita femminile: vergi nità, erotismo, maternità ecc..</p><p id="6f0e39bc-d7c9-4b2d-977e-f88a56f57b15" class="">La ferita è la memoria del corpo: memorizza la fragilità, il dolore e poi la reale esistenza</p><p id="0f5197f9-1063-4fd0-98f3-d7565a92e674" class=""><strong>GINA PANE</strong></p><ul id="fed1a855-0deb-48b0-8724-5af2b93935a0" class="toggle"><li><details  =""><summary>Azione sperimentale (1973)</summary><p id="5d94cef4-3c28-4fcc-84ed-4a950f1ef0b6" class="">
+</p><figure id="bd28b182-2163-4716-8a07-e653aac6b81a" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%203.png"><img style="width:243px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%203.png"/></a></figure><p id="28e53f0b-9508-45bc-81c5-f714d87431a9" class="">
+</p><figure id="6b590d81-8c98-4252-87dd-8ac67986a7bf" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%204.png"><img style="width:269px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%204.png"/></a></figure><p id="cb8640cc-9d5f-4a9d-a65c-56b0fff67854" class="">
+</p><p id="a983fd39-d32b-49be-950e-ca0b45fbd330" class="">Vestita di bianco compie la performance a partire da una serie di elementi: due mazzi di rose, uno bianco e uno rosso, le spine staccate dai gambi, una lametta da barba, usati per provocare segni, associazioni visive e ferite vere. La ferità è per Pane “la memoria del corpo: ne memorizza fragilità, dolore, l’esistenza reale”</p><p id="df98fc67-01a7-478c-812f-3714c1901d96" class="">L’abito candido bianco rimanda al matrimonio.</p><p id="ab817793-c542-4287-a9b1-63de4778da4e" class="">Le sue performance consistono nel martoriarsi il viso e il corpo in azioni estreme, a tal punto che spesso deve interromperle.</p></details></li></ul><p id="456ed360-2914-4b66-9950-52d5e9a5516b" class=""><strong>MARINA ABRAMOVIC</strong></p><p id="438c2d94-ff4e-48af-b2fe-e86c10509ad5" class="">Ricerca introspettiva delle sue performance sono delle più disparate: da percorsi su tematiche sentimentali, la relazione con il pubblico, il dolore, aspetti pubblici e sociali, femminili ecc... si interfeccia con varie problematiche ponendo il corpo come soggetto principale nella sua arte.</p><p id="a8c33679-e541-4258-9f3e-9bcf411b6bbc" class="">Indaga i limiti fisici e del pubblico (titubanza, preoccupazione)</p><ul id="5ed08f37-ad63-429e-aa56-6f59387d2384" class="toggle"><li><details  =""><summary>Rhythm 0 (1974)</summary><p id="6383bff9-fc4e-4e85-982d-b3c7bcc853d5" class="">
+</p><figure id="bedc6533-bf04-4e21-89fb-c13943eb87c8" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%205.png"><img style="width:463px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%205.png"/></a></figure><p id="470b2bb8-9e8f-4b0b-aed4-9db9809cd4a5" class="">
+</p><figure id="98502c31-65c9-4563-9df9-1cb5c6f68f5b" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%206.png"><img style="width:614px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%206.png"/></a></figure><p id="b54eccd8-234d-43dc-8584-da96f2dcb299" class="">
+</p><p id="05533bc2-5643-4d10-8315-21caec3c8d34" class="">Performance che avviene nei primi anni ‘70 in una galleria di Napoli. </p><p id="4dafe106-72bb-42ef-8571-6fb5d9a7d26d" class="">Oggetti disposti sul tavolo (circa ‘70) svariati utensili: aghi, forbici, martello, piume, corde, scarpe, vino, torcia, pistola, piume</p><p id="f13faee9-853c-4dfa-a6fc-385488026dfd" class="">Il pubblico è libero di utilizzare qualsiasi oggetto su di lei. L’artista in silenzio subisce le azioni contro il suo corpo</p></details></li></ul><ul id="8baa4404-e1f9-432f-876d-f8af483eb9ce" class="toggle"><li><details  =""><summary>Imponderabilia (1977)</summary><p id="dd3994f9-30fa-4f47-bc4b-af57e4ae1aff" class="">
+</p><figure id="4a9e921f-d547-4562-aba4-3ad6fccdc905" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%207.png"><img style="width:497px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%207.png"/></a></figure><p id="7596d600-38db-489e-97bb-5a0e3c1faf6b" class="">
+</p><p id="cb61554d-dc84-448a-b01f-ce55396d7ca9" class="">Performance realizzata assieme ad Ulay, altro artista, nudi uno di fronte all’altro davanti gli stipiti di accesso allo spazio. Per entrare il pubblico è costretto a passare in mezzo ai corpi toccandoli, scegliendo che direazione prendere. Il pubblico deve avere contatto con gli artisti, deve interfacciarsi con la nudità. Chiave di lettura: mettersi a nudo. (In un contesto istituzionale)</p><p id="54866b4e-924c-4bed-bf09-644c12545ee8" class="">Realizzata presso la GAM di Bologna, si conclude con l’irruzione della polizia intervenute per interrompere l’evento per oltraggio al pubblico pudore.</p><p id="6588a687-ebf7-41e5-8a77-801ff4bed650" class="">La caratteristica di vulnerabilità che normalmente accompagna la figura nuda è completamente trasferita sul visitatore. </p></details></li></ul><ul id="d8b0e7ff-46a4-43b8-8be4-ca16d2c95dca" class="toggle"><li><details  =""><summary>Rest Energy (1980)</summary><p id="ca88cff8-7a4b-416a-b214-284367795097" class="">
+</p><figure id="80088c14-8c1b-4b8e-89ec-501be3559367" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%208.png"><img style="width:262px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%208.png"/></a></figure><p id="ff4a47ec-476c-4350-a33a-62ca06da541b" class="">
+</p><p id="ee6fb69e-9696-414a-abba-688f68dcf063" class="">Altra opera svolta con Ulay, video in cui l’artista tiene un arco, Ulay tende la corda, la freccia è diretta al cuore di Marina.</p></details></li></ul><ul id="1811f342-5981-41b9-a736-514fef82ec1a" class="toggle"><li><details  =""><summary>The artist is present (2010)</summary><p id="80a2d9fb-034d-4692-8683-85aa61581eea" class="">
+</p><figure id="7282adce-63c5-478d-9ea7-e74680c75229" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%209.png"><img style="width:341px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%209.png"/></a></figure><p id="6ad700b6-b256-436b-a4c5-72d6951f840a" class="">
+</p><figure id="0fba4e33-ec69-4cae-9d2e-ccac3af9b4ad" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2010.png"><img style="width:350px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2010.png"/></a></figure><p id="c97a0f85-a8aa-4af1-8c7f-6fbc9d558353" class="">
+</p><p id="4e6caa49-ef98-458e-bec5-e68b7f11bbb5" class="">Il pubblico poteva sedersi di fronte all’artista, osservarsi per un attimo.</p><p id="91a4fead-7610-46bb-b674-4332c489e8ff" class="">L’artista indossa lunghe tuniche monocromatiche che sottolineano la sua identità, si pone d’innanzi lo spettatore ad un tavolo, mantenendo espressione concentrata, non tradisce la sua impassibilità. </p><p id="37f91456-1d4e-4eec-9fd3-f240120dca83" class="">Performance di 700 ore, c’è uno scambio con più di 1000 spettatori.</p><p id="4cc51a9c-58f0-4219-9701-028806b62ae2" class="">Ad un certo punto si ritrova di fronte ad Ulay, compagno di arte e vita, non si vedevano da fine degli anni ‘80. Tutte le emozioni che aveva represso non ha potuto più fermare, l’hanno tradita le lacrime di emozione. Si sono intrecciati le mani pur non fosse azione lecita nella performance.</p><p id="46eac523-0494-4964-b31d-a9f84812eabe" class="">
+</p></details></li></ul><p id="7901f5ff-a0dd-48e6-a446-eaed2e214db5" class="">
+</p><p id="ac12ac87-58f9-4ad9-9686-dea99eae300b" class=""><span style="border-bottom:0.05em solid">Temi rilevanti delle diverse tendenze concettuali:</span></p><p id="3034b564-8742-4458-8705-2b553c02dc2d" class="">Minimalismo: arte informale, ridotta, distaccata - forme elementari e primarie</p><p id="960067bd-0251-44c8-a78f-be7a608b3067" class="">Arte concettuale: relazione tra concetto, immagine, oggetto - idea del’opera più importante della sua esecuzione</p><p id="1defc5e7-0501-4505-9922-2aa22056c02f" class="">Land art: territorio, ambiente - l’opera si dilata nello spazio fino a raggiungere dimensioni ambientali. Diretto contatto con location scelte ad hoc sulla base di aspetti geografici e storici.</p><p id="037b7def-0431-4b49-ba68-47278b9ec9e4" class="">Arte povera: anticonsumismo - materiali antiartistici: composti minerali, animali vivi, vegetali.</p><p id="88453eb2-ce9d-461c-be0c-f86a3f4351b5" class="">Body art: corpo, espressione del sè - priva di ambientazioni, l’opera si riduce al corpo dell’artista.</p><p id="13c8ccaf-5140-4d12-b0f1-5be84bd5b994" class="">
+</p><h2 id="86fafd63-7680-4ec9-8e85-1687ab5ca079" class="">Gli anni ‘80 in Europa e in America</h2><p id="40b7146a-4d38-4891-94b2-7085f11f8356" class="">Importante boom economico: i prezzi delle opere raggiungono valori esorbitanti - spinta a produzione artistica più commerciale</p><p id="2296531f-c127-4bd8-8d06-4cd144aeed42" class="">
+</p><p id="65478677-09d6-4ecb-ab7a-c8a0518642fb" class=""><span style="border-bottom:0.05em solid">Obiettivi raggiunti nell’arte del dopoguerra:
+</span>- espansione del dipinto nelle tre dimensioni
+- il tempo come variabile negli eventi performativi
+- la creazione di opere che favoriscono il processo e progetto invece della forma
+- la crisi dell’idea stessa di forma
+- perdita di una rigida divisione tra le tecniche</p><p id="c796e562-9bf8-4e13-a509-25ac7623ead4" class="">
+</p><p id="a6347bd0-6cdc-4494-8bfa-182704339939" class=""><span style="border-bottom:0.05em solid">Nuova questione di rilevanza sociale:</span>
+- ambiente
+- critica al consumismo
+- nuova consapevolezza del corpo
+- multiculturalismo</p><p id="358fafa9-c28d-469f-a0fc-3ecf70c42ed6" class="">
+</p><figure id="3017a639-fd85-4c46-a5d4-e208f827eb6c" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2011.png"><img style="width:629px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2011.png"/></a></figure><p id="18e45c41-fedf-4036-aae7-439704195916" class="">
+</p><h3 id="9ea83d16-040e-4212-8a3a-b8a9cb4664bf" class="">Transavanguardia </h3><p id="84a1a991-5482-4017-afb0-6f773d892515" class="">Termine coniato dal critico Achille Bonito Oliva, in cui il concetto di “attraversamento” (trans) ha sostituito quello di avanzamento. Gli aspetti che risultarono salienti nella teoria di ABO furono:</p><ul id="21caf5be-3f3c-43f4-a598-181baa462c68" class="bulleted-list"><li style="list-style-type:disc">Genius loci: ovvero la riscoperta delle radici locali e popolari di ciascun artista</li></ul><ul id="a2e56eff-2364-4a42-964b-e927e0350fe2" class="bulleted-list"><li style="list-style-type:disc">La tendenza a liberarsi da qualsiasi norma o ideologia</li></ul><ul id="62dfb52d-5b56-4d2b-9e52-bdc64ad4a17a" class="bulleted-list"><li style="list-style-type:disc">Il presentarsi dell’artista non tanto con uno sguardo in avanti, quanto con gli occhi aperti anche ai fenomeni laterali e inattesi</li></ul><p id="27efb0ff-6d01-48e6-b129-37a35246a93c" class="">Nei tardi anni Settanta, gli artisti che vennero scelti per partecipare alle mostre della Transavanguardia furono cinque: Sandro Chia, Enzo Cucchi, Mimmo Paladino, Nicola De Maria, Francesco Clemente</p><p id="d2fe5ff6-b4ee-484c-b361-268ca4e02743" class="">[ Si crea alternativa pittorica a ciò che si vive in Italia: aspetto concettuale, aspetto minimale, aspetto dell’arte povera ]</p><p id="1846632f-628a-4d1c-817c-73e0ab971a0f" class="">
+</p><p id="2de76f2a-15c7-42e5-99c2-731b3f3c2703" class=""><strong>SANDRO CHIA</strong></p><ul id="a57be1f5-0f64-41b6-9177-a31d486e44c4" class="toggle"><li><details  =""><summary>Fumatore con guanto giallo (1980)</summary><p id="4f7c82c8-efa5-49fe-ac10-a5cab2746ffd" class="">
+</p><figure id="f2fd1e79-b641-41ae-b37b-81ca43bd4f4f" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2012.png"><img style="width:288px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2012.png"/></a></figure><p id="298811b7-e50a-45e8-bb86-da7d83391093" class="">
+</p><p id="b4cac18b-86bc-4645-84b4-b7bba6fbe9ef" class="">Uomo in abito elegante che vediamo di spalle. La figura è centrata e contornata da un rosso che la evidenzia, il fondo ricorda le pennellate rapide informali e il fulo che esce scherzosamente da tre punti: testa, sigaretta e fondoschiena (ciave di lettura ironica)</p><p id="3736b8a8-01e8-4ac7-965f-f34b99f1a5ee" class="">
+</p></details></li></ul><p id="476ab4d3-e0ab-45c1-9d82-d586dcc79bcd" class="">
+</p><p id="28afaa40-64c7-4c20-9344-3bc049c20c61" class=""><strong>ENZO CUCCI</strong></p><ul id="ba81d44b-8474-4d0d-8403-a9547f181744" class="toggle"><li><details  =""><summary>Più vicini agli dei (1983)</summary><p id="199884a3-f88b-4ca0-b727-5386284097e6" class="">
+</p><figure id="7354e29a-ac29-4cf4-b54c-4723d39bd6c0" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2013.png"><img style="width:767px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2013.png"/></a></figure><p id="80be99aa-93c9-4f26-9873-6af5a1e3bf21" class="">
+</p><p id="4870ffb0-855a-4f79-a595-845b7d9c47ea" class="">I quattro elementi primari - acqua, aria, fuoco, terra - si congiungono in una certa composizione dal moto al tempo stesso centrifugo e centripeto</p><p id="a7beed5b-07e8-4f86-8e14-4c0d56d509dc" class="">Si focalizza sui ricordi d’infanzia</p></details></li></ul><p id="922973e2-8d7a-419e-b644-1e117c2bcd19" class="">
+</p><p id="6cda4658-0eb8-4ff5-8944-b4c57deb126b" class=""><strong>MIMMO PALADINO</strong></p><ul id="22737d09-2a59-4c70-9103-80be41e3bf29" class="toggle"><li><details  =""><summary>La Vasca (1984)</summary><p id="797d58aa-a410-49b8-96c2-26e9aef9fc5d" class="">
+</p><figure id="42fee534-cbfb-47ac-b360-fcee3f1b4073" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2014.png"><img style="width:600px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2014.png"/></a></figure><p id="5f6b6bd9-6985-468e-97a1-3a7d38aeb56f" class="">
+</p><p id="7ae56651-30c3-496e-ad02-8b27c775ec75" class="">Vediamo trapelare elementi come busti di guerriero, serpenti, animali, riconducibili al culto dei morti, dei santi, dei sogni, di ciò che sfugge al dominio razionale e induce sia alla speranza di miracoli, sia alla paura di forze ignote.</p></details></li></ul><ul id="87d15001-0e12-4eb0-ab84-0241eb1764c2" class="toggle"><li><details  =""><summary>Scultura ambientale per “La sposa di Messina” (1990)</summary><p id="46c668a9-5510-48eb-be43-49758b59d6ee" class="">
+</p><figure id="bb78c068-9ca0-4986-acf1-38adf82cb94e" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2015.png"><img style="width:640px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2015.png"/></a></figure><p id="49b9b7a9-7a92-45ee-b440-29f22887820c" class="">
+</p><p id="9a496fb9-d8dc-47f1-b095-69de9c714008" class="">Montagna di sale, cavalli in legno bruciato.</p><p id="e1f53b8a-0447-443d-bc34-9edb6e5a0970" class="">Cumulo di piramide di sale, uno degli elementi più comuni, preziosi e simbolici. Spargere sale significa rendere sterile il terreno, decreatere una vittoria su una civiltà sconfitta, solo che i cavalli giacciono distesi come relitti archeologici.</p><p id="18962046-6aeb-48ea-b7c8-a54128037bd3" class="">
+</p><p id="2d8c4f94-47a0-458a-bc75-f28b55191fa3" class="">
+</p></details></li></ul><p id="6786d0c6-5978-4568-a513-387bd417bea5" class="">
+</p><p id="c6f97c96-e501-462f-a9d2-daf8523d5578" class=""><strong>NICOLA DE MARIA</strong></p><ul id="0d5492a1-252e-475e-8eaa-8f465c0304ed" class="toggle"><li><details  =""><summary>Gloria, dipinti dell’universo senza bombe, nuovi dipinti d’amore + angeli (1986)</summary><p id="05ca6913-625b-4dac-83f5-1fe5587060fe" class="">
+</p><figure id="3dcd4b96-07e5-4d93-94c6-c56a6b566d00" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2016.png"><img style="width:231px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2016.png"/></a></figure><p id="6fba0c48-1c8d-4c90-a4ae-4c8edfd50146" class="">
+</p><p id="c606eefa-2e74-4be9-8b53-f1f67979e67a" class="">Gamme di colori primari, sala che presenta aspetti cromatici che conquistano le pareti. Inserisce oggetti, come valigia che allude al viaggio interiore.</p></details></li></ul><p id="392efe7e-4e40-4349-bc5b-0d04a5be396c" class="">
+</p><p id="a67ba3f2-c7be-49f5-b3a7-e22d4db37efe" class=""><strong>FRANCESCO CLEMENTE</strong></p><ul id="a84710eb-a42d-4345-89b6-477781556d5c" class="toggle"><li><details  =""><summary>Secret (1983)</summary><p id="04856f6f-8d59-44d0-a1a1-363b44610211" class="">
+</p><figure id="d92a2feb-eeb5-48da-bd62-a9f16cc40ab4" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2017.png"><img style="width:700px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2017.png"/></a></figure><p id="544c778c-18ba-4a53-924f-953d0bc9f3dd" class="">
+</p><p id="e3b4049d-19b8-4981-b790-fe372bd8b48f" class="">Con un segno frammentato, e utilizzando sovrapposizioni, si dedica all’autoritratto, ai sogni, agli incubi.</p></details></li></ul><p id="b464af76-7b52-4ed8-b933-bd5be8b8ed42" class="">
+</p><h3 id="0bce9e40-7796-46c8-ba0b-3c97f40d9204" class="">Nuovi selvaggi o Neoespressionismo</h3><p id="463ef4b7-2dc5-4a7a-be29-c3ff98df7397" class="">Riprendono le fila del discorso intrapreso in Germania, è un chiaro riferimento ai Fauves, alla pittura forte e incisiva, ai colori brillanti.</p><p id="11d8e7e6-77a4-418b-bf1b-a541262475f5" class="">Situazioni forti cromatiche, di forma e contenuto</p><p id="3f6ee72c-09a7-471c-8f27-b446b7589231" class="">
+</p><p id="16dd71d5-758e-453e-8551-959319994670" class=""><strong>GEORGE BASELITZ</strong></p><ul id="d220ce51-c3a2-45df-931a-02e0583449ce" class="toggle"><li><details  =""><summary>Mangiatore di arance II (1981)</summary><p id="47383c8d-1ec0-440e-855e-95be192bf638" class="">
+</p><figure id="76ced6e9-a2df-4399-b82f-0339c47d46bc" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2018.png"><img style="width:273px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2018.png"/></a></figure><p id="b51b8dd2-4d5c-45d3-9c82-4c8a37b7ff5d" class="">
+</p><p id="3bcfe76b-d08c-4fd4-8119-08ecd5c8551a" class="">Nel capovolgimento è in gioco un altro processo, un’altra volontà, un processo intellettuale e spirituale completamente diverso. Lo stupore non è l’unico obiettivo, si tratta del modo ri rappresentare la libertà.</p><p id="f01bb85f-db80-43bc-931d-d4ae452c2330" class="">Pennellata violenta, materica, grintosa, impianto diversificato rispetto la classica rappresentazione figurativa.</p><p id="29e4b642-8d2b-4acc-9563-d788c1349db1" class="">L’elemento centrale posto in evidenza è l’arancia. </p><p id="26143e47-7a81-4679-ab34-2dcde108971b" class="">L’intento è quello di capovolgere la situazione in modo tale che lo spettatore si trovi d’innanzi a qualcosa che non ha mai visto.</p></details></li></ul><ul id="60253682-5709-431e-a1cc-8f18de1546e3" class="toggle"><li><details  =""><summary>Le ragazze di Olmo II (1981)</summary><p id="b1722d67-daac-4c8f-b760-ca8d59a24d9e" class="">
+</p><figure id="d1d6c908-2b40-4a66-b371-2e7dffd999ea" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2019.png"><img style="width:302px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2019.png"/></a></figure><p id="44e26bcb-1acb-43a7-9c01-62283426ef33" class="">
+</p><p id="12db0ae3-e6d8-41c7-b460-1bfb18adab9b" class="">Le due figure femminili, intagliate a forza di segni spigolosi su fondo giallo, appaiono nel grande formato sospese, tenute in equilibrio dalle forme tondeggianti blu turchese, corrispondenti alle ruote delle loro biciclette.</p><p id="cb3eda40-9235-4708-9c11-7e21fcf5ee61" class="">La densa materia pittorica lascia in vista i tratti e le direzioni delle pennellate. Il colore è acceso e innaturale. I due corpi nudi sono semplificati, ma mantengono lo spessore e le asprezze della scultura intagliata nel legno, alla quale l’artista lavora in questi stessi anni.</p><p id="6764d820-0a85-4316-88b5-d6b5ebfafd20" class="">
+</p></details></li></ul><p id="0ef31a4d-0dba-4a44-9cf4-35ebb565c03a" class="">
+</p><p id="500637b1-68a9-4937-97ed-9bb55d26a490" class=""><strong>ANSELM KIEFER</strong></p><ul id="7e9e0d50-f905-40c5-817a-940230ed7c66" class="toggle"><li><details  =""><summary>Die Himmelsleiter (La scala del paradiso) (1990)</summary><p id="315c024f-f9a7-44ac-88e0-d85ab7fb9960" class="">
+</p><figure id="bf32a336-fbae-4c5f-88bb-7a615832e629" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2020.png"><img style="width:622px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2020.png"/></a></figure><p id="1eb9fcf7-1633-4e61-b624-72079354de10" class="">
+</p><p id="2cce0b27-d7bd-4016-8b42-4264b9ce0a8a" class="">Riferimento a Germania post-bellica. Continua a riportare su tela e installazioni il peso della storia, il passato. Cova dentro di sè l’eredità drammatica che caratterizza la Germania.</p></details></li></ul><ul id="dd1c686a-933d-4b3a-b492-1c10ca8b8a9a" class="toggle"><li><details  =""><summary>I Sette Palazzi Celesti (2004)</summary><p id="1a97b6e5-8719-4a8e-a99c-0a626570dda9" class="">
+</p><figure id="515ffaff-c025-4ac0-83a0-8f8ef272d7b9" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2021.png"><img style="width:252px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2021.png"/></a></figure><p id="902ea414-2721-414c-b842-b0c0b5b3e32a" class="">
+</p><p id="0a590646-fda6-4aa1-ab2f-e076c566baa1" class="">Prendono nome dai dalazzi descritti nell’antico trattato ebraico “il Libro dei Palazzi/Santuari) risalente al IV-V secolom in cui si narra il simbolico cammino di iniziazione spirituale di chi vuole avvicinarsi al cospetto di Dio.</p><p id="4a8949c4-9259-468b-a98c-ba3a081f8765" class="">Atmosfera lugubre amplificata da location e installazione, predispone il visitatore ad una sorta di contemplazione.</p><p id="2b05dc4f-446e-4498-9d44-a721c3a06054" class="">Essi arppresentano un punto d’arrivo dell’intero lavoro dell’artista e sintetizzano i suoi temi principali prioettandoli in una nuova dimensione fuori dal tempo: l’interporetazione dell’antica religione ebraica: la rappresentazione delle rovine dell’Occidente dopo la 2GM; la proiezione in un futuro possibile da cui l’artista ci invita a guardare il presente.</p><p id="c02b105c-b40e-42de-9c30-c41293425b2f" class="">
+</p></details></li></ul><p id="71ea1dbf-963d-42a0-8113-fb67b4c20e46" class="">
+</p><p id="82e06d55-a900-4c2f-859f-ddc7384ce6ec" class=""><strong>GERHARD RICHTER</strong></p><ul id="7718b3ba-0b8b-4b41-88a8-59daaebcbc66" class="toggle"><li><details  =""><summary>Betty (1988)</summary><p id="6a20992e-89ba-4283-b4de-716437e595f4" class="">
+</p><figure id="f3751c4c-da11-4ca1-a560-cbda3503d840" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2022.png"><img style="width:244px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2022.png"/></a></figure><p id="90721f90-7333-4804-ba65-233daab17da9" class="">
+</p><p id="a3d830e1-631a-44f0-97f4-9faecbd47285" class="">Olio su tela, riproduzione quasi fotografica, meticolosa. Riproduce abbigliamento e capelli in chiave limpida. Estrema veridicità. Attenzione alla luce. </p><p id="0b7676ad-91b9-4bd9-b563-604296eab11b" class="">
+</p></details></li></ul><ul id="d1b5b520-ec17-402d-9195-086054385e5a" class="toggle"><li><details  =""><summary>Altre opere</summary><p id="c8444fe8-e690-47bd-acd3-55aca520d9ef" class="">
+</p><figure id="517ecffd-1566-434d-b0d0-1fa08ca5db6c" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2023.png"><img style="width:622px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2023.png"/></a></figure><p id="d8c22d28-5c3a-4d36-9c8e-60dbb2370eef" class="">
+</p><p id="8c50dd11-fd18-46a2-9277-dbd3be8023c3" class="">Trascina con spatole il colore a destra e sinistra. </p></details></li></ul><p id="8ca4fb51-9f5e-454b-b30d-eb9cbe22e680" class="">
+</p><h3 id="176c0b66-ac79-40e7-8d46-fb2a4b1b1257" class="">Graffitismo</h3><p id="25bb6ac7-7551-4de5-8d93-6f1bedbaa20c" class="">Soprattutto nei quartieri poveri di New York come il Bronx e Harlem, a fine anni ‘60, primi ani ‘70, si ricoprivano i cagoni delle metropolitane di disegni eseguiti con bolbolette di colore spray. </p><p id="5aa16fc7-525d-4a58-8b38-71ebceeb1ba1" class="">Immagini spesso ispirate ai fumetti o firme personali o sigle stilizzate.</p><p id="beefa9e7-b93c-46d4-b21b-e1ad3c04f47a" class="">Dalla struttura narrativa che ricorda la musica parlata e ripetitiva dal rap.</p><p id="fe5d42a3-78bf-445a-be24-5f841576d776" class="">Spesso di dividevano in piccole “bande” spesso in competizione.</p><p id="0ea2c2e5-3bf9-44f6-b9ad-78b4cc8925e2" class="">Arriva molti anni dopo in Italia.</p><p id="11c820be-49e2-4d7f-a42a-0f86917be05c" class="">All’inizio degli anni ‘80 alcuni disegnatori si fecero notare dai galleristi che li lanciarono come i pittori del momento, col risultato di far perdere spontaneità al loro gesto creativo e di immetterli in un circuito commerciale dal quale si fecero stritolare. Gli unici a rimanere a galla furono quelli che avevano avuto una formazione artistica soprattutto accanto a Andy Warhol che guardò al graffitismo con interesse.</p><p id="cc5990c2-fafe-4664-a815-a3aebcda646d" class=""><strong>KEITH HARING</strong></p><p id="31dd8292-58ab-47cb-938b-346fea0b1b4e" class="">Ha incominciato a tracciare il suo segno meccanico e sintetico sugli spazi lasciati vuoti nei pannelli per la pubblicità nei sotterranei della metropolitana.</p><p id="364a933a-1dde-428d-be53-1da0b6930116" class="">Segno incisivo, indentitario. Repertorio elementare dal punto di vista stilistico. 
+I suoi temi ricorrenti erano un bambino radiante, donne incinte, televisori che camminano, personaggi con teste di cane, e segni decorativi che riempivano ogni possibile vuoto.</p><p id="8fc3699c-c425-4ee0-aee2-5422baf85d16" class="">Contorni accentuati, neri, tratto nero spesso incisivo.  Stile “fumettistico”</p><p id="bdf77566-b774-4738-b464-6ea143ce0fb9" class="">Ripetizione ossessiva degli elementi che conquistano l’intero spazio. </p><p id="4070c596-a1f6-43c6-8b02-b31dc35203b9" class="">Nascono accessori, apre negozi dedicandosi al riportare queste fantasie sull’oggettistica. Apre due negozi a Tokyo e NY, li chiama Pop Shop dove vende serigrafie, multipli, addiittura orologi.</p><ul id="8a9e4f04-34c0-4c81-ac2c-484caf7de075" class="toggle"><li><details  =""><summary>Esempi opere</summary><p id="dc9b833a-cd88-4949-b6c7-218b68737499" class="">
+</p><figure id="3e0e576f-40b2-4a54-9d34-28563954b2ab" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2024.png"><img style="width:354px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2024.png"/></a></figure><p id="e7039616-fdce-41f9-957e-08079c9b4e99" class="">
+</p><p id="e7e269e5-f915-4f9e-a1dc-42721d6a99d6" class="">
+</p><figure id="fa29df0f-fea5-432e-9e32-f3116d0c89c9" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2025.png"><img style="width:309px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2025.png"/></a></figure><p id="c9b07d13-835b-42f6-823e-aec403387576" class="">
+</p><figure id="da3e3fc9-3d38-45df-a38f-c0364e34a980" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2026.png"><img style="width:302px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2026.png"/></a></figure><p id="54e236bb-c477-44aa-a319-a21ab54a2bd5" class="">
+</p><figure id="f29957c6-4dc4-4031-a175-58610089799c" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2027.png"><img style="width:617px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2027.png"/></a></figure><p id="49c3b940-332f-4b9c-a324-d67edd4fdc17" class="">
+</p></details></li></ul><p id="822c057e-1b2c-47c1-983c-4a1fdbf25a1a" class="">
+</p><p id="a1fb63ea-48b7-42c0-9fa0-cdacdc252252" class=""><strong>JEAN MICHEL BASQUIAT</strong></p><p id="73f080b4-2239-43ad-a5a4-a8ea323bdc77" class="">Artista ispanico tahitiano, si rifà al linguaggio del graffito e ad aspetti della cultura ispanica. Primo pittore di colore invitato a Documenta e biennale, ha decretato l’ingresso dei non bianchi ai musei. </p><ul id="88630f23-b5ba-458a-92cf-572b6380b39b" class="toggle"><li><details  =""><summary>Mona Lisa (1983)</summary><p id="45c23882-7bd1-4d81-9455-73a63b400e3e" class="">
+</p><figure id="ba4ec355-a416-4042-8f03-8c3dfa2c7c25" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2028.png"><img style="width:252px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2028.png"/></a></figure><p id="28efad73-2dfd-41b4-8035-5b3c6dd0edb1" class="">
+</p><p id="530b5fde-00d8-442d-a3d5-8f21c29cddfd" class="">Rifacimento della Gioconda di Da Vinci all’interno di una sorta di banconota, tracciata con segni infantili. </p></details></li></ul><ul id="898cd431-3eca-409d-99e7-0d5ed546fb52" class="toggle"><li><details  =""><summary>Notary (1983)</summary><p id="63f6b4fe-983f-4d5f-8f1e-f3f37f331b79" class="">
+</p><figure id="4c5d3b07-7c79-4e5e-a364-d5d5ce2066ad" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2029.png"><img style="width:567px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2029.png"/></a></figure><p id="f1c8591f-aa8e-44f8-b76f-fac11b2dbd41" class="">
+</p><p id="0c5d0e57-f8ca-477f-8305-ba0f6485dd8c" class="">Vari elementi che si ripresentano più volte nelle sue opere: teschi, scheletri, tematica della morte. Scritte criptiche simili a quelle dei bagni pubblici, disegni, e segni.</p><p id="c655dcad-a8f7-4a6d-a912-c66c23abc1af" class="">
+</p></details></li></ul><ul id="874ad1af-9c75-46ea-9e7f-faab3943cc02" class="toggle"><li><details  =""><summary>J’s Milagro</summary><p id="c2c0b8a1-0c61-42b1-8106-0933be8f65c9" class="">
+</p><figure id="4936701d-e452-4cb7-b1ba-c50d0af70a06" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2030.png"><img style="width:431px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2030.png"/></a></figure><p id="371e5ffd-68ed-466c-8a7d-65338bf483c2" class="">
+</p><p id="570a5985-e97f-43bf-bc6f-328e61e571b2" class="">Compaiono varie similitudini con una concezione classica del quadro sacro: ai due lati, nei posti anticamente occupati dai santi stanno due aree simili di colore verde: il centro dell’opera è occupato da una figura umana scura, senza testa, proprio dove nei quadri antichi compariva il santo.</p><p id="295fe7b5-ca3c-4d52-b139-724a953acf6e" class="">Divisa in tre aree circoscritta in cronici e serrature, la verticalità riequilibria la struttura e richiama le antiche rappresentazioni iconografiche degli antichi trittici. Simbologie che si riferiscono alle proprie vicissitudini, elementi che richiamano la propria autobiografia. Il serpente ricorda le ritualità africane. Appunti e schizzi, fotocopie vanno a ripercorrere e ricordano il pensiero che si ripete. </p></details></li></ul><p id="c3c72e72-666a-4431-8d90-2e7d07845159" class="">
+</p><h3 id="37fb0ff1-1bc2-4f0b-b2a2-82313538779d" class="">La scultura oggettuale dei secondi anni ‘80</h3><p id="3164f3e0-3cd8-43bd-addb-a2d9ddbfff51" class="">Gli artisti incominciarono a utilizzare soprattutto due generi di supporto: da una parte la fotografia e dall’altra gli oggetti. Essi non vennero più presentati come residui usati, ma costruiti o fatti costruire ad artigiani su un preciso progetto.</p><p id="3d3ab54e-2eb1-447b-a628-76fba44a84df" class="">Il tema della merce e dell’atttrazione che essa può esercitare, già toccato dalla Pop Art, vene portato alla sua esasperazione massima.</p><p id="291ceda8-b8de-4680-b404-3afe89a87fd8" class="">L’occhio degli anni Ottanta fu insieme più cinico, critico e graffiante di quello degli anni Settanta. L’aspetto più interessante che venne indagato fu il rapporto di dipendenza psicologica dagli oggetti, divenuti dei simulacri.</p><p id="d400d6c2-16d3-4850-b1f4-d806bc0474d6" class="">Commody Sculpture (scultura-merce) è la dicitura utilizzata per descrivere la loro natura complessa, basata sull’intreccio tra oggetto e desiderio, marca e status symbol.</p><p id="da35aecf-8b6c-4e03-a8f9-ff515c017a76" class="">
+</p><p id="5739c073-dc6d-4f25-aa41-72ab8031a2bc" class=""><strong>HAIM STEINBACH</strong></p><p id="7a29be83-8e83-4a01-b427-d9b07eb0a971" class="">Attraverso raggruppamenti di oggetti eterogenei, appartenenti alla sfera della merce e del gadget, Steinbach fa leva sul gusto e sul desiderio di quello che definisce un “pubblico generico” recuperando e innovando stili della tradizione artistica.</p><ul id="1ff118e5-62c5-4ff1-9c82-938132644f3d" class="toggle"><li><details  =""><summary>Stay With Friends (1986)</summary><p id="82c324ef-22c6-49db-9f52-3ab7bb35f17b" class="">
+</p><figure id="64093738-d967-4644-9c07-aa427580afcd" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2031.png"><img style="width:510px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2031.png"/></a></figure><p id="1378517e-87a0-4263-87c4-de4b700b69ba" class="">
+</p><p id="86f15800-d6fd-4dc3-9b47-47c4d7550a0f" class="">Mensola di legno laccato, anfore e scatole di cartone, oggetti non fissati ma solo appoggiati.</p></details></li></ul><p id="8c831646-bca8-4390-8513-8707d11679ae" class="">
+</p><p id="eac91554-5ed9-4556-b754-9eb05f75bdc5" class=""><strong>JEFF KOONS</strong></p><p id="26b71418-0537-4565-b88f-793758b086bc" class="">Estrapola l’idea dell’oggetto, lo riconduce al ready-made.</p><p id="53806797-2381-4dd1-a87b-2946894e8ef9" class="">Utilizza migliori artigiani e materiali per le proprie opere.</p><p id="36f640ef-532c-49c8-8c99-2d05f4628b97" class="">Fenomeno del KITSCH → pessimo gusto, poca eleganza ed estetica, volgare, eccessivo.</p><p id="f2b79310-c793-417a-95ef-85579cdd04bd" class="">L’artista firma la copertina di “Artpop” album di Lady Gaga, inserisce rimando a Venere di Betticelli.</p><ul id="db52754e-f026-4f88-a995-660e63709ecc" class="toggle"><li><details  =""><summary>New Hoover Converibles, Green, Red, Brown, New Shelton Wet/Dry 10 Gallon Displaced Doubledecker (1981-7)</summary><p id="28d162de-e7ad-4eef-a596-9b739f2dc7fa" class="">
+</p><figure id="92ad6cb7-e008-4f68-9141-558b9e976c9e" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2032.png"><img style="width:212px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2032.png"/></a></figure><p id="e8aede36-4e6f-48c9-af02-e38e1332f268" class="">
+</p><p id="0f800f73-d938-4753-a4bd-08646b79dbf9" class="">Ha utilizzato aspirapolveri nuovi, luccicanti, mostrandoli in coppie o gruppi ordinati dentro a teche da museo, trasparenti e pulite, illuminate dal basso con luci a neon. </p><p id="9c9af6c2-4431-483b-acee-3b7280d42fe6" class="">Ci troviamo dinnanzi a una manipolazione dell’oggetto originale tale da renderlo degno di ammirazione, come un bene di lusso in una teca.</p><p id="5180dd05-92a9-43de-8ffe-30ad74d1d85b" class="">
+</p><p id="769f9dd3-e566-411d-a0f3-9761dc80db6a" class="">
+</p></details></li></ul><ul id="8640413d-6f4d-485b-9207-b2511bfeacce" class="toggle"><li><details  =""><summary>Micheal Jackson and Bubbles (1988)</summary><p id="ad33c81d-5b0e-42ba-a167-e86bd25566eb" class="">
+</p><figure id="f7fef48b-271e-4f3d-81a6-5165232a4c62" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2033.png"><img style="width:358px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2033.png"/></a></figure><p id="0856f6cf-6206-48a3-af22-b65d1673acb9" class="">
+</p><p id="dc407ca0-bc01-453b-bbe7-3bb599f9e76e" class="">Nel mercato del gusto massificato funziona tutto ciò che suscita un appeal immediato, rieccheggiando dalla televisione piena di buoni sentimenti o dalle vetrine nel rito dello shopping.</p><p id="d06d6a22-44aa-43fc-92f4-c84108aafe02" class="">
+</p><p id="db900660-5ec9-40cd-9607-9af8452ea1be" class="">
+</p><p id="25175363-3dfe-4374-b0eb-3a63817f7e83" class="">
+</p></details></li></ul><ul id="fc007c9e-4a86-45bb-849d-b29fe9711310" class="toggle"><li><details  =""><summary>Balloon Dog, Serie Celebration (1994-2000)</summary><p id="44d596c1-9e54-4252-ad4c-3b3d2f5469a1" class="">
+</p><figure id="a1af7f88-f70a-4f29-9776-9aa8610d9955" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2034.png"><img style="width:260px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2034.png"/></a></figure><p id="c59938d2-8bbf-4ff2-9ee4-d0ac10832352" class="">
+</p><p id="c51daa43-e70f-4ea4-91c4-6a5901acd830" class="">Koons è particolarmente attratto da oggetti kitsch, li trasforma in opere di grandi dimensioni come cose da adorare.</p><p id="49ccbbf8-341e-4b16-9549-4e78f6b409d8" class="">Acciaio inossidabile, ricrea questi oggetti che perdono leggerezza.</p><p id="d8e6441f-2747-4fe3-b19c-df84e0a9bb4e" class="">Hanno una certa corposità, materiosità, pesantezza.</p><p id="988d7df9-28af-4770-9403-7add270ffb56" class="">Installazioni di grandi dimensioni, ricrea la lucentezza della plastica.</p></details></li></ul><h2 id="fd33fc4d-147f-448c-b37a-b7ee20dc0832" class=""><strong>Anni Novanta e Duemila</strong></h2><p id="047432ef-6d7d-4803-96c5-a9e1afdea400" class="">
+</p><p id="99cbecaf-3cb6-46ec-bdf2-6c272bb43452" class="">Avvenimenti importanti:</p><ul id="4ca0cb7d-e616-46d8-b430-a4b7ffe7fab7" class="bulleted-list"><li style="list-style-type:disc">Caduta del muro di Berlino 1989</li></ul><ul id="575004d6-0f4e-4a4c-b250-c997271217dc" class="bulleted-list"><li style="list-style-type:disc">Nascita del World Wide Web nel 6 Agosto del 1991, quando Tim Berners-Lee pubblicò il primo sito web.</li></ul><p id="f59c1630-35a0-4adf-9136-3cf5760c060e" class="">
+</p><p id="e58b5996-60be-4d83-bce0-27fd5a9aceb5" class=""><span style="border-bottom:0.05em solid">INSTALLAZIONE</span></p><p id="b4e95049-7677-4c9a-b868-490f70395881" class="">Una delle caratteristiche tecniche degli anni Novanta è stato proprio l’affermarsi di un nuovo modo di concepire le immagini.</p><p id="a1435ee1-577e-41e5-8561-15c2a48c1977" class="">Strutturate spesso come spazi intimi e ricostruiscono la dimensione della camera o della tana, alcune installazioni sono concepite per ospitare il visitatore, offrendogli musica, letture ed esperienze che eccedono l’esclusività della visione, per privilegiare una dimensione relazionale.</p><p id="52d24b53-bc83-4be1-abc6-081e466c8294" class="">Ciò che distringue l’installazione dalla scultura tradizionale è che l’opera non è solo un oggetto tridimensionale ma si dilata verso l’intero ambiente e trae il suo senso anche da questo.</p><p id="1cbce405-477d-488f-b385-859fe4844420" class="">
+</p><p id="26c9e292-b643-43e7-bc96-210bb557435a" class=""><strong>KURT SCHWITTERS</strong></p><ul id="9f875d4f-0846-43e7-8a78-a00312468e8f" class="toggle"><li><details  =""><summary>Merzbau (1923-43)</summary><p id="5cef4b83-d629-4ab0-80ad-4b3c86e8bdbd" class="">
+</p><figure id="096691fa-e756-40fa-a849-efaa9b27e07b" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2035.png"><img style="width:469px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2035.png"/></a></figure><p id="f748c175-ecc4-4144-9325-6c79f1f802f7" class="">
+</p><p id="81c45c07-c907-4c75-867a-71ad6ee211ef" class="">Assemblaggio nella casa dell’artista, distrutto nel 1943 e ricostruito presso il museo di Hannover.</p><p id="149eebef-e490-465a-b5f6-b9cdbf4c47cf" class="">Il Merzbau è un ambiente in progress, nato intorno a una scultura, aumentata a un tal punto da occupare completamente lo studio dell’artista.</p><p id="858fee4f-ceee-42d2-82b9-c7d41058561b" class="">Lo spazio di lavoro si trasforma in un assemblage a scala ambientale coinvolgendo i sensi, il corpo, l’arte e biografia.</p><p id="fdd6d8de-871e-466b-879f-feaa92e7cd57" class="">L’artista dilata il suo “quadro” non soltanto oltre la bidimensione ma in tutta l’intera stanza che lo ospira. Nel giro di circa 20 anni questo ambiente divenne un luogo in cui l’artista depositava i propri gesti ma anche i propri oggetti più cari.</p></details></li></ul><p id="2816748f-0b51-4280-847c-9fdad5a32433" class="">
+</p><p id="6b485321-7a83-4809-b603-f81638d54688" class=""><strong>MAURIZIO CATTELAN</strong></p><p id="786165f8-0f62-4ca0-bb41-d451ba3f3b1c" class="">Trasmette significato della cultura italiana a livello internazionale importanti messaggi/concetti con aspetto provocatorio, dissacratorio.</p><p id="c8fed155-98a2-4602-9bd6-a634cd85b668" class="">Conosce il sistema dell’arte.</p><p id="d4aacb98-2c63-4655-b3c4-f202daf21ae4" class="">Giocando di provocazione e scandalo porta il pubblico alla riflessione.</p><ul id="af0ef447-f086-4684-9fd4-75fa2ecec4bc" class="toggle"><li><details  =""><summary>Senza Titolo (1998)</summary><p id="18fe9ebb-ade3-446d-bbbe-d00e9a65bf0d" class="">
+</p><figure id="0e39f0f7-7317-4d41-9760-67d91973d78b" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2036.png"><img style="width:242px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2036.png"/></a></figure><p id="b5b78c34-3428-4dd5-bc05-159061de08a1" class="">
+</p><p id="0e9d7109-6216-47a8-b2b9-53c20fcbc887" class="">Olivo sradicato dal contesto naturale e posto all’interno nel castello di Rivoli in un ambiente chiuso.</p><p id="0755408f-c088-4b7d-a142-0ea937d1f076" class="">Estraneità, decontestualizzazione. Descrive la solitudine che può provare un migrante che si allontana dalla propria terra di origine.</p><p id="c3669097-cfbd-4bf2-b52b-0cff32a0217d" class="">Quasi ogni tipo di materiale può essere utilizzato in un installazione contemporanea.</p><p id="761e136e-35ff-4b9a-9ebd-8d56bb307410" class="">Il livello dello sguardo dell’osservatore ricade sulla zolla di terra, dove prendono vita le radici. Discorso profondo sulle radici di un territorio.</p></details></li></ul><ul id="5414a273-838a-4430-bb86-c8fa32101e4f" class="toggle"><li><details  =""><summary>La Nona ora (1999)</summary><p id="6dcb5083-0000-412e-b8e4-26afbc57f0f6" class="">
+</p><figure id="54a79bb0-5a0c-4489-82fd-07248dcb7b51" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2037.png"><img style="width:247px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2037.png"/></a></figure><p id="f93526df-b152-40a5-971b-20a87525f05b" class="">
+</p><p id="8de3cdd4-0451-4e32-852f-027227b8958f" class="">Raffigurazione di Papa Giovanni Paolo II colpito da un meteorite. </p><p id="9e565103-6d2b-4681-aa7d-7e3852838e60" class="">Il titolo ha riferimento del tutto evangelico. La nona ora corrisponde alle 15, quando si presuppone che Cristo morì sulla croce.</p><p id="39a8be94-f70e-45fc-8c7c-1745ad0cd90e" class="">Una delle opere più discusse di Cattelan, la scelta di creare un contrasto così violento tra il sacro e profano, di contaminare in modo così provocatorio l’immagine del dolore è certamente assai forte e crea nello spettatore sgradevole tensione. </p><p id="f3a09922-5ac7-4ee4-8133-ff8fe7409092" class="">Colpire una figura importante come quella del Papa non è ironia, ha un aspetto carismatico, forte, non c’è volontà blasfema. </p><p id="b321527b-ba76-41b2-b7cf-780aafd28f73" class="">Il Papa, anche se colpito dal morbo di Parkison diventa simbolo della sofferenza, molto amato perchè continua nonostante la malattia a nascondere le proprie debolezze.</p><p id="0b7b747b-ca2b-4803-8ca5-203db0e0bfa9" class="">Sottolinea il male che si abbatte sull’uomo che non si vuole piegare al dolore, che continua a tenere ben salda tra le mani la croce. Si sostiene con tutte le sue forze.</p><p id="4dbde972-b4e8-4a24-b257-e6b64900ae7f" class="">
+</p></details></li></ul><ul id="31426f32-3068-4b51-8cc2-31f356793ca5" class="toggle"><li><details  =""><summary>Comedian (2019)</summary><p id="62e25312-3e58-45e9-b44d-7411a56d1360" class="">
+</p><figure id="bcf76685-a067-4e10-be53-dae49aec3558" class="image"><a href="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2038.png"><img style="width:307px" src="Body%20Art,%20Transavanguardia,%20Anni%20%E2%80%9880,%20%E2%80%9890%20e%202000%20254a4e9af7b64ea9b3cca32bdfb7b1fc/Untitled%2038.png"/></a></figure><p id="545eede7-1f9e-416c-bc6f-87603d30bbbb" class="">
+</p><p id="19bbe890-3335-4f93-b260-3cf8c76bd6ed" class="">L&#x27;opera consiste in una banana fissata al muro tramite una striscia di nastro adesivo grigio.</p><p id="036c7214-fb2e-4b31-95ec-2e82495b81df" class="">Il penultimo giorno dell&#x27;esposizione al pubblico una numerosa folla assalì la galleria col proposito di mangiare la banana. A causa di ciò la banana fu rimossa al fine di proteggere il frutto e tutelare l&#x27;incolumità delle altre opere esposte.</p><p id="cbf71dde-c2f4-419c-ae91-c1842f5339a9" class="">Cronologia degli eventi:
+Cattelan espone nella galleria una banana attaccata ad un muro di cartongesso con del nastro adesivo ad alta resistenza.
+La banana, acquistata qualche ora prima da un fruttivendolo locale per 30 centesimi di dollaro, è stata quotata per 120.000 dollari.
+Nonostante l&#x27;opera d&#x27;arte fosse deperibile, la banana è stata acquistata per 120.000 dollari. L&#x27;opera è infatti pensata per essere rinnovata con una banana nuova.
+Durante il secondo giorno di esposizione, un altro artista ha preso la banana di Cattelan e l&#x27;ha mangiata in diretta davanti alle telecamere. L&#x27;azione è diventata a sua volta una performance artistica, chiamata Hungry Artist (&quot;l&#x27;artista affamato&quot;). Il video della banana da 120.000 dollari divorata in pochi morsi ha fatto subito il giro del mondo.
+L&#x27;opera d&#x27;arte è stata subito rimpiazzata con una nuova banana.
+Alla riapertura della galleria, il giorno seguente, una folla di persone ha letteralmente assalito la galleria d&#x27;arte per poter divorare la banana di Cattelan.
+Per motivi di sicurezza il quarto giorno l&#x27;opera è stata rimossa dalla galleria.
+Nei giorni seguenti alla sua esposizione e alla sua &quot;sparizione&quot; la banana di Cattelan è diventata un meme nei social, con tag dedicate e molte iniziative da parte di aziende e persone famose.</p></details></li></ul><p id="113c0fd5-988c-4208-a51b-9ef156539590" class="">
+</p></div></article></body></html>

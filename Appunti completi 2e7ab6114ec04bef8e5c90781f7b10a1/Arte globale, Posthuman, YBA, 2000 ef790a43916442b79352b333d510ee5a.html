@@ -1,0 +1,737 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Arte globale, Posthuman, YBA, 2000</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ef790a43-9164-42b7-9352-b333d510ee5a" class="page sans"><header><h1 class="page-title">Arte globale, Posthuman, YBA, 2000</h1></header><div class="page-body"><h3 id="c4fe4666-77dc-4338-af41-1b00538d3ffc" class=""><strong>ARTE GLOBALE</strong></h3><p id="55551830-afca-442a-a634-c434765a196a" class="">C’è un nuovo confronto necessario con altre energie che vengono da parti diverse del nostro pianeta e che andranno a costituire quella forma di cultura che negli anni ‘90 chiameremo l’arte della globalizzazione.</p><p id="c92e0761-c7e9-4089-81d8-3346661a9f2e" class="">L’arte entra nell’era della globalizzazione, cresce in maniera esponenziale la presenza delle biennali, fiere, nuovi musei che aprono in luoghi di cui quasi non avevamo memoria e ciò porta alla “crisi” di un sistema troppo legato alle identità nazionali.</p><p id="dee216fb-4046-4a71-8a15-50bbf374475d" class="">Un altro carattere tipico dell’arte di questo periodo, anch’esso legato ai contemporanei cambiamenti socio-politici, va identificato nella presenza sulla ribalta mondiale di artisti proveniente da paesi e culture finora rimaste in ombra.</p><p id="96c97362-0852-43ba-87b5-4ebdd96d62d3" class="">Nel panorama contemporaneo artistico si fa più consistente la presenza delle donne con opere non più o non solo incentrate sulla condizione femminile.</p><p id="7a8a8dc2-21a2-44a1-ad0f-8a851ce8f964" class="">Le opere di queste artiste focalizzano temi profondi, dalla sensibilità al rapporto con il proprio corpo, alla definizione di una propria identità e di un proprio ruolo nel mondo contemporaneo. </p><p id="ea05b79c-ebfe-462e-92b2-7d5b16ef3c95" class="">Il manifesto dell’arte globale esce nel 1994.</p><p id="c520728f-a0c8-4c2b-b0c6-149f1c6f4cf9" class="">
+</p><p id="f479ed8f-96ac-4b52-a1db-1d472558baeb" class=""><strong>MONA HATOUM </strong></p><ul id="d1e04b9f-ed58-42ec-8f4d-5d272bad3610" class="toggle"><li><details  =""><summary>Doormat (1996)</summary><p id="de794797-aab3-4de6-9f99-0ac585a47cc0" class="">
+</p><figure id="c6fb93d3-a38d-41ea-8697-392835abeb9c" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled.png"><img style="width:550px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled.png"/></a></figure><p id="4f6b3cbd-fbf3-4440-91b1-b8a4c120d385" class="">
+</p><p id="db4c6e58-6b07-4d74-b75d-86241c2210ec" class="">Evoca immediatamente all’ambiguità dell’invito ad addentrarsi tra le mura domestiche, dietro la cui ridente facciata possono celarsi tensioni.</p><p id="74fac493-afc6-4d07-917f-8e9203ac8909" class="">“Un tappeto dovrebbe darti conforto e proteggerti dal freddo del pavimento. Da lontano questo tappeto sembra realizzato in morbido velluto, una superficie luccicante molto invitante. Quando ti avvicini, ti rendi conto che è fatto di milioni di spilliaffilati in acciaio inossidabile spinti verso l&#x27;alto attraverso un supporto di tela.”</p><p id="a96d9239-e22c-408d-b1f5-21c9dfec3f7e" class="">Zerbino con scritta BENVENUTO. </p><p id="d023f4e8-31fd-44ba-ae63-7e93b556d0fa" class="">Interessante l’azione dell’artista di installare il suo lavoro in una cultura in gran parte islamica, in cui la preghiera quotidiana il rituale eseguito nella moschea locale tende a essere frequentato in gran parte da uomini, con molte donne che invece eseguono le loro preghiere a casa. </p></details></li></ul><p id="bf59c90a-86cd-4b96-8f0d-43d60a1fd9d5" class="">
+</p><p id="5a452173-b307-4100-a98b-0c957c100988" class=""><strong>SHIRIN NESHAT</strong></p><p id="9f120862-8851-4247-8588-59242c369281" class="">I film visivamente accattivanti di Shirin Neshat esplorano la cultura dell&#x27;Islam, in particolare la condizione delle donne in quel mondo, dove hanno più potere di quanto spesso si pensi. Mettendo in discussione la politica sessuale, Neshat rivela qualcosa della condizione collettiva, dei suoi rituali, conflitti ed emozioni.</p><ul id="f124c56e-fdd8-4fa2-9aaa-b3750af649d5" class="toggle"><li><details  =""><summary>Passage (2001)</summary><p id="f6f17543-1453-488a-87d7-fb87ecbe6507" class="">
+</p><figure id="db17ee37-638c-43c7-95ef-32f86b9feaf0" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%201.png"><img style="width:635px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%201.png"/></a></figure><p id="450d8629-8af1-4472-a133-b77d3256f989" class="">
+</p><p id="2feb7cfb-cb12-4498-8baa-67408b557b16" class="">Un gruppo di uomini trasporta un corpo avvolto in un panno bianco su una spiaggia; in lontananza un gruppo di donne velate di nero scavano una fossa con le mani, mentre un bambino dispone un cerchio di pietre. Scene minimali ed enigmatiche.</p><p id="2b94d01e-7280-4d96-a845-384af4b0ff95" class="">
+</p></details></li></ul><ul id="de9ea302-cb3c-40b8-b0e1-1ab15682a00b" class="toggle"><li><details  =""><summary>Rebellious silence (1994)</summary><p id="c500bd49-6559-4bce-b373-ada364c8cff8" class="">
+</p><figure id="a5b88444-8f1c-4cd8-80f2-9441d145f4cb" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%202.png"><img style="width:2340px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%202.png"/></a></figure><p id="e743e1b3-08b6-46b3-a16f-960c17da4a69" class="">
+</p><p id="41841a07-d78b-4adb-a18e-a147aac193b0" class="">Sebbene sia pittrice, Neshat sceglie come mezzo la fotografia perché sentiva che i suoi soggetti richiedessero un senso di realismo. Era affascinata dal fotogiornalismo e credeva che la serie Women of Allah richiedesse un sentimento autentico non possibile con la pittura.</p><p id="cd81c4d4-f823-4a15-9b63-890fda684dc9" class="">Rebellious Silence è una fotografia che ritrae una donna in un velo tradizionale insieme alla canna di un fucile che taglia in due una cucitura verticale sull&#x27;immagine. La poesia in farsi inscritta sul suo viso funge da niqab. La poesia serve come una dichiarazione dei diritti della donna, facendo riferimento alla legge obbligatoria di indossare il velo in pubblico durante la guerra rivoluzionaria in Iran, mentre il suo sguardo determinato onora il coraggio e la convinzione delle donne musulmane che furono militarizzate durante la guerra.</p><p id="4bf8e624-64fb-4024-a056-ae2f1f0c4c1e" class="">
+</p></details></li></ul><p id="710b6165-a2d6-494b-b053-2c752e4ac275" class="">
+</p><h3 id="17904c2b-63e7-498f-bf1e-98edd3816f3b" class=""><strong>NUOVA CORPOREITÀ - POST HUMAN</strong></h3><p id="47b3c784-01ef-46f1-9a1f-cf23ec6a6966" class="">Mentre i divi che animano la società dello spettacolo cambiano continuamente aspetto e restano giovani in eterno, gli esperimenti scientifici hanno portato a compimento di esperimenti sulla <em>clonazione di animali</em> e si prospetta la <em>clonazione umana</em>: pochi cenni per spiegare perchè l’arte degli anni Novanta abbia insistito sul <strong>corpo</strong>, sia come veicolo di di bellezza e seduzione, sia come luogo misterioso pieno di orribili bisogni e capace di riservarci angoscia e malattia.</p><p id="84c8bf34-375a-401a-9218-5c46bf6249f2" class="">POST HUMAN - Mostra del 1992: Tendenza artistica definita dal critico Jeffrey Deitch: definisce la natura di una riflessione che attraversa con insistenza tutto il corso degli anni 90, relazionandosi con le nozioni tradizionali si sesso, sessualità e identità.</p><p id="49545e89-3184-4f76-a2cd-56982ed176e2" class="">La mutata percezione del corpo, maturata nella sfera dell’immaginario e della cultura oltre che nelle scienze diventa uno dei temi ossessivi dell’arte di fine millennio. </p><p id="5f225f7a-08e3-4981-9730-5331465a40ca" class="">La tendenza non si presenta come un movimento omogeneo, ma piuttosto come una costellazione di punti di vista sull’uomo. Fra i tratti comuni, la sostituzione del corpo reale, che aveva presenziato nella performance della Body Art, con quello artificiale. </p><p id="5abd9771-064d-4ea4-8dff-6cf57adaadce" class="">Si passa da corpi incisi di bisturi a mostrare la propria endoscopia (visualizzazione di organi interni), dalle sculture di intestini a metamorfosi e travestimenti.</p><p id="13ce5012-60c2-4e0b-9cd3-bb7c61679d84" class="">
+</p><p id="29df9108-d4ca-483f-83bf-f0f5c84f5c0d" class=""><strong>MATTHEW BARNEY </strong></p><ul id="243bd454-1247-45ee-9afd-30f386c1fed7" class="toggle"><li><details  =""><summary>Cremaster  (1994)</summary><p id="98410399-621f-487c-859f-2ec876478b8a" class="">
+</p><figure id="578a9d34-d0e1-4c61-aaed-6090246f5d7c" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%203.png"><img style="width:542px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%203.png"/></a></figure><p id="603384f1-50bb-41c7-9439-29e3a0af01bb" class="">
+</p><p id="66af855c-2f1c-48bf-9bf0-e28a163859ba" class="">Con il ciclo di cinque film raccolti sotto il titolo di <em>Cremaster</em> girati tra il 1994 e il 2002 Barney realizza una  complessa saga nella quale molti dei personaggi appaiono sotto sembianze di creature mutanti e zoomorge. L’artista è il protagonista di storie affidate esclusivamente al flusso delle immagini, completamente prive di parlato.</p><p id="9cea224f-b294-4720-a4f6-ba571e4b95f9" class="">Il titolo del ciclo fa riferimento al nome diu n piccolo muscolo, il cremasterio, associato alle gonadi, parte estremamente sensibile del corpo che diventa motivo della narrazione fantastica sviluppata nei capitoli (i quali non seguono un ordine)</p><p id="5596418e-1498-46c0-90eb-7cf47dc7a960" class="">Cremaster 4 è l’episodio più celebre. Barney interpreta un satiro, dall’aspetto dandy ed elegante, dai capelli rosso fuoco e le orecchie appuntite. L’ibridazione e il teriomorfismo (fusione tra uomo e animale) costituiscono i temi centrali del film.</p></details></li></ul><p id="cd30458c-0858-453c-a84a-62ebb740595c" class="">
+</p><p id="b9b37239-0f67-41d3-8bc9-c2f86dcc3c24" class=""><strong>FELIX GONZALES TORRES</strong></p><ul id="3b2bf9c1-f216-4892-be95-bdcbf9b34058" class="toggle"><li><details  =""><summary>Senza titolo (ritratto di Ross in L.A.) (cumulo di caramelle) (1990)</summary><p id="b22f8766-d4ca-4882-ad7b-6d32cf223814" class="">
+</p><p id="6d75e469-1507-4b3b-b75a-c0cf39c6c87b" class="">
+</p><figure id="25f9ae76-fca1-4973-90ed-21cdf7036a7c" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%204.png"><img style="width:1024px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%204.png"/></a></figure><p id="05653712-cd05-4604-9234-082ab1ec15fd" class="">
+</p><p id="e3fd0b01-8ae2-48d5-b1ed-e45eacb2aef9" class="">Un’allegoria per indicare come nelle relazioni d’amore chi prende l’altro lo fa “vivere” ma lo consuma anche. I mucchi di caramelle sono esemplificativi di una ricerca che elegge l’omosessualità, come dimensione emezionale che fa da principio formale dell’opera e da cui scaturiscono riflessioni sul tema del rapporto a due.</p><p id="2f161283-8f5e-48e8-acc9-283bfddef888" class="">La principale fonte di ispirazione per le sue creazioni è stato <strong>Ross, </strong>il compagno morto di Aids nel 1991. </p><p id="7cb54776-dec1-4c30-b256-9ea724c66d77" class="">L’opera ogni giorno deve pesare 175 pounds (circa 80 chili), peso del compagno il giorno in cui morì. Per questo a fine giornata il peso dell’opera deve tornare a 175 pounds. Consumando l’opera, gli spettatori riproducono la lenta deplezione a cui l’AIDS sottopose il corpo di Ross: come le caramelle che vengono sottratte una ad una, il compagno veniva consumato di giorno in giorno dalla malattia. In chiave simbolica, il gesto di mangiare ‘un pezzo di Ross’ assume un ruolo quasi spirituale o religioso, elevandosi ad ostia profana, e al contempo denuncia sul ruolo centrale che i governi e la popolazione abbiano avuto nella morte di così tante persone, scegliendo di non vedere e di non dare importanza a ciò che stava succedendo attorno a loro.</p><p id="52e5c0c9-a436-4aa0-839b-957f9e9e587f" class="">
+</p></details></li></ul><p id="568c6c80-11f4-4e65-be51-3ac4c5fd0b3d" class="">
+</p><h3 id="6c8b0785-2f93-4d4d-a8e6-b1d7989621d5" class=""><strong>YBA - YOUNG BRITISH ARTISTS</strong></h3><p id="08f7f768-b84a-4fae-ad8c-f28daaf1970f" class="">Un fenomeno abbastanza tipico degli anni novanta è stato l’emergere di giovani artisti inglesi che hanno portato queste tematiche all’esasperazione con una mostra: <strong>Sensation (1997) </strong>alla Saatchi Gallery, Royal Academy of Arts, Londra.
+(Sensation → Sensazionalismo) l’arte diventa fenomeno sociale.</p><p id="9b953af2-cbb8-4f96-85ef-37f4ea95ab42" class="">Vennero ospitate opere scandalose, provenienti dalla collezione di arte contemporanea di Charles Saatchi, la mostra fece il giro del mondo e venne censurata nella versione newyorkese.</p><p id="817a386e-f322-483c-a227-d1efd5521d51" class="">La YBA incoraggia nuove forme di creatività, abolendo la tradizionale separazione dell’arte in pittura, scultura ecc… favorendo la trasversalità delle discipline e un approccio multi-materiale. </p><p id="23a8a7b2-9ee1-41ee-8bb3-0aa622a30042" class="">Non è legata a diversi materiali, processi a forme. Si riconoscono per la volontà di shockare la audience con immagini violente gratuite, ed uno sfacciato uso della pornografia, in addizione al desiderio di spingere oltre ciò che molti considerano i limiti della decenza.</p><p id="aa3d8fe7-b00c-485c-b664-b9bc9f44900e" class="">
+</p><p id="e0d3c5d4-1620-4315-9ec5-39f2d0877543" class=""><strong>DAMIEN HIRST</strong></p><p id="c69030f3-4a57-497e-a59e-082b5bebcb29" class="">Dà inizio alla YBA con l’esibizione “Freeze” del 1988 a Londra, a cui sono esposte opere dei suoi compagni di studi: Sarah Lucas, Micheal Landy e Agnus Fairhaust. </p><p id="3b02339b-1be3-4a89-b058-85b8fa79dd75" class="">La morte è un tema centrale nelle opere di Hirst. Divenne famoso per una serie di opere in cui animali morti (tra cui uno squalo, una pecora e una mucca) sono conservati, a volte sezionati, in formaldeide.</p><p id="e9395a77-0747-4d3f-8a06-d4ee3e38dfef" class="">Non cerca il bello, o di creare qualcosa che possa piacere ma vuole provocare uno shock, facendo incontrare lo spettatore con l’immagine della morte concreta.</p><ul id="548f36cd-efb9-4e29-bc06-24ba1cd4e8eb" class="toggle"><li><details  =""><summary>The Physical Impossibility of Death in the Mind of Someone Living (1991)</summary><p id="f5d9e42e-9f77-433d-8f6e-fc71300b4b5d" class="">
+</p><figure id="657d00ee-d098-4a26-ad10-be0c3078fbde" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/DHS76_771_0.jpg"><img style="width:771px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/DHS76_771_0.jpg"/></a></figure><p id="86b19f9a-270b-4192-bea3-4ba01d935fd8" class="">
+</p><p id="fa8bbc37-19c9-411d-9df8-b6b6be9e471a" class="">Consiste in una <a href="https://it.wikipedia.org/wiki/Tassidermia">t</a>assidermia di uno squalo tigre di 4m immerso in una soluzione di formaldeide contenuta in una vetrina. (sostanza che conserva intatto il corpo dell’animale)</p><p id="c315003b-f958-4957-8dbc-87e8ec722d86" class="">“In linea con il titolo del pezzo, lo squalo è contemporaneamente vita e morte incarnate in un modo che non afferri fino a quando non lo vedi, sospeso e silenzioso, nella sua vasca. Dà l&#x27;impulso innato e demoniaco di vivere in una forma demoniaca, simile alla morte.”</p><p id="7cbc00bf-2756-42ee-8887-95b29b4208ec" class="">Sappiamo che c’è la morte, che esiste, ne siamo consapeovli ma non riusciamo a crearne un’immagine precisa nella mente.</p><p id="771a7fee-ef1f-4a4c-b747-47988fcfade9" class="">
+</p></details></li></ul><ul id="4efba618-55f4-4a28-92f1-b95cc29a6506" class="toggle"><li><details  =""><summary>Lullaby, the Seasons (2002)</summary><p id="b3afbef7-0025-4501-9974-dbe7580a43fb" class="">
+</p><figure id="9709edba-0198-49ca-847a-8be77cf89413" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%205.png"><img style="width:423px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%205.png"/></a></figure><p id="aeecc1ae-d447-40fa-99ca-ec43268ec052" class="">
+</p><p id="f2b0c700-d4b6-491a-b9fd-1fa35dd7acb6" class="">Viene portato in primo piano il rapporto che abbiamo con la nostra salute: scaffali di farmaci stoccati come fossero profumi che rappresentano bombe chimiche.</p></details></li></ul><ul id="5737f69f-ceca-43b6-8382-8d7481e5ee30" class="toggle"><li><details  =""><summary>For the Love of God (2007)</summary><p id="8547b596-b77d-49a9-adae-2f805b46ca91" class="">
+</p><figure id="0c650041-67b3-451f-8267-3bfc258d884f" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%206.png"><img style="width:301px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%206.png"/></a></figure><p id="817bed26-af5b-4c60-8fed-bb33c5ad0dd8" class="">
+</p><p id="bd5dfb9d-5d8c-4cd1-b4d7-e7e8d4668214" class="">Consiste in un teschio umano fuso in platino arricchito da diamanti.
+Serve a ricordare che la nostra esistenza sulla terra è transitoria.</p><p id="3e652e4f-fde1-4089-bbd0-d272a6343eec" class="">Hirst combina l’immaginario classico del memento mori con l’ispirazione tratta dai teschi aztechi e l’amore messicano per la decorazione e l’atteggiamento verso la morte. Spiega della morte “Non ti piace, quindi lo cammuffi o lo decori per farlo sembrare qualcosa di sopportabile - a tal punto che diventa qualcos’altro” </p><p id="c58923d7-54ea-405c-9d43-64abde6f0c2b" class="">
+</p><p id="833f66b2-9a99-4f9e-a8f4-1253b24f64db" class="">
+</p></details></li></ul><p id="fd1ec9b0-aa2a-4d48-b36e-7de4de7f6c53" class="">
+</p><p id="7998a2b7-5447-4ae6-93f1-154a06404fb2" class=""><strong>CHRIS OFILI</strong></p><ul id="66fb7c85-41d2-4171-824e-c5a1b356ffbf" class="toggle"><li><details  =""><summary>The Holy Virgin Mary (1996)</summary><p id="11bc21f9-37a0-4e38-946d-10f18b35ae7b" class="">
+</p><figure id="a4af93ba-a46e-409b-ae4f-0c6355d892c3" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%207.png"><img style="width:440px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%207.png"/></a></figure><p id="a6a46602-ca03-4b56-9ce0-f76fb216ee68" class="">
+</p><p id="eeae5942-ad02-489c-8800-1cd3a94690fb" class="">Quadrorealizzato con tecniche miste che spaziano dalla tradizionale pittura a olio, all’utilizzo di brillantini, resine, sterco di elefante e collage di immagini pornografiche. </p><p id="c3ad8299-132e-4d78-8694-c363a5f6a5bc" class="">Su uno sfondo dorato spicca una donna nera con un abito blu, che secondo l’iconografia cristiana è uno degli attributi della Vergine Maria. La Madonna è circondata da una serie di figure che a prima vista ricordano farfalle colorate, ma che in realtà sono ritagli e collage di immagini pornografiche, e in particolare di dettagli di genitali femminili, utilizzati per richiamare ironicamente l’utilizzo dei putti nell’arte cristiana tradizionale. Un grumo di vernice e sterco di elefante forma e rappresenta il seno nudo della Madonna.</p><p id="e2e4c5da-8120-411a-a2b6-1b0d3ca31863" class="">Il quadro viene esposto attraverso una strategia peculiare: non è appeso alla parete, ma semplicemente appoggiato e sorretto da due cumuli di sterco di elefante decorati con una serie di puntine colorate. Le puntine sono disposte per formare la parole “Virgin” sul cumulo di destra e “Mary” sul cumulo di sinistra. Chiaramente genera polemiche nella critica a causa dell’aspetto blasfemo.</p></details></li></ul><p id="153f7879-738a-4787-8808-7caecab61322" class="">
+</p><p id="b35d5424-592e-4ef0-a84e-e7f284d86a07" class=""><strong>JACK &amp; DINOS CHAPMAN</strong></p><ul id="18a3641b-ceeb-4297-83d5-59708ec8a1d7" class="toggle"><li><details  =""><summary>Chromosexual (1997)</summary><p id="57584226-f23c-447b-81b8-3f28c07086c4" class="">
+</p><figure id="7968581f-2bb1-4af4-98fc-c070a6c078bc" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%208.png"><img style="width:286px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%208.png"/></a></figure><p id="80f7beb8-438f-4ca1-999c-7041085b1a81" class="">
+</p><p id="124e0d0d-24d4-432c-95b4-2bb45303cbb9" class="">
+</p><p id="45d4638e-1aec-414a-8d07-ade4386560b2" class="">Gruppi di corpi siamese realizzati in materiale sintetico, generati con l’unico scopo di donare organi, piacere erotico o forza lavoro.</p><p id="650421cf-11db-4a9e-abdb-08ac3af0270e" class="">Sollecitano la sfera delle paure e delle fantastie addensate intorno alle idee di malformazione, modificazione genetica e clonazione, intrecciate come incubi alla percezione della corporeità contemporanea. </p><p id="9892b7c1-13dd-4011-a3fe-cba7cc5229bc" class="">Fusione di intenti: conclamazione del post-human (trasformazione del corpo) e piacere erotico (trasformazione di particolari organi del corpo sostituiti con altri) </p></details></li></ul><p id="a4f86192-2932-4f1c-91af-8b98c8c5eb1d" class="">
+</p><p id="39ef970c-6527-49db-b1a2-c9f8844c0d1e" class=""><strong>TRACEY EMIN</strong></p><p id="edd325d7-01c2-43fd-9915-3311476eefc7" class="">Pone in evidenza gli aspetti trasgressivi e dolorosi all’interno di un contesto provocatorio in maniera sottile.</p><ul id="aa69167f-257e-4b51-b4e9-bb346cd0274c" class="toggle"><li><details  =""><summary>My bed (1998)</summary><p id="4501d361-f066-48c2-bb8f-4ee242bce605" class="">
+</p><figure id="6e89fc96-c0a7-4c6c-b7b3-a57fe0bdcc26" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%209.png"><img style="width:540px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%209.png"/></a></figure><p id="dcad4443-62ef-43b3-96ef-869125ead8cb" class="">
+</p><p id="84e72a15-741f-4760-b990-895feca4cd78" class="">Ripropone in un’installazione un fermo immagine un suo vissuto.</p><p id="a16f6540-1817-4fbc-b26c-2d27ae0121d2" class="">Letto disfatto circondato da alcolici, libri, fazzoletti, mozziconi, preservativi, asciugamani, peluche, biancheria macchiata, cintura e bottiglie mezze piene e mezze vuote. É il letto disfatto di Tracey Emin dove ha vissuto per quattro giorni dopo una battuta d’arresto dovuta a una relazione sentimentale.</p><p id="b486d01c-0664-4c8b-8088-0249bef042b8" class="">
+</p><p id="df28e2c4-77f2-47d9-8e53-20ca048e802e" class="">
+</p></details></li></ul><p id="0aa287ff-8bf8-41ca-b767-b0d58754f357" class="">
+</p><p id="bcef0217-4e05-4f08-9191-fa6a0f0ff5fb" class=""><strong>SARAH LUCAS</strong></p><p id="529b9e11-b75b-4243-99c4-a617798811d6" class="">Tratta corporeità in veste simbolica</p><ul id="10ca2707-d448-42ec-ba6b-609ac3559e8b" class="toggle"><li><details  =""><summary>Au Naturel (1994)</summary><p id="26071225-6255-45e2-8d88-170f034fe81b" class="">
+</p><figure id="333e2055-a311-4bbb-b7e4-95195fb75eb6" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2010.png"><img style="width:537px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2010.png"/></a></figure><p id="b95cfbf4-65ac-4be1-b526-fc3a51018930" class="">
+</p><p id="ab678624-e12f-4797-bb71-1a2112393cf7" class="">Assembla determinati elementi (vegetali, frutta ecc) per ricreare simbologie caratterizzanti, stereotipi della sessualità maschile e femminile.</p><p id="8d4b0fad-1f41-4522-b638-e2f817dff784" class="">Materasso vecchio matrimoniale usurato, appoggiato addosso ad una parete. Ricrea uno scenario in cui dei corpi vivono nel materasso. Riduce i genitali alla minima essenza. Volgarità accentuata che sprigiona un’altra modalità di lettura: provocatoria, aggressiva ma anche ludica.</p></details></li></ul><p id="c187a64c-a3b7-4539-9332-ab876e4a263b" class="">
+</p><p id="665c8da1-db94-40c5-8bfd-4aa15552113b" class="">
+</p><h3 id="ee912294-3c3e-41f2-a13b-7e301232494b" class="">L’ARTE DOPO IL DUEMILA</h3><p id="e55e98af-8fd4-405c-bc42-ac15ef4f9df5" class="">11 settembre 2001 -  Evento mondiale devastante. Aerei dirottati da terrorismo islamico abbattono le torri gemelle.</p><p id="58ed5c0e-aab1-42b7-827e-67cf7f598c99" class="">Nel 2007 la Apple presenta agli USA il primo modello smartphone, si introduce li’iPhone come combinazione di iPod con schermo tattile, telefono cellulare rivoluzionario e internet. → Amplifica rete tra utenti, linguaggi mediatici, influenze globali, diffusione notizie + aspetto fotografico. </p><p id="13d62fc4-ffd6-4c51-b0f7-d3747feaf4ee" class="">2008  - Crisi finanziaria che devasta l’Europa a causa del crollo dei Mutui Subprime. Mancanza di lavoro. </p><p id="61cd04f4-39f4-4eab-b385-9cebdf3c73a3" class="">Profilerano fiere e biennali. </p><p id="52df05ef-6fd1-4044-a8e0-f10ef4adf6a3" class="">
+</p><p id="b4f1a6ef-79e4-46aa-afb8-a59f4b0cfd99" class=""><strong>ADRIAN PACI</strong></p><p id="cc68dbb5-296b-4962-af91-7ec59d381e6e" class="">Lavora sull’emigrazione, ha origini albanesi, lavora sul modo di relazionarsi a un nuovo territorio, nuovo popolo. Perdita delle proprie radici. </p><ul id="5c74de30-73f2-49e2-b919-a65730fab1fd" class="toggle"><li><details  =""><summary>Centro di permanenza temporanea (2007) </summary><p id="611b0e90-0e3a-4117-b5d5-5a8a8d88455b" class="">
+</p><figure id="880f34ff-baca-4ec3-ae8e-dd0c18d5cc6d" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2011.png"><img style="width:593px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2011.png"/></a></figure><p id="54b953f8-1548-4ee9-8364-cbe7eadb3450" class="">
+</p><p id="18947743-befa-4c22-96eb-cf1568501202" class="">Video in cui personaggi sono in attesa, non si conosce meta, arrivo, bagagli, si crea una situazione di curiosità, porsi domande. Non è presente alcun aereo. Condizione umana, politica e sociale dei migranti: spaesamento, non conoscere cosa li aspetta</p></details></li></ul><p id="97078520-cda8-4941-b1ae-e665d026f6db" class="">
+</p><p id="850607e8-016e-4c8a-a867-82b58fb7ac2d" class=""><strong>AI WEIWEI</strong></p><p id="04639ead-b6f6-418f-a696-2d4b616da49b" class="">Ha molti problemi con il regime cinese a cui va contro, fa protesta, contestazione, innesca dialoghi con la sfera comunista.</p><ul id="14bee3ed-0069-42c4-8ad7-e06c820aa072" class="toggle"><li><details  =""><summary>Reframe (2016)</summary><p id="9640ccaa-2a23-4ecd-8b2b-f7c006c87254" class="">
+</p><figure id="d25f2e10-ac43-4499-8e78-4d595fc8dc5f" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2012.png"><img style="width:440px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2012.png"/></a></figure><p id="e839a21b-4ff5-4248-a500-7eab03724d1b" class="">
+</p><p id="71c56976-0337-4eb9-b950-9050f79b65e0" class="">Realizza su facciata di Palazzo Strozzi una nuova cornice con gommoni di salvataggio. </p><p id="7583853b-ca3b-4adf-b6d1-ba6a0667cac9" class="">Le leggere imbarcazoini sulla facciata rimandano alle fragili strutture a cui i rifugiati sono costretti ad aggrapparsi in mare ed evocano, al contempo, come i migranti tentino di innestare se stessi in un luogo altro, in un ambiente sconosciuto quale è l’Europa, con un’impostazione socioculturale profondamente diversa. </p><p id="a468f7c5-41af-4840-9c05-c1543d0aca3d" class="">Ricerca aristica si basa sull’attenzione mediatica ai profughi e sulla loro situazione precaria. Impegno sociale verso una crisi umanitaria. Lo fa su uno dei palazzi più noti storici di Firenze.</p><p id="40faab78-477c-4891-a00c-f8e616538e6d" class="">
+</p><p id="ea085f54-8cb7-4add-92f2-8ed900fcfe6b" class="">
+</p></details></li></ul><p id="b74c5cdd-60b8-4270-9819-1f785e77d777" class="">
+</p><p id="34100d25-fa83-43b5-85ae-1e7ff1817bea" class="">
+</p><p id="c867c6f8-3e56-4724-a73c-5f0ff429ba3b" class=""><strong>BANKSY</strong></p><p id="e8dcdd0c-1a9c-4407-93c6-17680378254b" class="">Artista anonimo di Bristol, quartiere di Londra. Icona del contemporaneo per quanto riguarda la street art. Lavoro sociale, politico con connotazione contemporanea. Graffiti dal linguaggio inconfondibile. Realizzazioni che utilizza stencil, tecnica che prevede uso di pieni e vuoti per creare contrasti cromatici con vernici spray.</p><p id="c1daa47d-c4a5-4a52-8157-f4b380da6f64" class="">
+</p><ul id="c98ca540-77ac-4c35-91c1-b91c5cea2c34" class="toggle"><li><details  =""><summary>Girl with Balloon (2002)</summary><p id="31bd0ed7-29ae-4cf1-b192-41e1e64fc06c" class="">
+</p><figure id="c73f161b-4ccf-4a56-8920-d53048db5948" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2013.png"><img style="width:287px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2013.png"/></a></figure><p id="356e2ba1-0096-4c60-bb80-700b0f4e93ff" class="">
+</p><p id="3f19000b-2798-4812-ac40-a900b1838989" class="">Infanzia negata nei luoghi di guerra. </p><p id="42cabe4a-9619-411b-997a-4be8407e4c66" class="">
+</p><p id="5efbe728-d0e9-4777-867e-977a6c94a9fa" class="">
+</p><p id="ebde1716-cf4f-4721-aa79-9ee874f80381" class="">
+</p></details></li></ul><ul id="5f52d62a-c550-4168-884a-5bb331d2d0e2" class="toggle"><li><details  =""><summary>Flower Thrower (2003)</summary><p id="12ee6bef-5e33-4e17-a92a-2063778a1eb9" class="">
+</p><figure id="fc6b7673-0cff-4224-ab0d-a5ec1693a16c" class="image"><a href="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2014.png"><img style="width:400px" src="Arte%20globale,%20Posthuman,%20YBA,%202000%20ef790a43916442b79352b333d510ee5a/Untitled%2014.png"/></a></figure><p id="6fd2b3dd-2bf3-439a-be00-fb340837d5cb" class="">
+</p><p id="bccfd963-c625-43d9-b3ba-72399588f87b" class="">Nel 2003 viene contemplato il muro di separazione tra israeliani e palestinesi. Un uomo col volto coperto anzichè impugnare un’arma sta per lanciare un mazzo di fiori, ovvero un messaggio pacifista, di speranza.</p><p id="884fb962-dd61-404c-8f1c-bb144527c927" class="">Il focus del colore è sui fiori.</p><p id="db26fe99-3386-432c-b978-34d85d864a10" class="">
+</p></details></li></ul></div></article></body></html>
